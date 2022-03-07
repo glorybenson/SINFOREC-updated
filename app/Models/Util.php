@@ -68,7 +68,8 @@ class Util
 
     public static function pack( $key, $ModelClass, $shell)
     {
-        $model =  $ModelClass::where( 'created_by', Auth::user()[ 'id']);
+        //$model =  $ModelClass::where( 'created_by', Auth::user()[ 'id']);
+        $model =  $ModelClass::where( 'created_by', '!=', null);
         self::pack_ext( $key, $model->get(), $shell, null);
     }
 

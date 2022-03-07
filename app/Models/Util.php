@@ -53,7 +53,8 @@ class Util
     public static function get_entity( $table_name)
     {
         $uid = Auth()->user()['id'];
-        $query = DB::table( $table_name)->where('created_by', $uid)->get();
+        //$query = DB::table( $table_name)->where('created_by', $uid)->get();
+        $query = DB::table( $table_name)->get();
         $collection = [];
         if ( count($query) > 0)
             foreach ($query as $makeup) {

@@ -51,7 +51,7 @@ class CommunesController extends Controller
 
         $communes = new Communes();
         Util::fill( $communes, [ 'description', 'arrondissement_id'], $request);
-        //$communes->created_by = Auth()->user()[ 'id'];
+        $communes->created_by = Auth()->user()[ 'id'];
 
         return Util::try_save( $communes, null, [ 'sender' => 'Communes', 'redirect_url' => 'communes',
             'success' => 'Commune créée avec succès']);

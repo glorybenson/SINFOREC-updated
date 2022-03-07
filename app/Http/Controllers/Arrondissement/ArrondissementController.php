@@ -50,7 +50,7 @@ class ArrondissementController extends Controller
 
         $arrondissement = new Arrondissement();
         Util::fill( $arrondissement, [ 'description', 'department_id'], $request);
-        //$arrondissement->created_by = Auth()->user()[ 'id'];
+        $arrondissement->created_by = Auth()->user()[ 'id'];
 
         return Util::try_save( $arrondissement, null, [ 'sender' => 'Arrondissement', 'redirect_url' => 'arrondissement',
             'success' => 'Arrondissement créé avec succès']);

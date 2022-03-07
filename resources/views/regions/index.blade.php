@@ -30,7 +30,7 @@
                                     <th>La description</th>
                                     <th>Pays</th>
                                     <th>Créé par</th>
-                                    <th>Créé sur</th>
+                                    <th>Créé le</th>
                                     <th>Action</th>
                                 </thead>
                                         @foreach ( $regions as $item)

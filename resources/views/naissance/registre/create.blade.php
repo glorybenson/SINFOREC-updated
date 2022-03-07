@@ -523,8 +523,8 @@
                         </div>
                         <div class="form-navigation float-right mr-4" id="new">
                             <button type="button" class="previous btn btn-primary p-2 pr-3 pl-3 mr-3"> Précédente</button>
-                            <button id="draft" type="button" class="btn btn-primary p-2 pr-3 pl-3">Enregistrer comme brouillon</button>
-                            <button type="button" class="next btn btn-primary ml-2 p-2 pr-3 pl-3">Continuez</button>
+                            <button id="draft" type="button" class="btn btn-primary p-2 pr-3 pl-3">Sauvegarder</button>
+                            <button type="button" class="next btn btn-primary ml-2 p-2 pr-3 pl-3">Sauver et Continuer</button>
                             <input type="submit" class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right" value="Sauver et Sortir">
                             <span class="clearfix"></span>
                         </div>

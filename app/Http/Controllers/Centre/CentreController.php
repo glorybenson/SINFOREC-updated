@@ -62,7 +62,7 @@ class CentreController extends Controller
 
         $centres = new Centre();
         Util::fill( $centres, [ 'arrondissements', 'communes', 'regions', 'description', 'departments'], $request);
-        //$centres->created_by = Auth::user()[ 'id'];
+        $centres->created_by = Auth::user()[ 'id'];
 
         return Util::try_save( $centres, null, [ 'sender' => 'Centres', 'redirect_url' => 'centre',
             'success' => 'Centre créée avec succès']);

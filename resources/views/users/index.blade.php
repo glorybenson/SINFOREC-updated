@@ -31,7 +31,7 @@
                                 <th>Nom de famille</th>
                                 <th>e-mail</th>
                                 <th>Créé par</th>
-                                <th>Créé sur</th>
+                                <th>Créé le</th>
                                 <th>Dernière connexion</th>
                                 <th>Action</th>
                             </thead>

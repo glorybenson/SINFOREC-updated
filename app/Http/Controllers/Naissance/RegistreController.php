@@ -17,14 +17,14 @@ class RegistreController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
-    {
+    /*{
         $add = DB::table('naissance')
             ->join('users', 'naissance.created_by', '=', 'users.id')
             ->select('naissance.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->get();
 
         return view('naissance.registre.index', ['add' => collect($add)]);
-    }
+    }*/
 
     /**
      * Show the form for creating a new resource.

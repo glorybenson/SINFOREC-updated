@@ -49,7 +49,7 @@ class PaysController extends Controller
         ]);
         $pay = new Pay;
         Util::fill( $pay, [ 'description'], $request);
-        $pay->created_by = Auth::user()[ 'id'];
+        //$pay->created_by = Auth::user()[ 'id'];
 
         return Util::try_save( $pay, null, [ 'sender' => 'Pays', 'redirect_url' => 'pays', 'success' => 'Pays créé avec succès']);
     }

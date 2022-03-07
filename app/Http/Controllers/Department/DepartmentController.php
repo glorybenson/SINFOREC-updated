@@ -48,7 +48,7 @@ class DepartmentController extends Controller
         ]);
         $department = new Department();
         Util::fill( $department, [ 'description', 'region_id'], $request);
-        $department->created_by = Auth()->user()[ 'id'];
+        //$department->created_by = Auth()->user()[ 'id'];
 
         return Util::try_save( $department, null, [ 'sender' => 'Department', 'redirect_url' => 'department', 'success' => 'Département créé avec succès']);
     }

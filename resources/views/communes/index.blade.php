@@ -31,7 +31,7 @@
                                     <th>La description</th>
                                     <th>Arrondissement</th>
                                     <th>Créé par</th>
-                                    <th>Créé sur</th>
+                                    <th>Créé le</th>
                                     <th>Action</th>
                                 </thead>
                                 <tbody>

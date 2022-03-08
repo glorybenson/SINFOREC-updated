@@ -9,7 +9,7 @@
                 <div class="d-flex align-items-center">
                     <h5 class="page-title">Dashboard</h5>
                     <ul class="breadcrumb ml-2">
-                        <li class="breadcrumb-item active">Change Password</li>
+                        <li class="breadcrumb-item active">Changer le mot de passe</li>
                     </ul>
                 </div>
             </div>
@@ -19,7 +19,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title float-left">Change Password</h4>
+                    <h4 class="card-title float-left">Changer le mot de passe</h4>
                     <div class="text-right">
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     <form method="POST" action="{{ route('change.password') }}">
                         @csrf
                         <div class="row mb-3">
-                            <label for="current_password" class="col-md-3 col-form-label text-md-end">{{ __('Current Password') }}</label>
+                            <label for="current_password" class="col-md-3 col-form-label text-md-end">{{ __('Mot de passe actuel') }}</label>
                             <div class="col-md-9">
                                 <input id="current_password" type="password" class="form-control @error('current_password') is-invalid @enderror" name="current_password" required>
                                 @error('current_password')
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="new_password" class="col-md-3 col-form-label text-md-end">{{ __('New Password') }}</label>
+                            <label for="new_password" class="col-md-3 col-form-label text-md-end">{{ __('nouveau mot de passe') }}</label>
                             <div class="col-md-9">
                                 <input id="new_password" type="password" class="form-control @error('new_password') is-invalid @enderror" name="new_password" required>
                                 @error('new_password')
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="confirm_new_password" class="col-md-3 col-form-label text-md-end">{{ __('Confirm New Password') }}</label>
+                            <label for="confirm_new_password" class="col-md-3 col-form-label text-md-end">{{ __('Confirmer le nouveau mot de passe') }}</label>
                             <div class="col-md-9">
                                 <input id="confirm_new_password" type="password" class="form-control @error('confirm_new_password') is-invalid @enderror" name="confirm_new_password" required>
                                 @error('confirm_new_password')
@@ -64,7 +64,7 @@
                         <div class="">
                             <div class="text-right m-3">
                                 <button type="submit" class="btn btn-primary p-2" onclick="return confirm('Are you sure you want to submit this form?')">
-                                    {{ __('Update Profile') }}
+                                    {{ __('Mettre à jour le profil') }}
                                 </button>
                             </div>
                         </div>

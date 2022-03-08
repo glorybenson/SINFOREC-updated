@@ -44,15 +44,6 @@ class HomeController extends Controller
         return view('users.index', $data);
     }
 
-    function send_notification($message, $first = null, $last = null)
-        {
-            $data = [
-                'message' => $message,
-                'data' => $first . ' ' . $last
-            ];
-            Notification::send(Auth::user(), new GeneralNotification($data));
-        }
-
     public function my_profile(Request $request)
     {
         try {

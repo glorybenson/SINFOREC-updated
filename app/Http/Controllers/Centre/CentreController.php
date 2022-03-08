@@ -53,8 +53,8 @@ class CentreController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'arrondissements' => 'required',
-            'communes' => 'required',
+            //'arrondissements' => 'required',
+            //'communes' => 'required',
             'regions' => 'required',
             'description' => 'required',
             'departments' => 'required'

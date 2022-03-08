@@ -240,6 +240,10 @@
                     for (const element of $sections) {
                         var wizardClass = 'wizard-navs-' + $sections.index($sections.filter('.current')[0]);
                         document.getElementById(wizardClass).className = "wizard-filled";
+
+                        var newWizardClass = 'wizard-navs-' + (curIndex()+1);
+                        document.getElementById(newWizardClass).className = "wizard-active";
+
                         wizardCurrent = document.getElementById(wizardClass)
                     }
                     var wizardCurrentIcon = 'wizard-navs-icon-' + curr;

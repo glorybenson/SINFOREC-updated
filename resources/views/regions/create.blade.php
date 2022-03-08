@@ -50,6 +50,7 @@
                                             <div class="col-md-10">
                                                 <select class="selectpicker w-100" data-live-search="true" name="pay_id"
                                                     required aria-label=".form-select-lg example">
+                                                    <option value="" selected>--</option>
                                                     @for( $i = 0; $i < count( $countries); ++$i)
                                                         <option value="{{ $countries[ $i]->id }}">{{ $countries[ $i]->description }}</option>
                                                     @endfor

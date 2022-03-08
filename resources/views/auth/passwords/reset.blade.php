@@ -38,10 +38,8 @@
                             <h1>Réinitialiser le mot de passe</h1>
                             <p class="account-subtitle">
                                 @if (session('status'))
-                            <!---<div class="alert alert-success" role="alert">--->
-                            Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail
+                            <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
-                                {{ __('Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail !') }}
                             </div>
                             @endif
                             </p>
@@ -63,7 +61,7 @@
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <!--<strong>{{ $message }}</strong>-->
                                     </span>
                                     @enderror
                                 </div>

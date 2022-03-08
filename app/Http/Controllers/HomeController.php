@@ -309,27 +309,26 @@ class HomeController extends Controller
 
         return $createUser;
     }
-}
 
-public function delete_notification(Request $request)
-{
-    # code...
-    $Notification = Auth::user()->Notifications->find($request->not_id);
-    if ($Notification) {
-        $Notification->markAsRead();
+    public function delete_notification(Request $request)
+    {
+        # code...
+        $Notification = Auth::user()->Notifications->find($request->not_id);
+        if ($Notification) {
+            $Notification->markAsRead();
+        }
+        // $data = array(
+        //     'data' => $Notification,
+        //     'request' => $request
+        // );
+        return true;
     }
-    // $data = array(
-    //     'data' => $Notification,
-    //     'request' => $request
-    // );
-    return true;
-}
 
-public function delete_all_notification()
-{
-    # code...
-    $user = Auth::user();
-    $user->unreadNotifications()->update(['read_at' => now()]);
-    return back();
-}
+    public function delete_all_notification()
+    {
+        # code...
+        $user = Auth::user();
+        $user->unreadNotifications()->update(['read_at' => now()]);
+        return back();
+    }
 }

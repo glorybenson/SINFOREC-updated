@@ -7,7 +7,7 @@
                 <div class="d-flex align-items-center">
                     <h5 class="page-title">Dashboard</h5>
                     <ul class="breadcrumb ml-2">
-                        <li class="breadcrumb-item active">Users</li>
+                        <li class="breadcrumb-item active">Utilisateur</li>
                     </ul>
                 </div>
             </div>
@@ -17,7 +17,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title float-left">Users</h4>
+                    <h4 class="card-title float-left">Utilisateur</h4>
                     <div class="text-right">
                         <a href="{{ route('create.user') }}" class="btn btn-dark px-3">Créer un Utilisateur</a>
                     </div>

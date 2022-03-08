@@ -138,7 +138,7 @@
                         <div class="">
                             <div class="text-right m-3">
                                 <button type="submit" class="btn btn-primary p-2" onclick="return confirm('Are you sure you want to submit this form?')">
-                                    {{ __('Update Profile') }}
+                                    {{ __('Mettre à jour le profil') }}
                                 </button>
                             </div>
                         </div>

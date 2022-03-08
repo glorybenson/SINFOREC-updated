@@ -6346,6 +6346,11 @@ input:checked+.slider:before {
     font-weight: 600;
 }
 
+.wizard-active {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
 .wizard-filled {
     color: #04AA6D !important;
     font-weight: 600;

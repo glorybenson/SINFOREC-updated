@@ -81,7 +81,7 @@
                 <div class="d-flex align-items-center">
                     <h5 class="page-title">Dashboard</h5>
                     <ul class="breadcrumb ml-2">
-                        <li class="breadcrumb-item active">Update Profile</li>
+                        <li class="breadcrumb-item active">Mettre à jour le profil</li>
                     </ul>
                 </div>
             </div>
@@ -91,7 +91,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title float-left">My Profile</h4>
+                    <h4 class="card-title float-left">Mon profil</h4>
                     <div class="text-right">
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                         <input type="hidden" name="id" value="{{ Auth::user()->id }}">
 
                         <div class="row mb-3">
-                            <label for="first_name" class="col-md-3 col-form-label text-md-end">{{ __('First Name') }}</label>
+                            <label for="first_name" class="col-md-3 col-form-label text-md-end">{{ __('Prénom') }}</label>
                             <div class="col-md-9">
                                 <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ Auth::user()->first_name }}" autocomplete="first name" required>
                                 @error('first_name')
@@ -113,7 +113,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="last_name" class="col-md-3 col-form-label text-md-end">{{ __('Last Name') }}</label>
+                            <label for="last_name" class="col-md-3 col-form-label text-md-end">{{ __('Nom de famille') }}</label>
                             <div class="col-md-9">
                                 <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ Auth::user()->last_name }}" required autocomplete="last name">
                                 @error('last_name')
@@ -125,7 +125,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-3 col-form-label text-md-end">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-3 col-form-label text-md-end">{{ __('E-Mail') }}</label>
                             <div class="col-md-9">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email">
                                 @error('email')

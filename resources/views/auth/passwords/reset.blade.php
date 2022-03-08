@@ -39,7 +39,9 @@
                             <p class="account-subtitle">
                                 @if (session('status'))
                             <div class="alert alert-success" role="alert">
-                                {{ __('Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail') }}
+                            Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail
+                                {{ session('status') }}
+                                {{ __('Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail !') }}
                             </div>
                             @endif
                             </p>

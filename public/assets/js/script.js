@@ -256,6 +256,13 @@
                 });
             });
 
+            // Navigate to a specific section by clicking the title in sidebar
+            $('#wizard-ul a').click(function () {
+                // get the index by checking the id
+                const indexMatch = $(this).attr('id').match(/wizard-navs-(\d+)/);
+                navigateTo(indexMatch ? indexMatch[1] : 0);
+            });
+
             // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
             $sections.each(function(index, section) {
                 $(section).find(':input').attr('data-parsley-group', 'block-' + index);

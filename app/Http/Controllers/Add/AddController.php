@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use App\Models\Add;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class AddController extends Controller
 {
@@ -93,7 +94,7 @@ class AddController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return back()->with('success', 'Ajout créée avec succès');
+        return Redirect::route('naissance.registre')->with('success', 'Ajout créée avec succès');
     }
 
     /**

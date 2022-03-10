@@ -116,7 +116,42 @@
                                         <h6>#</h6>
                                     </div>
                                 </div>
-                                    </div>                      
-                                </div>      
-                                </div>              
+
+
+                                <table class="table mb-0 table-striped border-0 data-table" id="datatable">
+                                <thead class="thead-light">
+                                <th></th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                        <td>
+                                        Date de Déclaration
+                                        </td>
+                                        <td>
+                                           #
+                                        </td>                                      
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        Date de Déclaration
+                                        </td>
+                                        <td>
+                                           #
+                                        </td>                                      
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        Date de Déclaration
+                                        </td>
+                                        <td>
+                                           #
+                                        </td>                                      
+                                    </tr>
+                                    </tbody>
+                            </table>
+                        </div>                      
+                    </div>      
+                </div>              
 @endsection                              

@@ -40,7 +40,7 @@
                                         <h6>Prénom</h6>
                                     </div>
                                     <div class="col-9">
-                                        <h6>{{ $user->first_name }}</h6>
+                                        <h6>{{ $add->child_info-date_of_decl }}</h6>
                                     </div>
                                 </div>
 @endsection                              

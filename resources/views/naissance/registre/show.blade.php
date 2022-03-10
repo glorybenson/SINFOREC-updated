@@ -1,11 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<style>
-    .badge {
-        font-size: 16px;
-    }
-</style>
+
 <div class="row">
     <div class="col-md-10 mx-auto">
         <div class="mt-3">
@@ -53,6 +49,3 @@
                                         <h6>{{ $item->values->{'child_info-date_of_decl'} }}</h6>
                                     </div>
                                 </div>-->
-
-<!--@include('layouts.includes.filterJs')-->
-@endsection

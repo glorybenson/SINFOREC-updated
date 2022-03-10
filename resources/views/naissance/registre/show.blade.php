@@ -35,87 +35,102 @@
                                     <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
                             </div>
                             </div>
-                            <div class="card-body">
-                                <div class="row pr-3 pl-3">
-                                <div class="col-3">
-                                        <p>Date de Déclaration</p>
-                                    </div>
+                            <div class="card-body pb-5">
                                     <div class="list-group-item">
-                                    <div class="col-9">
-                                        <p>#</p>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                        Date de Déclaration
+                                    </div>
+                                    <div class="col-md-7">
+                                    #
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Numéro de déclaration</p>
+                                </div>
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                Numéro de déclaration</p>
                                     </div>
-                                    <div class="col-9">
-                                        <p>#</p>
+                                    <div class="col-md-7">
+                                       #
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Prénom de l'enfant </p>
+                                </div>
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                Prénom de l'enfant
                                     </div>
-                                    <div class="col-9">
-                                        <p>#</p>
+                                    <div class="col-md-7">
+                                        #
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Nom de famille de l'enfant</p>
+                                </div>
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                       Nom de famille de l'enfant
                                     </div>
-                                    <div class="col-9">
-                                        <p>#</p>
+                                    <div class="col-md-7">
+                                        #
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Date de Naissance de l'enfant</p>
+                                </div>
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                        Date de Naissance de l'enfant
                                     </div>
-                                    <div class="col-9">
-                                        <p>#</p>
+                                    <div class="col-md-7">
+                                        #
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Heure de Naissance</p>
+                                </div>
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                        Heure de Naissance
                                     </div>
-                                    <div class="col-9">
-                                        <p>#</p>
+                                   <div class="col-md-7">   #
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Lieu de Naissance</p>
+                                
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                        Lieu de Naissance
                                     </div>
-                                    <div class="col-9">
-                                        <p>#</p>
-                                    </div>
-                                </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Sexe</p>
-                                    </div>
-                                    <div class="col-9">
-                                        <p>#</p>
+                                    <div class="col-md-7">
+                                       #
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                <div class="row pr-3 pl-3">
-                                    <div class="col-3">
-                                        <p>Formation sanitaire</p>
+                                </div>
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                       Sexe
+                                       <div class="col-md-7">
+                                       #
                                     </div>
-                                    <div class="col-9">
-                                        <p>#</p>
+                                </div>
+                                </div>
+                                <div class="card-body pb-5">
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                        Formation sanitaire
                                     </div>
+                                    <div class="col-md-7">
+                                        #
+                                    </div>
+                                </div>
                                 </div>                   
                         </div>                      
                     </div>      

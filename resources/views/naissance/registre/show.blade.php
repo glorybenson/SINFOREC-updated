@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="col-9">
                                         <p>{{ $add = DB::table('naissance_add')
-                                            ->get('first_name') }}<P>
+                                            ->get('child_info-first_name') }}<P>
                                     </div>
                                 </div>
                                 <hr>

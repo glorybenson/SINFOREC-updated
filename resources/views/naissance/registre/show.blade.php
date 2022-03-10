@@ -37,16 +37,10 @@
                                 <div class="card-body">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                    @foreach ($add as $item)
-                                    @php
-                                        if(isset($item))
-                                            $item->values = json_decode( $item->values);
-                                    @endphp
                                         <h6>Prénom</h6>
                                     </div>
                                     <div class="col-9">
                                         <h6>{{ $item->values->{'child_info-last_name'} }}</h6>
-                                    @endforeach
                                     </div>
                                 </div>
 @endsection                              

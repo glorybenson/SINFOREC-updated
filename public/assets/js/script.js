@@ -228,6 +228,11 @@
             $('.form-navigation .previous').click(function() {
                 console.log(curIndex())
                 navigateTo(curIndex() - 1);
+
+
+                $('#wizard-ul a').removeClass('wizard-active');
+                var formerWizardClass = 'wizard-navs-' + curIndex();
+                document.getElementById(formerWizardClass).className = "wizard-active";
             });
 
             // Next button goes forward iff current block validates
@@ -237,6 +242,7 @@
                 }).done(function() {
                     var curr = $sections.index($sections.filter('.current'));
                     var wizardCurrent = '';
+
                     for (const element of $sections) {
                         var wizardClass = 'wizard-navs-' + $sections.index($sections.filter('.current')[0]);
                         document.getElementById(wizardClass).className = "wizard-filled";

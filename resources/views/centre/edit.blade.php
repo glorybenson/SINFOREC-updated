@@ -56,7 +56,7 @@
                                                         id="region">
                                                     <option selected>--</option>
                                                     @foreach ($regions as $item)
-                                                        <option value="{{ ((object)$item)->description }}">
+                                                        <option value="{{ ((object)$item)->id }}">
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>
@@ -75,7 +75,7 @@
                                                         id="region">
                                                     <option value="" selected>--</option>
                                                     @foreach ( $departments as $item)
-                                                        <option value="{{ ((object)$item)->description }}">
+                                                        <option value="{{ ((object)$item)->id }}">
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>
@@ -92,9 +92,9 @@
                                             <div class="col-md-10">
                                                 <select data-live-search="true" name="arrondissements"
                                                     class="selectpicker w-100" id="region">
-                                                    <option value="" selected>--</option>
+                                                    <option value="0" selected>--</option>
                                                     @foreach ($arrondissements as $item)
-                                                        <option value="{{ ((object)$item)->description }}">
+                                                        <option value="{{ ((object)$item)->id }}">
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>
@@ -111,9 +111,9 @@
                                             <div class="col-md-10">
                                                 <select data-live-search="true" name="communes" class="selectpicker w-100"
                                                     id="region">
-                                                    <option value="" selected>--</option>
+                                                    <option value="0" selected>--</option>
                                                     @foreach ($communes as $item)
-                                                        <option value="{{ ((object)$item)->description }}">
+                                                        <option value="{{ ((object)$item)->id }}">
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>

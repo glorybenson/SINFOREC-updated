@@ -79,7 +79,7 @@ class AddController extends Controller
             $add = new Add();
             $add->values = json_encode( $inputs);
             $add->created_by = Auth::user()[ 'id'];
-            $add->done = isset( $ajax_call);
+            $add->done = isset( $ajax_call) ? 'yes' : 'no';
             $add->save();
             $inputs[ 'id'] = $add->id;
             $add->values = json_encode( $inputs);
@@ -126,6 +126,7 @@ class AddController extends Controller
         $binding[ 'old'] = $old->values;
         $binding[ 'post_url'] = route( 'naissance.registre.edit.post', [ 'id' => $id]);
         $binding[ 'page_url'] = route( 'naissance.registre.edit', [ 'id' => $id]);
+        $binding[ 'is_edit'] = true;
 
         return view('naissance.registre.create', $binding);
     }

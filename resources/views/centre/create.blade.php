@@ -93,7 +93,6 @@
                                                 <div class="col-md-10">
                                                     <select data-live-search="true" data-name="arrondissements" name="arrondissements"
                                                             class="selectpicker w-100 modifiable" id="arrondissements">
-                                                        <option value="" selected>--</option>
                                                         @foreach ($arrondissements as $item)
                                                             <option value="{{ ((object)$item)->id }}">
                                                                 {{ ((object)$item)->description }}</option>
@@ -114,7 +113,6 @@
                                                 <div class="col-md-10">
                                                     <select data-live-search="true" data-name="communes" name="communes"
                                                             class="selectpicker w-100 modifiable" id="communes">
-                                                        <option value="" selected>--</option>
                                                         @foreach ($communes as $item)
                                                             <option value="{{ ((object)$item)->id }}">
                                                                 {{ ((object)$item)->description }}</option>

@@ -95,7 +95,7 @@
                 $( 'div.modifiable').find( 'select').change();
             }
 
-            $( '#draft').on( 'click', function () {
+            $( '.draft').on( 'click', function () {
 
                 act( {}, saveData);
             });
@@ -271,7 +271,7 @@
             Array.from( target.get( 0).attributes).map( function ( each) {
                 dropdown.attr( each.name, each.value);
             });
-            dropdown.append( $( '<option>--</option>'));
+            dropdown.append( $( '<option value="0">--</option>'));
             filler.forEach( function ( each) {
                 const option = $( '<option/>');
                 option.attr( 'value', each[ 'id']);

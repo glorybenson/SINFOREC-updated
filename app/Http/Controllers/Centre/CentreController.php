@@ -53,8 +53,8 @@ class CentreController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            //'arrondissements' => 'required',
-            //'communes' => 'required',
+            'arrondissements' => 'nullable',
+            'communes' => 'nullable',
             'regions' => 'required',
             'description' => 'required',
             'departments' => 'required'
@@ -114,8 +114,8 @@ class CentreController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'arrondissements' => 'required',
-            'communes' => 'required',
+            'arrondissements' => 'nullable',
+            'communes' => 'nullable',
             'regions' => 'required',
             'description' => 'required',
             'departments' => 'required',

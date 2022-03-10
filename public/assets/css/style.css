@@ -6341,6 +6341,11 @@ input:checked+.slider:before {
     /* font-weight: 600; */
 }
 
+#wizard-ul li p a.wizard-filled:hover {
+    color: #000000 !important;
+    /* font-weight: 600; */
+}
+
 .wizard-nav-active {
     color: #04AA6D;
     font-weight: 600;

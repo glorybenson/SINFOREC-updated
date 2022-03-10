@@ -41,7 +41,7 @@
                                         <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -59,7 +59,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ ('first_name') }}</p>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -68,7 +68,12 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p><input value="{{ $add->get('first_name') }}" class="form-control"
+                                                    id="first_name" name="first_name" required>
+                                                @if ($errors->has('first_name'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors->first('first_name') }}</strong>
+                                                    </span></p>
                                     </div>
                                 </div>
                                 <hr>

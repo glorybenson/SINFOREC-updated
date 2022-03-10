@@ -50,7 +50,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $registre->first_name }} </p>
+                                        <p>{{ $registre->child_info-first_name }} </p>
                                     </div>
                                 </div>
                                 <hr>

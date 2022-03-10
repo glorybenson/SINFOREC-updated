@@ -59,7 +59,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p>{{ $add->get('first_name') }}</p>
                                     </div>
                                 </div>
                                 <hr>

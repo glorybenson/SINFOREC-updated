@@ -44,7 +44,7 @@
                                         if(isset($item))
                                             $item->values = json_decode( $item->values);
                                     @endphp-->
-                                <div class="card-body">
+                                <!--<div class="card-body">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <h6>Date de Déclaration</h6>
@@ -52,7 +52,7 @@
                                     <div class="col-9">
                                         <h6>{{ $item->values->{'child_info-date_of_decl'} }}</h6>
                                     </div>
-                                </div>
+                                </div>-->
 
 <!--@include('layouts.includes.filterJs')-->
 @endsection

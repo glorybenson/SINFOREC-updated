@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="col-9">
                                         <p>
-                                        <input id="child_info-date_of_decl" placeholder="Select date" type="date" name="child_info-date_of_decl" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
+                                        <get id="child_info-date_of_decl" >
                                                 <span class="feedback-new" id="invalid-feedback7" role="alert"></span><P>
                                     </div>
                                 </div>

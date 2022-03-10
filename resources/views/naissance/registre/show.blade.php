@@ -51,7 +51,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>['registre' => collect('child_info-last_name')] </p>
+                                        <p> </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -69,9 +69,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>
-                                         </p>
-
+                                        ['registre' => collect('child_info-last_name')];
                                     </div>
                                 </div>
                                 <hr>

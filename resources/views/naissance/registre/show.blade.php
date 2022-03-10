@@ -40,7 +40,7 @@
                                         <h6>Prénom</h6>
                                     </div>
                                     <div class="col-9">
-                                        <h6>{{ $item->values->{'child_info-last_name'} }}</h6>
+                                        <h6>{{ $registre->values->{'child_info-last_name'} }}</h6>
                                     </div>
                                 </div>
 @endsection                              

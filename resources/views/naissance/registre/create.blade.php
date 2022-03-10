@@ -516,7 +516,6 @@
                                                 <label for="judgment-region">Régions</label>
                                                 @if (isset($regions))
                                                     <select id="judgment-region" data-live-search="true" name="judgment-region" class="selectpicker w-100 serializable removable" tabindex="4" data-parsley-errors-container="#invalid-feedback46" required >
-                                                        <option value="" selected>--</option>
                                                         @foreach ($regions as $item)
                                                             <option value="{{ ((object)$item)->id }}">
                                                                 {{ ((object)$item)->description }}

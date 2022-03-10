@@ -25,5 +25,4 @@
                     </div>
                 </div>
 
-@include('layouts.includes.filterJs')
 @endsection

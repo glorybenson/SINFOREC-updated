@@ -34,28 +34,30 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($pays as $pay)
-                                        <tr>
-                                            <td>
-                                                {{ $pay->description }}
-                                            </td>
-                                            <td>
-                                                {{ \App\Models\User::find( $pay->created_by)->first_name }}
-                                            </td>
-                                            <td>
-                                                {{ $pay->created_at }}
-                                            </td>
-                                            <td>
-                                                <a class="text-dark"
-                                                    href="{{ route('pays.show', ['id' => $pay->id, 'rt' => time()]) }}"><i
-                                                        class="feather-eye"></i></a>
-                                                <a href="{{ route('pays.edit', ['id' => $pay->id]) }}"
-                                                    class="mx-2 text-dark"><i class="feather-edit"></i></a>
-<!--                                                <a class="text-dark"
-                                                    onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                                    href="{{ route('pays.delete', ['id' => $pay->id]) }}"><i
-                                                        class="feather-trash"></i></a>-->
-                                            </td>
-                                        </tr>
+                                        @if ($pay->id > 0)
+                                            <tr>
+                                                <td>
+                                                    {{ $pay->description }}
+                                                </td>
+                                                <td>
+                                                    {{ \App\Models\User::find( $pay->created_by)->first_name }}
+                                                </td>
+                                                <td>
+                                                    {{ $pay->created_at }}
+                                                </td>
+                                                <td>
+                                                    <a class="text-dark"
+                                                        href="{{ route('pays.show', ['id' => $pay->id, 'rt' => time()]) }}"><i
+                                                            class="feather-eye"></i></a>
+                                                    <a href="{{ route('pays.edit', ['id' => $pay->id]) }}"
+                                                        class="mx-2 text-dark"><i class="feather-edit"></i></a>
+    <!--                                                <a class="text-dark"
+                                                        onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
+                                                        href="{{ route('pays.delete', ['id' => $pay->id]) }}"><i
+                                                            class="feather-trash"></i></a>-->
+                                                </td>
+                                            </tr>
+                                        @endif
                                     @endforeach
                                 </tbody>
                             </table>

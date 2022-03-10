@@ -37,27 +37,29 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($arrondissement as $item)
-                                        <tr>
-                                            <td>
-                                                {{ $item->description }}
-                                            </td>
-                                            <td>{{ \App\Models\Department::find( $item->department_id)->description }}</td>
-                                            <td>
-                                                {{ \App\Models\User::find( $item->created_by)->first_name }}
-                                            </td>
-                                            <td>{{ $item->created_at }}</td>
-                                            <td>
-                                                <a class="text-dark"
-                                                    href="{{ route('arrondissement.show', ['id' => $item->id, 'rt' => time()]) }}"><i
-                                                        class="feather-eye"></i></a>
-                                                <a href="{{ route('arrondissement.edit', ['id' => $item->id]) }}"
-                                                    class="mx-2 text-dark"><i class="feather-edit"></i></a>
-<!--                                                <a class="text-dark"
-                                                    onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                                    href="{{ route('arrondissement.delete', ['id' => $item->id]) }}"><i
-                                                        class="feather-trash"></i></a>-->
-                                            </td>
-                                        </tr>
+                                        @if ($item->id > 0)
+                                            <tr>
+                                                <td>
+                                                    {{ $item->description }}
+                                                </td>
+                                                <td>{{ \App\Models\Department::find( $item->department_id)->description }}</td>
+                                                <td>
+                                                    {{ \App\Models\User::find( $item->created_by)->first_name }}
+                                                </td>
+                                                <td>{{ $item->created_at }}</td>
+                                                <td>
+                                                    <a class="text-dark"
+                                                        href="{{ route('arrondissement.show', ['id' => $item->id, 'rt' => time()]) }}"><i
+                                                            class="feather-eye"></i></a>
+                                                    <a href="{{ route('arrondissement.edit', ['id' => $item->id]) }}"
+                                                        class="mx-2 text-dark"><i class="feather-edit"></i></a>
+    <!--                                                <a class="text-dark"
+                                                        onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
+                                                        href="{{ route('arrondissement.delete', ['id' => $item->id]) }}"><i
+                                                            class="feather-trash"></i></a>-->
+                                                </td>
+                                            </tr>
+                                        @endif
                                     @endforeach
                                 </tbody>
                             </table>

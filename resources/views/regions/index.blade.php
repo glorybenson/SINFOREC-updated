@@ -34,26 +34,28 @@
                                     <th>Action</th>
                                 </thead>
                                         @foreach ( $regions as $item)
-                                            <tr>
-                                                <td>{{ $item->description }}</td>
-                                                <td>{{ \App\Models\Pay::find( $item->pay_id)->description }}</td>
-                                                <td>
-                                                    {{ \App\Models\User::find( $item->created_by)->first_name }}
-                                                </td>
-                                                <td>
-                                                {{ $item->created_at }}
-                                                <td>
-                                                    <a
-                                                        href="{{ route('region.show', ['id' => $item->id, 'rt' => time()]) }}"><i
-                                                            class="feather-eye"></i></a>
-                                                    <a class="px-2"
-                                                        href="{{ route('region.edit', ['id' => $item->id]) }}"> <i
-                                                            class="feather-edit"></i></a>
-<!--                                                    <a onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                                        href="{{ route('region.delete', ['id' => $item->id]) }}"><i
-                                                            class="feather-trash"></i></a>-->
-                                                </td>
-                                            </tr>
+                                            @if ($item->id > 0)
+                                                <tr>
+                                                    <td>{{ $item->description }}</td>
+                                                    <td>{{ \App\Models\Pay::find( $item->pay_id)->description }}</td>
+                                                    <td>
+                                                        {{ \App\Models\User::find( $item->created_by)->first_name }}
+                                                    </td>
+                                                    <td>
+                                                    {{ $item->created_at }}
+                                                    <td>
+                                                        <a
+                                                            href="{{ route('region.show', ['id' => $item->id, 'rt' => time()]) }}"><i
+                                                                class="feather-eye"></i></a>
+                                                        <a class="px-2"
+                                                            href="{{ route('region.edit', ['id' => $item->id]) }}"> <i
+                                                                class="feather-edit"></i></a>
+    <!--                                                    <a onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
+                                                            href="{{ route('region.delete', ['id' => $item->id]) }}"><i
+                                                                class="feather-trash"></i></a>-->
+                                                    </td>
+                                                </tr>
+                                            @endif
                                         @endforeach
                                 </tbody>
                             </table>

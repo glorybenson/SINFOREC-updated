@@ -35,7 +35,8 @@
                                         @csrf
                                         <div class="row mb-3">
                                             <label for="description"
-                                                   class="col-md-2 col-form-label text-md-end">Description</label>
+                                                   class="col-md-2 col-form-label text-md-end
+                                                   required">Description</label>
                                             <div class="col-md-10">
                                                 <input value="{{ old('description') }}" class="form-control" name="description" required>
                                                 @if ($errors->has('description'))
@@ -46,7 +47,7 @@
                                             </div>
                                         </div>
                                         <div class="row mb-3">
-                                            <label for="description" class="col-md-2 col-form-label text-md-end">
+                                            <label for="description" class="col-md-2 col-form-label text-md-end required">
                                                 Region</label>
                                             @if (isset($regions))
                                                 <div class="col-md-10">
@@ -54,8 +55,10 @@
                                                             class="selectpicker w-100 modifiable" id="regions">
                                                         <option value="" selected>--</option>
                                                         @foreach ($regions as $item)
-                                                            <option value="{{ ((object)$item)->id }}">
-                                                                {{ ((object)$item)->description }}</option>
+                                                            @if (((object)$item)->id > 0)
+                                                                <option value="{{ ((object)$item)->id }}">
+                                                                    {{ ((object)$item)->description }}</option>
+                                                            @endif
                                                         @endforeach
                                                     </select>
                                                     @if ($errors->has('regions'))
@@ -67,15 +70,17 @@
                                             @endif
                                         </div>
                                         <div class="row mb-3">
-                                            <label for="description" class="col-md-2 col-form-label text-md-end">
+                                            <label for="description" class="col-md-2 col-form-label text-md-end required">
                                                 Département</label>
                                             @if (isset($departments))
                                                 <div class="col-md-10">
                                                     <select data-live-search="true" data-name="departments" name="departments" id="departments" class="selectpicker w-100 modifiable">
                                                         <option value="" selected>--</option>
                                                         @foreach ($departments as $item)
-                                                            <option value="{{ ((object)$item)->id }}">
-                                                                {{ ((object)$item)->description }}</option>
+                                                            @if (((object)$item)->id > 0)
+                                                                <option value="{{ ((object)$item)->id }}">
+                                                                    {{ ((object)$item)->description }}</option>
+                                                            @endif
                                                         @endforeach
                                                     </select>
                                                     @if ($errors->has('departments'))
@@ -93,9 +98,12 @@
                                                 <div class="col-md-10">
                                                     <select data-live-search="true" data-name="arrondissements" name="arrondissements"
                                                             class="selectpicker w-100 modifiable" id="arrondissements">
+                                                        <option value="0" selected>N/A</option>
                                                         @foreach ($arrondissements as $item)
-                                                            <option value="{{ ((object)$item)->id }}">
-                                                                {{ ((object)$item)->description }}</option>
+                                                            @if (((object)$item)->id > 0)
+                                                                <option value="{{ ((object)$item)->id }}">
+                                                                    {{ ((object)$item)->description }}</option>
+                                                            @endif
                                                         @endforeach
                                                     </select>
                                                     @if ($errors->has('arrondissements'))
@@ -113,9 +121,12 @@
                                                 <div class="col-md-10">
                                                     <select data-live-search="true" data-name="communes" name="communes"
                                                             class="selectpicker w-100 modifiable" id="communes">
+                                                        <option value="0" selected>N/A</option>
                                                         @foreach ($communes as $item)
-                                                            <option value="{{ ((object)$item)->id }}">
-                                                                {{ ((object)$item)->description }}</option>
+                                                            @if (((object)$item)->id > 0)
+                                                                <option value="{{ ((object)$item)->id }}">
+                                                                    {{ ((object)$item)->description }}</option>
+                                                            @endif
                                                         @endforeach
                                                     </select>
                                                 @if ($errors->has('commune'))

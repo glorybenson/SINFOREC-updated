@@ -79,11 +79,11 @@ class AddController extends Controller
             $add = new Add();
             $add->values = json_encode( $inputs);
             $add->created_by = Auth::user()[ 'id'];
-            $add->done = isset( $ajax_call) ? 'yes' : 'no';
+            $add->done = isset( $ajax_call) ? 'no' : 'yes';
             $add->save();
-            $inputs[ 'id'] = $add->id;
-            $add->values = json_encode( $inputs);
-            $add->update();
+            //$inputs[ 'id'] = $add->id;
+            //$add->values = json_encode( $inputs);
+            //$add->update();
         }
 
         if ( isset( $ajax_call))

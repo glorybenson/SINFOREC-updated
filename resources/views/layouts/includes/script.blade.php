@@ -62,7 +62,7 @@
 
                 if( guide.length > 0)
                 {
-                    placeholders.find( dropdown_sel).get( 0).textContent = '--';
+                    placeholders.find( dropdown_sel).get( 0).textContent = 'N/A';
                     for ( let i = order.indexOf( pin); i < order.length; ++i)
                     {
                         const optionLabel = guide[ 0][ order[ i]];

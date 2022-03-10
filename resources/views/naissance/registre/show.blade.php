@@ -119,7 +119,7 @@
 
 
                                 <table>
-                                <thead class="thead-light">
+                                <thead>
                                 <th></th>
                                 <th></th>
                                 </thead>

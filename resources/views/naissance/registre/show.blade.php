@@ -35,13 +35,18 @@
                                     <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
                             </div>
                             </div>
+                            @foreach ($add as $item)
+                                    @php
+                                        if(isset($item))
+                                            $item->values = json_decode( $item->values);
+                                    @endphp
                             <div class="card-body">
                                 <div class="row pr-3 pl-3">
                                 <div class="col-3">
                                         <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        </p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <hr>
@@ -50,7 +55,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $registre->pay }} </p>
+                                        <p>{{ $item->values->{'child_info-last_name'} }} </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -59,7 +64,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $item->values->{'father_info-country'} }}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -69,7 +74,7 @@
                                     </div>
                                     <div class="col-9">
                                         <p>
-                                        <registre id="child_info-date_of_decl" > </p>
+                                        {{ $item->values->{'mother_info-family_name'} }} </p>
 
                                     </div>
                                 </div>
@@ -117,7 +122,8 @@
                                     <div class="col-9">
                                         <p></p>
                                     </div>
-                                </div>                   
+                                </div>   
+                                @endforeach      
                         </div>                      
                     </div>      
                 </div>            

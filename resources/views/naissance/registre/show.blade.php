@@ -34,5 +34,13 @@
                                     <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
                                 </div>
                                 </div>
-
+                                <div class="card-body">
+                                <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Prénom</h6>
+                                    </div>
+                                    <div class="col-9">
+                                        <h6>{{ $user->first_name }}</h6>
+                                    </div>
+                                </div>
 @endsection                              

@@ -160,7 +160,7 @@
                                                     <option value="" selected>--</option>
                                                     @if(isset($communes))
                                                         @foreach($communes as $commune)
-                                                            <option value="{{((object)$commune)->id}}" {{ old('communes') == ((object)$commune)->description ? 'selected' : '' }}>{{((object)$commune)->description}}</option>
+                                                            <option value="{{((object)$commune)->id}}">{{((object)$commune)->description}}</option>
                                                         @endforeach
                                                     @endif
                                                 </select>

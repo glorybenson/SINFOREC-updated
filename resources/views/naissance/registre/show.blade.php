@@ -68,7 +68,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        {$add =->get{('child_info-last_name')}}
+                                        {$add ->get{('child_info-last_name')}}
                                     </div>
                                 </div>
                                 <hr>

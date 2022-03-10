@@ -40,11 +40,12 @@
                                 <div class="col-3">
                                         <p>Date de Déclaration</p>
                                     </div>
+                                    <div class="list-group-item">
                                     <div class="col-9">
                                         <p>#</p>
                                     </div>
                                 </div>
-                                    <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Numéro de déclaration</p>
@@ -53,7 +54,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
-                                    <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Prénom de l'enfant </p>
@@ -62,7 +63,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
-                                    <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Nom de famille de l'enfant</p>
@@ -71,7 +72,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
-                                <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Date de Naissance de l'enfant</p>
@@ -80,7 +81,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
-                                <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Heure de Naissance</p>
@@ -89,7 +90,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
-                                <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Lieu de Naissance</p>
@@ -98,7 +99,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
-                                <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Sexe</p>
@@ -107,7 +108,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
-                                <hr>
+                                <div class="list-group-item">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Formation sanitaire</p>
@@ -118,5 +119,6 @@
                                 </div>                   
                         </div>                      
                     </div>      
-                </div>              
+                </div>            
+
 @endsection                              

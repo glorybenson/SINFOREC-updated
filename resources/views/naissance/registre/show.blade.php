@@ -30,7 +30,8 @@
                                     <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Bulletin de Naissance</li>
                                     <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Acte de Naissance</li>
                                 </ul>
-                            <hr>
+                            
+
                                     <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
                             </div>
                             </div>
@@ -65,6 +66,51 @@
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <h6>Nom de famille de l'enfant</h6>
+                                    </div>
+                                    <div class="col-9">
+                                        <h6>#</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Date de Naissance de l'enfant</h6>
+                                    </div>
+                                    <div class="col-9">
+                                        <h6>#</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Heure de Naissance</h6>
+                                    </div>
+                                    <div class="col-9">
+                                        <h6>#</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Lieu de Naissance</h6>
+                                    </div>
+                                    <div class="col-9">
+                                        <h6>#</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Sexe</h6>
+                                    </div>
+                                    <div class="col-9">
+                                        <h6>#</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Formation sanitaire</h6>
                                     </div>
                                     <div class="col-9">
                                         <h6>#</h6>

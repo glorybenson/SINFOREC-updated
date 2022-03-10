@@ -118,7 +118,7 @@
                                 </div>
 
 
-                                <table class="table mb-0 table-striped border-0 data-table" id="datatable">
+                                <table>
                                 <thead class="thead-light">
                                 <th></th>
                                 <th></th>

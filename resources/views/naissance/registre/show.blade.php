@@ -41,7 +41,7 @@
                                         <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p>{{ $item->{'child_info-dob'} }}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -59,7 +59,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $add->get('first_name') }}</p>
+                                        <p>{{ $add 'first_name' }}</p>
                                     </div>
                                 </div>
                                 <hr>

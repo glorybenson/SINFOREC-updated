@@ -53,6 +53,6 @@
                                         <h6>{{ $item->values->{'child_info-date_of_decl'} }}</h6>
                                     </div>
                                 </div>
-                                
-@include('layouts.includes.filterJs')
-@endsection
+
+<!--@include('layouts.includes.filterJs')
+@endsection-->

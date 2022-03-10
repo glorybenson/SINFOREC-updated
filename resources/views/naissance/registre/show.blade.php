@@ -59,7 +59,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $add->get('first_name') }}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -125,7 +125,7 @@
                     <li>
                     <div id="formControl">
                     <a>Zone Gérographique
-                                    <i id="open-menu" class="fa fa-chevron-right"></i>
+                                    <i id="open-menu"></i>
                                 </a> 
                             </div>
                             </li>

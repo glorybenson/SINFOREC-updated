@@ -32,25 +32,25 @@
                                 </ul>
                             
                                     <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
-                                </div>
-                                </div>
-                                <div class="card-body">
+                            </div>
+                            </div>
+                            <div class="card-body">
                                 <div class="row pr-3 pl-3">
-                                    <div class="col-3">
+                                <div class="col-3">
                                         <h6>Prénom</h6>
                                     </div>
                                     <hr>
-                                    <div class="row pr-3 pl-3">
+                                <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <h6>User Role</h6>
                                     </div>
                                     <hr>
-                                    <div class="row pr-3 pl-3">
+                                <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <h6>Pays</h6>
                                     </div>
                                     <hr>
-                                    <div class="row pr-3 pl-3">
+                                <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <h6>Départements</h6>
                                     </div>

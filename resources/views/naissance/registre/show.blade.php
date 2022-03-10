@@ -34,8 +34,24 @@
                                     <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Bulletin de Naissance</li>
                                     <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Acte de Naissance</li>
                                 </ul>
+                                <hr>
                                     <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
                                 </div>
+                                </div>
+
+                                @foreach ($add as $item)
+                                @php
+                                        if(isset($item))
+                                            $item->values = json_decode( $item->values);
+                                    @endphp
+                                <div class="card-body">
+                                <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Date de Déclaration</h6>
+                                    </div>
+                                    <div class="col-9">
+                                        <h6>{{ $item->values->{'child_info-date_of_decl'} }}</h6>
+                                    </div>
                                 </div>
 
 

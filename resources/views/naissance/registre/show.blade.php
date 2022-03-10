@@ -41,7 +41,7 @@
                                         <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $item->{'child_info-dob'} }}</p>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                 <hr>

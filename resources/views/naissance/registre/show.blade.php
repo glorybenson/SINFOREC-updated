@@ -46,6 +46,7 @@
                                     </div>
                                     <div class="col-9">
                                         <h6>{{ $item->values->{'child_info-last_name'} }}</h6>
+                                    @endforeach
                                     </div>
                                 </div>
 @endsection                              

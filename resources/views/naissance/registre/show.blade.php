@@ -51,7 +51,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $add->get('admin_first_name') }} </p>
+                                        <p>{{ $add->first_name }} </p>
                                     </div>
                                 </div>
                                 <hr>

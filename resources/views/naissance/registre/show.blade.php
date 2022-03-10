@@ -50,7 +50,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <hr>
@@ -59,7 +59,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <hr>
@@ -79,7 +79,7 @@
                                         <p>Date de Naissance de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <hr>
@@ -88,7 +88,7 @@
                                         <p>Heure de Naissance</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <hr>
@@ -97,7 +97,7 @@
                                         <p>Lieu de Naissance</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <hr>
@@ -106,7 +106,7 @@
                                         <p>Sexe</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <hr>
@@ -115,7 +115,7 @@
                                         <p>Formation sanitaire</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>#</p>
+                                        <p></p>
                                     </div>
                                 </div>                   
                         </div>                      

@@ -68,8 +68,8 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $add = DB::table('naissance_add');
-                                            ->get('child_info-dob'))->first(59); }}<P>
+                                        <p>{{ $add = DB::table('naissance_add')
+                                            ->get('child_info-dob')->first('59'); }}<P>
                                     </div>
                                 </div>
                                 <hr>

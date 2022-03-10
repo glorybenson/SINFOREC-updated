@@ -30,9 +30,9 @@
                             <div class="card-header">
                             <div class="text-right">
                                 <ul>
-                                    <li class="btn btn-dark px-3">Extrait de Naissance</li>
-                                    <li class="btn btn-dark px-3">Bulletin de Naissance</li>
-                                    <li class="btn btn-dark px-3">Acte de Naissance</li>
+                                    <li class="btn btn-green px-3">Extrait de Naissance</li>
+                                    <li class="btn btn-green px-3">Bulletin de Naissance</li>
+                                    <li class="btn btn-green px-3">Acte de Naissance</li>
                                 </ul>
                                     <h4 class="card-title float-left">User Details</h4>
                                 </div>

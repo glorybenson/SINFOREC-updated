@@ -16,7 +16,7 @@
                             <div class="d-flex align-items-center">
                                 <h5 class="page-title">Dashboard</h5>
                                 <ul class="breadcrumb ml-2">
-                                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Naissance</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('naissance.registre') }}">Naissance</a>
                                     </li>
                                     <li class="breadcrumb-item active">View</li>
                                 </ul>

@@ -29,9 +29,9 @@
                         <div class="card">
                             <div class="card-header">
                             <div class="text-right">
-                                    <a href="{{ route('#') }}" class="btn btn-dark px-3">Extrait de Naissance</a>
-                                    <a href="{{ route('#') }}" class="btn btn-dark px-3">Bulletin de Naissance</a>
-                                    <a href="{{ route('#') }}" class="btn btn-dark px-3">Acte de Naissance</a>
+                                    <a href="{{ route(''naissance.registre.show'') }}" class="btn btn-dark px-3">Extrait de Naissance</a>
+                                    <a href="{{ route(''naissance.registre.show'') }}" class="btn btn-dark px-3">Bulletin de Naissance</a>
+                                    <a href="{{ route(''naissance.registre.show'') }}" class="btn btn-dark px-3">Acte de Naissance</a>
                                     <h4 class="card-title float-left">User Details</h4>
                                 </div>
                                 </div>

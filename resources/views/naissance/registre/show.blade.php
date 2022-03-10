@@ -122,9 +122,13 @@
                     </div>      
                 </div>            
                 <ol>
-                    <li><a>Zone Gérographique
+                    <li>
+                    <div id="formControl">
+                    <a>Zone Gérographique
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
-                                </a> </li>
+                                </a> 
+                            </div>
+                            </li>
                     <li>Renseignement sur le Père </li>
                     <li>Renseignement de la Mère </li>
                     <li>Renseignement sur le Déclarant </li>

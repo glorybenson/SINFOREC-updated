@@ -115,42 +115,7 @@
                                     <div class="col-9">
                                         <h6>#</h6>
                                     </div>
-                                </div>
-
-
-                                <table>
-                                <thead>
-                                <th></th>
-                                <th></th>
-                                </thead>
-                                <tbody>
-
-                                <tr>
-                                        <td>
-                                        Date de Déclaration
-                                        </td>
-                                        <td>
-                                           #
-                                        </td>                                      
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                        Date de Déclaration
-                                        </td>
-                                        <td>
-                                           #
-                                        </td>                                      
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                        Date de Déclaration
-                                        </td>
-                                        <td>
-                                           #
-                                        </td>                                      
-                                    </tr>
-                                    </tbody>
-                            </table>
+                                </div>                   
                         </div>                      
                     </div>      
                 </div>              

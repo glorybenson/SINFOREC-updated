@@ -39,8 +39,22 @@
                                     <div class="col-3">
                                         <h6>Prénom</h6>
                                     </div>
-                                    <div class="col-9">
-                                        <h6>{{ $registre->last_name }}</h6>
+                                    <hr>
+                                    <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>User Role</h6>
                                     </div>
-                                </div>
+                                    <hr>
+                                    <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Pays</h6>
+                                    </div>
+                                    <hr>
+                                    <div class="row pr-3 pl-3">
+                                    <div class="col-3">
+                                        <h6>Départements</h6>
+                                    </div>
+                                    </div>                      
+                                </div>      
+                                </div>              
 @endsection                              

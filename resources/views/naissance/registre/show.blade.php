@@ -62,6 +62,7 @@
                                         <p>#</p>
                                     </div>
                                 </div>
+                                <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
                                         <p>Nom de famille de l'enfant</p>

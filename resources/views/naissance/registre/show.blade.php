@@ -68,8 +68,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <p><input value="{{ get('first_name') }}" class="form-control"
-                                                    id="first_name" name="first_name" required>
+                                        <p>$add =->get('child_info-last_name');</p>
                                     </div>
                                 </div>
                                 <hr>

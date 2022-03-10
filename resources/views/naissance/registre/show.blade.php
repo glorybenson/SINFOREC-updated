@@ -39,6 +39,10 @@
                                 <div class="col-3">
                                         <h6>Date de Déclaration</h6>
                                     </div>
+                                    <div class="col-9">
+                                        <h6>#</h6>
+                                    </div>
+                                </div>
                                     <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">

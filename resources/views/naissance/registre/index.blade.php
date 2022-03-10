@@ -67,7 +67,7 @@
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="{{ route('add.show', ['id' => $item->id, 'rt' => time()]) }}">
+                                            <a class="text-dark" href="{{ route('naissance.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
                                                 <i class="feather-eye"></i></a>
                                             <a href="{{ route('naissance.registre.edit', ['id' => $item->id]) }}"
                                                class="mx-2 text-dark"><i class="feather-edit"></i></a>   

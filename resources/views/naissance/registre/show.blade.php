@@ -70,7 +70,7 @@
                                     <div class="col-9">
                                         <p>
                                         {{ $add  ?? ''
-                                            ->get("child_info-dob") }}<P>
+                                            ->get('') }}<P>
                                     </div>
                                 </div>
                                 <hr>

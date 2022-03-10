@@ -7,6 +7,8 @@
                     <div class="d-flex align-items-center">
                         <h5 class="page-title">Dashboard</h5>
                         <ul class="breadcrumb ml-2">
+                        <li class="breadcrumb-item"><a href="{{ route('naissance.registre') }}">Des détails</a>
+
                             <li class="breadcrumb-item active">Registre</li>
                         </ul>
                     </div>

@@ -38,82 +38,82 @@
                             <div class="card-body">
                                 <div class="row pr-3 pl-3">
                                 <div class="col-3">
-                                        <h6>Date de Déclaration</h6>
+                                        <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                     <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Numéro de déclaration</h6>
+                                        <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                     <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Prénom de l'enfant </h6>
+                                        <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                     <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Nom de famille de l'enfant</h6>
+                                        <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Date de Naissance de l'enfant</h6>
+                                        <p>Date de Naissance de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Heure de Naissance</h6>
+                                        <p>Heure de Naissance</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Lieu de Naissance</h6>
+                                        <p>Lieu de Naissance</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Sexe</h6>
+                                        <p>Sexe</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
-                                        <h6>Formation sanitaire</h6>
+                                        <p>Formation sanitaire</p>
                                     </div>
                                     <div class="col-9">
-                                        <h6>#</h6>
+                                        <p>#</p>
                                     </div>
                                 </div>                   
                         </div>                      

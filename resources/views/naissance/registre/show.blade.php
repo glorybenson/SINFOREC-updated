@@ -39,11 +39,11 @@
                                 </div>
                                 </div>
 
-                                @foreach ($add as $item)
+                                <!--@foreach ($add as $item)
                                 @php
                                         if(isset($item))
                                             $item->values = json_decode( $item->values);
-                                    @endphp
+                                    @endphp-->
                                 <div class="card-body">
                                 <div class="row pr-3 pl-3">
                                     <div class="col-3">
@@ -54,5 +54,5 @@
                                     </div>
                                 </div>
 
-<!--@include('layouts.includes.filterJs')
-@endsection-->
+<!--@include('layouts.includes.filterJs')-->
+@endsection

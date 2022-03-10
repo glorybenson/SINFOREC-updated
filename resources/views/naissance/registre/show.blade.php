@@ -59,7 +59,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $add 'first_name') }}</p>
+                                        <p>{{ $add 'first_name' }}</p>
                                     </div>
                                 </div>
                                 <hr>

@@ -69,7 +69,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        {{$registre -> get('child_info-last_name')}};
+                                        {{$registre -> get('child_info-last_name')}}
                                     </div>
                                 </div>
                                 <hr>

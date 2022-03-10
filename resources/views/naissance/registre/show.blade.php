@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="col-9">
                                         <p>
-                                        <registre id="child_info-date_of_decl" >
+                                        <registre id="child_info-date_of_decl" > </p>
 
                                     </div>
                                 </div>

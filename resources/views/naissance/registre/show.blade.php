@@ -68,7 +68,8 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        {$add ->get{('child_info-last_name')}}
+                                        <p>{{ $add = DB::table('naissance_add')
+                                            ->get('first_name') }}<P>
                                     </div>
                                 </div>
                                 <hr>

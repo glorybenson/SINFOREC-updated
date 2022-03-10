@@ -92,7 +92,9 @@
                                                     <option value="" selected>--</option>
                                                     @if(isset($pays))
                                                         @foreach($pays as $pay)
-                                                            <option value="{{((object)$pay)->id}}">{{((object)$pay)->description}}</option>
+                                                            @if(((object)$pay)->id > 0)
+                                                                <option value="{{((object)$pay)->id}}">{{((object)$pay)->description}}</option>
+                                                            @endif
                                                         @endforeach
                                                     @endif
                                                 </select>
@@ -109,7 +111,9 @@
                                                     <option value="" selected>--</option>
                                                     @if(isset($regions))
                                                         @foreach($regions as $region)
-                                                            <option value="{{((object)$region)->id}}">{{((object)$region)->description}}</option>
+                                                            @if(((object)$region)->id > 0)
+                                                                <option value="{{((object)$region)->id}}">{{((object)$region)->description}}</option>
+                                                            @endif
                                                         @endforeach
                                                     @endif
                                                 </select>
@@ -126,7 +130,9 @@
                                                     <option value="" selected>--</option>
                                                     @if(isset($departments))
                                                         @foreach($departments as $department)
-                                                            <option value="{{((object)$department)->id}}">{{((object)$department)->description}}</option>
+                                                            @if(((object)$department)->id > 0)
+                                                                <option value="{{((object)$department)->id}}">{{((object)$department)->description}}</option>
+                                                            @endif
                                                         @endforeach
                                                     @endif
                                                 </select>
@@ -143,7 +149,9 @@
                                                     <option value="" selected>--</option>
                                                     @if(isset($arrondissements))
                                                         @foreach($arrondissements as $arrondissement)
-                                                            <option value="{{((object)$arrondissement)->id }}">{{((object)$arrondissement)->description }}</option>
+                                                            @if(((object)$arrondissement)->id > 0)
+                                                                <option value="{{((object)$arrondissement)->id }}">{{((object)$arrondissement)->description }}</option>
+                                                            @endif
                                                         @endforeach
                                                     @endif
                                                 </select>
@@ -160,7 +168,9 @@
                                                     <option value="" selected>--</option>
                                                     @if(isset($communes))
                                                         @foreach($communes as $commune)
-                                                            <option value="{{((object)$commune)->id}}" >{{((object)$commune)->description}}</option>
+                                                            @if(((object)$commune)->id > 0)
+                                                                <option value="{{((object)$commune)->id}}" >{{((object)$commune)->description}}</option>
+                                                            @endif
                                                         @endforeach
                                                     @endif
                                                 </select>
@@ -177,7 +187,9 @@
                                                     <option value="" selected>--</option>
                                                     @if(isset($centre))
                                                         @foreach($centre as $item)
-                                                            <option value="{{((object)$item)->id}}">{{((object)$item)->description}}</option>
+                                                            @if(((object)$item)->id > 0)
+                                                                <option value="{{((object)$item)->id}}">{{((object)$item)->description}}</option>
+                                                            @endif
                                                         @endforeach
                                                     @endif
                                                 </select>
@@ -518,9 +530,11 @@
                                                     <select id="judgment-region" data-live-search="true" name="judgment-region" class="selectpicker w-100 serializable removable" tabindex="4" data-parsley-errors-container="#invalid-feedback46" required >
                                                         <option value="" selected>--</option>
                                                         @foreach ($regions as $item)
-                                                            <option value="{{ ((object)$item)->id }}">
-                                                                {{ ((object)$item)->description }}
-                                                            </option>
+                                                            @if(((object)$item)->id > 0)
+                                                                <option value="{{ ((object)$item)->id }}">
+                                                                    {{ ((object)$item)->description }}
+                                                                </option>
+                                                            @endif
                                                         @endforeach
                                                     </select>
                                                     <span class="feedback-new" id="invalid-feedback46" role="alert"></span>

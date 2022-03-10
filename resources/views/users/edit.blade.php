@@ -23,7 +23,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title float-left">Edit User Details</h4>
+                                <h4 class="card-title float-left">Modifier les détails de l'utilisateur</h4>
                                 <div class="text-right">
                                     <a href="{{ route('home') }}" class="btn btn-dark px-3">Retour aux utilisateurs</a>
                                 </div>

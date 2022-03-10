@@ -50,7 +50,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p> </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -121,5 +121,12 @@
                         </div>                      
                     </div>      
                 </div>            
+                <ol>
+                    <li>Zone Gérographique </li>
+                    <li>Renseignement sur le Père </li>
+                    <li>Renseignement de la Mère </li>
+                    <li>Renseignement sur le Déclarant </li>
+                    <li>Jugement </li>
+                </ol>
 
 @endsection                              

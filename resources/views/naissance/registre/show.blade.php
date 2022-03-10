@@ -70,7 +70,6 @@
                                     <div class="col-9">
                                         <p>
                                         <get id="child_info-date_of_decl" >
-                                                <span class="feedback-new" id="invalid-feedback7" role="alert"></span><P>
                                     </div>
                                 </div>
                                 <hr>

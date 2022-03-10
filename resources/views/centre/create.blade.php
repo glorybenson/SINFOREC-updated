@@ -88,8 +88,8 @@
                                                             <strong>{{ $errors->first('departments') }}</strong>
                                                         </span>
                                                     @endif
-                                                    @endif
                                                 </div>
+                                            @endif
                                         </div>
                                         <div class="row mb-3">
                                             <label for="description" class="col-md-2 col-form-label text-md-end">
@@ -98,7 +98,8 @@
                                                 <div class="col-md-10">
                                                     <select data-live-search="true" data-name="arrondissements" name="arrondissements"
                                                             class="selectpicker w-100 modifiable" id="arrondissements">
-                                                        <option value="0" selected>N/A</option>
+                                                        <option value="" selected>--</option>
+                                                        <option value="0">N/A</option>
                                                         @foreach ($arrondissements as $item)
                                                             @if (((object)$item)->id > 0)
                                                                 <option value="{{ ((object)$item)->id }}">
@@ -111,8 +112,8 @@
                                                             <strong>{{ $errors->first('arrondissements') }}</strong>
                                                         </span>
                                                     @endif
-                                                    @endif
                                                 </div>
+                                            @endif
                                         </div>
                                         <div class="row mb-3">
                                             <label for="communes" class="col-md-2 col-form-label text-md-end">
@@ -121,7 +122,8 @@
                                                 <div class="col-md-10">
                                                     <select data-live-search="true" data-name="communes" name="communes"
                                                             class="selectpicker w-100 modifiable" id="communes">
-                                                        <option value="0" selected>N/A</option>
+                                                        <option value="" selected>--</option>
+                                                        <option value="0">N/A</option>
                                                         @foreach ($communes as $item)
                                                             @if (((object)$item)->id > 0)
                                                                 <option value="{{ ((object)$item)->id }}">
@@ -134,8 +136,8 @@
                                                         <strong>{{ $errors->first('communes') }}</strong>
                                                     </span>
                                                 @endif
+                                                </div>
                                             @endif
-                                            </div>
                                         </div>
                                         <div class="float-right">
                                             <button type="submit" class="btn btn-primary px-4"

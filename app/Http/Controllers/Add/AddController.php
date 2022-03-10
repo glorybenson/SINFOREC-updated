@@ -109,9 +109,7 @@ class AddController extends Controller
             ->join('users', 'naissance_add.created_by', '=', 'users.id')
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->get()->first();
-        //return view('naissance.registre.show', ['registre' => collect($add)]);
-        
-        return view('naissance.registre.show', ['add' => $add]);
+        return view('naissance.registre.show', ['registre' => collect($add)]);
     }
 
     /**

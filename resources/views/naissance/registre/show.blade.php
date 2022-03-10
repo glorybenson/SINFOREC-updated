@@ -51,7 +51,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $add->'child_info-last_name' }} </p>
+                                        <p>['registre' => collect('child_info-last_name')] </p>
                                     </div>
                                 </div>
                                 <hr>

@@ -207,7 +207,7 @@
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ \App\Models\Arrondissement::find( $item->arrondissement_id)->description }}</td>
+                                            <td>{{ \App\Models\Arrondissement::find( $values->arrondissement_id)->description }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>

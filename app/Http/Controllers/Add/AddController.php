@@ -122,7 +122,7 @@ class AddController extends Controller
         $binding = Util::load( $shell);
 
         $binding[ 'naissance_add'] = DB::select( 'SELECT naissance_add.id, arrondissement.description as geographical_zone-arrondissements,
-                                       naissance_add.arrondissements=arrondissement.id'
+                                    JOIN geographical_zone-arrondissements ON naissance_add.arrondissements=arrondissement.id'
             . ' WHERE naissance_add.id=?', [$id])[ 0];
 
             return view('naissance.registre.show', $binding);

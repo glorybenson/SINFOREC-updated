@@ -94,7 +94,7 @@ class AddController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('naissance.registre')->with('success', 'Ajout créée avec succès');
+        return Redirect::route('naissance.registre', ['id' => $add->id])->with('success', 'Ajout créée avec succès');
     }
 
     /**

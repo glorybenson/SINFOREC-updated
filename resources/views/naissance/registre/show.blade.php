@@ -207,7 +207,7 @@
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ $id->{'geographical_zone-arrondissements'} }}</td>
+                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>

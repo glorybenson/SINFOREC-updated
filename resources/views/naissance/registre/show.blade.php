@@ -203,7 +203,7 @@
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
-                                            <td>{{ $values->{'6'} }}</td>
+                                            <td>{{ $values->{'pays'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>

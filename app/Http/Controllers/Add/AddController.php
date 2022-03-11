@@ -108,7 +108,6 @@ class AddController extends Controller
      */
     public function show($id)
     {
-        
         $add = DB::table('naissance_add')
             ->join('users', 'naissance_add.created_by', '=', 'users.id')
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
@@ -118,14 +117,6 @@ class AddController extends Controller
             'registre' => collect($add),
             'values' => $values,
         ]);
-        $shell = new \stdClass();
-        $binding = Util::load( $shell);
-
-        $binding[ 'naissance_add'] = DB::select( 'SELECT naissance_add.id, arrondissement.id as geographical_zone-arrondissements,
-                                    JOIN geographical_zone-arrondissements ON naissance_add.arrondissements=arrondissement.id'
-            . ' WHERE naissance_add.id=?', [$id])[ 0];
-
-            return view('naissance.registre.show', $binding);
     }
 
     /**

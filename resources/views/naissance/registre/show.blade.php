@@ -124,11 +124,48 @@
                                 </div>   
                         </div>                      
                     </div>      
-                </div>            
+                </div> 
+
+            <style>
+                .beefup-head {
+                cursor: pointer;
+                position: relative;
+                }
+                .beefup-head:after {
+                    border-style: solid;
+                    border-width: 12px 12px 0 12px;
+                    border-color: #ddd transparent transparent transparent;
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    height: 0;
+                    margin-top: -6px;
+                    top: 50%;
+                    width: 0;
+                }
+
+                .open > .beefup-head:after {
+                    border-width: 0 12px 12px 12px;
+                    border-color: transparent transparent #ddd transparent;
+                }
+            </style>
+            
+                <article class="demo"> 
+                <h2 class="beefup-head"><a href="https://www.jqueryscript.net/accordion/">Zone Gérographique </a> Header</h2> 
+                <div class="beefup-body">  
+                <p>Accordion Body</p> 
+             </div>
+            </article>
+
+            $('.demo').beefup();
+            $('.demo').beefup({
+                // Boolean: Enable accessibility features like tab control
+                accessibility: true,}
+
                 <ol>
                     <li>
                     <div id="formControl">
-                    <a>Zone Gérographique
+                    <a>Zone Gérographique 
                                     <i id="open-menu"></i>
                                 </a> 
                             </div>
@@ -138,5 +175,7 @@
                     <li>Renseignement sur le Déclarant </li>
                     <li>Jugement </li>
                 </ol>
+
+                <script src="jquery.beefup.js"></script>
 
 @endsection                              

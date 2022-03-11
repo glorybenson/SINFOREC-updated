@@ -69,7 +69,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        {{$registre -> get(id)}}
+                                        {{$registre -> get('id')}}
                                     </div>
                                 </div>
                                 <hr>

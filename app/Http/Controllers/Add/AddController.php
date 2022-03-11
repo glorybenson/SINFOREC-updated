@@ -68,8 +68,8 @@ class AddController extends Controller
             $ajax_call = true;
         }
 
-        if( array_key_exists( 'id', $inputs)) {
-            $add = Add::find( $inputs[ 'id']);
+        if( array_key_exists( 'id', $inputs) || array_key_exists('docId', $inputs)) {
+            $add = array_key_exists( 'id', $inputs) ? Add::find( $inputs[ 'id']) : Add::find( $inputs[ 'docId']);
             $add->values = json_encode( $inputs);
             $add->update();
             return $add;

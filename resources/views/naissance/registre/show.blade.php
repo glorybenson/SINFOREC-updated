@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-<p class="hidden">@json ($registre) </p>
+<!--<p class="hidden">@json ($registre) </p> -->
     <div class="col-md-10 mx-auto">
         <div class= "mt-3">
             <div class="content container-fluid">
@@ -35,6 +35,50 @@
 
                                     <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
                             </div>
+                            </div>
+
+                            <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                        <tr>
+                                            <td>Date de Déclaration</td>
+                                            <td>{ $values->{'child_info-date_of_decl'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Numéro de déclaration</td>
+                                            <td>{{ $values->{'child_info-decl_number'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prénom de l'enfant</td>
+                                            <td>{{ $values->{'child_info-first_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de famille de l'enfant</td>
+                                            <td>{{ $values->{'child_info-last_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date de Naissance de l'enfant</td>
+                                            <td>{{ $values->{'child_info-dob'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Heure de Naissance</td>
+                                            <td>{{ $values->{'child_info-birth_time'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lieu de Naissance</td>
+                                            <td>{{ $values->{'child_info-place_of_birth'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sexe</td>
+                                            <td>{{ $values->{'child_info-gender'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Formation sanitaire</td>
+                                            <td>{{ $values->{'child_info-health_training'} }}</td>
+                                        </tr>
+                                    </table>
+                                    <div class="mb-5">
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="card-body">
@@ -183,9 +227,7 @@
              </div>
             </article>
 
-            $('.demo').beefup({
-                accessibility: true,
-            });
+           
 
                 <ol>
                     <li>

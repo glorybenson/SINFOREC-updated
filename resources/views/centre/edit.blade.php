@@ -78,7 +78,8 @@
                                                     <option value="" selected>--</option>
                                                     @foreach ( $departments as $item)
                                                         <option value="{{ ((object)$item)->id }}"
-                                                            {{ ((object)$item)->id == $editingCentre->$departments ?
+                                                            {{ ((object)$item)->id ==
+                                                            $editingCentre->$departments['id'] ?
                                                                  "selected":"" }}>
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach

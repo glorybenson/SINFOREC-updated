@@ -110,7 +110,7 @@ class AddController extends Controller
     {
         $add = DB::table('naissance_add')
             ->join('users', 'naissance_add.created_by', '=', 'users.id')
-            ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name', 'geographical_zone-arrondissements as arrondissement_id' )
+            ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->get()->first();
         $values = json_decode($add->values);
         return view('naissance.registre.show', [

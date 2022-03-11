@@ -154,25 +154,27 @@
                 <h2 class="beefup-head"><a href="#"></a> Zone Gérographique </h2> 
                 <div class="beefup-body">  
                 <p>
-                <tr>
+                                 <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
                                             <td>Pays</td>
-                                            <td>{{ $values->{'child_info-health_training'} }}</td>
+                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ $values->{'child_info-health_training'} }}</td>
+                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>
-                                            <td>{{ $values->{'child_info-health_training'} }}</td>
+                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Département</td>
-                                            <td>{{ $values->{'child_info-health_training'} }}</td>
+                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Commune</td>
-                                            <td>{{ $values->{'child_info-health_training'} }} </td>
+                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
                                         </tr>
                                     </table>
                                     <div class="mb-5">

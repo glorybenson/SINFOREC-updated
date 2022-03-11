@@ -57,8 +57,8 @@
                                                     <option selected>--</option>
                                                     @foreach ($regions as $item)
                                                         <option value="{{ ((object)$item)->id }}">
-                                                            {{ ((object)$item)->description
-                                                            ($editingCentre->regions) }}</option>
+                                                            {{ ((object)$item)->description }} {{
+                                                            ($editingCentre->regions)}}</option>
                                                     @endforeach
                                                 </select>
                                                 @if ($errors->has('regions'))

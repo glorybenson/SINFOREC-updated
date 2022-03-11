@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="row">
+<p class="hidden">@json ($registre) </p>
     <div class="col-md-10 mx-auto">
         <div class= "mt-3">
             <div class="content container-fluid">
@@ -153,27 +154,25 @@
                 <h2 class="beefup-head"><a href="#"></a> Zone Gérographique </h2> 
                 <div class="beefup-body">  
                 <p>
-                <div class="card-body">
-                                    <table class="table table-bordered table-striped">
-                                    <tr>
-                                            <td>La description</td>
-                                            <td>{{ $centre->description }}</td>
+                <tr>
+                                            <td>Pays</td>
+                                            <td>{{ $values->{'child_info-health_training'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ $centre->arrondissements }}</td>
+                                            <td>{{ $values->{'child_info-health_training'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>
-                                            <td>{{ $centre->regions }}</td>
+                                            <td>{{ $values->{'child_info-health_training'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Département</td>
-                                            <td>{{ $centre->departments }}</td>
+                                            <td>{{ $values->{'child_info-health_training'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Commune</td>
-                                            <td>{{ $centre->communes }}</td>
+                                            <td>{{ $values->{'child_info-health_training'} }} </td>
                                         </tr>
                                     </table>
                                     <div class="mb-5">

@@ -81,12 +81,12 @@ class AddController extends Controller
             $add->created_by = Auth::user()[ 'id'];
             $add->done = isset( $ajax_call) ? 'no' : 'yes';
             $add->save();
-            //$inputs[ 'id'] = $add->id;
-            //$add->values = json_encode( $inputs);
-            //$add->update();
+            $inputs[ 'id'] = $add->id;
+            $add->values = json_encode( $inputs);
+            $add->update();
         }
 
-        if ( isset( $ajax_call))
+        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
         {
             $id = $add->id;
             return response("{ \"message\": \"Ajout créée avec succès\", \"id\": $id}", 200)
@@ -105,10 +105,7 @@ class AddController extends Controller
      */
     public function show($id)
     {
-        $add = DB::table('naissance_add')
-            ->join('users', 'naissance_add.created_by', '=', 'users.id')
-            ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
-            ->get()->first();
+        $add = Add::findOrFail($id);
         return view('naissance.registre.show', ['registre' => collect($add)]);
     }
 

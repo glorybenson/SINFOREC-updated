@@ -112,6 +112,7 @@
                     const docID = $( '[data-tool]').attr( 'doc-id');
                     if( docID != null)
                         present[ 'id'] = + docID;
+                        present['saveAndExit'] = null;
 
 
                     $.ajaxSetup({

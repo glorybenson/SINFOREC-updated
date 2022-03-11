@@ -69,7 +69,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        {{$registre -> collect('child_info-dob')}}
+                                        {{$add -> get('child_info-dob')}}
                                     </div>
                                 </div>
                                 <hr>

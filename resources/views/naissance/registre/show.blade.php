@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             
-                            <div class="card-body">
+                          <!--  <div class="card-body">
                                 <div class="row pr-3 pl-3">
                                 <div class="col-3">
                                         <p>Date de Déclaration</p>
@@ -168,7 +168,7 @@
                                 </div>   
                         </div>                      
                     </div>      
-                </div> 
+                </div> -->
 
             <style>
                 .beefup-head {

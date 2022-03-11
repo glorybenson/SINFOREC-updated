@@ -116,7 +116,7 @@ class AddController extends Controller
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->get()->first();
         $values = json_decode($add->values);
-        return view('naissance.registre.show', [ 'arrondissement_description' => $arrondissement_description
+        return view('naissance.registre.show', [ 'arrondissement_description' => $arrondissement_description,
             'registre' => collect($add),
             'values' => $values,
         ]);

@@ -114,7 +114,6 @@
                         present[ 'id'] = + docID;
                         present['saveAndExit'] = null;
 
-
                     $.ajaxSetup({
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -128,6 +127,7 @@
                         data: present,
                         success: function ( wish) {
                             $( '[data-tool]').attr( 'doc-id', wish[ 'id']);
+                            $('input[name="docId"]').val(wish['id']);
                             toastr.success( wish[ 'message'], "Success");
                         },
                         error: function ( response) {

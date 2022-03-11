@@ -31,13 +31,13 @@
                                     <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Bulletin de Naissance</li>
                                     <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Acte de Naissance</li>
                                 </ul>
-                            <div></div>
-
-                                    <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
                             </div>
                             </div>
 
                             <div class="card-body">
+                                <div>
+                                <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
+                                </div>
                                     <table class="table table-bordered table-striped">
                                         <tr>
                                             <td>Date de Déclaration</td>

@@ -197,7 +197,7 @@
                 <article class="demo"> <li>
                 <h2 class="beefup-head"><a href="#"></a> Zone Gérographique </h2> 
                 <div class="beefup-body">  
-                  <!--{{$('.demo').beefup(accessibility: true) }}-->
+                  
                 <p>
                                  <div class="card-body">
                                     <table class="table table-bordered table-striped">

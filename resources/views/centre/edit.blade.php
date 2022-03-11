@@ -12,7 +12,7 @@
                                     <h5 class="page-title">Dashboard</h5>
                                     <ul class="breadcrumb ml-2">
                                         <li class="breadcrumb-item text-capitalize"><a
-                                                href="{{ route('communes') }}">Centre</a>
+                                                href="{{ route('centre') }}">Centre</a>
                                         </li>
                                         <li class="breadcrumb-item active">Éditer</li>
                                     </ul>

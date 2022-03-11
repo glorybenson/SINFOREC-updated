@@ -115,7 +115,6 @@ class AddController extends Controller
             ->get('department_id')->first();
             $department_id = $arrondissement->get( 'department_id')[ 0]->department_id;
         $department_description = Department::find( $department_id)->description;
-            $department_description = 'geographical_zone-departments';
         $values = json_decode($add->values);
         return view('geographical_zone-departments' => $department_description 'naissance.registre.show', [
             'registre' => collect($add),

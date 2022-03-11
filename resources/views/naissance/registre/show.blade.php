@@ -45,7 +45,7 @@
                                         </tr>
                                         <tr>
                                             <td>Numéro de déclaration</td>
-                                            <td>{{ $values->get{'departments_description'} }}</td>
+                                            <td>{{ $values->{'child_info-decl_number'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Prénom de l'enfant</td>
@@ -203,7 +203,7 @@
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
-                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                            <td>{{ $values->get{'geographical_zone-pays'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>

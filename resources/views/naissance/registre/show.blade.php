@@ -42,7 +42,7 @@
                                         <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        {{$registre -> get('child_info-dob')}}
+                                        {{$registre -> get('33')}}
                                     </div>
                                 </div>
                                 <hr>
@@ -69,7 +69,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        {{$registre -> get('last_name')}}
+                                        {{$registre -> get('6')}}
                                     </div>
                                 </div>
                                 <hr>

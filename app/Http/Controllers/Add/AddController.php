@@ -68,13 +68,16 @@ class AddController extends Controller
             $ajax_call = true;
         }
 
-        if( array_key_exists( 'id', $inputs) || array_key_exists('docId', $inputs)) {
-            $add = array_key_exists( 'id', $inputs) ? Add::find( $inputs[ 'id']) : Add::find( $inputs[ 'docId']);
+        if( array_key_exists( 'id', $inputs)) {
+            $add = Add::find( $inputs[ 'id']);
             $add->values = json_encode( $inputs);
             $add->update();
             return $add;
-        }
-        else
+        } else if (array_key_exists('docId', $inputs)) {
+            $add = Add::find( $inputs[ 'docId']);
+            $add->values = json_encode( $inputs);
+            $add->update();
+        } else
         {
             $add = new Add();
             $add->values = json_encode( $inputs);
@@ -94,7 +97,7 @@ class AddController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('naissance.registre', ['id' => $add->id])->with('success', 'Ajout créée avec succès');
+        return Redirect::route('naissance.registre')->with('success', 'Ajout créée avec succès');
     }
 
     /**

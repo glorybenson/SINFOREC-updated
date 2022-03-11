@@ -109,7 +109,7 @@ class AddController extends Controller
      */
     public function show($id)
     {
-        $arrondissement_id = $registre->get( 'arrondissement_id')[ 0]->arrondissement_id;
+        $arrondissement_id = $add->get( 'arrondissement_id')[ 0]->arrondissement_id;
         $arrondissement_description = Arrondissement::find( $arrondissement_id)->description;
         $add = DB::table('naissance_add')
             ->join('users', 'naissance_add.created_by', '=', 'users.id')

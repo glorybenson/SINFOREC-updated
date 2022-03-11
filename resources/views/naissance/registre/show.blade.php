@@ -3,8 +3,9 @@
 @section('content')
 
 <div class="row">
+    <p class="hidden">@json ($registre) </p>
     <div class="col-md-10 mx-auto">
-        <div class="mt-3">
+        <div class= "mt-3">
             <div class="content container-fluid">
                 <div class="page-header">
                     <div class="row align-items-center">
@@ -69,7 +70,8 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        {{ $registre->values->{'child_info-dob'} }}
+
+                                        {{ $registre->values('child_info-dob') }}
                                     </div>
                                 </div>
                                 <hr>

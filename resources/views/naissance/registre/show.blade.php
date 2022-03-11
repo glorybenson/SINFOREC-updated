@@ -45,7 +45,7 @@
                                         </tr>
                                         <tr>
                                             <td>Numéro de déclaration</td>
-                                            <td>{{ $values->{'child_info-decl_number'} }}</td>
+                                            <td>{{ $add->get{'departments_description'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Prénom de l'enfant</td>

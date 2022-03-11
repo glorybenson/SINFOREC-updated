@@ -56,11 +56,9 @@
                                                         id="region">
                                                     <option selected>--</option>
                                                     @foreach ($regions as $item)
-                                                        <option value="{{ ((object)$item)->id }}"
-                                                                {{ ((object)$item)->id == $editingCentre->regions->id ?
-                                                                 "selected":"" }}>
+                                                        <option value="{{ ((object)$item)->id }}">
                                                             {{ ((object)$item)->description
-                                                            ($editingCentre->regions->id) }}</option>
+                                                            ($editingCentre->regions) }}</option>
                                                     @endforeach
                                                 </select>
                                                 @if ($errors->has('regions'))

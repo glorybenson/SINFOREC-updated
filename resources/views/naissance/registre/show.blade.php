@@ -41,7 +41,7 @@
                                     <table class="table table-bordered table-striped">
                                         <tr>
                                             <td>Date de Déclaration</td>
-                                            <td>{ $values->{'child_info-date_of_decl'} }}</td>
+                                            <td>{{ $values->{'child_info-date_of_decl'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Numéro de déclaration</td>

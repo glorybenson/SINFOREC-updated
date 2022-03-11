@@ -114,6 +114,7 @@ class AddController extends Controller
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->get('department_id')->first();
             $department = 'geographical_zone-departments';
+            $department = json_decode($add->values);
         $values = json_decode($add->values);
         return view('department' => $department 'naissance.registre.show', [
             'registre' => collect($add),

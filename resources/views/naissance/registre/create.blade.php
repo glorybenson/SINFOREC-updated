@@ -562,7 +562,7 @@
                         </div>
                         <div class="form-navigation float-right mr-4" id="new">
                             <input type="hidden" name="saveAndExit" value="1">
-                            <input type="hidden" name="docId" value="{{$id ?? 0}}">
+                            <input type="hidden" name="docId" value="0">
                             <button type="button" class="previous btn btn-primary p-2 pr-3 pl-3 mr-3"> Précédente</button>
                             <button id="draft" type="button" class="draft btn btn-primary p-2 pr-3
                             pl-3">Sauvegarder</button>

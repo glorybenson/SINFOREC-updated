@@ -56,9 +56,10 @@
                                                         id="region">
                                                     <option selected>--</option>
                                                     @foreach ($regions as $item)
-                                                        <option value="{{ ((object)$item)->id }}">
-                                                            {{ ((object)$item)->description }} {{
-                                                            ($editingCentre->regions)}}</option>
+                                                        <option value="{{ ((object)$item)->id }}"
+                                                            {{ ((object)$item)->id == $editingCentre->regions ?
+                                                             "selected":"" }}>
+                                                            {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>
                                                 @if ($errors->has('regions'))
@@ -76,7 +77,9 @@
                                                         id="region">
                                                     <option value="" selected>--</option>
                                                     @foreach ( $departments as $item)
-                                                        <option value="{{ ((object)$item)->id }}">
+                                                        <option value="{{ ((object)$item)->id }}"
+                                                            {{ ((object)$item)->id == $editingCentre->$departments ?
+                                                                 "selected":"" }}>
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>
@@ -95,7 +98,9 @@
                                                     class="selectpicker w-100" id="region">
                                                     <option value="0" selected>--</option>
                                                     @foreach ($arrondissements as $item)
-                                                        <option value="{{ ((object)$item)->id }}">
+                                                        <option value="{{ ((object)$item)->id }}" {{ ((object)$item)
+                                                        ->id == $editingCentre->$arrondissements ?
+                                                             "selected":"" }}>
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>
@@ -114,7 +119,9 @@
                                                     id="region">
                                                     <option value="0" selected>--</option>
                                                     @foreach ($communes as $item)
-                                                        <option value="{{ ((object)$item)->id }}">
+                                                        <option value="{{ ((object)$item)->id }}"
+                                                            {{ ((object)$item)->id == $editingCentre->$communes ?
+                                                                 "selected":"" }}>
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>

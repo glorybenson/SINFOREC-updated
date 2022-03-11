@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Add;
 
 use App\Http\Controllers\Controller;
 use App\Models\Util;
+use App\Models\Department;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
@@ -111,9 +112,10 @@ class AddController extends Controller
         $add = DB::table('naissance_add')
             ->join('users', 'naissance_add.created_by', '=', 'users.id')
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
-            ->get()->first();
+            ->get('department_id')->first();
             $department_id = 'geographical_zone-departments';
         $values = json_decode($add->values);
+        $department_id = json_decode($add-> 'geographical_zone-departments');
         return view('naissance.registre.show', [
             'registre' => collect($add),
             'values' => $values,

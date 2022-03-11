@@ -215,7 +215,7 @@
                                         </tr>
                                         <tr>
                                             <td>Département</td>
-                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                            <td>{{ $department_id->{'geographical_zone-departments'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Commune</td>

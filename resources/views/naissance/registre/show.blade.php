@@ -43,7 +43,8 @@
                                         <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $values->{'child_info-date_of_decl'} }}
+                                        </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -52,7 +53,7 @@
                                         <p>Numéro de déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        <p> </p>
+                                       {{ $values->{'child_info-decl_number'} }}
                                     </div>
                                 </div>
                                 <hr>
@@ -61,7 +62,7 @@
                                         <p>Prénom de l'enfant </p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $values->{'child_info-first_name'} }}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -70,8 +71,7 @@
                                         <p>Nom de famille de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-
-                                        {{ $values->{'child_info-dob'} }}
+                                        {{ $values->{'child_info-last_name'} }}
                                     </div>
                                 </div>
                                 <hr>
@@ -80,7 +80,7 @@
                                         <p>Date de Naissance de l'enfant</p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $values->{'child_info-dob'} }}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -89,7 +89,9 @@
                                         <p>Heure de Naissance</p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>
+                                        {{ $values->{'child_info-birth_time'} }}
+                                        </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -98,7 +100,8 @@
                                         <p>Lieu de Naissance</p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $values->{'child_info-place_of_birth'} }}  
+                                        </p>
                                     </div>
                                 </div>
                                 <hr>
@@ -107,7 +110,7 @@
                                         <p>Sexe</p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $values->{'child_info-gender'} }}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -116,10 +119,9 @@
                                         <p>Formation sanitaire</p>
                                     </div>
                                     <div class="col-9">
-                                        <p></p>
+                                        <p>{{ $values->{'child_info-health_training'} }}</p>
                                     </div>
                                 </div>   
-                                   
                         </div>                      
                     </div>      
                 </div>            

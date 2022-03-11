@@ -71,7 +71,7 @@
                                     </div>
                                     <div class="col-9">
 
-                                        {{ $values['child_info-dob'] }}
+                                        {{ $values->{'child_info-dob'} }}
                                     </div>
                                 </div>
                                 <hr>

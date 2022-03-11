@@ -117,7 +117,7 @@ class AddController extends Controller
         $department_description = Department::find( $department_id)->description;
             $department_description = 'geographical_zone-departments';
         $values = json_decode($add->values);
-        return view('department' => $department 'naissance.registre.show', [
+        return view('geographical_zone-departments' => $department_description 'naissance.registre.show', [
             'registre' => collect($add),
             'values' => $values,
         ]);

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Add;
 
 use App\Http\Controllers\Controller;
-use App\Models\Arrondissement;
 use App\Models\Util;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -109,14 +108,12 @@ class AddController extends Controller
      */
     public function show($id)
     {
-        $arrondissement_id = $values->get( 'arrondissement_id')[ 0]->arrondissement_id;
-        $arrondissement_description = Arrondissement::find( $arrondissement_id)->description;
         $add = DB::table('naissance_add')
             ->join('users', 'naissance_add.created_by', '=', 'users.id')
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->get()->first();
         $values = json_decode($add->values);
-        return view('naissance.registre.show', [ 'arrondissement_description' => $arrondissement_description,
+        return view('naissance.registre.show', [
             'registre' => collect($add),
             'values' => $values,
         ]);

@@ -42,7 +42,7 @@
                                         <p>Date de Déclaration</p>
                                     </div>
                                     <div class="col-9">
-                                        {{$registre -> first('name_of_father')}}
+                                        {{$registre -> first(name_of_father)}}
                                     </div>
                                 </div>
                                 <hr>

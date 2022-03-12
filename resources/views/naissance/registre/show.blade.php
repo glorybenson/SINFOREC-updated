@@ -147,11 +147,11 @@
                                         </tr>
                                         <tr>
                                             <td>Profession du Père</td>
-                                            <td>{{ $values->{'father_info-center'} }} </td>
+                                            <td>{{ $values->{'father_info-communes'} }} </td>
                                         </tr>
                                         <tr>
                                             <td>Addresse du Père</td>
-                                            <td>{{ $values->{'father_info-communes'} }} </td>
+                                            <td>{{ $values->{'father_info-center'} }} </td>
                                         </tr>
                                     </table>
       </div>

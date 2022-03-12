@@ -174,7 +174,7 @@
              
                             <div id="formControl">
                                 <a>Zone Gérographique
-                                    <i id="open-menu" class="fa fa-chevron"></i>
+                                    <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
                                 <ul style="display: block;" id="wizard-ul">
@@ -202,7 +202,6 @@
                                             <td>{{ $values->{'geographical_zone-communes'} }} </td>
                                         </tr>
                                     </table>
-                                    <div class="mb-5">
                                     </div>
                                     </li>
                                 </ul>
@@ -232,7 +231,6 @@
                                             <td>{{ $values->{'geographical_zone-communes'} }} </td>
                                         </tr>
                                     </table>
-                                    <div class="mb-5">
                                     </div>
                                     </li>
                                 </ul>

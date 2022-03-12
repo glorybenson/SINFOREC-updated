@@ -315,8 +315,84 @@
                     </ul>
                 </div>
             </div>
+
+            <div id="formControl">
+                                <a>Renseignement de la Mère 
+                                    <i id="open-menu" class="fa fa-chevron-right"></i>
+                                </a>
+                                @if(isset($is_edit))
+                                <ul style="display: block;">
+                                    <li>
+                                    <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Prénom de la Mère </td>
+                                            <td>{{ $values->{'mother_info-first_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de famille de la Mère</td>
+                                            <td>{{ $values->{'mother_info-family_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date de Naissance de la Mère</td>
+                                            <td>{{ $values->{'mother_info-dob'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lieu de Naissance de la Mère</td>
+                                            <td>{{ $values->{'mother_info-birth_place'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profession de la Mère</td>
+                                            <td>{{ $values->{'mother_info-occupation'} }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Addresse de la Mère</td>
+                                            <td>{{ $values->{'mother_info-address'} }} </td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                    </li>
+                                </ul>
+                            @else
+                                <ul style="display: block;">
+                                    <li>
+                                    <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Prénom de la Mère </td>
+                                            <td>{{ $values->{'mother_info-first_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de famille de la Mère</td>
+                                            <td>{{ $values->{'mother_info-family_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date de Naissance de la Mère</td>
+                                            <td>{{ $values->{'mother_info-dob'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lieu de Naissance de la Mère</td>
+                                            <td>{{ $values->{'mother_info-birth_place'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profession de la Mère</td>
+                                            <td>{{ $values->{'mother_info-occupation'} }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Addresse de la Mère</td>
+                                            <td>{{ $values->{'mother_info-address'} }} </td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                    </li>
+                                </ul>
+                            @endif
+                        </li>
+                    </ul>
+                </div>
+            </div>
                    <!-- <li> </li>
-                    <li>Renseignement de la Mère </li>
+                    <li> </li>
                     <li>Renseignement sur le Déclarant </li>
                     <li>Jugement </li>
 </ol-->

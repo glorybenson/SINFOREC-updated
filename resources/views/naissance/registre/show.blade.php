@@ -194,8 +194,7 @@
   background-color: #f1f1f1;
 }
 </style>
-</head>
-<body>
+
 
 <h2>Animated Collapsibles</h2>
 

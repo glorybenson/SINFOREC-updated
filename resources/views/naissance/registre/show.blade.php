@@ -86,14 +86,35 @@
     <div class="card-header" id="headingOne">
       <h2 class="mb-0">
         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
+        1. Zone Gérographique
         </button>
       </h2>
     </div>
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Pays</td>
+                                            <td>{{ $models['geographical_zone-pays'] }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arrondissement</td>
+                                            <td>{{ $models['geographical_zone-arrondissements'] }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Région</td>
+                                            <td>{{ $models['geographical_zone-regions'] }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Département</td>
+                                            <td>{{ $models['geographical_zone-departments'] }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Commune</td>
+                                            <td>{{ $models['geographical_zone-communes'] }} </td>
+                                        </tr>
+                                    </table>
       </div>
     </div>
   </div>
@@ -101,13 +122,38 @@
     <div class="card-header" id="headingTwo">
       <h2 class="mb-0">
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
+        2. Renseignement sur le Père
         </button>
       </h2>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Prénom du Père</td>
+                                            <td>{{ $values->{'father_info-country'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de famille du Père</td>
+                                            <td>{{ $values->{'father_info-region'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date de Naissance du Père</td>
+                                            <td>{{ $values->{'father_info-department'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lieu de Naissance du Père</td>
+                                            <td>{{ $values->{'father_info-borough'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profession du Père</td>
+                                            <td>{{ $values->{'father_info-center'} }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Addresse du Père</td>
+                                            <td>{{ $values->{'father_info-communes'} }} </td>
+                                        </tr>
+                                    </table>
       </div>
     </div>
   </div>
@@ -115,19 +161,112 @@
     <div class="card-header" id="headingThree">
       <h2 class="mb-0">
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+        3. Renseignement de la Mère
         </button>
       </h2>
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Prénom de la Mère </td>
+                                            <td>{{ $values->{'mother_info-first_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de famille de la Mère</td>
+                                            <td>{{ $values->{'mother_info-family_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date de Naissance de la Mère</td>
+                                            <td>{{ $values->{'mother_info-dob'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lieu de Naissance de la Mère</td>
+                                            <td>{{ $values->{'mother_info-birth_place'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profession de la Mère</td>
+                                            <td>{{ $values->{'mother_info-occupation'} }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Addresse de la Mère</td>
+                                            <td>{{ $values->{'mother_info-address'} }} </td>
+                                        </tr>
+                                    </table>
       </div>
     </div>
   </div>
 </div>
-
-                            <div id="formControl">
+<div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        4.  Renseignement sur le Déclarant
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+      <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Prénom du déclarant</td>
+                                            <td>{{ $values->{'declarant_info-first_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom du déclarant</td>
+                                            <td>{{ $values->{'declarant_info-last_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adresse du déclarant</td>
+                                            <td>{{ $values->{'declarant_info-address'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profession du déclarant</td>
+                                            <td>{{ $values->{'declarant_info-profession'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>C.I.N</td>
+                                            <td>{{ $values->{'declarant_info-cin'} }} </td>
+                                        </tr>
+                                    </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        5. Jugement
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+      <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Jugement</td>
+                                            <td>{{ $values->{'judgement-judgement'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date du jugement</td>
+                                            <td>{{ $values->{'judgement-date'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Régions</td>
+                                            <td>{{ $values->{'judgment-region'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mentions Marginales</td>
+                                            <td>{{ $values->{'judgement-annotations'} }}</td>
+                                        </tr>
+                                        
+                                    </table>
+      </div>
+    </div>
+  </div>
+</div>
+                           <!-- <div id="formControl">
                                 <h5>1. Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </h5>
                                 @if(isset($is_edit))
@@ -476,7 +615,7 @@
                     </ul>
                 </div>
             </div>
-                   <!-- <li> </li>
+                    <li> </li>
                     <li> </li>
                     <li>Renseignement sur le Déclarant </li>
                     <li>Jugement </li>

@@ -203,11 +203,11 @@
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
-                                            <td></td>
+                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ \App\Models\Arrondissement::find( $values->arrondissement_id)->description }}</td>
+                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>

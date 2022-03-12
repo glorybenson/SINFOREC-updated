@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-<!--<p class="hidden">@json ($registre) </p>-->
+<p class="hidden">@json ($registre) </p>
     <div class="col-md-10 mx-auto">
         <div class= "mt-3">
             <div class="content container-fluid">
@@ -240,26 +240,76 @@
             </div>
                  
                   
-                <p>
-                                 
-                </p> 
-             </div>
-            </article>
-
-           
-
-                <ol>
-                    <li>
-                    <div id="formControl">
-                    <a>Zone Gérographique 
-                                    <i id="open-menu"></i>
-                                </a> 
-                            </div>
-                            </li>
-                    <li>Renseignement sur le Père </li>
+            <div id="formControl">
+                                <a>Renseignement sur le Père <i id="open-menu" class="fa fa-chevron-right"></i>
+                                </a>
+                                @if(isset($is_edit))
+                                <ul style="display: block;" id="wizard-ul">
+                                    <li>
+                                    <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Pays</td>
+                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arrondissement</td>
+                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Région</td>
+                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Département</td>
+                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Commune</td>
+                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                    </li>
+                                </ul>
+                            @else
+                                <ul style="display: block;" id="wizard-ul">
+                                    <li>
+                                    <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Pays</td>
+                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arrondissement</td>
+                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Région</td>
+                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Département</td>
+                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Commune</td>
+                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                    </li>
+                                </ul>
+                            @endif
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                   <!-- <li> </li>
                     <li>Renseignement de la Mère </li>
                     <li>Renseignement sur le Déclarant </li>
                     <li>Jugement </li>
-                </ol
+</ol-->
 
 @endsection                              

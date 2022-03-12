@@ -317,9 +317,8 @@
             </div>
 
             <div id="formControl">
-                                <a>3. Renseignement de la Mère
-                                    <i id="open-menu" class="fa fa-chevron-right"></i>
-                                </a>
+                                <h5>3. Renseignement de la Mère
+                                    <i id="open-menu" class="fa fa-chevron-right"></i></h5>
                                 @if(isset($is_edit))
                                 <ul style="display: block;">
                                     <li>
@@ -393,9 +392,9 @@
             </div>
 
             <div id="formControl">
-                                <a>3.  Renseignement sur le Déclarant
+                                <h5>3.  Renseignement sur le Déclarant
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
-                                </a>
+                                </h5>
                                
                                 @if(isset($is_edit))
                                 <ul style="display: block;">
@@ -463,9 +462,8 @@
             </div>
             
              <div id="formControl">
-                <a>5. Jugement
-                        <i id="open-menu" class="fa fa-chevron-right"></i>
-                                </a>                              
+                <h5>5. Jugement
+                        <i id="open-menu" class="fa fa-chevron-right"></i></h5>                              
                                 @if(isset($is_edit))
                                 <ul style="display: none;">
                                     <li>

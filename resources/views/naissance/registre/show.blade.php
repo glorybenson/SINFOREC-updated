@@ -182,23 +182,23 @@
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
-                                            <td>{{ $models->{'geographical_zone-pays'} }}</td>
+                                            <td>{{ $models['geographical_zone-pays'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ $models->{'geographical_zone-arrondissements'} }}</td>
+                                            <td>{{ $models['geographical_zone-arrondissements'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>
-                                            <td>{{ $models->{'geographical_zone-regions'} }}</td>
+                                            <td>{{ $models['geographical_zone-regions'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Département</td>
-                                            <td>{{ $models->{'geographical_zone-departments'} }}</td>
+                                            <td>{{ $models['geographical_zone-departments'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Commune</td>
-                                            <td>{{ $models->{'geographical_zone-communes'} }} </td>
+                                            <td>{{ $models['geographical_zone-communes'] }} </td>
                                         </tr>
                                     </table>
                                     </div>
@@ -209,25 +209,25 @@
                                     <li>
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">
-                                       <tr>
+                                        <tr>
                                             <td>Pays</td>
-                                            <td>{{ $models->{'geographical_zone-pays'} }}</td>
+                                            <td>{{ $models['geographical_zone-pays'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ $models->{'geographical_zone-arrondissements'} }}</td>
+                                            <td>{{ $models['geographical_zone-arrondissements'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>
-                                            <td>{{ $models->{'geographical_zone-regions'} }}</td>
+                                            <td>{{ $models['geographical_zone-regions'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Département</td>
-                                            <td>{{ $models->{'geographical_zone-departments'} }}</td>
+                                            <td>{{ $models['geographical_zone-departments'] }}</td>
                                         </tr>
                                         <tr>
                                             <td>Commune</td>
-                                            <td>{{ $models->{'geographical_zone-communes'} }} </td>
+                                            <td>{{ $models['geographical_zone-communes'] }} </td>
                                         </tr>
                                     </table>
                                     </div>
@@ -317,7 +317,7 @@
             </div>
 
             <div id="formControl">
-                                <a>Renseignement de la Mère 
+                                <a>Renseignement de la Mère
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))

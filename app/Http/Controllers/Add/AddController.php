@@ -117,6 +117,7 @@ class AddController extends Controller
         $add = DB::table('naissance_add')
             ->join('users', 'naissance_add.created_by', '=', 'users.id')
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
+            ->where('naissance_add.id', '=', $id)
             ->get()->first();
         $values = json_decode($add->values);
 
@@ -138,6 +139,8 @@ class AddController extends Controller
                 Communes::find($values->{'geographical_zone-communes'})->description,
             'geographical_zone-departments' => empty($valuesArr['geographical_zone-departments']) ? '--' :
                 Department::find($values->{'geographical_zone-departments'})->description,
+            'geographical_zone-regions' => empty($valuesArr['geographical_zone-regions']) ? '--' :
+                Region::find($values->{'geographical_zone-regions'})->description,
             'geographical_zone-arrondissements' => empty($valuesArr['geographical_zone-arrondissements']) ? '--' :
                 Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
         ];

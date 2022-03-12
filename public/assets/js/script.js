@@ -267,6 +267,7 @@
                 // get the index by checking the id
                 const indexMatch = $(this).attr('id').match(/wizard-navs-(\d+)/);
                 navigateTo(indexMatch ? indexMatch[1] : 0);
+
                 $('.wizard-active').removeClass('wizard-active');
                 $(this).addClass("wizard-active");
             });

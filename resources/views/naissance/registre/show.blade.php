@@ -173,7 +173,7 @@
             
              
                             <div id="formControl">
-                                <a>Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
+                                <a>Zone Gérographique <i id="open-menu" class="fa fa-chevron-left"></i>
                                 </a>
                                 @if(isset($is_edit))
                                 <ul style="display: block;" id="wizard-ul">

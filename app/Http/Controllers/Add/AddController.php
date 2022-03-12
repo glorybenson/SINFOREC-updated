@@ -138,6 +138,8 @@ class AddController extends Controller
                 Communes::find($values->{'geographical_zone-communes'})->description,
             'geographical_zone-departments' => empty($valuesArr['geographical_zone-departments']) ? '--' :
                 Department::find($values->{'geographical_zone-departments'})->description,
+            'geographical_zone-regions' => empty($valuesArr['geographical_zone-regions']) ? '--' :
+                Region::find($values->{'geographical_zone-regions'})->description,
             'geographical_zone-arrondissements' => empty($valuesArr['geographical_zone-arrondissements']) ? '--' :
                 Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
         ];

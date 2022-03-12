@@ -186,14 +186,14 @@ class AddController extends Controller
         $add->values = json_encode( $inputs);
         $add->update();
 
-        if ( isset( $ajax_call))
+        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
         {
             return response("{ \"message\": \"Add créée avec succès\"}", 200)
                 ->header('Content-Type', 'application/json')
                 ->header( 'charset', 'utf-8');
         }
 
-        return redirect()->back()->with('success', 'Add créée avec succès');
+        return Redirect::route('naissance.registre')->with('success', 'Add créée avec succès');
     }
 
     /**

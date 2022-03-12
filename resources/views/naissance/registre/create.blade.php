@@ -28,24 +28,28 @@
                             @if(isset($is_edit))
                                 <ul style="display: block;" id="wizard-ul">
                                     <li>
-                                        <p><a class="flow-control wizard-filled" id="wizard-navs-0" href="#">1 Zone
+                                        <p><a class="flow-control{{$filledFields[0] ? ' wizard-filled' : ''}}"
+                                              id="wizard-navs-0" href="#">1
+                                                Zone
                                                 Gérographique</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-1" class="wizard-filled" href="#">2
+                                        <p><a id="wizard-navs-1" class="{{$filledFields[1] ? ' wizard-filled' : ''}}"
+                                              href="#">2
                                                 Renseignement sur l’enfant</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-2" class="wizard-filled" href="#">3 Renseignement sur le Père</a></p>
+                                        <p><a id="wizard-navs-2" class="{{$filledFields[2] ? ' wizard-filled' : ''}}"
+                                              href="#">3 Renseignement sur le Père</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-3" class="wizard-filled" href="#">4 Renseignement de la Mère</a></p>
+                                        <p><a id="wizard-navs-3" class="{{$filledFields[1] ? ' wizard-filled' : ''}}" href="#">4 Renseignement de la Mère</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-4" class="wizard-filled" href="#">5 Renseignement sur le Déclarant</a></p>
+                                        <p><a id="wizard-navs-4" class="{{$filledFields[1] ? ' wizard-filled' : ''}}" href="#">5 Renseignement sur le Déclarant</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-5" class="wizard-filled" href="#">6 Jugement</a></p>
+                                        <p><a id="wizard-navs-5" class="{{$filledFields[1] ? ' wizard-filled' : ''}}" href="#">6 Jugement</a></p>
                                     </li>
                                 </ul>
                             @else

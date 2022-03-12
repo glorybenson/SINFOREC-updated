@@ -136,7 +136,7 @@ class AddController extends Controller
         $formNames = ['geographical', 'child_info', 'father_info', 'mother_info', 'declarant_info', 'judgement'];
         $formNamesFilled = array_map(function ($prefix) use ($old) {
             $filled = true;
-            foreach ($old->values as $key => $value) {
+            foreach (json_decode($old->values, true) as $key => $value) {
                 if (str_starts_with($key, $prefix) && empty($value)) {
                     $filled = false;
                 }

@@ -176,7 +176,7 @@
                                 <a>Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
-                                <ul style="display: block;" id="wizard-ul">
+                                <ul style="display: block;">
                                     <li>
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">
@@ -205,7 +205,7 @@
                                     </li>
                                 </ul>
                             @else
-                                <ul style="display: block;" id="wizard-ul">
+                                <ul style="display: block;">
                                     <li>
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">
@@ -240,11 +240,12 @@
             </div>
                  
                   
-            <div id="formControl">
-                                <a>Renseignement sur le Père <i id="open-menu" class="fa fa-chevron-right"></i>
+                           <div id="formControl">
+                                <a>Renseignement sur le Père 
+                                    <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
-                                <ul style="display: block;" id="wizard-ul">
+                                <ul style="display: block;">
                                     <li>
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">
@@ -277,7 +278,7 @@
                                     </li>
                                 </ul>
                             @else
-                                <ul style="display: block;" id="wizard-ul">
+                                <ul style="display: block;">
                                     <li>
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">

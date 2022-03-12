@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                           <!--  <div class="card-body">
                                 <div class="row pr-3 pl-3">
                                 <div class="col-3">
@@ -144,7 +144,7 @@
                                         <p>Lieu de Naissance</p>
                                     </div>
                                     <div class="col-9">
-                                        <p>{{ $values->{'child_info-place_of_birth'} }}  
+                                        <p>{{ $values->{'child_info-place_of_birth'} }}
                                         </p>
                                     </div>
                                 </div>
@@ -165,13 +165,13 @@
                                     <div class="col-9">
                                         <p>{{ $values->{'child_info-health_training'} }}</p>
                                     </div>
-                                </div>   
-                        </div>                      
-                    </div>      
+                                </div>
+                        </div>
+                    </div>
                 </div> -->
 
-            
-             
+
+
                             <div id="formControl">
                                 <a>Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
@@ -182,23 +182,23 @@
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
-                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-pays'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-arrondissements'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>
-                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-regions'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Département</td>
-                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-departments'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Commune</td>
-                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
+                                            <td>{{ $models->{'geographical_zone-communes'} }} </td>
                                         </tr>
                                     </table>
                                     </div>
@@ -211,23 +211,23 @@
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
-                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-pays'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Arrondissement</td>
-                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-arrondissements'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Région</td>
-                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-regions'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Département</td>
-                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                            <td>{{ $models->{'geographical_zone-departments'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Commune</td>
-                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
+                                            <td>{{ $models->{'geographical_zone-communes'} }} </td>
                                         </tr>
                                     </table>
                                     </div>
@@ -238,10 +238,10 @@
                     </ul>
                 </div>
             </div>
-                 
-                  
+
+
                            <div id="formControl">
-                                <a>Renseignement sur le Père 
+                                <a>Renseignement sur le Père
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
@@ -321,4 +321,4 @@
                     <li>Jugement </li>
 </ol-->
 
-@endsection                              
+@endsection

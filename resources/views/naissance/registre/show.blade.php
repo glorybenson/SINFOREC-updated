@@ -428,7 +428,7 @@
                                     </li>
                                 </ul>
                             @else
-                            <li class="">
+                            
                                 <ul style="display: block;">
                                     <li>
                                     <div class="card-body">

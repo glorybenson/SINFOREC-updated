@@ -177,8 +177,9 @@
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
-                                <!--<ul style="display: block;" id="wizard-ul">-->
-                                <div class="card-body">
+                                <ul style="display: block;" id="wizard-ul">
+                                    <li>
+                                    <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
@@ -203,9 +204,12 @@
                                     </table>
                                     <div class="mb-5">
                                     </div>
-                                <!--</ul>-->
+                                    </li>
+                                </ul>
                             @else
-                            <div class="card-body">
+                                <ul style="display: block;" id="wizard-ul">
+                                    <li>
+                                    <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
@@ -230,6 +234,8 @@
                                     </table>
                                     <div class="mb-5">
                                     </div>
+                                    </li>
+                                </ul>
                             @endif
                         </li>
                     </ul>

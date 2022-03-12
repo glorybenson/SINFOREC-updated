@@ -225,10 +225,10 @@
     </div>
   </div>
 </div>
-<div class="card">
+    <div class="card">
     <div class="card-header" id="headingThree">
       <h5
-      class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+       data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         5. Jugement
       </h5>
     </div>
@@ -254,8 +254,8 @@
                                     </table>
       </div>
     </div>
-  </div>
-</div>
+    </div>
+    </div>
                            <!-- <div id="formControl">
                                 <h5>1. Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </h5>

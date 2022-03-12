@@ -173,8 +173,8 @@
 
 
                             <div id="formControl">
-                                <a>1. Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
-                                </a>
+                                <h5>1. Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
+                                </h5>
                                 @if(isset($is_edit))
                                 <ul style="display: block;">
                                     <li>
@@ -241,9 +241,9 @@
 
 
                            <div id="formControl">
-                                <a>2. Renseignement sur le Père
+                                <h5>2. Renseignement sur le Père
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
-                                </a>
+                                </h5>
                                 @if(isset($is_edit))
                                 <ul style="display: block;">
                                     <li>

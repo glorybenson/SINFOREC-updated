@@ -230,7 +230,7 @@
     <div class="card">
     <div class="card-header" id="headingFive">
       <h5
-      class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
         5. Jugement
       </h5>
     </div>

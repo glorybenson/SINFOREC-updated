@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-<p class="hidden">@json ($registre) </p>
+<!--<p class="hidden">@json ($registre) </p>-->
     <div class="col-md-10 mx-auto">
         <div class= "mt-3">
             <div class="content container-fluid">
@@ -249,24 +249,28 @@
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                        <tr>
-                                            <td>Pays</td>
-                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                            <td>Prénom du Père</td>
+                                            <td>{{ $values->{'father_info-country'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Arrondissement</td>
-                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
+                                            <td>Nom de famille du Père</td>
+                                            <td>{{ $values->{'father_info-region'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Région</td>
-                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
+                                            <td>Date de Naissance du Père</td>
+                                            <td>{{ $values->{'father_info-department'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Département</td>
-                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                            <td>Lieu de Naissance du Père</td>
+                                            <td>{{ $values->{'father_info-borough'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Commune</td>
-                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
+                                            <td>Profession du Père</td>
+                                            <td>{{ $values->{'father_info-center'} }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Addresse du Père</td>
+                                            <td>{{ $values->{'father_info-communes'} }} </td>
                                         </tr>
                                     </table>
                                     </div>
@@ -278,24 +282,28 @@
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                        <tr>
-                                            <td>Pays</td>
-                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                            <td>Prénom du Père</td>
+                                            <td>{{ $values->{'father_info-country'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Arrondissement</td>
-                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
+                                            <td>Nom de famille du Père</td>
+                                            <td>{{ $values->{'father_info-region'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Région</td>
-                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
+                                            <td>Date de Naissance du Père</td>
+                                            <td>{{ $values->{'father_info-department'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Département</td>
-                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                            <td>Lieu de Naissance du Père</td>
+                                            <td>{{ $values->{'father_info-borough'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Commune</td>
-                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
+                                            <td>Profession du Père</td>
+                                            <td>{{ $values->{'father_info-center'} }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Addresse du Père</td>
+                                            <td>{{ $values->{'father_info-communes'} }} </td>
                                         </tr>
                                     </table>
                                     </div>

@@ -133,17 +133,32 @@ class AddController extends Controller
         $binding[ 'old'] = $old->values;
         $binding[ 'post_url'] = route( 'naissance.registre.edit.post', [ 'id' => $id]);
         $binding[ 'page_url'] = route( 'naissance.registre.edit', [ 'id' => $id]);
-        $formNames = ['geographical', 'child_info', 'father_info', 'mother_info', 'declarant_info', 'judgement'];
-        $formNamesFilled = array_map(function ($prefix) use ($old) {
-            $filled = true;
-            foreach (json_decode($old->values, true) as $key => $value) {
-                if (str_starts_with($key, $prefix) && empty($value)) {
-                    $filled = false;
+        $formFields = [
+            ['geographical_zone-pays', 'geographical_zone-arrondissements', 'geographical_zone-departments',
+                'geographical_zone-communes', 'geographical_zone-regions', 'geographical_zone-centre'],
+            ['child_info-date_of_decl', 'child_info-decl_number', 'child_info-first_name', 'child_info-birth_time',
+                'child_info-last_name', 'child_info-gender', 'child_info-dob', 'child_info-place_of_birth'],
+            ['father_info-department', 'father_info-communes', 'father_info-country', 'father_info-borough',
+                'father_info-region', 'father_info-center'],
+            ['mother_info-family_name', 'mother_info-birth_place', 'mother_info-occupation', 'mother_info-first_name',
+                'mother_info-address', 'mother_info-dob'],
+            ['declarant_info-profession', 'declarant_info-first_name', 'declarant_info-last_name',
+                'declarant_info-address', 'declarant_info-cin'],
+            ['judgement-judgement'],
+        ];
+        $formNamesFilled = array_map(function ($fields) use ($old) {
+            $values = json_decode($old->values, true);
+            foreach ($values as $key => $value) {
+                if (in_array($key, $fields) && empty($value)) {
+                    return false;
+                } elseif ($fields[0] === 'judgement-judgement' && $values['judgement-judgement'] !== 'Non'
+                    && empty($value)) {
+                    return false;
                 }
             }
 
-            return $filled;
-        }, $formNames);
+            return true;
+        }, $formFields);
 
         $binding['filledFields'] = $formNamesFilled;
         $binding[ 'is_edit'] = true;
@@ -171,14 +186,14 @@ class AddController extends Controller
         $add->values = json_encode( $inputs);
         $add->update();
 
-        if ( isset( $ajax_call))
+        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
         {
             return response("{ \"message\": \"Add créée avec succès\"}", 200)
                 ->header('Content-Type', 'application/json')
                 ->header( 'charset', 'utf-8');
         }
 
-        return redirect()->back()->with('success', 'Add créée avec succès');
+        return Redirect::route('naissance.registre')->with('success', 'Add créée avec succès');
     }
 
     /**

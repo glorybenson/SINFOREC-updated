@@ -43,13 +43,16 @@
                                               href="#">3 Renseignement sur le Père</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-3" class="{{$filledFields[1] ? ' wizard-filled' : ''}}" href="#">4 Renseignement de la Mère</a></p>
+                                        <p><a id="wizard-navs-3" class="{{$filledFields[3] ? ' wizard-filled' : ''}}"
+                                              href="#">4 Renseignement de la Mère</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-4" class="{{$filledFields[1] ? ' wizard-filled' : ''}}" href="#">5 Renseignement sur le Déclarant</a></p>
+                                        <p><a id="wizard-navs-4" class="{{$filledFields[4] ? ' wizard-filled' : ''}}"
+                                              href="#">5 Renseignement sur le Déclarant</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-5" class="{{$filledFields[1] ? ' wizard-filled' : ''}}" href="#">6 Jugement</a></p>
+                                        <p><a id="wizard-navs-5" class="{{$filledFields[5] ? ' wizard-filled' : ''}}"
+                                              href="#">6 Jugement</a></p>
                                     </li>
                                 </ul>
                             @else

@@ -125,18 +125,20 @@ class AddController extends Controller
             'values' => $values,
         ];
 
+        $valuesArr = json_decode($add->values, true);
+
         $binding['models'] = [
-            'judgement-region' => empty(((array)$values)['judgement-region']) ? '--' :
+            'judgement-region' => empty($valuesArr['judgement-region']) ? '--' :
                 Region::find($values->{'judgement-region'})->description,
-            'geographical_zone-pays' => empty(((array)$values)['geographical_zone-pays']) ? '--' :
+            'geographical_zone-pays' => empty($valuesArr['geographical_zone-pays']) ? '--' :
                 Pay::find($values->{'geographical_zone-pays'})->description,
-            'geographical_zone-centre' => empty(((array)$values)['geographical_zone-centre']) ? '--' :
+            'geographical_zone-centre' => empty($valuesArr['geographical_zone-centre']) ? '--' :
                 Centre::find($values->{'geographical_zone-centre'})->description,
-            'geographical_zone-communes' => empty(((array)$values)['geographical_zone-communes']) ? '--' :
+            'geographical_zone-communes' => empty($valuesArr['geographical_zone-communes']) ? '--' :
                 Communes::find($values->{'geographical_zone-communes'})->description,
-            'geographical_zone-departments' => empty(((array)$values)['geographical_zone-departments']) ? '--' :
+            'geographical_zone-departments' => empty($valuesArr['geographical_zone-departments']) ? '--' :
                 Department::find($values->{'geographical_zone-departments'})->description,
-            'geographical_zone-arrondissements' => empty(((array)$values)['geographical_zone-arrondissements']) ? '--' :
+            'geographical_zone-arrondissements' => empty($valuesArr['geographical_zone-arrondissements']) ? '--' :
                 Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
         ];
 

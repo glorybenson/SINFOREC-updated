@@ -126,12 +126,18 @@ class AddController extends Controller
         ];
 
         $binding['models'] = [
-            'judgement-region' => Region::find($values->{'judgement-region'})->description,
-            'geographical_zone-pays' => Pay::find($values->{'geographical_zone-pays'})->description,
-            'geographical_zone-centre' => Centre::find($values->{'geographical_zone-centre'})->description,
-            'geographical_zone-communes' => Communes::find($values->{'geographical_zone-communes'})->description,
-            'geographical_zone-departments' => Department::find($values->{'geographical_zone-departments'})->description,
-            'geographical_zone-arrondissements' => Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
+            'judgement-region' => empty(((array)$values)['judgement-region']) ? '--' :
+                Region::find($values->{'judgement-region'})->description,
+            'geographical_zone-pays' => empty(((array)$values)['geographical_zone-pays']) ? '--' :
+                Pay::find($values->{'geographical_zone-pays'})->description,
+            'geographical_zone-centre' => empty(((array)$values)['geographical_zone-centre']) ? '--' :
+                Centre::find($values->{'geographical_zone-centre'})->description,
+            'geographical_zone-communes' => empty(((array)$values)['geographical_zone-communes']) ? '--' :
+                Communes::find($values->{'geographical_zone-communes'})->description,
+            'geographical_zone-departments' => empty(((array)$values)['geographical_zone-departments']) ? '--' :
+                Department::find($values->{'geographical_zone-departments'})->description,
+            'geographical_zone-arrondissements' => empty(((array)$values)['geographical_zone-arrondissements']) ? '--' :
+                Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
         ];
 
         return view('naissance.registre.show', $binding);

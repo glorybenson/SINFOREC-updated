@@ -267,6 +267,8 @@
                 // get the index by checking the id
                 const indexMatch = $(this).attr('id').match(/wizard-navs-(\d+)/);
                 navigateTo(indexMatch ? indexMatch[1] : 0);
+                $('.wizard-active').removeClass('wizard-active');
+                $(this).addClass("wizard-active");
             });
 
             // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.

@@ -191,7 +191,7 @@
   </div>
 </div>
 <div class="card">
-    <div class="card-header" id="headingThree">
+    <div class="card-header" id="headingFour">
       <h5
       class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         4.  Renseignement sur le Déclarant
@@ -226,9 +226,9 @@
   </div>
 </div>
     <div class="card">
-    <div class="card-header" id="headingThree">
+    <div class="card-header" id="headingFive">
       <h5
-       data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         5. Jugement
       </h5>
     </div>

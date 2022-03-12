@@ -173,7 +173,7 @@
 
 
                             <div id="formControl">
-                                <a>Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
+                                <a>1. Zone Gérographique <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
                                 <ul style="display: block;">
@@ -241,7 +241,7 @@
 
 
                            <div id="formControl">
-                                <a>Renseignement sur le Père
+                                <a>2. Renseignement sur le Père
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
@@ -317,7 +317,7 @@
             </div>
 
             <div id="formControl">
-                                <a>Renseignement de la Mère
+                                <a>3. Renseignement de la Mère
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
@@ -395,7 +395,7 @@
 
             <div id="formControl">
                             <span class="shape1"></span><span class="shape2"></span>
-                            <span>Renseignement sur le Déclarant</span> <span class="menu-arrow"></span></a>
+                            <span>4. Renseignement sur le Déclarant</span> <span class="menu-arrow"></span></a>
                                
                                 @if(isset($is_edit))
                                 <ul style="display: block;">
@@ -411,20 +411,16 @@
                                             <td>{{ $values->{'mother_info-family_name'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Date de Naissance de la Mère</td>
+                                            <td>Adresse du déclarant</td>
                                             <td>{{ $values->{'mother_info-dob'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Lieu de Naissance de la Mère</td>
+                                            <td>Profession du déclarant</td>
                                             <td>{{ $values->{'mother_info-birth_place'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Profession de la Mère</td>
+                                            <td>C.I.N</td>
                                             <td>{{ $values->{'mother_info-occupation'} }} </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Addresse de la Mère</td>
-                                            <td>{{ $values->{'mother_info-address'} }} </td>
                                         </tr>
                                     </table>
                                     </div>
@@ -436,29 +432,87 @@
                                     <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                        <tr>
-                                            <td>Prénom de la Mère </td>
+                                            <td>Prénom du déclarant</td>
                                             <td>{{ $values->{'mother_info-first_name'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Nom de famille de la Mère</td>
+                                            <td>Nom du déclarant</td>
                                             <td>{{ $values->{'mother_info-family_name'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Date de Naissance de la Mère</td>
+                                            <td>Adresse du déclarant</td>
                                             <td>{{ $values->{'mother_info-dob'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Lieu de Naissance de la Mère</td>
+                                            <td>Profession du déclarant</td>
                                             <td>{{ $values->{'mother_info-birth_place'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Profession de la Mère</td>
+                                            <td>C.I.N</td>
                                             <td>{{ $values->{'mother_info-occupation'} }} </td>
                                         </tr>
-                                        <tr>
-                                            <td>Addresse de la Mère</td>
-                                            <td>{{ $values->{'mother_info-address'} }} </td>
+                                    </table>
+                                    </div>
+                                    </li>
+                                </ul>
+                            @endif
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="formControl">
+                            <span class="shape1"></span><span class="shape2"></span>
+                            <span>5. Jugement</span> <span class="menu-arrow"></span></a>
+                               
+                                @if(isset($is_edit))
+                                <ul style="display: none;">
+                                    <li>
+                                    <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Jugement</td>
+                                            <td>{{ $values->{'judgement-judgement'} }}</td>
                                         </tr>
+                                        <tr>
+                                            <td>Date du jugement</td>
+                                            <td>{{ $values->{'judgement-date'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Régions</td>
+                                            <td>{{ $values->{'judgment-region'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mentions Marginales</td>
+                                            <td>{{ $values->{'judgement-annotations'} }}</td>
+                                        </tr>
+                                        
+                                    </table>
+                                    </div>
+                                    </li>
+                                </ul>
+                            @else
+                                <ul style="display: block;">
+                                    <li>
+                                    <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Jugement</td>
+                                            <td>{{ $values->{'judgement-judgement'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date du jugement</td>
+                                            <td>{{ $values->{'judgement-date'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Régions</td>
+                                            <td>{{ $values->{'judgment-region'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mentions Marginales</td>
+                                            <td>{{ $values->{'judgement-annotations'} }}</td>
+                                        </tr>
+                                        
                                     </table>
                                     </div>
                                     </li>

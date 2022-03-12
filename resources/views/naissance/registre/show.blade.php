@@ -271,66 +271,6 @@
                     <li>Renseignement de la Mère </li>
                     <li>Renseignement sur le Déclarant </li>
                     <li>Jugement </li>
-                </ol>
-
-               <!-- <article role="article" class="beefup4" id="beefup4-2">
-    <h2 class="beefup-head">Open via JS</h2>
-    <div class="beefup-body">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-    </div>
-  </article>
-
-                <article role="article" class="beefup5">
-    <h2 class="beefup-head">Scroll 1</h2>
-    <div class="beefup-body">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-    </div>
-  </article>-->$_FILES
-              <script src="/path/to/cdn/jquery.min.js"></script>
-                <script src="jquery.beefup.js"></script>
-                <script>
-        $(function() {
-            $('.beefup1').beefup();
-
-            $('.beefup2').beefup({
-                openSingle: true
-            });
-
-            $('.beefup3').beefup({
-                animation: 'fade',
-                showSpeed: 1000
-            });
-
-            $('.beefup4').beefup('.beefup4');
-            $('.beefup4').beefup().open($('#beefup4-2'));
-
-            $('.beefup5').beefup({
-                scroll: true
-            });
-
-            $('.beefup6').beefup({
-                onOpen: function ($this) {
-                    $this.css('background', 'yellow');
-                },
-                onClose: function ($this) {
-                    $this.css('background', '');
-                }
-            });
-        });
-    </script>
-    <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+                </ol
 
 @endsection                              

@@ -79,8 +79,7 @@
                                                     @foreach ( $departments as $item)
                                                         <option value="{{ ((object)$item)->id }}"
                                                             {{ ((object)$item)->id ==
-                                                            $editingCentre->$departments['id'] ?
-                                                                 "selected":"" }}>
+                                                            $editingCentre->departments ? "selected":"" }}>
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
                                                 </select>
@@ -100,7 +99,7 @@
                                                     <option value="0" selected>--</option>
                                                     @foreach ($arrondissements as $item)
                                                         <option value="{{ ((object)$item)->id }}" {{ ((object)$item)
-                                                        ->id == $editingCentre->$arrondissements ?
+                                                        ->id == $editingCentre->arrondissements ?
                                                              "selected":"" }}>
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach
@@ -121,7 +120,7 @@
                                                     <option value="0" selected>--</option>
                                                     @foreach ($communes as $item)
                                                         <option value="{{ ((object)$item)->id }}"
-                                                            {{ ((object)$item)->id == $editingCentre->$communes ?
+                                                            {{ ((object)$item)->id == $editingCentre->communes ?
                                                                  "selected":"" }}>
                                                             {{ ((object)$item)->description }}</option>
                                                     @endforeach

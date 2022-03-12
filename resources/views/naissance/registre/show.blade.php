@@ -394,6 +394,7 @@
 
 
             <div id="formControl">
+            <li class="">
                             <span class="shape1"></span><span class="shape2"></span>
                             <span>4. Renseignement sur le Déclarant</span> <span class="menu-arrow"></span></a>
                                
@@ -427,6 +428,7 @@
                                     </li>
                                 </ul>
                             @else
+                            <li class="">
                                 <ul style="display: block;">
                                     <li>
                                     <div class="card-body">

@@ -434,23 +434,23 @@
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Prénom du déclarant</td>
-                                            <td>{{ $values->{'mother_info-first_name'} }}</td>
+                                            <td>{{ $values->{'declarant_info-first_name'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Nom du déclarant</td>
-                                            <td>{{ $values->{'mother_info-family_name'} }}</td>
+                                            <td>{{ $values->{'declarant_info-last_name'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Adresse du déclarant</td>
-                                            <td>{{ $values->{'mother_info-dob'} }}</td>
+                                            <td>{{ $values->{'declarant_info-address'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Profession du déclarant</td>
-                                            <td>{{ $values->{'mother_info-birth_place'} }}</td>
+                                            <td>{{ $values->{'declarant_info-profession'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>C.I.N</td>
-                                            <td>{{ $values->{'mother_info-occupation'} }} </td>
+                                            <td>{{ $values->{'declarant_info-cin'} }} </td>
                                         </tr>
                                     </table>
                                     </div>

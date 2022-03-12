@@ -133,6 +133,19 @@ class AddController extends Controller
         $binding[ 'old'] = $old->values;
         $binding[ 'post_url'] = route( 'naissance.registre.edit.post', [ 'id' => $id]);
         $binding[ 'page_url'] = route( 'naissance.registre.edit', [ 'id' => $id]);
+        $formNames = ['geographical', 'child_info', 'father_info', 'mother_info', 'declarant_info', 'judgement'];
+        $formNamesFilled = array_map(function ($prefix) use ($old) {
+            $filled = true;
+            foreach (json_decode($old->values, true) as $key => $value) {
+                if (str_starts_with($key, $prefix) && empty($value)) {
+                    $filled = false;
+                }
+            }
+
+            return $filled;
+        }, $formNames);
+
+        $binding['filledFields'] = $formNamesFilled;
         $binding[ 'is_edit'] = true;
 
         return view('naissance.registre.create', $binding);

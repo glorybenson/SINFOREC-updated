@@ -177,58 +177,8 @@
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                                 @if(isset($is_edit))
-                                <ul style="display: block;" id="wizard-ul">
-                                    <li>
-                                        <p><a class="flow-control wizard-filled" id="wizard-navs-0" href="#">1 Zone
-                                                Gérographique</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-1" class="wizard-filled" href="#">2
-                                                Renseignement sur l’enfant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-2" class="wizard-filled" href="#">3 Renseignement sur le Père</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-3" class="wizard-filled" href="#">4 Renseignement de la Mère</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-4" class="wizard-filled" href="#">5 Renseignement sur le Déclarant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-5" class="wizard-filled" href="#">6 Jugement</a></p>
-                                    </li>
-                                </ul>
-                            @else
-                                <ul style="display: block;" id="wizard-ul">
-                                    <li>
-                                        <p><a class="flow-control" id="wizard-navs-0" href="#">1 Zone Gérographique</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-1" href="#">2 Renseignement sur l’enfant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-2" href="#">3 Renseignement sur le Père</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-3" href="#">4 Renseignement de la Mère</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-4" href="#">5 Renseignement sur le Déclarant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-5" href="#">6 Jugement</a></p>
-                                    </li>
-                                </ul>
-                            @endif
-                        </li>
-                    </ul>
-                </div>
-            </div>
-                 
-                  
-                <p>
-                                 <div class="card-body">
+                                <!--<ul style="display: block;" id="wizard-ul">-->
+                                <div class="card-body">
                                     <table class="table table-bordered table-striped">
                                        <tr>
                                             <td>Pays</td>
@@ -253,6 +203,42 @@
                                     </table>
                                     <div class="mb-5">
                                     </div>
+                                <!--</ul>-->
+                            @else
+                            <div class="card-body">
+                                    <table class="table table-bordered table-striped">
+                                       <tr>
+                                            <td>Pays</td>
+                                            <td>{{ $values->{'geographical_zone-pays'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arrondissement</td>
+                                            <td>{{ $values->{'geographical_zone-arrondissements'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Région</td>
+                                            <td>{{ $values->{'geographical_zone-regions'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Département</td>
+                                            <td>{{ $values->{'geographical_zone-departments'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Commune</td>
+                                            <td>{{ $values->{'geographical_zone-communes'} }} </td>
+                                        </tr>
+                                    </table>
+                                    <div class="mb-5">
+                                    </div>
+                            @endif
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                 
+                  
+                <p>
+                                 
                 </p> 
              </div>
             </article>

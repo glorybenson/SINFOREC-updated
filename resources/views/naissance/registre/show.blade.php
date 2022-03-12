@@ -260,7 +260,6 @@
                                             <td>Mentions Marginales</td>
                                             <td>{{ $values->{'judgement-annotations'} }}</td>
                                         </tr>
-                                        
                                     </table>
       </div>
     </div>

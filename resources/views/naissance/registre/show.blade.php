@@ -392,11 +392,10 @@
                 </div>
             </div>
 
-
             <div id="formControl">
-            <li class="">
-                            <span class="shape1"></span><span class="shape2"></span>
-                            <span>4. Renseignement sur le Déclarant</span> <span class="menu-arrow"></span></a>
+                                <a>3.  Renseignement sur le Déclarant
+                                    <i id="open-menu" class="fa fa-chevron-right"></i>
+                                </a>
                                
                                 @if(isset($is_edit))
                                 <ul style="display: block;">
@@ -462,11 +461,11 @@
                     </ul>
                 </div>
             </div>
-
-            <div id="formControl">
-                            <span class="shape1"></span><span class="shape2"></span>
-                            <span>5. Jugement</span> <span class="menu-arrow"></span></a>
-                               
+            
+             <div id="formControl">
+                <a>5. Jugement
+                        <i id="open-menu" class="fa fa-chevron-right"></i>
+                                </a>                              
                                 @if(isset($is_edit))
                                 <ul style="display: none;">
                                     <li>

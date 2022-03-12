@@ -170,33 +170,62 @@
                     </div>      
                 </div> -->
 
-            <style>
-                .beefup-head {
-                cursor: pointer;
-                position: relative;
-                }
-                .beefup-head:after {
-                    border-style: solid;
-                    border-width: 12px 12px 0 12px;
-                    border-color: #ddd transparent transparent transparent;
-                    content: '';
-                    position: absolute;
-                    right: 0;
-                    height: 0;
-                    margin-top: -6px;
-                    top: 50%;
-                    width: 0;
-                }
-
-                .open > .beefup-head:after {
-                    border-width: 0 12px 12px 12px;
-                    border-color: transparent transparent #ddd transparent;
-                }
-            </style>
             
-                <article class="demo"> <li>
-                <h2 class="beefup-head"><a href="#"></a> Zone Gérographique </h2> 
-                <div class="beefup-body">  
+             
+                            <div id="formControl">
+                                <a>Zone Gérographique
+                                    <i id="open-menu" class="fa fa-chevron-right"></i>
+                                </a>
+                                @if(isset($is_edit))
+                                <ul style="display: block;" id="wizard-ul">
+                                    <li>
+                                        <p><a class="flow-control wizard-filled" id="wizard-navs-0" href="#">1 Zone
+                                                Gérographique</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-1" class="wizard-filled" href="#">2
+                                                Renseignement sur l’enfant</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-2" class="wizard-filled" href="#">3 Renseignement sur le Père</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-3" class="wizard-filled" href="#">4 Renseignement de la Mère</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-4" class="wizard-filled" href="#">5 Renseignement sur le Déclarant</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-5" class="wizard-filled" href="#">6 Jugement</a></p>
+                                    </li>
+                                </ul>
+                            @else
+                                <ul style="display: block;" id="wizard-ul">
+                                    <li>
+                                        <p><a class="flow-control" id="wizard-navs-0" href="#">1 Zone Gérographique</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-1" href="#">2 Renseignement sur l’enfant</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-2" href="#">3 Renseignement sur le Père</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-3" href="#">4 Renseignement de la Mère</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-4" href="#">5 Renseignement sur le Déclarant</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-5" href="#">6 Jugement</a></p>
+                                    </li>
+                                </ul>
+                            @endif
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                 
                   
                 <p>
                                  <div class="card-body">

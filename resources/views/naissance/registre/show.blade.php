@@ -196,9 +196,8 @@
                     </div>
                 </div> -->
 
-                <h2>Animated Collapsibles</h2>
-                <p>1. Zone Gérographique</p>
-                <button class="collapsible">Open Collapsible</button>
+                
+                <h5 class="collapsible">1. Zone Gérographique</button>
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>

@@ -85,7 +85,6 @@
                             <div>
                             <div class="accordion" id="accordionExample">
   <div class="card">
-    <div class="card-header" id="headingOne">
         <h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
         1. Zone Gérographique</h5>
     </div>
@@ -118,7 +117,6 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-header" id="headingTwo">
         <h5 class="mb-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         2. Renseignement sur le Père</h5>
     </div>

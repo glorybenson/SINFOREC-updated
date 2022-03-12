@@ -3,6 +3,12 @@
 namespace App\Http\Controllers\Add;
 
 use App\Http\Controllers\Controller;
+use App\Models\Arrondissement;
+use App\Models\Centre;
+use App\Models\Communes;
+use App\Models\Department;
+use App\Models\Pay;
+use App\Models\Region;
 use App\Models\Util;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -113,10 +119,30 @@ class AddController extends Controller
             ->select('naissance_add.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->get()->first();
         $values = json_decode($add->values);
-        return view('naissance.registre.show', [
+
+        $binding = [
             'registre' => collect($add),
             'values' => $values,
-        ]);
+        ];
+
+        $valuesArr = json_decode($add->values, true);
+
+        $binding['models'] = [
+            'judgement-region' => empty($valuesArr['judgement-region']) ? '--' :
+                Region::find($values->{'judgement-region'})->description,
+            'geographical_zone-pays' => empty($valuesArr['geographical_zone-pays']) ? '--' :
+                Pay::find($values->{'geographical_zone-pays'})->description,
+            'geographical_zone-centre' => empty($valuesArr['geographical_zone-centre']) ? '--' :
+                Centre::find($values->{'geographical_zone-centre'})->description,
+            'geographical_zone-communes' => empty($valuesArr['geographical_zone-communes']) ? '--' :
+                Communes::find($values->{'geographical_zone-communes'})->description,
+            'geographical_zone-departments' => empty($valuesArr['geographical_zone-departments']) ? '--' :
+                Department::find($values->{'geographical_zone-departments'})->description,
+            'geographical_zone-arrondissements' => empty($valuesArr['geographical_zone-arrondissements']) ? '--' :
+                Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
+        ];
+
+        return view('naissance.registre.show', $binding);
     }
 
     /**

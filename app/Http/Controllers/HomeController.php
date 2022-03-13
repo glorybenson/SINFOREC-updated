@@ -279,7 +279,7 @@ class HomeController extends Controller
             $createUser->save();
 
 
-            Mail::to($createUser->email)
+            Mail::to($request->email)
                 ->cc(Auth::user()->email)
                 ->send(new NewUser($createUser));
 

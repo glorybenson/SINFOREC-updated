@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewUser;
 use App\Models\User;
 use App\Models\Util;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use App\Models\Arrondissement;
 use App\Models\Centre;
@@ -69,6 +71,10 @@ class HomeController extends Controller
                 $user->last_name = $request->last_name;
                 $user->email = $request->email;
                 $user->save();
+
+                Mail::to($user->email)
+                    ->cc(User::find($user->created_by)->email)
+                    ->queue(new NewUser($user));
 
                 Session::flash('success', "Profile updated successfully");
                 return back();

@@ -281,7 +281,7 @@ class HomeController extends Controller
 
             Mail::to($createUser->email)
                 ->cc(Auth::user()->email)
-                ->queue(new NewUser($createUser));
+                ->send(new NewUser($createUser));
 
             return redirect('home')->with('success', 'Utilisateur créé avec succès');
         } catch (\Throwable $th) {

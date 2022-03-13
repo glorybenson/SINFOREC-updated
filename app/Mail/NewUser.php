@@ -31,7 +31,7 @@ class NewUser extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.newUser')
+        return $this->view('email.newUser')
             ->subject('Confirmation de la creation de votre compete');
     }
 }

@@ -72,10 +72,6 @@ class HomeController extends Controller
                 $user->email = $request->email;
                 $user->save();
 
-                Mail::to($user->email)
-                    ->cc(User::find($user->created_by)->email)
-                    ->queue(new NewUser($user));
-
                 Session::flash('success', "Profile updated successfully");
                 return back();
             }
@@ -281,6 +277,12 @@ class HomeController extends Controller
             $createUser->created_by = Auth::user()->id;
             $createUser->timestamps = true;
             $createUser->save();
+
+
+            Mail::to($createUser->email)
+                ->cc(Auth::user()->email)
+                ->queue(new NewUser($createUser));
+
             return redirect('home')->with('success', 'Utilisateur créé avec succès');
         } catch (\Throwable $th) {
             //throw $th;

@@ -54,7 +54,7 @@ class Util
     {
         $uid = Auth()->user()['id'];
         //$query = DB::table( $table_name)->where('created_by', $uid)->get();
-        $query = DB::table( $table_name)->get();
+        $query = DB::table( $table_name)->where('id', '!=', 0)->get();
         $collection = [];
         if ( count($query) > 0)
             foreach ($query as $makeup) {

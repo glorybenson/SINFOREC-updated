@@ -46,7 +46,7 @@
                                             </div>
                                         </div>
                                         <div class="text-right">
-                                            <button type="submit" class="btn btn-primary px-4">
+                                            <button type="submit" class="btn btn-primary px-4"
                                                 onclick="return confirm('Are you sure you want to submit this form?')">
                                                 Ajout d’un pays
                                             </button>

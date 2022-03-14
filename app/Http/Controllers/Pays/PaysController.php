@@ -21,7 +21,7 @@ class PaysController extends Controller
      */
     public function index()
     {
-        $pays = Pay::all();
+        $pays = Pay::all()->except(0);
         return view('pays.index', compact('pays'));
     }
 

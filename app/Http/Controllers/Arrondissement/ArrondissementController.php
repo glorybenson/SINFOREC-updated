@@ -20,7 +20,7 @@ class ArrondissementController extends Controller
     public function index()
     {
         $arrondissement = Arrondissement::all();
-        $department = Department::all();
+        $department = Department::all()->except(0);
         return view('arrondissement.index', [ 'arrondissement' => $arrondissement, 'department' => $department]);
     }
 

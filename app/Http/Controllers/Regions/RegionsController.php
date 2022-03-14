@@ -20,8 +20,8 @@ class RegionsController extends Controller
      */
     public function index()
     {
-        $regions = Region::all();
-        $pays = Pay::all();
+        $regions = Region::all()->except(0);
+        $pays = Pay::all()->except(0);
         return view('regions.index', ['regions' => $regions, 'pays' => $pays]);
     }
 

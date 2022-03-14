@@ -18,8 +18,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        $department = Department::all();
-        $regions = Region::all();
+        $department = Department::all()->except(0);
+        $regions = Region::all()->except(0);
         return view('department.index', ['department' => $department, 'regions' => $regions]);
     }
 

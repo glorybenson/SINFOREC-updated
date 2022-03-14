@@ -132,9 +132,9 @@ class HomeController extends Controller
     {
         $shell = new \stdClass();
         $binding = Util::load($shell);
-        $data['pays'] = $r = Pay::all();
-        $data['regions'] = $r = Region::all();
-        $data['departments'] = Department::all();
+        $data['pays'] = $r = Pay::all()->except(0);
+        $data['regions'] = $r = Region::all()->except(0);
+        $data['departments'] = Department::all()->except(0);
         $data['arrondissements'] = Arrondissement::all();
         $data['communes'] = Communes::all();
         $data['centre'] = Centre::all();

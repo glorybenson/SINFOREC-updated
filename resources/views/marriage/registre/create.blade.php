@@ -32,8 +32,7 @@
                                     <li>
                                         <p>
                                             <a class="{{$field['is_filled'] ? ' wizard-filled' : ''}}"
-                                               id="wizard-navs-{{
-                                            $loop->index }}" href="#">
+                                               id="wizard-navs-{{$loop->index }}" href="#">
                                                 {{ $loop->iteration }} {{ $field['title'] }}
                                             </a>
                                         </p>
@@ -178,19 +177,19 @@
                         <div class="form-section">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5 class="card-title">2 Renseignement sur l’enfant </h5>
+                                    <h5 class="card-title">2 Acte de Mariage </h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="mb-4">
-                                                <label for="child_info-date_of_decl">Date de Déclaration</label>
-                                                <input id="child_info-date_of_decl" placeholder="Select date" type="date" name="child_info-date_of_decl" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
+                                                <label for="certificate-date_of_marriage">Date du Mariage</label>
+                                                <input id="certificate-date_of_marriage" placeholder="Select date" type="date" name="certificate-date_of_marriage" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
                                                 <span class="feedback-new" id="invalid-feedback7" role="alert"></span>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="child_info-decl_number">Numéro de déclaration</label>
-                                                <input id="child_info-decl_number" type="text" class="form-control serializable" name="child_info-decl_number" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >
+                                                <label for="certificate-decl_number">Numéro de déclaration</label>
+                                                <input id="certificate-decl_number" type="text" class="form-control serializable" name="certificate-decl_number" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >
                                                 <span class="feedback-new" id="invalid-feedback8" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -199,8 +198,8 @@
                                                 @endif
                                             </div>
                                             <div class="mb-4">
-                                                <label for="child_info-first_name">Prénom de l'enfant</label>
-                                                <input id="child_info-first_name" type="text" class="form-control serializable" name="child_info-first_name" tabindex="2" data-parsley-errors-container="#invalid-feedback9" required >
+                                                <label for="certificate-date_of_decl">Date de déclaration</label>
+                                                <input id="certificate-date_of_decl" type="text" class="form-control serializable" name="certificate-date_of_decl" tabindex="2" data-parsley-errors-container="#invalid-feedback9" required >
                                                 <span class="feedback-new" id="invalid-feedback9" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -209,8 +208,9 @@
                                                 @endif
                                             </div>
                                             <div class="mb-4">
-                                                <label for="child_info-last_name">Nom de famille de l'enfant</label>
-                                                <input id="child_info-last_name" type="text" class="form-control serializable" name="child_info-last_name" tabindex="3" data-parsley-errors-container="#invalid-feedback10" required >
+                                                <label for="certificate-wedding_time">Heure du Mariage</label>
+                                                <input id="certificate-wedding_time" placeholder="Select date"
+                                                       type="time" name="certificate-wedding_time" class="form-control serializable" tabindex="5" data-parsley-errors-container="#invalid-feedback10" required >
                                                 <span class="feedback-new" id="invalid-feedback10" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -219,43 +219,27 @@
                                                 @endif
                                             </div>
                                             <div class="mb-4">
-                                                <label for="child_info-dob">Date de Naissance de l'enfant</label>
-                                                <input id="child_info-dob" placeholder="Select date" type="date" name="child_info-dob" class="form-control serializable" tabindex="4" data-parsley-errors-container="#invalid-feedback11" required >
+                                                <label for="certificate-wedding_venue">Lieu du Mariage</label>
+                                                <input id="certificate-wedding_venue" type="text" class="form-control
+                                                serializable" name="certificate-wedding_venue" tabindex="2" data-parsley-errors-container="#invalid-feedback11" required >
                                                 <span class="feedback-new" id="invalid-feedback11" role="alert"></span>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="child_info-birth_time">Heure de Naissance</label>
-                                                <input id="child_info-birth_time" placeholder="Select date" type="time" name="child_info-birth_time" class="form-control serializable" tabindex="5" data-parsley-errors-container="#invalid-feedback12" required >
+                                                <label for="certificate-civil_servant">Officier d'ETAT CIVIL</label>
+                                                <select id="certificate-civil_servant"
+                                                        data-parsley-errors-container="#invalid-feedback12"
+                                                        data-live-search="true" data-name="centre" name="certificate-civil_servant" class="selectpicker w-100 serializable" tabindex="2" required>
+                                                <optiuon value="" selected>--</optiuon>
+                                                @if(isset($users))
+                                                    @foreach($users as $item)
+                                                        <option value="{{((object)$item)->id}}">
+                                                            {{((object)$item)->first_name}}
+                                                            {{((object)$item)->last_name}}
+                                                        </option>
+                                                    @endforeach
+                                                @endif
+                                                            </select>
                                                 <span class="feedback-new" id="invalid-feedback12" role="alert"></span>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="child_info-place_of_birth">Lieu de Naissance</label>
-                                                <input id="child_info-place_of_birth" type="text" class="form-control serializable" name="child_info-place_of_birth" tabindex="3" data-parsley-errors-container="#invalid-feedback10" required >
-                                                <span class="feedback-new" id="invalid-feedback10" role="alert"></span>
-                                                @if ($errors->has('description'))
-                                                    <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="child_info-gender">Sexe</label>
-                                                <select id="child_info-gender" data-live-search="true" name="child_info-gender" class="selectpicker w-100 serializable" tabindex="6" data-parsley-errors-container="#invalid-feedback13" required >
-                                                    <option value>--</option>
-                                                    <option value="Masculin">Masculin</option>
-                                                    <option value="Féminin">Féminin</option>
-                                                </select>
-                                                <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="child_info-health_training">Formation sanitaire</label>
-                                                <input id="child_info-health_training" type="text" class="form-control serializable" name="child_info-health_training" tabindex="7" data-parsley-errors-container="#invalid-feedback15">
-                                                <span class="feedback-new" id="invalid-feedback15" role="alert"></span>
-                                                @if ($errors->has('description'))
-                                                    <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
-                                            </span>
-                                                @endif
                                             </div>
                                         </div>
                                     </div>

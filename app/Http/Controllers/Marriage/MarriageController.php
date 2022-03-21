@@ -10,6 +10,7 @@ use App\Models\Department;
 use App\Models\Marriage;
 use App\Models\Pay;
 use App\Models\Region;
+use App\Models\User;
 use App\Models\Util;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -218,6 +219,7 @@ final class MarriageController extends Controller
             ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => false],
         ];
         $binding[ 'is_edit'] = true;
+        $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
 
         return view('marriage.registre.create', $binding);
     }

@@ -7,9 +7,8 @@
                     <div class="d-flex align-items-center">
                         <h5 class="page-title">Dashboard</h5>
                         <ul class="breadcrumb ml-2">
-                            <li class="breadcrumb-item active"><a href="{{ route('naissance.registre') }}"
-                                                                  class="text-primary">Registre des
-                                    Naissances</a></li>
+                            <li class="breadcrumb-item active"><a href="{{ route('marriage.registre') }}"
+                                                                  class="text-primary">Registre des Mariage</a></li>
                         </ul>
                     </div>
                 </div>
@@ -23,62 +22,22 @@
                     <ul>
                         <li>
                             <div id="formControl">
-                                <a>Naissance Registre
+                                <a>Mariage Registre
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                             </div>
-                            @if(isset($is_edit))
-                                <ul style="display: block;" id="wizard-ul">
+
+                            <ul style="display: block;" id="wizard-ul">
+                                @foreach($fields as $field)
                                     <li>
-                                        <p><a class="flow-control{{$filledFields[0] ? ' wizard-filled' : ''}}"
-                                              id="wizard-navs-0" href="#">1
-                                                Zone
-                                                Gérographique</a></p>
+                                        <p>
+                                            <a class="{{$field[1] ? ' wizard-filled' : ''}}" id="wizard-navs-{{ $loop->index }}" href="#">
+                                                {{ $loop->iteration }} {{ $field[0] }}
+                                            </a>
+                                        </p>
                                     </li>
-                                    <li>
-                                        <p><a id="wizard-navs-1" class="{{$filledFields[1] ? ' wizard-filled' : ''}}"
-                                              href="#">2
-                                                Renseignement sur l’enfant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-2" class="{{$filledFields[2] ? ' wizard-filled' : ''}}"
-                                              href="#">3 Renseignement sur le Père</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-3" class="{{$filledFields[3] ? ' wizard-filled' : ''}}"
-                                              href="#">4 Renseignement de la Mère</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-4" class="{{$filledFields[4] ? ' wizard-filled' : ''}}"
-                                              href="#">5 Renseignement sur le Déclarant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-5" class="{{$filledFields[5] ? ' wizard-filled' : ''}}"
-                                              href="#">6 Jugement</a></p>
-                                    </li>
-                                </ul>
-                            @else
-                                <ul style="display: block;" id="wizard-ul">
-                                    <li>
-                                        <p><a class="flow-control" id="wizard-navs-0" href="#">1 Zone Gérographique</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-1" href="#">2 Renseignement sur l’enfant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-2" href="#">3 Renseignement sur le Père</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-3" href="#">4 Renseignement de la Mère</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-4" href="#">5 Renseignement sur le Déclarant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-5" href="#">6 Jugement</a></p>
-                                    </li>
-                                </ul>
-                            @endif
+                                @endforeach
+                            </ul>
                         </li>
                     </ul>
                 </div>

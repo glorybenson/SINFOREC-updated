@@ -33,6 +33,14 @@ Route::middleware( 'auth')->group( function () {
     Route::get('/naissance/registre/{id}/detail', [App\Http\Controllers\Add\AddController::class, 'show'])->name('naissance.registre.show');
     Route::get('/naissance/registre/{id}/delete', [App\Http\Controllers\Add\AddController::class, 'destroy'])->name('naissance.registre.delete');
 
+    Route::get('/marriage/registre', [App\Http\Controllers\Marriage\MarriageController::class, 'index'])->name('marriage.registre');
+    Route::get('/marriage/registre/{id}/edit', [App\Http\Controllers\Marriage\MarriageController::class, 'edit'])->name('marriage.registre.edit');
+    Route::post('/marriage/registre/{id}/edit', [App\Http\Controllers\Marriage\MarriageController::class, 'update'])->name('marriage.registre.edit.post');
+    Route::get('/marriage/registre/create', [App\Http\Controllers\Marriage\MarriageController::class, 'create'])->name('marriage.registre.create');
+    Route::post('/marriage/registre/create', [App\Http\Controllers\Marriage\MarriageController::class, 'store'])->name('marriage.registre.create.post');
+    Route::get('/marriage/registre/{id}/detail', [App\Http\Controllers\Marriage\MarriageController::class, 'show'])->name('marriage.registre.show');
+    Route::get('/marriage/registre/{id}/delete', [App\Http\Controllers\Marriage\MarriageController::class, 'destroy'])->name('marriage.registre.delete');
+
     Route::get( '/naissance/registre/geographical_zone', [FormController::class, 'geographical_zone'])->name( 'naissance.forms.geographical_zone');
     Route::get( '/naissance/registre/child_info', [FormController::class, 'child_info'])->name( 'naissance.forms.child_info');
     Route::get( '/naissance/registre/father_info', [FormController::class, 'father_info'])->name( 'naissance.forms.father_info');

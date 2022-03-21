@@ -61,7 +61,7 @@
                             <span class="shape1"></span><span class="shape2"></span>
                             <span>Mariage</span> <span class="menu-arrow"></span></a>
                         <ul style="display: none;">
-                            <li><a href="">Régistre de Mariage </a></li>
+                            <li><a href="{{ route('marriage.registre') }}">Régistre de Mariage </a></li>
                             <li><a href="">Certificat de Mariage</a></li>
                             <li><a href="">Acte de Mariage</a></li>
                         </ul>

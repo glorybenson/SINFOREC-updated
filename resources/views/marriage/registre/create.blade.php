@@ -31,8 +31,10 @@
                                 @foreach($fields as $field)
                                     <li>
                                         <p>
-                                            <a class="{{$field[1] ? ' wizard-filled' : ''}}" id="wizard-navs-{{ $loop->index }}" href="#">
-                                                {{ $loop->iteration }} {{ $field[0] }}
+                                            <a class="{{$field['is_filled'] ? ' wizard-filled' : ''}}"
+                                               id="wizard-navs-{{
+                                            $loop->index }}" href="#">
+                                                {{ $loop->iteration }} {{ $field['title'] }}
                                             </a>
                                         </p>
                                     </li>

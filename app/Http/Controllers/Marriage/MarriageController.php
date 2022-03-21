@@ -36,20 +36,20 @@ final class MarriageController extends Controller
         $binding[ 'page_url'] = route( 'marriage.registre.create');
 
         $binding['fields'] = [
-            ['title' => 'Zone Gérographique', false],
-            ['title' => 'Acte de Mariage', false],
-            ['title' => "Renseignement sur l'Epoux", false],
-            ['title' => "Renseignement sur le Père de l'Epoux", false],
-            ['title' => "Renseignement sur la Mère de l'Epoux", false],
-            ['title' => "Renseignement sur l'Epouse", false],
-            ['title' => "Renseignement sur le Père de l'Epouse", false],
-            ['title' => "Renseignement sur la Mère de l'Epouse", false],
-            ['title' => "Renseignements additionnels ", false],
-            ['title' => "Jugement", false],
-            ['title' => "Premier témoin de l'Epoux", false],
-            ['title' => "Deuxieme témoin de l'Epoux", false],
-            ['title' => "Premier témoin de l'Epouse", false],
-            ['title' => "Deuxieme témoin de l'Epouse", false],
+            ['title' => 'Zone Gérographique', 'is_filled' => false],
+            ['title' => 'Acte de Mariage', 'is_filled' => false],
+            ['title' => "Renseignement sur l'Epoux", 'is_filled' => false],
+            ['title' => "Renseignement sur le Père de l'Epoux", 'is_filled' => false],
+            ['title' => "Renseignement sur la Mère de l'Epoux", 'is_filled' => false],
+            ['title' => "Renseignement sur l'Epouse", 'is_filled' => false],
+            ['title' => "Renseignement sur le Père de l'Epouse", 'is_filled' => false],
+            ['title' => "Renseignement sur la Mère de l'Epouse", 'is_filled' => false],
+            ['title' => "Renseignements additionnels ", 'is_filled' => false],
+            ['title' => "Jugement", 'is_filled' => false],
+            ['title' => "Premier témoin de l'Epoux", 'is_filled' => false],
+            ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => false],
+            ['title' => "Premier témoin de l'Epouse", 'is_filled' => false],
+            ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => false],
         ];
 
         return view('marriage.registre.create', $binding);

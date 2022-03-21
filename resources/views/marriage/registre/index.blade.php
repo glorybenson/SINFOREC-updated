@@ -36,7 +36,7 @@
                                 <th>Date du Mariage</th>
                                 <th>Numéro de déclaration</th>
                                 <th>Officier d'ETAT CIVIL</th>
-                                <th>Cree le</th>
+                                
                                 <th>Action</th>
                                 </thead>
                                 <tbody>
@@ -64,9 +64,6 @@
                                         </td>
                                         <td>
                                             {{ \App\Models\User::find($item->created_by)->first_name }}
-                                        </td>
-                                        <td>
-                                            {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
                                             <a class="text-dark" href="{{ route('marriage.registre.show', ['id' => $item->id, 'rt' => time()]) }}">

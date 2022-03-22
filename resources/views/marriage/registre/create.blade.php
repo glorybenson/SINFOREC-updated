@@ -739,7 +739,7 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-3">
-                                                <label for="judgment-region">Régions</label>
+                                                <label for="judgment-region">Lieu d'emission</label>
                                                 @if (isset($regions))
                                                     <select id="judgment-region" data-live-search="true" name="judgment-region" class="selectpicker w-100 serializable removable" tabindex="4" data-parsley-errors-container="#invalid-feedback46" required >
                                                         <option value="" selected>--</option>
@@ -759,7 +759,7 @@
                                                     @endif
                                                 @endif
                                             </div>
-                                            <div class="row mb-3">
+                                            <!--<div class="row mb-3">
                                                 <label for="judgement-annotations">Mentions Marginales</label>
                                                 <input id="judgement-annotations" type="text" class="form-control serializable removable" name="judgement-annotations" required  tabindex="5" data-parsley-errors-container="#invalid-feedback39">
                                                 <span class="feedback-new" id="invalid-feedback39" role="alert"></span>
@@ -768,7 +768,7 @@
                                                 <strong>{{ $errors->first('description') }}</strong>
                                             </span>
                                                 @endif
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>

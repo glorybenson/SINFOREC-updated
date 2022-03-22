@@ -903,6 +903,134 @@
                             </div>
                         </div>
 
+                        <div class="form-section">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">13 Premier témoin de l'Epouse</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="row mb-4">
+                                                <label for="mother_info-first_name">Prénom Premier témoin de l'Epouse</label>
+                                                <input id="mother_info-first_name" type="text" class="form-control serializable" name="mother_info-first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback22" required >
+                                                <span class="feedback-new" id="invalid-feedback22" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-family_name">Nom Premier témoin de l'Epouse</label>
+                                                <input id="mother_info-family_name" type="text" class="form-control serializable" name="mother_info-family_name" tabindex="2" data-parsley-errors-container="#invalid-feedback23" required >
+                                                <span class="feedback-new" id="invalid-feedback23" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-occupation">Profession Premier témoin de l'Epouse</label>
+                                                <input id="mother_info-occupation" type="text" class="form-control serializable" name="mother_info-occupation" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
+                                                <span class="feedback-new" id="invalid-feedback26" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="declarant_info-cin" class="required">C.I.N</label>
+                                                <input id="declarant_info-cin" type="number" class="form-control serializable" name="declarant_info-cin" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
+                                                <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-address">Addresse Premier témoin de l'Epouse</label>
+                                                <input id="mother_info-address" type="text" class="form-control serializable" name="mother_info-address" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+                                                <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">14 Deuxieme témoin de l'Epouse</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="row mb-4">
+                                                <label for="mother_info-first_name">Prénom Deuxieme témoin de l'Epouse</label>
+                                                <input id="mother_info-first_name" type="text" class="form-control serializable" name="mother_info-first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback22" required >
+                                                <span class="feedback-new" id="invalid-feedback22" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-family_name">Nom Deuxieme témoin de l'Epouse</label>
+                                                <input id="mother_info-family_name" type="text" class="form-control serializable" name="mother_info-family_name" tabindex="2" data-parsley-errors-container="#invalid-feedback23" required >
+                                                <span class="feedback-new" id="invalid-feedback23" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-occupation">Profession Deuxieme témoin de l'Epouse</label>
+                                                <input id="mother_info-occupation" type="text" class="form-control serializable" name="mother_info-occupation" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
+                                                <span class="feedback-new" id="invalid-feedback26" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="declarant_info-cin" class="required">C.I.N</label>
+                                                <input id="declarant_info-cin" type="number" class="form-control serializable" name="declarant_info-cin" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
+                                                <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-address">Addresse Deuxieme témoin de l'Epouse</label>
+                                                <input id="mother_info-address" type="text" class="form-control serializable" name="mother_info-address" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+                                                <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <div class="form-navigation float-right mr-4" id="new">
                             <input type="hidden" name="saveAndExit" value="1">

@@ -7,7 +7,7 @@
                     <div class="d-flex align-items-center">
                         <h5 class="page-title">Dashboard</h5>
                         <ul class="breadcrumb ml-2">
-                        <li class="breadcrumb-item"><a href="{{ route('Deces.registre') }}">Des détails</a>
+                        <li class="breadcrumb-item"><a href="{{ route('deces.registre') }}">Des détails</a>
 
                             <li class="breadcrumb-item active">Registre</li>
                         </ul>
@@ -22,7 +22,7 @@
                         <h4 class="card-title float-left">
                             S'inscrire</h4>
                         <div class="text-right">
-                            <a href="{{ route('Deces.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
+                            <a href="{{ route('deces.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -69,13 +69,13 @@
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="{{ route('Deces.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
+                                            <a class="text-dark" href="{{ route('deces.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
                                                 <i class="feather-eye"></i></a>
-                                            <a href="{{ route('Deces.registre.edit', ['id' => $item->id]) }}"
+                                            <a href="{{ route('deces.registre.edit', ['id' => $item->id]) }}"
                                                class="mx-2 text-dark"><i class="feather-edit"></i></a>   
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href="{{ route('Deces.registre.delete', ['id' => $item->id]) }}"><i
+                                               href="{{ route('deces.registre.delete', ['id' => $item->id]) }}"><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

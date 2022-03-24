@@ -152,7 +152,8 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="geographical_zone-centre">Centres</label>
-                                                <select id="geographical_zone-centre" data-parsley-errors-container="#invalid-feedback6" data-live-search="true" data-name="centre" name="geographical_zone-centre" class="selectpicker w-100 serializable" tabindex="2" required>
+                                                <select id="geographical_zone-centre"
+                                                        data-parsley-errors-container="#invalid-feedback6" data-live-search="true" data-name="centre" name="geographical_zone-centre" class="selectpicker w-100 serializable modifiable" tabindex="2" required>
                                                     <option value="" selected>--</option>
                                                     @if(isset($centre))
                                                         @foreach($centre as $item)

@@ -27,9 +27,11 @@
         // createCenterAutocomplete();
         saveAsDraft();
 
-        if( location.pathname.indexOf( '/centre/create') !== -1
-            || location.pathname.indexOf( 'naissance/registre/create') !== -1
-            || /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname))
+        if(location.pathname.indexOf( '/centre/create') !== -1
+                || location.pathname.indexOf( 'naissance/registre/create') !== -1
+                || /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname)
+                || location.pathname.indexOf( 'marriage/registre/create') !== -1
+                || /marriage\/registre\/[0-9]+\/edit/.test( window.location.pathname))
             filterHierarchy( createDropdown);
 
         // if( location.pathname.indexOf( 'create-user') !== -1 || location.pathname.indexOf( 'edit-user') !== -1)
@@ -86,7 +88,8 @@
         function saveAsDraft() {
             let edit = false;
 
-            if( !( edit = /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname)) &&  window.location.pathname.indexOf( 'naissance/registre/create') === -1)
+            if( (!( edit = /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname)) &&  window.location.pathname.indexOf( 'naissance/registre/create') === -1)
+                || (!( edit = /marriage\/registre\/[0-9]+\/edit/.test( window.location.pathname)) &&  window.location.pathname.indexOf( 'marriage/registre/create') === -1))
                 return;
 
             if( edit) {

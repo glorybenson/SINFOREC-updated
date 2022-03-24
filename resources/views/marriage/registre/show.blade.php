@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card-body">
+                               <!-- <div class="card-body">
                                     <div>
                                         <h4 class="card-title float-left">Renseignement sur le mariage</h4>
                                     </div>
@@ -78,7 +78,7 @@
                             </div>
 
 
-                            <div>
+                            <div>-->
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">

@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                            S'inscrire</h4>
+                        Régistre de Mariage</h4>
                         <div class="text-right">
                             <a href="{{ route('marriage.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>

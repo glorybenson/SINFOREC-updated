@@ -298,7 +298,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de l'Epouse</td>
-                                                        <td>{{ $values->{'bride_address'} }}</td>
+                                                        <td>{{ $values->{'bride-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>

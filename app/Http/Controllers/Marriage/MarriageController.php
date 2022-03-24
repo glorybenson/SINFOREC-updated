@@ -30,18 +30,22 @@ final class MarriageController extends Controller
             ->join('users', 'marriage.created_by', '=', 'users.id')
             ->select('marriage.*')
             ->get();
-        $values = json_decode($add['values'], true);
 
-        if (isset($values['certificate-civil_servant'])) {
-            $civilServant = User::find($values['certificate-civil_servant']);
-        }
-        $civilServantName = isset($civilServant)
-            ? $civilServant->first_name . ' ' . $civilServant->last_name
-            : '--';
+        $add = array_map(function ($marriae) {
+            $values = json_decode($marriae->values, true);
+            if (isset($values['certificate-civil_servant'])) {
+                $civilServant = User::find($values['certificate-civil_servant']);
+            }
+            $marriae->civilServantName = isset($civilServant)
+                ? $civilServant->first_name . ' ' . $civilServant->last_name
+                : '--';
+            return $marriae;
+        }, (array)$add);
+
+
 
         return view('marriage.registre.index', [
-            'add' => $add,
-            'civilServantName' => $civilServantName,
+            'add' => $add
         ]);
     }
 

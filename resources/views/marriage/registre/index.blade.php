@@ -64,7 +64,7 @@
                                             {{ $item->values->{'certificate-decl_number'} }}
                                         </td>
                                         <td>
-                                            {{ $civilServantName }}
+                                            {{ $item->civilServantName }}
                                         </td>
                                         <td>
                                             {{ \App\Models\User::find($item->created_by)->first_name }}

@@ -48,23 +48,23 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            {{ $item->values->{'child_info-first_name'} }}
+                                            {{ $item->values->{'groom_father-first_name'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'child_info-last_name'} }}
+                                            {{ $item->values->{'groom_father-family_name'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'child_info-dob'} }}
+                                            {{ $item->values->{'bride-first_name'} }}</td>
+                                        <td>
+                                            {{ $item->values->{'bride-family_name'} }}</td>
+                                        <td>
+                                            {{ $item->values->{'certificate-date_of_marriage'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'father_info-country'} }}</td>
-                                        <td>
-                                            {{ $item->values->{'mother_info-first_name'} }}</td>
-                                        <td>
-                                            {{ $item->values->{'mother_info-family_name'} }}
+                                            {{ $item->values->{'certificate-decl_number'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'mother_info-family_name'} }}
+                                            {{ $item->values->{'certificate-civil_servant'} }}
                                         </td>
                                         <td>
                                             {{ \App\Models\User::find($item->created_by)->first_name }}

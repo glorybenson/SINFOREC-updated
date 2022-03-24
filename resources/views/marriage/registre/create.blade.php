@@ -224,7 +224,8 @@
                                                 <label for="certificate-civil_servant">Officier d'ETAT CIVIL</label>
                                                 <select id="certificate-civil_servant"
                                                         data-parsley-errors-container="#invalid-feedback12"
-                                                        data-live-search="true" data-name="centre" name="certificate-civil_servant" class="selectpicker w-100 serializable" tabindex="2" required>
+                                                        data-live-search="true" data-name="civil_servant"
+                                                        name="certificate-civil_servant" class="selectpicker w-100 serializable modifiable" tabindex="2" required>
                                                 <optiuon value="" selected>--</optiuon>
                                                 @if(isset($users))
                                                     @foreach($users as $item)

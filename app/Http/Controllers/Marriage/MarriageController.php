@@ -45,6 +45,7 @@ final class MarriageController extends Controller
         $binding = Util::load( $shell);
         $binding[ 'post_url'] = route( 'marriage.registre.create.post');
         $binding[ 'page_url'] = route( 'marriage.registre.create');
+        $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
 
         $binding['fields'] = [
             ['title' => 'Zone Gérographique', 'is_filled' => false],

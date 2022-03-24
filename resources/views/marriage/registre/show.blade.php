@@ -13,7 +13,8 @@
                             <div class="d-flex align-items-center">
                                 <h5 class="page-title">Dashboard</h5>
                                 <ul class="breadcrumb ml-2">
-                                    <li class="breadcrumb-item"><a href="{{ route('naissance.registre') }}">Registre de Mariage</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('marriage.registre') }}">Registre de
+                                            Mariage</a>
                                     </li>
                                     <li class="breadcrumb-item active">View</li>
                                 </ul>
@@ -33,52 +34,44 @@
                             </div>
                             </div>
 
-                           <!-- <div class="card-body">
+                           <div class="card-body">
                                 <div>
-                                <h4 class="card-title float-left">Renseignement sur l’enfant</h4>
+                                <h4 class="card-title float-left">Renseignement sur le mariage</h4>
                                 </div>
                                     <table class="table table-bordered table-striped">
                                         <tr>
-                                            <td>Date de Déclaration</td>
-                                            <td>{{ $values->{'child_info-date_of_decl'} }}</td>
+                                            <td>Prénom du Père de l'Epoux</td>
+                                            <td>{{ $values->{'groom_father-first_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de famille du Père de l'Epoux</td>
+                                            <td>{{ $values->{'groom_father-family_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prénom de l'Epouse</td>
+                                            <td>{{ $values->{'bride-first_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de famille de l'Epouse</td>
+                                            <td>{{ $values->{'bride-family_name'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date du Mariage</td>
+                                            <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
                                         </tr>
                                         <tr>
                                             <td>Numéro de déclaration</td>
-                                            <td>{{ $values->{'child_info-decl_number'} }}</td>
+                                            <td>{{ $values->{'certificate-decl_number'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Prénom de l'enfant</td>
-                                            <td>{{ $values->{'child_info-first_name'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nom de famille de l'enfant</td>
-                                            <td>{{ $values->{'child_info-last_name'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Date de Naissance de l'enfant</td>
-                                            <td>{{ $values->{'child_info-dob'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Heure de Naissance</td>
-                                            <td>{{ $values->{'child_info-birth_time'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lieu de Naissance</td>
-                                            <td>{{ $values->{'child_info-place_of_birth'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sexe</td>
-                                            <td>{{ $values->{'child_info-gender'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Formation sanitaire</td>
-                                            <td>{{ $values->{'child_info-health_training'} }}</td>
+                                            <td>Officier d'ETAT CIVIL</td>
+                                            <td>{{ $values->{'certificate-civil_servant'} }}</td>
                                         </tr>
                                     </table>
                                     <div class="mb-5">
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
 
 
                             <div>
@@ -190,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-header" id="headingFour">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -225,7 +218,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="card">
                         <div class="card-header" id="headingFive">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -265,7 +258,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card">
                         <div class="card-header" id="headingFive">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -305,8 +298,8 @@
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="card">
                         <div class="card-header" id="headingSix">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -432,7 +425,7 @@
                 <div class="card">
                         <div class="card-header" id="headingNine">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. Renseignements additionnels 
+                                9. Renseignements additionnels
                             </h5>
                         </div>
                         <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">

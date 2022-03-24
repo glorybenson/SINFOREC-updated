@@ -31,18 +31,18 @@ final class MarriageController extends Controller
             ->select('marriage.*')
             ->get();
 
-        $add = array_map(function ($marriae) {
-            $values = json_decode($marriae['values'], true);
+        $add_new = [];
+
+        foreach ($add as $item) {
+            $values = json_decode($item->values, true);
             if (isset($values['certificate-civil_servant'])) {
                 $civilServant = User::find($values['certificate-civil_servant']);
             }
-            $marriae['civilServantName'] = isset($civilServant)
+            $item->civilServantName = isset($civilServant)
                 ? $civilServant->first_name . ' ' . $civilServant->last_name
                 : '--';
-            return $marriae;
-        }, (array)$add);
-
-
+            $add_new[] = $item;
+        }
 
         return view('marriage.registre.index', [
             'add' => $add

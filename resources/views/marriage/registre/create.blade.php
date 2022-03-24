@@ -729,8 +729,8 @@
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-3">
-                                            <label for="">Regime Matrimonial</label>
-                                                <select id="" data-live-search="true" name="" class="selectpicker
+                                            <label for="additional-regime">Regime Matrimonial</label>
+                                                <select id="additional-regime" data-live-search="true" name="additional-regime" class="selectpicker
                                                 w-100 serializable"   tabindex="1" data-parsley-errors-container="#invalid-feedback49"  required >
                                                     <option value="" selected>---</option>
                                                     <option value="">Poligamie</option>
@@ -739,8 +739,8 @@
                                                 <span class="feedback-new" id="invalid-feedback49" role="alert"></span>
                                                 </div>
                                                 <div class="row mb-3">
-                                            <label for="">Type</label>
-                                                <select id="" data-live-search="true" name="" class="selectpicker
+                                            <label for="additional-type">Type</label>
+                                                <select id="additional-type" data-live-search="true" name="additional-type" class="selectpicker
                                                 w-100 serializable"   tabindex="1" data-parsley-errors-container="#invalid-feedback50"  required >
                                                     <option value="" selected>---</option>
                                                     <option value="">Bien Commun</option>
@@ -749,9 +749,9 @@
                                                 <span class="feedback-new" id="invalid-feedback50" role="alert"></span>
                                                 </div>
                                                 <div class="row mb-3">
-                                                <label for="declarant_info-last_name">Dotes</label>
-                                                <input id="declarant_info-last_name" type="text" class="form-control
-                                                serializable" name="declarant_info-last_name" tabindex="2"
+                                                <label for="additional-type">Dotes</label>
+                                                <input id="additional-type" type="text" class="form-control
+                                                serializable" name="additional-type" tabindex="2"
                                                        data-parsley-errors-container="#invalid-feedback51" required >
                                                 <span class="feedback-new" id="invalid-feedback51" role="alert"></span>
                                                 @if ($errors->has('description'))

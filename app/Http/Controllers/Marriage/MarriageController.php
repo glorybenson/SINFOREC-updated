@@ -187,6 +187,15 @@ final class MarriageController extends Controller
                 'bride_father-profession', 'bride_father-address'],
             ['bride_mother-first_name', 'bride_mother-family_name', 'bride_mother-dob', 'bride_mother-birth_place',
                 'bride_mother-profession', 'bride_mother-address'],
+            ['judgement-judgement'],
+            ['groom_witness_one-first_name','groom_witness_one-name','groom_witness_one-profession',
+                'groom_witness_one-cin','groom_witness_one-address'],
+            ['groom_witness_two-first_name','groom_witness_two-name','groom_witness_two-profession',
+                'groom_witness_two-cin','groom_witness_two-address'],
+            ['bride_witness_one-first_name','bride_witness_one-name','bride_witness_one-profession',
+                'bride_witness_one-cin','bride_witness_one-address'],
+            ['bride_witness_two-first_name','bride_witness_two-name','bride_witness_two-profession',
+                'bride_witness_two-cin','bride_witness_two-address'],
         ];
         $formNamesFilled = array_map(function ($fields) use ($old) {
             $values = json_decode($old->values, true);

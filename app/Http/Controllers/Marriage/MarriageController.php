@@ -188,6 +188,7 @@ final class MarriageController extends Controller
                 'bride_father-profession', 'bride_father-address'],
             ['bride_mother-first_name', 'bride_mother-family_name', 'bride_mother-dob', 'bride_mother-birth_place',
                 'bride_mother-profession', 'bride_mother-address'],
+            ['additional-regime', 'additional-type', 'additional-feats'],
             ['judgement-judgement'],
             ['groom_witness_one-first_name','groom_witness_one-name','groom_witness_one-profession',
                 'groom_witness_one-cin','groom_witness_one-address'],

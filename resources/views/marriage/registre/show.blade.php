@@ -147,7 +147,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Officier d'ETAT CIVIL</td>
-                                                        <td>{{ $values->{'certificate-civil_servant'} }}</td>
+                                                        <td>{{ $civilServantName }}</td>
                                                     </tr>
                                                 </table>
                                             </div>

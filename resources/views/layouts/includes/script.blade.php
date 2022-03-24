@@ -86,7 +86,8 @@
         }
 
         function saveAsDraft() {
-            let edit = /registre\/[0-9]+\/edit/.test( window.location.pathname) || window.location.pathname.indexOf('/registre/create') === -1;
+            let edit = /registre\/[0-9]+\/edit/.test( window.location.pathname)
+                || window.location.pathname.indexOf('/registre/create') >= 0;
 
             if(!edit) return;
 

@@ -91,14 +91,14 @@
                                         -webkit-transform: rotate(45deg);
                                     }
                                     </style>
-                                    
+
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
                                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne"
                                                 aria-expanded="false" aria-controls="collapseOne">
                                                 1. Zone Gérographique
-                                                <i class="arrow down"></i>
+                                                <span><i class="arrow down"></i></span>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"

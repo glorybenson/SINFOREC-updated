@@ -220,12 +220,12 @@ final class MarriageController extends Controller
             ['title' => "Renseignement sur l'Epouse", 'is_filled' => $formNamesFilled[5]],
             ['title' => "Renseignement sur le Père de l'Epouse", 'is_filled' => $formNamesFilled[6]],
             ['title' => "Renseignement sur la Mère de l'Epouse", 'is_filled' => $formNamesFilled[7]],
-            ['title' => "Renseignements additionnels ", 'is_filled' => false],
-            ['title' => "Jugement", 'is_filled' => false],
-            ['title' => "Premier témoin de l'Epoux", 'is_filled' => false],
-            ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => false],
-            ['title' => "Premier témoin de l'Epouse", 'is_filled' => false],
-            ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => false],
+            ['title' => "Renseignements additionnels ", 'is_filled' => $formNamesFilled[8]],
+            ['title' => "Jugement", 'is_filled' => $formNamesFilled[9]],
+            ['title' => "Premier témoin de l'Epoux", 'is_filled' => $formNamesFilled[10]],
+            ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => $formNamesFilled[11]],
+            ['title' => "Premier témoin de l'Epouse", 'is_filled' => $formNamesFilled[12]],
+            ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => $formNamesFilled[13]],
         ];
         $binding[ 'is_edit'] = true;
         $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();

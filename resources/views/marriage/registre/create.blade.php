@@ -199,13 +199,8 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="certificate-date_of_decl">Date de déclaration</label>
-                                                <input id="certificate-date_of_decl" type="text" class="form-control serializable" name="certificate-date_of_decl" tabindex="2" data-parsley-errors-container="#invalid-feedback9" required >
+                                                <input id="certificate-date_of_decl" placeholder="Select date" type="date" name="certificate-date_of_decl" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
                                                 <span class="feedback-new" id="invalid-feedback9" role="alert"></span>
-                                                @if ($errors->has('description'))
-                                                    <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
-                                            </span>
-                                                @endif
                                             </div>
                                             <div class="mb-4">
                                                 <label for="certificate-wedding_time">Heure du Mariage</label>

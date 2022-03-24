@@ -86,17 +86,13 @@
         }
 
         function saveAsDraft() {
-            let edit = false;
+            let edit = /registre\/[0-9]+\/edit/.test( window.location.pathname) && window.location.pathname.indexOf( '/registre/create') === -1;
 
-            if( (!( edit = /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname)) &&  window.location.pathname.indexOf( 'naissance/registre/create') === -1)
-                || (!( edit = /marriage\/registre\/[0-9]+\/edit/.test( window.location.pathname)) &&  window.location.pathname.indexOf( 'marriage/registre/create') === -1))
-                return;
+            if(!edit) return;
 
-            if( edit) {
-                const kit = JSON.parse( $( '[data-tool]').attr( 'data-tool'));
-                act( kit, retrieveData);
-                $( 'div.modifiable').find( 'select').change();
-            }
+            const kit = JSON.parse( $( '[data-tool]').attr( 'data-tool'));
+            act( kit, retrieveData);
+            $( 'div.modifiable').find( 'select').change();
 
             $( '.draft').on( 'click', function () {
 

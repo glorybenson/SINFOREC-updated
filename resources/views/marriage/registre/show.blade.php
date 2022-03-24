@@ -131,7 +131,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Numéro de déclaration</td>
-                                                        <td>{{ $values->{'certificate-decl_number} }}</td>
+                                                        <td>{{ $values->{'certificate-decl_number'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de déclaration</td>

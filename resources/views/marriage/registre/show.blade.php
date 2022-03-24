@@ -135,19 +135,19 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Date de déclaration</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'certificate-date_of_decl'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Heure du Mariage</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'certificate-wedding_time'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu du Mariage</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'certificate-wedding_venue'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Officier d'ETAT CIVIL</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'certificate-civil_servant'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -166,27 +166,27 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu de Naissance de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -206,23 +206,23 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom du Père de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_father-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille du Père de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_father-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance du Père de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_father-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu de Naissance du Père de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_father-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession du Père de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_father-profession'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -242,75 +242,28 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_mother-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_mother-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Lieu de Naissance de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_mother-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_mother-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_mother-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="card">
-                                        <div class="card-header" id="headingFive">
-                                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapseFive"
-                                                aria-expanded="false"
-                                                aria-controls="collapseFive">
-                                                5. Renseignement sur la Mère de l'Epoux
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                                             data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <table class="table table-bordered table-striped">
-                                                    <tr>
-                                                        <td>Prénom de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Nom de famille de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Date de Naissance de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Lieu de Naissance de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Profession de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Addresse de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
                                     <div class="card">
                                         <div class="card-header" id="headingSix">
                                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseSix"
@@ -325,27 +278,27 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu de Naissance de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -366,27 +319,27 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom du Père de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_father-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille du Père de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_father-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance du Père de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_father-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu de Naissance du Père de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_father-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession du Père de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_father-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse du Père de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_father-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -408,27 +361,27 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom de la Mère de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_mother-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille de la Mère de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_mother-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance de la Mère de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_mother-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu de Naissance de la Mère de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_mother-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession de la Mère de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_mother-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de la Mère de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_mother-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -450,15 +403,15 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Regime Matrimonial</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'additional-regime'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Type</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'additional-type'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Dotes</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'additional-feats'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -479,19 +432,19 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Jugement</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'judgement-judgement'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date du jugement</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'judgement-date'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Numéro du jugement</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'judgement-number'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu d'emission</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'judgement-region'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -510,25 +463,27 @@
                                              data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <table class="table table-bordered table-striped">
+                                                    ['','g','',
+                                                    '',''],
                                                     <tr>
                                                         <td>Prénom Premier témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_one-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom Premier témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_one-name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession Premier témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_one-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>C.I.N</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_one-cin'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse Premier témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_one-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -549,23 +504,23 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom Deuxieme témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_two-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom Deuxieme témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_two-name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession Deuxieme témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_two-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>C.I.N</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_two-cin'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse Deuxieme témoin de l'Epoux</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'groom_witness_two-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -587,23 +542,23 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom Premier témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_one-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom Premier témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_one-name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession Premier témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_one-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>C.I.N</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_one-cin'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse Premier témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_one-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -624,23 +579,23 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom Deuxieme témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_two-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom Deuxieme témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_two-name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession Deuxieme témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_two-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>C.I.N</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_two-cin'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse Deuxieme témoin de l'Epouse</td>
-                                                        <td>{{ $values->{'certificate-date_of_marriage'} }}</td>
+                                                        <td>{{ $values->{'bride_witness_two-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>

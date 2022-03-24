@@ -733,8 +733,8 @@
                                                 <select id="additional-regime" data-live-search="true"
                                                         name="additional-regime" class="selectpicker w-100 serializable"   tabindex="1" data-parsley-errors-container="#invalid-feedback49"  required >
                                                     <option value="" selected>---</option>
-                                                    <option value="">Poligamie</option>
-                                                    <option value="">Monogamie</option>
+                                                    <option value="Poligamie">Poligamie</option>
+                                                    <option value="Monogamie">Monogamie</option>
                                                 </select>
                                                 <span class="feedback-new" id="invalid-feedback49" role="alert"></span>
                                                 </div>
@@ -743,8 +743,8 @@
                                                 <select id="additional-type" data-live-search="true"
                                                         name="additional-type" class="selectpicker w-100 serializable"   tabindex="1" data-parsley-errors-container="#invalid-feedback50"  required >
                                                     <option value="" selected>---</option>
-                                                    <option value="">Bien Commun</option>
-                                                    <option value="">Separation des Biens</option>
+                                                    <option value="Bien Commun">Bien Commun</option>
+                                                    <option value="Separation des Biens">Separation des Biens</option>
                                                 </select>
                                                 <span class="feedback-new" id="invalid-feedback50" role="alert"></span>
                                                 </div>

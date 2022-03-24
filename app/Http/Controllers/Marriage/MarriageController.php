@@ -30,7 +30,7 @@ final class MarriageController extends Controller
             ->join('users', 'marriage.created_by', '=', 'users.id')
             ->select('marriage.*')
             ->get();
-        $values = json_decode($add->values, true);
+        $values = json_decode($add['values'], true);
 
         if (isset($values['certificate-civil_servant'])) {
             $civilServant = User::find($values['certificate-civil_servant']);

@@ -32,11 +32,11 @@ final class MarriageController extends Controller
             ->get();
 
         $add = array_map(function ($marriae) {
-            $values = json_decode($marriae->values, true);
+            $values = json_decode($marriae['values'], true);
             if (isset($values['certificate-civil_servant'])) {
                 $civilServant = User::find($values['certificate-civil_servant']);
             }
-            $marriae->civilServantName = isset($civilServant)
+            $marriae['civilServantName'] = isset($civilServant)
                 ? $civilServant->first_name . ' ' . $civilServant->last_name
                 : '--';
             return $marriae;

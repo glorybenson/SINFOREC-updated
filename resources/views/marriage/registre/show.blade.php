@@ -97,8 +97,7 @@
                                         <div class="card-header" id="headingOne">
                                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne"
                                                 aria-expanded="false" aria-controls="collapseOne">
-                                                1. Zone Gérographique
-                                                <div></div>
+                                                1. Zone Gérographique  
                                                 <span><i class="arrow down"></i></span>
                                             </h5>
                                         </div>

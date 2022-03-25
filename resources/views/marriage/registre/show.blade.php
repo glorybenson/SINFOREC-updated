@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="row">
-    <p class="hidden">@json ($registre) </p>
+    <!--<p class="hidden">@json ($registre) </p>-->
         <div class="col-md-10 mx-auto">
             <div class="mt-3">
                 <div class="content container-fluid">
@@ -124,6 +124,10 @@
                                                     <tr>
                                                         <td>Commune</td>
                                                         <td>{{ $models['geographical_zone-communes'] }} </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Centre</td>
+                                                        <td>{{ $models['geographical_zone-centre'] }} </td>
                                                     </tr>
                                                 </table>
                                             </div>

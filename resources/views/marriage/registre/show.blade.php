@@ -486,8 +486,7 @@
                                              data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <table class="table table-bordered table-striped">
-                                                    ['','g','',
-                                                    '',''],
+                                                    
                                                     <tr>
                                                         <td>Prénom Premier témoin de l'Epoux</td>
                                                         <td>{{ $values->{'groom_witness_one-first_name'} }}</td>

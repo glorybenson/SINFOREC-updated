@@ -108,14 +108,14 @@
                                                     <tr>
                                                         <td>Pays</td>
                                                         <td>{{ $models['geographical_zone-pays'] }}</td>
+                                                    </tr>                                                   
+                                                    <tr>
+                                                        <td>Région</td>
+                                                        <td>{{ $models['geographical_zone-regions'] }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Arrondissement</td>
                                                         <td>{{ $models['geographical_zone-arrondissements'] }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Région</td>
-                                                        <td>{{ $models['geographical_zone-regions'] }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Département</td>

@@ -15,7 +15,7 @@ class DecesController extends Controller
 {
     //Index method here
     public function index(){
-        return view('Deces.registre.inddex');
+        return view('Deces.registre.index');
     }
 
     public function createView(){

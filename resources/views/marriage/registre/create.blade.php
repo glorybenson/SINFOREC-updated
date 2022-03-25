@@ -226,7 +226,7 @@
                                                         data-parsley-errors-container="#invalid-feedback12"
                                                         data-live-search="true" data-name="civil_servant"
                                                         name="certificate-civil_servant" class="selectpicker w-100 serializable modifiable" tabindex="2" required>
-                                                <optiuon value="" selected>--</optiuon>
+                                                <option value="" selected>--</option>
                                                 @if(isset($users))
                                                     @foreach($users as $item)
                                                         <option value="{{((object)$item)->id}}">

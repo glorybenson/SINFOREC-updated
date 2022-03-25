@@ -269,6 +269,10 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance de la Mère de l'Epoux</td>
+                                                        <td>{{ $values->{'groom_mother-dob'} }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Lieu de Naissance de la Mère de l'Epoux</td>
                                                         <td>{{ $values->{'groom_mother-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>

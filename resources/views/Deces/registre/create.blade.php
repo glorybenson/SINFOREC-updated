@@ -14,9 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="row"
-             data-tool="{{ isset( $old) ? $old : '{}' }}"
-             data-conn="{{ $link }}">
+        <div class="row">
             <div class="col-md-4">
                 <div class="card p-3 wizard-form">
                     <ul>
@@ -84,7 +82,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card pb-4">
-                    <form id="form" method="POST" class="demo-form" action="{{ $post_url }}">
+                    <form id="form" method="POST" class="demo-form" action="">
                         @csrf
                         <div class="form-section">
                             <div class="card">

@@ -22,7 +22,7 @@
                         <h4 class="card-title float-left">
                             S'inscrire</h4>
                         <div class="text-right">
-                            <a href="{{ route('deces.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
+                            <a href="{{ route('deces.registre') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
                     </div>
                     <div class="card-body">

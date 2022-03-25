@@ -137,4 +137,7 @@ Route::middleware( 'auth')->group( function () {
     Route::post('/regions/{id}/edit/', [App\Http\Controllers\Regions\RegionsController::class, 'update'])->name('region.edit.post');
 
     Route::get('/regions/{id}/delete', [App\Http\Controllers\Regions\RegionsController::class, 'destroy'])->name('region.delete');
+
+    //Deces Routes Here
+    Route::get('deces/create', [App\Http\Controllers\Deces\DecesController::class, 'createView'])->name('deces.registre');
 });

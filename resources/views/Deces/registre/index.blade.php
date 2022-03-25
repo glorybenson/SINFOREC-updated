@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                            S'inscrire</h4>
+                        Deces data table</h4>
                         <div class="text-right">
                             <a href="{{ route('deces.registre') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>

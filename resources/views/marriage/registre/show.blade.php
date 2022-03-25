@@ -114,13 +114,13 @@
                                                         <td>{{ $models['geographical_zone-regions'] }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Arrondissement</td>
-                                                        <td>{{ $models['geographical_zone-arrondissements'] }}</td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>Département</td>
                                                         <td>{{ $models['geographical_zone-departments'] }}</td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Arrondissement</td>
+                                                        <td>{{ $models['geographical_zone-arrondissements'] }}</td>
+                                                    </tr>                                                    
                                                     <tr>
                                                         <td>Commune</td>
                                                         <td>{{ $models['geographical_zone-communes'] }} </td>

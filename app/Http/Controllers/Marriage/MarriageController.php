@@ -31,7 +31,22 @@ final class MarriageController extends Controller
             ->select('marriage.*')
             ->get();
 
-        return view('marriage.registre.index', ['add' => $add]);
+        $add_new = [];
+
+        foreach ($add as $item) {
+            $values = json_decode($item->values, true);
+            if (isset($values['certificate-civil_servant'])) {
+                $civilServant = User::find($values['certificate-civil_servant']);
+            }
+            $item->civilServantName = isset($civilServant)
+                ? $civilServant->first_name . ' ' . $civilServant->last_name
+                : '--';
+            $add_new[] = $item;
+        }
+
+        return view('marriage.registre.index', [
+            'add' => $add
+        ]);
     }
 
     /**
@@ -153,6 +168,13 @@ final class MarriageController extends Controller
             'geographical_zone-arrondissements' => empty($valuesArr['geographical_zone-arrondissements']) ? '--' :
                 Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
         ];
+
+        if (isset($valuesArr['certificate-civil_servant'])) {
+            $civilServant = User::find($valuesArr['certificate-civil_servant']);
+        }
+        $binding['civilServantName'] = isset($civilServant)
+            ? $civilServant->first_name . ' ' . $civilServant->last_name
+            : '--';
 
         return view('marriage.registre.show', $binding);
     }

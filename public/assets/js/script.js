@@ -262,15 +262,17 @@
                 });
             });
 
-            // Navigate to a specific section by clicking the title in sidebar
-            $('#wizard-ul a').click(function () {
-                // get the index by checking the id
-                const indexMatch = $(this).attr('id').match(/wizard-navs-(\d+)/);
-                navigateTo(indexMatch ? indexMatch[1] : 0);
+            if (/registre\/[0-9]+\/edit/.test( window.location.pathname)) {
+                // Navigate to a specific section by clicking the title in sidebar
+                $('#wizard-ul a').click(function () {
+                    // get the index by checking the id
+                    const indexMatch = $(this).attr('id').match(/wizard-navs-(\d+)/);
+                    navigateTo(indexMatch ? indexMatch[1] : 0);
 
-                $('.wizard-active').removeClass('wizard-active');
-                $(this).addClass("wizard-active");
-            });
+                    $('.wizard-active').removeClass('wizard-active');
+                    $(this).addClass("wizard-active");
+                });
+            }
 
             // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
             $sections.each(function(index, section) {

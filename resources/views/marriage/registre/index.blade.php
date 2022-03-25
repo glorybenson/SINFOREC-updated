@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                            S'inscrire</h4>
+                        Régistre de Mariage</h4>
                         <div class="text-right">
                             <a href="{{ route('marriage.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
@@ -64,7 +64,7 @@
                                             {{ $item->values->{'certificate-decl_number'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'certificate-civil_servant'} }}
+                                            {{ $item->civilServantName }}
                                         </td>
                                         <td>
                                             {{ \App\Models\User::find($item->created_by)->first_name }}

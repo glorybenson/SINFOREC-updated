@@ -140,4 +140,6 @@ Route::middleware( 'auth')->group( function () {
 
     //Deces Routes Here
     Route::get('deces/create', [App\Http\Controllers\Deces\DecesController::class, 'createView'])->name('deces.registre');
+    Route::get('deces', [App\Http\Controllers\Deces\DecesController::class, 'index'])->name('deces.index');
+    Route::post('', [App\Http\Controllers\Deces\DecesController::class, 'storeDeces'])->name('deces.store');
 });

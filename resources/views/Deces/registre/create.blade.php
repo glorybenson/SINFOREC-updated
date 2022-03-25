@@ -82,7 +82,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card pb-4">
-                    <form id="form" method="POST" class="demo-form" action="">
+                    <form id="form" method="POST" class="demo-form" action="{{ route('deces.store') }}">
                         @csrf
                         <div class="form-section">
                             <div class="card">
@@ -327,10 +327,10 @@
                                             </div>
                                             <div class="row mb-4">
                                                 <label for="">Sexe de la personne Décèdée</label>
-                                                <select id="" data-live-search="true" name="" class="selectpicker w-100 serializable"   tabindex="6" data-parsley-errors-container="#invalid-feedback40"  required >
+                                                <select id="" data-live-search="true" name="" class="selectpicker w-100 serializable"   tabindex="6" data-parsley-errors-container="#invalid-feedback40" required>
                                                     <option value="" selected>---</option>
-                                                    <option value="">Masculin</option>
-                                                    <option value="">Féminin</option>
+                                                    <option value="Masculin">Masculin</option>
+                                                    <option value="Feminin">Féminin</option>
                                                 </select>
                                                 <span class="feedback-new" id="invalid-feedback40" role="alert"></span>
                                             </div>

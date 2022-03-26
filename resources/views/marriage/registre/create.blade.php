@@ -459,6 +459,11 @@
 
                                             <div class="row mb-3">
                                                 <label for="groom_mother-address">Addresse de la Mère de l'Epoux </label>
+                                                <select data-name="address-select" class="selectpicker w-100
+                                                serializable modifiable address-special-select" tabindex="2" required >
+                                                    <option value="father_address" selected>Meme que le Pere</option>
+                                                    <option value="differente" selected>Differente</option>
+                                                </select>
                                                 <input id="groom_mother-address" type="text" class="form-control
                                                 serializable" name="groom_mother-address" tabindex="3" data-parsley-errors-container="#invalid-feedback30" required >
                                                 <span class="feedback-new" id="invalid-feedback30" role="alert"></span>

@@ -339,7 +339,8 @@
             $('.address-special-select').each(function () {
                 const name = $(this).attr('name');
                 const $this = $(`[name="${name}"]`);
-                $this.change(function () {
+
+                function changeFn() {
                     const input = $(this).closest('.form-field').find('input[type="text"]');
                     const dataFor = $(this).data('for');
                     const fatherInput = $(`[name="${dataFor}"]`);
@@ -350,7 +351,9 @@
                         input.val('');
                         input.show();
                     }
-                });
+                }
+                $this.change(changeFn);
+                changeFn();
             });
         }
     });

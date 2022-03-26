@@ -724,8 +724,8 @@
                                                 <span class="feedback-new" id="invalid-feedback48" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
-                                            </span>
+                                                        <strong>{{ $errors->first('description') }}</strong>
+                                                    </span>
                                                 @endif
                                             </div>
                                         </div>

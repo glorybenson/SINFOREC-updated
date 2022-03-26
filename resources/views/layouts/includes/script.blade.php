@@ -338,7 +338,8 @@
         function addressSelect() {
             $('.address-special-select').change(function () {
                 const input = $(this).closest('.form-field').find('input[type="text"]');
-                const fatherInput = $(`[name="${$(this).data('for')}"]`);
+                const dataFor = $(this).data('for');
+                const fatherInput = $(`[name="${dataFor}"]`);
                 if ($(this).val() === 'father_address') {
                     input.val(fatherInput.val());
                 } else {

@@ -342,6 +342,7 @@
                 const fatherInput = $(`[name="${dataFor}"]`);
                 if ($(this).val() === 'father_address') {
                     input.val(fatherInput.val());
+                    const fatVal = fatherInput.val();
                 } else {
                     input.val('');
                 }

@@ -459,7 +459,9 @@
 
                                             <div class="form-field row mb-3">
                                                 <label for="groom_mother-address">Addresse de la Mère de l'Epoux </label>
-                                                <select data-for="groom_father-address" class="selectpicker w-100
+                                                <select data-live-search="true" data-name="groom_mother_address"
+                                                        name="groom_mother_address"
+                                                        data-for="groom_father-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
                                                     <option value="father_address" selected>Meme que le Pere</option>
                                                     <option value="differente">Differente</option>

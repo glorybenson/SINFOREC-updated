@@ -427,7 +427,7 @@
                                                 <label for="mother_info-address">Addresse de la Mère</label>
                                                 <select data-live-search="true" data-name="mother_info_address"
                                                         name="mother_info_address"
-                                                        data-for="father_info-address" class="selectpicker w-100
+                                                        data-for="father_info-center" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
                                                     <option value="father_address" selected>Meme que le Pere</option>
                                                     <option value="differente">Differente</option>

@@ -336,17 +336,19 @@
         }
 
         function addressSelect() {
-            $('.address-special-select').change(function () {
+            $('.address-special-select').each(function () {
                 const name = $(this).attr('name');
                 const $this = $(`[name="${name}"]`);
-                const input = $(this).closest('.form-field').find('input[type="text"]');
-                const dataFor = $(this).data('for');
-                const fatherInput = $(`[name="${dataFor}"]`);
-                if ($this.val() === 'father_address') {
-                    input.val(fatherInput.val());
-                } else {
-                    input.val('');
-                }
+                $this.change(function () {
+                    const input = $(this).closest('.form-field').find('input[type="text"]');
+                    const dataFor = $(this).data('for');
+                    const fatherInput = $(`[name="${dataFor}"]`);
+                    if ($(this).val() === 'father_address') {
+                        input.val(fatherInput.val());
+                    } else {
+                        input.val('');
+                    }
+                });
             });
         }
     });

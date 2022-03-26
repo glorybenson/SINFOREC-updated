@@ -463,6 +463,7 @@
                                                         name="groom_mother_address"
                                                         data-for="groom_father-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
+                                                    <option value="" selected>---</option>
                                                     <option value="father_address" selected>Meme que le Pere</option>
                                                     <option value="differente">Differente</option>
                                                 </select>

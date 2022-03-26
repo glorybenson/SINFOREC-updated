@@ -345,8 +345,10 @@
                     const fatherInput = $(`[name="${dataFor}"]`);
                     if ($(this).val() === 'father_address') {
                         input.val(fatherInput.val());
+                        input.hide();
                     } else {
                         input.val('');
+                        input.show();
                     }
                 });
             });

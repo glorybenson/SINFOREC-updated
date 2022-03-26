@@ -340,7 +340,7 @@
                 const name = $(this).attr('name');
                 const $this = $(`[name="${name}"]`);
 
-                function changeFn() {
+                const changeFn = () => {
                     const input = $(this).closest('.form-field').find('input[type="text"]');
                     const dataFor = $(this).data('for');
                     const fatherInput = $(`[name="${dataFor}"]`);

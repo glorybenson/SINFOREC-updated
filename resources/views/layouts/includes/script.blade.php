@@ -26,6 +26,7 @@
         $('table').DataTable();
         // createCenterAutocomplete();
         saveAsDraft();
+        addressSelect();
 
         if(location.pathname.indexOf( '/centre/create') !== -1
                 || location.pathname.indexOf( 'naissance/registre/create') !== -1
@@ -332,6 +333,18 @@
                 }
             );
             el.change();
+        }
+
+        function addressSelect() {
+            $('.address-special-select').change(function () {
+                const input = $(this).closest('.form-field').find('input[type="text"]');
+                const fatherInput = $(`[name="${$(this).data('for')}"]`);
+                if ($(this).val() === 'father_address') {
+                    input.val(fatherInput.val());
+                } else {
+                    input.val('');
+                }
+            });
         }
     });
 </script>

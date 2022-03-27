@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Pay;
 use App\Models\Region;
-use App\Models\Deces;
 use App\Models\Centre;
 use App\Models\Communes;
 use App\Models\Department;
@@ -16,9 +15,7 @@ class DecesController extends Controller
 {
     //Index method here
     public function index(){
-
-        $add = Deces::all();
-        return view('Deces.registre.index', compact('add'));
+        return view('Deces.registre.index');
     }
 
     public function createView(){
@@ -33,6 +30,8 @@ class DecesController extends Controller
     }
 
     public function storeDeces(Request $request){
+        $winner = $request->all();
+        dd($winner);
        
        $deces = new Deces;
 
@@ -81,7 +80,6 @@ class DecesController extends Controller
        }else{
          return redirect()->back()->with('error', 'Failed');
        }
-
 
      
     }

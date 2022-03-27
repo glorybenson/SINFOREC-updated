@@ -226,7 +226,7 @@
                                                         data-parsley-errors-container="#invalid-feedback12"
                                                         data-live-search="true" data-name="civil_servant"
                                                         name="certificate-civil_servant" class="selectpicker w-100 serializable modifiable" tabindex="2" required>
-                                                <optiuon value="" selected>--</optiuon>
+                                                <option value="" selected>--</option>
                                                 @if(isset($users))
                                                     @foreach($users as $item)
                                                         <option value="{{((object)$item)->id}}">
@@ -457,8 +457,16 @@
                                                 @endif
                                             </div>
 
-                                            <div class="row mb-3">
+                                            <div class="form-field row mb-3">
                                                 <label for="groom_mother-address">Addresse de la Mère de l'Epoux </label>
+                                                <select data-live-search="true" data-name="groom_mother_address"
+                                                        data-for="groom_father-address" class="selectpicker w-100
+                                                serializable modifiable address-special-select" tabindex="2" required >
+
+                                                    <option value="" selected>--</option>
+                                                    <option value="father_address">Meme que le Pere</option>
+                                                    <option value="differente">Differente</option>
+                                                </select>
                                                 <input id="groom_mother-address" type="text" class="form-control
                                                 serializable" name="groom_mother-address" tabindex="3" data-parsley-errors-container="#invalid-feedback30" required >
                                                 <span class="feedback-new" id="invalid-feedback30" role="alert"></span>
@@ -702,16 +710,23 @@
                                                 @endif
                                             </div>
 
-                                            <div class="row mb-3">
+                                            <div class="form-field row mb-3">
                                                 <label for="bride_mother-address">Addresse de la Mère de l'Epouse </label>
+                                                <select data-live-search="true" data-name="bride_mother_address"
+                                                        data-for="bride_father-address" class="selectpicker w-100
+                                                serializable modifiable address-special-select" tabindex="2" required >
+                                                    <option value="" selected>--</option>
+                                                    <option value="father_address">Meme que le Pere</option>
+                                                    <option value="differente">Differente</option>
+                                                </select>
                                                 <input id="bride_mother-address" type="text" class="form-control
                                                 serializable" name="bride_mother-address" tabindex="3"
                                                        data-parsley-errors-container="#invalid-feedback48" required >
                                                 <span class="feedback-new" id="invalid-feedback48" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
-                                            </span>
+                                                        <strong>{{ $errors->first('description') }}</strong>
+                                                    </span>
                                                 @endif
                                             </div>
                                         </div>

@@ -26,6 +26,7 @@
         $('table').DataTable();
         // createCenterAutocomplete();
         saveAsDraft();
+        addressSelect();
 
         if(location.pathname.indexOf( '/centre/create') !== -1
                 || location.pathname.indexOf( 'naissance/registre/create') !== -1
@@ -334,11 +335,29 @@
             el.change();
         }
 
-        function myfunc(){
-            const data = document.getElementById('#address');
-            data.removeAttr('hidden');
-            data.attr('text');
-            console.log('great');
+        function addressSelect() {
+            $('.address-special-select').each(function () {
+                const name = $(this).data('name');
+                const $this = $(`[data-name="${name}"]`);
+
+                const changeFn = () => {
+                    const input = $(this).closest('.form-field').find('input[type="text"]');
+                    const dataFor = $(this).data('for');
+                    const fatherInput = $(`[name="${dataFor}"]`);
+                    if ($(this).val() === 'father_address') {
+                        input.val(fatherInput.val());
+                        input.hide();
+                    } else if($(this).val() === '') {
+                        input.val('');
+                        input.hide();
+                    } else {
+                        input.val('');
+                        input.show();
+                    }
+                }
+                $this.change(changeFn);
+                changeFn();
+            });
         }
     });
 </script>

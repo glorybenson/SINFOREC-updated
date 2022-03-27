@@ -59,6 +59,7 @@ class CreateDecesTable extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

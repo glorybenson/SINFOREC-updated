@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                            S'inscrire</h4>
+                        Deces data table</h4>
                         <div class="text-right">
                             <a href="{{ route('deces.registre') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
@@ -36,6 +36,7 @@
                                 <th>Date du Décès</th>
                                 <th>Numéro de déclaration</th>
                                 <th>Date de déclaration</th>
+
                                 <th>Action</th>
                                 </thead>
                                 <tbody>
@@ -62,9 +63,10 @@
                                         <td>
                                             {{ $item->declarant_cin }}
                                         </td>
-                                         <td>
+                                        <td>
                                             {{ $item->judgement_date }}
                                         </td>
+
                                        
                                        
                                         <td>

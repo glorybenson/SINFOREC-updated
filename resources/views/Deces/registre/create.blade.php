@@ -83,6 +83,7 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="col-md-8">
                 <div class="card pb-4">
                     <form id="form" method="POST" class="demo-form" action="{{ route('deces.store') }}">

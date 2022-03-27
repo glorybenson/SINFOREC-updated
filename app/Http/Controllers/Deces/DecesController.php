@@ -82,7 +82,6 @@ class DecesController extends Controller
          return redirect()->back()->with('error', 'Failed');
        }
 
-
      
     }
 

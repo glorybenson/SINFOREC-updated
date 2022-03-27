@@ -29,14 +29,13 @@
                         <div class="table-responsive">
                             <table class="table mb-0 table-striped border-0 data-table" id="datatable">
                                 <thead class="thead-light">
-                                <th>Prénom</th>
-                                <th>Nom de Famille</th>
-                                <th>Date de Naissance</th>
-                                <th>Prénom du Père</th>
-                                <th>Prénom de la mère</th>
-                                <th>Nom de Famille de la Mère</th>
-                                <th>Creer par</th>
-                                <th>Cree le</th>
+                                <th>Prénom de la personne Décèdée</th>
+                                <th>Nom de famille de la personne Décèdée</th>
+                                <th>Date de Naissance de la personne Décèdée</th>
+                                <th>Lieu de Naissance de la personne Décèdée</th>
+                                <th>Date du Décès</th>
+                                <th>Numéro de déclaration</th>
+                                <th>Date de déclaration</th>
                                 <th>Action</th>
                                 </thead>
                                 <tbody>
@@ -48,35 +47,34 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            {{ $item->values->{'child_info-first_name'} }}
+                                            {{ $item->firstname_of_the_deceased }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'child_info-last_name'} }}
+                                            {{ $item->lasttname_of_the_deceased }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'child_info-dob'} }}
+                                            {{ $item->dob_of_deceased }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'father_info-country'} }}</td>
+                                            {{ $item->birthplace_of_deceased }}</td>
                                         <td>
-                                            {{ $item->values->{'mother_info-first_name'} }}</td>
+                                            {{ $item->Date_du_Décès }}</td>
                                         <td>
-                                            {{ $item->values->{'mother_info-family_name'} }}
+                                            {{ $item->declarant_cin }}
                                         </td>
-                                        <td>
-                                            {{ \App\Models\User::find($item->created_by)->first_name }}
+                                         <td>
+                                            {{ $item->judgement_date }}
                                         </td>
+                                       
+                                       
                                         <td>
-                                            {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
-                                        </td>
-                                        <td>
-                                            <a class="text-dark" href="{{ route('deces.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
+                                            <a class="text-dark" href="">
                                                 <i class="feather-eye"></i></a>
-                                            <a href="{{ route('deces.registre.edit', ['id' => $item->id]) }}"
+                                            <a href=""
                                                class="mx-2 text-dark"><i class="feather-edit"></i></a>   
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href="{{ route('deces.registre.delete', ['id' => $item->id]) }}"><i
+                                               href=""><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

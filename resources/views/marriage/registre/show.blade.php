@@ -108,7 +108,11 @@
                                                     <tr>
                                                         <td>Pays</td>
                                                         <td>{{ $models['geographical_zone-pays'] }}</td>
-                                                    </tr>                                                   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Arrondissement</td>
+                                                        <td>{{ $models['geographical_zone-arrondissements'] }}</td>
+                                                    </tr>
                                                     <tr>
                                                         <td>Région</td>
                                                         <td>{{ $models['geographical_zone-regions'] }}</td>
@@ -118,16 +122,8 @@
                                                         <td>{{ $models['geographical_zone-departments'] }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Arrondissement</td>
-                                                        <td>{{ $models['geographical_zone-arrondissements'] }}</td>
-                                                    </tr>                                                    
-                                                    <tr>
                                                         <td>Commune</td>
                                                         <td>{{ $models['geographical_zone-communes'] }} </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Centre</td>
-                                                        <td>{{ $models['geographical_zone-centre'] }} </td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -269,10 +265,6 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance de la Mère de l'Epoux</td>
-                                                        <td>{{ $values->{'groom_mother-dob'} }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Lieu de Naissance de la Mère de l'Epoux</td>
                                                         <td>{{ $values->{'groom_mother-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
@@ -486,7 +478,8 @@
                                              data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <table class="table table-bordered table-striped">
-                                                    
+                                                    ['','g','',
+                                                    '',''],
                                                     <tr>
                                                         <td>Prénom Premier témoin de l'Epoux</td>
                                                         <td>{{ $values->{'groom_witness_one-first_name'} }}</td>

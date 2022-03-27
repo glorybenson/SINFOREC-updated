@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                        Deces data table</h4>
+                            S'inscrire</h4>
                         <div class="text-right">
                             <a href="{{ route('deces.registre') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
@@ -29,13 +29,12 @@
                         <div class="table-responsive">
                             <table class="table mb-0 table-striped border-0 data-table" id="datatable">
                                 <thead class="thead-light">
-                                <th>Prénom de la personne Décèdée</th>
-                                <th>Nom de famille de la personne Décèdée</th>
-                                <th>Date de Naissance de la personne Décèdée</th>
-                                <th>Lieu de Naissance de la personne Décèdée</th>
-                                <th>Date du Décès</th>
-                                <th>Numéro de déclaration</th>
-                                <th>Date de déclaration</th>
+                                <th>Prénom</th>
+                                <th>Nom de Famille</th>
+                                <th>Date de Naissance</th>
+                                <th>Prénom du Père</th>
+                                <th>Prénom de la mère</th>
+                                <th>Nom de Famille de la Mère</th>
                                 <th>Creer par</th>
                                 <th>Cree le</th>
                                 <th>Action</th>
@@ -61,9 +60,6 @@
                                             {{ $item->values->{'father_info-country'} }}</td>
                                         <td>
                                             {{ $item->values->{'mother_info-first_name'} }}</td>
-                                        <td>
-                                            {{ $item->values->{'mother_info-family_name'} }}
-                                        </td>
                                         <td>
                                             {{ $item->values->{'mother_info-family_name'} }}
                                         </td>

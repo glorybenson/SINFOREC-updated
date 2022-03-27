@@ -335,13 +335,26 @@
             el.change();
         }
 
+        function addressSelect() {
+            $('.address-special-select').each(function () {
+                const name = $(this).attr('name');
+                const $this = $(`[name="${name}"]`);
 
-        function myfunc(){
-            const data = document.getElementById('#address');
-            data.removeAttr('hidden');
-            data.attr('text');
-            console.log('great');
-
+                const changeFn = () => {
+                    const input = $(this).closest('.form-field').find('input[type="text"]');
+                    const dataFor = $(this).data('for');
+                    const fatherInput = $(`[name="${dataFor}"]`);
+                    if ($(this).val() === 'father_address') {
+                        input.val(fatherInput.val());
+                        input.hide();
+                    } else {
+                        input.val('');
+                        input.show();
+                    }
+                }
+                $this.change(changeFn);
+                changeFn();
+            });
         }
     });
 </script>

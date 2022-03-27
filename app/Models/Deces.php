@@ -50,5 +50,4 @@ class Deces extends Model
         'judgement_region',
         'mention_marginales',
     ];
-
 }

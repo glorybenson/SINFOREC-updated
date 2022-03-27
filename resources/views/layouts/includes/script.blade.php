@@ -347,6 +347,9 @@
                     if ($(this).val() === 'father_address') {
                         input.val(fatherInput.val());
                         input.hide();
+                    } else if($(this).val() === '') {
+                        input.val('');
+                        input.hide();
                     } else {
                         input.val('');
                         input.show();

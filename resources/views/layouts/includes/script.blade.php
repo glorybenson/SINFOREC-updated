@@ -337,8 +337,8 @@
 
         function addressSelect() {
             $('.address-special-select').each(function () {
-                const name = $(this).attr('name');
-                const $this = $(`[name="${name}"]`);
+                const name = $(this).data('name');
+                const $this = $(`[data-name="${name}"]`);
 
                 const changeFn = () => {
                     const input = $(this).closest('.form-field').find('input[type="text"]');

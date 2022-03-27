@@ -460,7 +460,6 @@
                                             <div class="form-field row mb-3">
                                                 <label for="groom_mother-address">Addresse de la Mère de l'Epoux </label>
                                                 <select data-live-search="true" data-name="groom_mother_address"
-                                                        name="groom_mother_address"
                                                         data-for="groom_father-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
 
@@ -714,7 +713,6 @@
                                             <div class="form-field row mb-3">
                                                 <label for="bride_mother-address">Addresse de la Mère de l'Epouse </label>
                                                 <select data-live-search="true" data-name="bride_mother_address"
-                                                        name="bride_mother_address"
                                                         data-for="bride_father-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
                                                     <option value="" selected>--</option>

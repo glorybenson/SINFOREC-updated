@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Pay;
 use App\Models\Region;
 use App\Models\Centre;
+use App\Models\Deces;
 use App\Models\Communes;
 use App\Models\Department;
 use App\Models\Arrondissement;

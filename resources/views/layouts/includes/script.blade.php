@@ -26,6 +26,7 @@
         $('table').DataTable();
         // createCenterAutocomplete();
         saveAsDraft();
+        addressSelect();
 
         if(location.pathname.indexOf( '/centre/create') !== -1
                 || location.pathname.indexOf( 'naissance/registre/create') !== -1

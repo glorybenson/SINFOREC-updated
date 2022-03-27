@@ -15,7 +15,8 @@ class DecesController extends Controller
 {
     //Index method here
     public function index(){
-        return view('Deces.registre.index');
+        $add = Deces::all();
+        return view('Deces.registre.index', compact('add'));
     }
 
     public function createView(){

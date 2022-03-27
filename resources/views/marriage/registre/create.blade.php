@@ -463,8 +463,9 @@
                                                         name="groom_mother_address"
                                                         data-for="groom_father-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
-                                                    <option value="father_address">Meme que le Pere</option>
-                                                    <option value="differente" selected>Differente</option>
+                                                    
+                                                    <option value="father_address" selected>Meme que le Pere</option>
+                                                    <option value="differente">Differente</option>
                                                 </select>
                                                 <input id="groom_mother-address" type="text" class="form-control
                                                 serializable" name="groom_mother-address" tabindex="3" data-parsley-errors-container="#invalid-feedback30" required >
@@ -715,8 +716,8 @@
                                                         name="bride_mother_address"
                                                         data-for="bride_father-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
-                                                    <option value="father_address">Meme que le Pere</option>
-                                                    <option value="differente" selected>Differente</option>
+                                                    <option value="father_address" selected>Meme que le Pere</option>
+                                                    <option value="differente">Differente</option>
                                                 </select>
                                                 <input id="bride_mother-address" type="text" class="form-control
                                                 serializable" name="bride_mother-address" tabindex="3"

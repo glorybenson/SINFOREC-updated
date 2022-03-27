@@ -333,5 +333,12 @@
             );
             el.change();
         }
+
+        function myfunc(){
+            const data = document.getElementById('#address');
+            data.removeAttr('hidden');
+            data.attr('text');
+            console.log('great');
+        }
     });
 </script>

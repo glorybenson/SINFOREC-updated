@@ -35,23 +35,27 @@
                                     <li>
                                         <p><a id="wizard-navs-1" class="{{$filledFields[1] ? ' wizard-filled' : ''}}"
                                               href="#">2
-                                                Renseignement sur l’enfant</a></p>
+                                              Acte de Décès</a></p>
                                     </li>
                                     <li>
                                         <p><a id="wizard-navs-2" class="{{$filledFields[2] ? ' wizard-filled' : ''}}"
-                                              href="#">3 Renseignement sur le Père</a></p>
+                                              href="#">3 Renseignement sur le Défunt / la Défunte</a></p>
                                     </li>
                                     <li>
                                         <p><a id="wizard-navs-3" class="{{$filledFields[3] ? ' wizard-filled' : ''}}"
-                                              href="#">4 Renseignement de la Mère</a></p>
+                                              href="#">4 Renseignement sur le Père du Défunt / de la Défunte</a></p>
                                     </li>
                                     <li>
                                         <p><a id="wizard-navs-4" class="{{$filledFields[4] ? ' wizard-filled' : ''}}"
-                                              href="#">5 Renseignement sur le Déclarant</a></p>
+                                              href="#">5 Renseignement sur la Mère du Défunt / de la Défunte</a></p>
                                     </li>
                                     <li>
                                         <p><a id="wizard-navs-5" class="{{$filledFields[5] ? ' wizard-filled' : ''}}"
-                                              href="#">6 Jugement</a></p>
+                                              href="#">6 Renseignement sur le Déclarant</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-6" class="{{$filledFields[6] ? ' wizard-filled' : ''}}"
+                                              href="#">7 Jugement</a></p>
                                     </li>
                                 </ul>
                             @else
@@ -60,19 +64,22 @@
                                         <p><a class="flow-control" id="wizard-navs-0" href="#">1 Zone Gérographique</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-1" href="#">2 Renseignement sur l’enfant</a></p>
+                                        <p><a id="wizard-navs-1" href="#">2 Acte de Décès</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-2" href="#">3 Renseignement sur le Père</a></p>
+                                        <p><a id="wizard-navs-2" href="#">3 Renseignement sur le Défunt / la Défunte</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-3" href="#">4 Renseignement de la Mère</a></p>
+                                        <p><a id="wizard-navs-3" href="#">4 Renseignement sur le Père du Défunt / de la Défunte</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-4" href="#">5 Renseignement sur le Déclarant</a></p>
+                                        <p><a id="wizard-navs-4" href="#">5 Renseignement sur la Mère du Défunt / de la Défunte</a></p>
                                     </li>
                                     <li>
-                                        <p><a id="wizard-navs-5" href="#">6 Jugement</a></p>
+                                        <p><a id="wizard-navs-5" href="#">6 Renseignement sur le Déclarant</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a id="wizard-navs-6" href="#">7 Jugement</a></p>
                                     </li>
                                 </ul>
                             @endif
@@ -80,7 +87,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="col-md-8">
                 <div class="card pb-4">
                     <form id="form" method="POST" class="demo-form" action="{{ route('deces.store') }}">
@@ -95,7 +101,7 @@
                                         <div class="col-sm">
                                             <div class="mb-4">
                                                 <label for="geographical_zone-pays">Pays</label>
-                                                <select id="geographical_zone-pays" data-parsley-errors-container="#invalid-feedback" data-live-search="true" data-name="pays" name="geographical_zone-pays" class="selectpicker w-100 serializable modifiable pb-1" required>
+                                                <select id="geographical_zone-pays" data-parsley-errors-container="#invalid-feedback" data-live-search="true" data-name="pays" name="geographical_zone_pays" class="selectpicker w-100 serializable modifiable pb-1" required>
                                                     <option value="" selected>--</option>
                                                     @if(isset($pays))
                                                         @foreach($pays as $pay)
@@ -114,7 +120,7 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="geographical_zone-regions">Régions</label>
-                                                <select id="geographical_zone-regions" data-parsley-errors-container="#invalid-feedback2" data-live-search="true" data-name="regions" name="geographical_zone-regions" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
+                                                <select id="geographical_zone-regions" data-parsley-errors-container="#invalid-feedback2" data-live-search="true" data-name="regions" name="geographical_zone_regions" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
                                                     <option value="" selected>--</option>
                                                     @if(isset($regions))
                                                         @foreach($regions as $region)
@@ -133,7 +139,7 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="geographical_zone-departments">Départements</label>
-                                                <select id="geographical_zone-departments" data-parsley-errors-container="#invalid-feedback3" data-live-search="true" data-name="departments" name="geographical_zone-departments" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
+                                                <select id="geographical_zone-departments" data-parsley-errors-container="#invalid-feedback3" data-live-search="true" data-name="departments" name="geographical_zone_departments" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
                                                     <option value="" selected>--</option>
                                                     @if(isset($departments))
                                                         @foreach($departments as $department)
@@ -152,7 +158,7 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="geographical_zone-arrondissements">Arrondissements</label>
-                                                <select id="geographical_zone-arrondissements" data-parsley-errors-container="#invalid-feedback4" data-live-search="true" data-name="arrondissements" name="geographical_zone-arrondissements" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
+                                                <select id="geographical_zone-arrondissements" data-parsley-errors-container="#invalid-feedback4" data-live-search="true" data-name="arrondissements" name="geographical_zone_arrondissements" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
                                                     <option value="" selected>--</option>
                                                     @if(isset($arrondissements))
                                                         @foreach($arrondissements as $arrondissement)
@@ -171,7 +177,7 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="geographical_zone-communes">Communes</label>
-                                                <select id="geographical_zone-communes" data-parsley-errors-container="#invalid-feedback5" data-live-search="true" data-name="communes" name="geographical_zone-communes" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
+                                                <select id="geographical_zone-communes" data-parsley-errors-container="#invalid-feedback5" data-live-search="true" data-name="communes" name="geographical_zone_communes" class="selectpicker w-100 serializable modifiable" tabindex="2" required >
                                                     <option value="" selected>--</option>
                                                     @if(isset($communes))
                                                         @foreach($communes as $commune)
@@ -190,7 +196,7 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="geographical_zone-centre">Centres</label>
-                                                <select id="geographical_zone-centre" data-parsley-errors-container="#invalid-feedback6" data-live-search="true" data-name="centre" name="geographical_zone-centre" class="selectpicker w-100 serializable" tabindex="2" required>
+                                                <select id="geographical_zone-centre" data-parsley-errors-container="#invalid-feedback6" data-live-search="true" data-name="centre" name="geographical_zone_centre" class="selectpicker w-100 serializable" tabindex="2" required>
                                                     <option value="" selected>--</option>
                                                     @if(isset($centre))
                                                         @foreach($centre as $item)
@@ -222,12 +228,12 @@
                                         <div class="col-sm">
                                             <div class="mb-4">
                                                 <label for="">Date du Décès</label>
-                                                <input id="" placeholder="Select date" type="date" name="" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
-                                                <span class="feedback-new" id="invalid-feedback7" role="alert"></span>
+                                                <input id="Date du Décès" placeholder="Select date" type="date" name="date_de_deces" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
+                                                <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
                                             </div>
                                             <div class="mb-4">
                                                 <label for="">Numéro de déclaration</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >
+                                                <input id="Numéro_de_déclaration" type="text" class="form-control serializable" name="Numéro_de_déclaration" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >
                                                 <span class="feedback-new" id="invalid-feedback8" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -237,18 +243,18 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label for="">Date de déclaration</label>
-                                                <input id="" placeholder="Select date" type="date" name="" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
+                                                <input id="date_de_déclaration" placeholder="Select date" type="date" name="date_de_déclaration" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
                                                 <span class="feedback-new" id="invalid-feedback7" role="alert"></span>
                                             </div>
                                                                                    
                                             <div class="mb-4">
                                                 <label for="">Heure du Décès</label>
-                                                <input id="" placeholder="Select date" type="time" name="" class="form-control serializable" tabindex="5" data-parsley-errors-container="#invalid-feedback12" required >
+                                                <input id="heure_du_décès" placeholder="Select date" type="time" name="heure_du_décès" class="form-control serializable" tabindex="5" data-parsley-errors-container="#invalid-feedback12" required >
                                                 <span class="feedback-new" id="invalid-feedback12" role="alert"></span>
                                             </div>
                                             <div class="mb-4">
                                                 <label for="">Lieu du Décès</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="6" data-parsley-errors-container="#invalid-feedback10" required >
+                                                <input id="lieu_du_décès" type="text" class="form-control serializable" name="lieu_du_décès" tabindex="6" data-parsley-errors-container="#invalid-feedback10" required >
                                                 <span class="feedback-new" id="invalid-feedback10" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -259,7 +265,7 @@
             
                                             <div class="mb-4">
                                                 <label for="">Formation sanitaire</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="7" data-parsley-errors-container="#invalid-feedback15">
+                                                <input id="" type="text" class="form-control serializable" name="formation_sanitaire" tabindex="7" data-parsley-errors-container="#invalid-feedback15">
                                                 <span class="feedback-new" id="invalid-feedback15" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -282,7 +288,7 @@
                                         <div class="col-sm">
                                             <div class="row mb-4">
                                                 <label for="">Prénom de la personne Décèdée</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="1" data-parsley-errors-container="#invalid-feedback16" required >
+                                                <input id="" type="text" class="form-control serializable" name="prénom_de_la_personne_Décèdée" tabindex="1" data-parsley-errors-container="#invalid-feedback16" required >
                                                 <span class="feedback-new" id="invalid-feedback16" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -292,7 +298,7 @@
                                             </div>
                                             <div class="row mb-4">
                                                 <label for="">Nom de famille de la personne Décèdée</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="2" data-parsley-errors-container="#invalid-feedback17" required >
+                                                <input id="" type="text" class="form-control serializable" name="nom_de_famille_de_la_personne_Décèdée" tabindex="2" data-parsley-errors-container="#invalid-feedback17" required >
                                                 <span class="feedback-new" id="invalid-feedback17" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -303,12 +309,12 @@
                                             <div class="row mb-4">
                                                 <label for="">
                                                 Date de Naissance de la personne Décèdée</label>
-                                                <input id="" placeholder="Select date" type="date" name="" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback18" required >
+                                                <input id="" placeholder="Select date" type="date" name="date_de_Naissance_de_la_personne_Décèdée" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback18" required >
                                                 <span class="feedback-new" id="invalid-feedback18" role="alert"></span>
                                             </div>
                                             <div class="row mb-4">
                                                 <label for="">Lieu de Naissance de la personne Décèdée</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="4" data-parsley-errors-container="#invalid-feedback19" required >
+                                                <input id="" type="text" class="form-control serializable" name="Lieu_de_Naissance_de_la_personne_Décèdée" tabindex="4" data-parsley-errors-container="#invalid-feedback19" required >
                                                 <span class="feedback-new" id="invalid-feedback19" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -318,7 +324,7 @@
                                             </div>
                                             <div class="row mb-4">
                                                 <label for="">Profession de la personne Décèdée</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="5" data-parsley-errors-container="#invalid-feedback20" required >
+                                                <input id="" type="text" class="form-control serializable" name="Profession_de_la_personne_Décèdée" tabindex="5" data-parsley-errors-container="#invalid-feedback20" required >
                                                 <span class="feedback-new" id="invalid-feedback20" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -328,7 +334,7 @@
                                             </div>
                                             <div class="row mb-4">
                                                 <label for="">Sexe de la personne Décèdée</label>
-                                                <select id="" data-live-search="true" name="" class="selectpicker w-100 serializable"   tabindex="6" data-parsley-errors-container="#invalid-feedback40" required>
+                                                <select id="" data-live-search="true" name="Sexe_de_la_personne_Décèdée" class="selectpicker w-100 serializable"   tabindex="6" data-parsley-errors-container="#invalid-feedback40" required>
                                                     <option value="" selected>---</option>
                                                     <option value="Masculin">Masculin</option>
                                                     <option value="Feminin">Féminin</option>
@@ -337,7 +343,7 @@
                                             </div>
                                             <div class="row mb-4">
                                                 <label for="">Addresse de la personne Décèdée</label>
-                                                <input id="" type="text" class="form-control serializable" name="" tabindex="7" data-parsley-errors-container="#invalid-feedback21" required >
+                                                <input id="" type="text" class="form-control serializable" name="Addresse_de_la_personne_Décèdée" tabindex="7" data-parsley-errors-container="#invalid-feedback21" required >
                                                 <span class="feedback-new" id="invalid-feedback21" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -353,14 +359,14 @@
                         <div class="form-section">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5 class="card-title">4 Renseignement de la Mère</h5>
+                                    <h5 class="card-title">Renseignement sur le Père du Défunt / de la Défunte</h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-4">
-                                                <label for="mother_info-first_name">Prénom de la Mère</label>
-                                                <input id="mother_info-first_name" type="text" class="form-control serializable" name="mother_info-first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback22" required >
+                                                <label for="father_info-first_name">Prénom du Père du Défunt / de la Défunte</label>
+                                                <input id="father_info-first_name" type="text" class="form-control serializable" name="firstname_of_the_father_of_deceased" tabindex="1" data-parsley-errors-container="#invalid-feedback22" required >
                                                 <span class="feedback-new" id="invalid-feedback22" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -369,8 +375,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="mother_info-family_name">Nom de famille de la Mère</label>
-                                                <input id="mother_info-family_name" type="text" class="form-control serializable" name="mother_info-family_name" tabindex="2" data-parsley-errors-container="#invalid-feedback23" required >
+                                                <label for="father_info-family_name">Nom de Famille de la Père  </label>
+                                                <input id="father_info-family_name" type="text" class="form-control serializable" name="father_family_name" tabindex="2" data-parsley-errors-container="#invalid-feedback23" required >
                                                 <span class="feedback-new" id="invalid-feedback23" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -379,23 +385,14 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="mother_info-dob">Date de Naissance de la Mère</label>
-                                                <input id="mother_info-dob" placeholder="Select date" type="date" name="mother_info-dob" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
+                                                <label for="father_info-dob">Date de naissance du père du défunt</label>
+                                                <input id="father_info-dob" placeholder="Select date" type="date" name="dob_of_father" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
                                                 <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
                                             </div>
+                                            
                                             <div class="row mb-4">
-                                                <label for="mother_info-birth_place">Lieu de Naissance de la Mère</label>
-                                                <input id="mother_info-birth_place" type="text" class="form-control serializable" name="mother_info-birth_place" tabindex="4" data-parsley-errors-container="#invalid-feedback25" required >
-                                                <span class="feedback-new" id="invalid-feedback25" role="alert"></span>
-                                                @if ($errors->has('description'))
-                                                    <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                            <div class="row mb-4">
-                                                <label for="mother_info-occupation">Profession de la Mère</label>
-                                                <input id="mother_info-occupation" type="text" class="form-control serializable" name="mother_info-occupation" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
+                                                <label for="father_info-occupation">Profession du Père du Défunt / de la Défunte</label>
+                                                <input id="father_info-occupation" type="text" class="form-control serializable" name="occupation_of_the_father_of_deceased" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
                                                 <span class="feedback-new" id="invalid-feedback26" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -404,8 +401,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="mother_info-address">Addresse de la Mère</label>
-                                                <input id="mother_info-address" type="text" class="form-control serializable" name="mother_info-address" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+                                                <label for="father_info-address">Addresse de la Père du Défunt / de la Défunte</label>
+                                                <input id="father_info-address" type="text" class="form-control serializable" name="address_of_the_father_of_deceased" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
                                                 <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -421,14 +418,76 @@
                         <div class="form-section">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5 class="card-title">5 Renseignement sur le Déclarant</h5>
+                                    <h5 class="card-title">Renseignement sur la Mère du Défunt / de la Défunte</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="row mb-4">
+                                                <label for="mother_info-first_name">Prénom de la Mère du Défunt / de la Défunte</label>
+                                                <input id="mother_info-first_name" type="text" class="form-control serializable" name="firstname_of_the_mother_of_deceased" tabindex="1" data-parsley-errors-container="#invalid-feedback22" required >
+                                                <span class="feedback-new" id="invalid-feedback22" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-family_name">Nom de Famille de la Mère</label>
+                                                <input id="mother_info-family_name" type="text" class="form-control serializable" name="mother_family_name" tabindex="2" data-parsley-errors-container="#invalid-feedback23" required >
+                                                <span class="feedback-new" id="invalid-feedback23" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="mother_info-dob">Date de Naissance du Défunt / de la Défunte</label>
+                                                <input id="mother_info-dob" placeholder="Select date" type="date" name="dob_of_mother" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
+                                                <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
+                                            </div>
+                                            
+                                            <div class="row mb-4">
+                                                <label for="mother_info-occupation">Profession de la Mère du Défunt / de la Défunte</label>
+                                                <input id="mother_info-occupation" type="text" class="form-control serializable" name="occupation_of_the_mother_of_deceased" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
+                                                <span class="feedback-new" id="invalid-feedback26" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+
+                                        
+
+                                            <div class="row mb-4">
+                                                <label for="mother_info-address">Addresse de la Mère du Défunt / de la Défunte</label>
+                                                <input id="mother_info-address" type="text" class="form-control serializable" name="address_of_the_mother_of_deceased" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+                                                <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">6 Renseignement sur le Déclarant</h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-3">
                                                 <label for="declarant_info-first_name">Prénom du déclarant</label>
-                                                <input id="declarant_info-first_name" type="text" class="form-control serializable" name="declarant_info-first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback29" required >
+                                                <input id="declarant_info-first_name" type="text" class="form-control serializable" name="declarant_firstname" tabindex="1" data-parsley-errors-container="#invalid-feedback29" required >
                                                 <span class="feedback-new" id="invalid-feedback29" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -438,7 +497,7 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <label for="declarant_info-last_name">Nom du déclarant</label>
-                                                <input id="declarant_info-last_name" type="text" class="form-control serializable" name="declarant_info-last_name" tabindex="2" data-parsley-errors-container="#invalid-feedback30" required >
+                                                <input id="declarant_info-last_name" type="text" class="form-control serializable" name="declarant_lasttname" tabindex="2" data-parsley-errors-container="#invalid-feedback30" required >
                                                 <span class="feedback-new" id="invalid-feedback30" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -448,7 +507,7 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <label for="declarant_info-address">Adresse du déclarant </label>
-                                                <input id="declarant_info-address" type="text" class="form-control serializable" name="declarant_info-address" tabindex="3" data-parsley-errors-container="#invalid-feedback31" required >
+                                                <input id="declarant_info-address" type="text" class="form-control serializable" name="declarant_address" tabindex="3" data-parsley-errors-container="#invalid-feedback31" required >
                                                 <span class="feedback-new" id="invalid-feedback31" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -458,7 +517,7 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <label for="declarant_info-profession" class="required">Profession du déclarant </label>
-                                                <input id="declarant_info-profession" type="text" class="form-control serializable" name="declarant_info-profession" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
+                                                <input id="declarant_info-profession" type="text" class="form-control serializable" name="declarant_profession" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
                                                 <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -468,7 +527,7 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <label for="declarant_info-cin" class="required">C.I.N</label>
-                                                <input id="declarant_info-cin" type="number" class="form-control serializable" name="declarant_info-cin" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
+                                                <input id="declarant_info-cin" type="number" class="form-control serializable" name="declarant_cin" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
                                                 <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -484,14 +543,14 @@
                         <div class="form-section current">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5 class="card-title">6 Jugement</h5>
+                                    <h5 class="card-title">7 Jugement</h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-3">
                                                 <label for="judgement-judgement">Jugement</label>
-                                                <select id="judgement-judgement" data-live-search="true" name="judgement-judgement" class="selectpicker w-100 serializable"   tabindex="1" data-parsley-errors-container="#invalid-feedback40"  required >
+                                                <select id="judgement-judgement" data-live-search="true" name="judgement_judgement" class="selectpicker w-100 serializable"   tabindex="1" data-parsley-errors-container="#invalid-feedback40"  required >
                                                     <option value="" selected>---</option>
                                                     <option value="Oui">Oui</option>
                                                     <option value="Non">Non</option>
@@ -500,12 +559,12 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <label for="judgement-date">Date du jugement</label>
-                                                <input id="judgement-date" placeholder="Select date" name="judgement-date" type="date" class="form-control serializable removable"   tabindex="2" data-parsley-errors-container="#invalid-feedback36"  required >
+                                                <input id="judgement-date" placeholder="Select date" name="judgement_date" type="date" class="form-control serializable removable"   tabindex="2" data-parsley-errors-container="#invalid-feedback36"  required >
                                                 <span class="feedback-new" id="invalid-feedback36" role="alert"></span>
                                             </div>
                                             <div class="row mb-3">
                                                 <label for="judgement-number">Numéro du jugement</label>
-                                                <input id="judgement-number" type="text" class="form-control serializable removable" name="judgement-number"   tabindex="3" data-parsley-errors-container="#invalid-feedback38"  required >
+                                                <input id="judgement-number" type="text" class="form-control serializable removable" name="judgement_number"   tabindex="3" data-parsley-errors-container="#invalid-feedback38"  required >
                                                 <span class="feedback-new" id="invalid-feedback38" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -516,7 +575,7 @@
                                             <div class="row mb-3">
                                                 <label for="judgment-region">Régions</label>
                                                 @if (isset($regions))
-                                                    <select id="judgment-region" data-live-search="true" name="judgment-region" class="selectpicker w-100 serializable removable" tabindex="4" data-parsley-errors-container="#invalid-feedback46" required >
+                                                    <select id="judgment-region" data-live-search="true" name="judgment_region" class="selectpicker w-100 serializable removable" tabindex="4" data-parsley-errors-container="#invalid-feedback46" required >
                                                         <option value="" selected>--</option>
                                                         @foreach ($regions as $item)
                                                             @if(((object)$item)->id > 0)
@@ -535,8 +594,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-3">
-                                                <label for="judgement-annotations">Mentions Marginales</label>
-                                                <input id="judgement-annotations" type="text" class="form-control serializable removable" name="judgement-annotations" required  tabindex="5" data-parsley-errors-container="#invalid-feedback39">
+                                                <label for="mention_marginales">Mentions Marginales</label>
+                                                <input id="mention_marginales" type="text" class="form-control serializable removable" name="mention_marginales" required  tabindex="5" data-parsley-errors-container="#invalid-feedback39">
                                                 <span class="feedback-new" id="invalid-feedback39" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">

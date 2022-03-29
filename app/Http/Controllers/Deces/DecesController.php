@@ -87,4 +87,9 @@ class DecesController extends Controller
     }
 
 
+    public function show(){
+        
+    }
+
+
 }

@@ -47,6 +47,8 @@ class DecesController extends Controller
     }
 
     public function storeDeces(Request $request){
+        $winner = $request->all();
+        dd($winner);
 
        $deces = new Deces;
 

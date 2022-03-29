@@ -29,18 +29,8 @@
         addressSelect();
 
         if(location.pathname.indexOf( '/centre/create') !== -1
-<<<<<<< HEAD
-                || location.pathname.indexOf( 'naissance/registre/create') !== -1
-                || /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname)
-                || location.pathname.indexOf( 'marriage/registre/create') !== -1
-                || /marriage\/registre\/[0-9]+\/edit/.test( window.location.pathname)
-                || location.pathname.indexOf( 'Deces/registre/create') !== -1
-                || /Deces\/registre\/[0-9]+\/edit/.test( window.location.pathname))
-
-=======
                 || location.pathname.indexOf( '/registre/create') !== -1
                 || /\/registre\/[0-9]+\/edit/.test( window.location.pathname))
->>>>>>> 6619dddefb98ef4174e24b972f342ab01d4eb9b6
             filterHierarchy( createDropdown);
 
         // if( location.pathname.indexOf( 'create-user') !== -1 || location.pathname.indexOf( 'edit-user') !== -1)

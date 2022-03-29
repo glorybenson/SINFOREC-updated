@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" data-tool="{{ $old ?? '{}' }}" data-conn="{{ $link }}">
+        <div class="row" data-tool="{{ $old ?? '{}' }}">
             <div class="col-md-4">
                 <div class="card p-3 wizard-form">
                     <ul>

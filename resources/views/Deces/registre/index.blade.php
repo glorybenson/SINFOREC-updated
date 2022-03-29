@@ -36,6 +36,8 @@
                                 <th>Date du Décès</th>
                                 <th>Numéro de déclaration</th>
                                 <th>Date de déclaration</th>
+                                <th>Créé par</th>
+                                <th>Créé le</th>
 
                                 <th>Action</th>
                                 </thead>
@@ -65,6 +67,12 @@
                                         </td>
                                         <td>
                                             {{ $item->judgement_date }}
+                                        </td>
+                                         <td>
+                                            {{ $item->created_by }}
+                                        </td>
+                                         <td>
+                                            {{ $item->created_at }}
                                         </td>
 
                                        

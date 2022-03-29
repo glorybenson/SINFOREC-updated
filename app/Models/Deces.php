@@ -49,5 +49,8 @@ class Deces extends Model
         'judgement_number',
         'judgement_region',
         'mention_marginales',
+        'Parente',
+        'created_by',
+        'created_at',
     ];
 }

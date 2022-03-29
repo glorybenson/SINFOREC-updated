@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Deces;
 
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Util;
@@ -13,6 +15,7 @@ use App\Models\Deces;
 use App\Models\Communes;
 use App\Models\Department;
 use App\Models\Arrondissement;
+
 
 class DecesController extends Controller
 {
@@ -48,6 +51,8 @@ class DecesController extends Controller
 
     public function storeDeces(Request $request){
 
+       $currentTime = Carbon::now();
+       $times = $currentTime->toDateTimeString();
        $deces = new Deces;
 
        $deces->pays = $request->geographical_zone_pays;
@@ -84,14 +89,17 @@ class DecesController extends Controller
        $deces->declarant_address = $request->declarant_address;
        $deces->declarant_profession = $request->declarant_profession;
        $deces->declarant_cin = $request->declarant_cin;
+       $deces->Parente = $request->parente;
        $deces->judgement_judgement = $request->judgement_judgement;
        $deces->judgement_date = $request->judgement_date;
        $deces->judgement_number = $request->judgement_number;
        $deces->judgement_region = $request->judgment_region;
        $deces->mention_marginales = $request->mention_marginales;
+       $deces->created_by = Auth::user()->first_name;
+       $deces->created_at = $times;
 
        if($deces->save()){
-        return redirect()->back()->with('success', 'Deces Created Successfully');
+        return redirect()->route('deces.index')->with('success', 'Deces Created Successfully');
        }else{
          return redirect()->back()->with('error', 'Failed');
        }

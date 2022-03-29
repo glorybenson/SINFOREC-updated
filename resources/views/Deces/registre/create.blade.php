@@ -15,11 +15,7 @@
             </div>
         </div>
        
-        <div class="row" data-tool="{{ $old ?? '{}' }}" data-conn='{"pays":[{"id":0,"description":"N/A",
-        "created_by":"0"},{"id":21,"description":"Senegal","created_by":"1"},{"id":22,"description":"Canada",
-        "created_by":"1"},{"id":23,"description":"Mali","created_by":"1"},{"id":24,"description":"France",
-        "created_by":"1"},{"id":25,"description":"Ghana","created_by":"1"},{"id":26,"description":"cote d&apos;ivoire",
-        "created_by":"1"}],"regions":[{"id":0,"description":"N/A","pay_id":"0"},{"id":23,"description":"Mbour","pay_id":"21"},{"id":26,"description":"Ottawa","pay_id":"22"},{"id":27,"description":"Paris","pay_id":"24"}],"departments":[{"id":0,"region_id":"0","description":"N/A"},{"id":17,"region_id":"23","description":"Health Department"},{"id":18,"region_id":"26","description":"Immigration"},{"id":19,"region_id":"27","description":"Entertainment"}],"arrondissements":[{"id":0,"description":"N/A","department_id":"0"},{"id":20,"description":"matter","department_id":"17"},{"id":21,"description":"passports and travel","department_id":"18"},{"id":22,"description":"Music","department_id":"19"}],"communes":[{"id":0,"description":"N/A","arrondissement_id":"0"},{"id":17,"description":"send","arrondissement_id":"20"},{"id":18,"description":"application","arrondissement_id":"21"},{"id":19,"description":"R n B","arrondissement_id":"22"}],"centre":[{"id":"36","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"send","departments":"Health Department","commune_id":"0"},{"id":"37","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"nat","departments":"Health Department","commune_id":"0"},{"id":"38","arrondissements":"matter","communes":"send","regions":"Mbour","description":"land","departments":"Health Department","commune_id":"17"},{"id":"39","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"New","departments":"Health Department","commune_id":"0"},{"id":"40","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"Lisa","departments":"Health Department","commune_id":"0"},{"id":"41","arrondissements":"Music","communes":"R n B","regions":"Paris","description":"Music Centre","departments":"Entertainment","commune_id":"19"}]}'>
+        <div class="row">
         
         <div class="col-md-4">
                 <div class="card p-3 wizard-form">
@@ -496,6 +492,16 @@
                                             <div class="row mb-3">
                                                 <label for="declarant_info-cin" class="required">C.I.N</label>
                                                 <input id="declarant_info-cin" type="number" class="form-control serializable" name="declarant_cin" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
+                                                <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
+                                                @if ($errors->has('description'))
+                                                    <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="declarant_info-profession" class="required">Parente</label>
+                                                <input id="parente" type="text" class="form-control serializable" name="parente" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
                                                 <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">

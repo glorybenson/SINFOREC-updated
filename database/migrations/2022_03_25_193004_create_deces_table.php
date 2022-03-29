@@ -49,13 +49,15 @@ class CreateDecesTable extends Migration
             $table->string('declarant_address');
             $table->string('declarant_profession');
             $table->integer('declarant_cin');
+            $table->string('Parente');
             $table->string('judgement_judgement')->nullable();
             $table->dateTime('judgement_date')->nullable();
             $table->string('judgement_number')->nullable();
             $table->integer('judgement_region')->nullable();
             $table->string('mention_marginales')->nullable();
-
-            $table->timestamps();
+            $table->string('created_by');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at')->nullable();
         });
     }
 

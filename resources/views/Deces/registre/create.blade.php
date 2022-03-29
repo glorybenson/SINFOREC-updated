@@ -14,6 +14,9 @@
                 </div>
             </div>
         </div>
+        <div class="row"
+             data-tool="{{ isset( $old) ? $old : '{}' }}"
+             data-conn="{{ $link }}">
         <!--<div class="row" data-tool="{{ $old ?? '{}' }}" data-conn='{"pays":[{"id":0,"description":"N/A",
         "created_by":"0"},{"id":21,"description":"Senegal","created_by":"1"},{"id":22,"description":"Canada",
         "created_by":"1"},{"id":23,"description":"Mali","created_by":"1"},{"id":24,"description":"France",

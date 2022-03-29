@@ -63,10 +63,10 @@
                                         <td>
                                             {{ $item->Date_du_Décès }}</td>
                                         <td>
-                                            {{ $item->declarant_cin }}
+                                            {{ $item->Numéro_de_déclaration }}
                                         </td>
                                         <td>
-                                            {{ $item->judgement_date }}
+                                            {{ $item->Date_de_déclaration}}
                                         </td>
                                          <td>
                                             {{ $item->created_by }}

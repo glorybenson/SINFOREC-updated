@@ -14,7 +14,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-tool="{{ $old ?? '{}' }}" data-conn='{"pays":[{"id":0,"description":"N/A",
+        "created_by":"0"},{"id":21,"description":"Senegal","created_by":"1"},{"id":22,"description":"Canada",
+        "created_by":"1"},{"id":23,"description":"Mali","created_by":"1"},{"id":24,"description":"France",
+        "created_by":"1"},{"id":25,"description":"Ghana","created_by":"1"},{"id":26,"description":"cote d&apos;ivoire",
+        "created_by":"1"}],"regions":[{"id":0,"description":"N/A","pay_id":"0"},{"id":23,"description":"Mbour","pay_id":"21"},{"id":26,"description":"Ottawa","pay_id":"22"},{"id":27,"description":"Paris","pay_id":"24"}],"departments":[{"id":0,"region_id":"0","description":"N/A"},{"id":17,"region_id":"23","description":"Health Department"},{"id":18,"region_id":"26","description":"Immigration"},{"id":19,"region_id":"27","description":"Entertainment"}],"arrondissements":[{"id":0,"description":"N/A","department_id":"0"},{"id":20,"description":"matter","department_id":"17"},{"id":21,"description":"passports and travel","department_id":"18"},{"id":22,"description":"Music","department_id":"19"}],"communes":[{"id":0,"description":"N/A","arrondissement_id":"0"},{"id":17,"description":"send","arrondissement_id":"20"},{"id":18,"description":"application","arrondissement_id":"21"},{"id":19,"description":"R n B","arrondissement_id":"22"}],"centre":[{"id":"36","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"send","departments":"Health Department","commune_id":"0"},{"id":"37","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"nat","departments":"Health Department","commune_id":"0"},{"id":"38","arrondissements":"matter","communes":"send","regions":"Mbour","description":"land","departments":"Health Department","commune_id":"17"},{"id":"39","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"New","departments":"Health Department","commune_id":"0"},{"id":"40","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"Lisa","departments":"Health Department","commune_id":"0"},{"id":"41","arrondissements":"Music","communes":"R n B","regions":"Paris","description":"Music Centre","departments":"Entertainment","commune_id":"19"}]}'>
             <div class="col-md-4">
                 <div class="card p-3 wizard-form">
                     <ul>
@@ -24,14 +28,17 @@
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                             </div>
-                            @if(isset($is_edit))
-                                <ul style="display: block;" id="wizard-ul">
+                            <ul style="display: block;" id="wizard-ul">
+                                @foreach($fields as $field)
                                     <li>
-                                        <p><a class="flow-control{{$filledFields[0] ? ' wizard-filled' : ''}}"
-                                              id="wizard-navs-0" href="#">1
-                                                Zone
-                                                Gérographique</a></p>
+                                        <p>
+                                            <a class="{{$field['is_filled'] ? ' wizard-filled' : ''}}"
+                                               id="wizard-navs-{{$loop->index }}" href="#">
+                                                {{ $loop->iteration }} {{ $field['title'] }}
+                                            </a>
+                                        </p>
                                     </li>
+<<<<<<< HEAD
                                     <li>
                                         <p><a id="wizard-navs-1" class="{{$filledFields[1] ? ' wizard-filled' : ''}}"
                                               href="#">2
@@ -79,6 +86,10 @@
                                     </li>
                                 </ul>
                             @endif
+=======
+                                @endforeach
+                            </ul>
+>>>>>>> 6619dddefb98ef4174e24b972f342ab01d4eb9b6
                         </li>
                     </ul>
                 </div>
@@ -242,7 +253,7 @@
                                                 <input id="date_de_déclaration" placeholder="Select date" type="date" name="date_de_déclaration" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
                                                 <span class="feedback-new" id="invalid-feedback7" role="alert"></span>
                                             </div>
-                                                                                   
+
                                             <div class="mb-4">
                                                 <label for="">Heure du Décès</label>
                                                 <input id="heure_du_décès" placeholder="Select date" type="time" name="heure_du_décès" class="form-control serializable" tabindex="5" data-parsley-errors-container="#invalid-feedback12" required >
@@ -258,7 +269,7 @@
                                             </span>
                                                 @endif
                                             </div>
-            
+
                                             <div class="mb-4">
                                                 <label for="">Formation sanitaire</label>
                                                 <input id="" type="text" class="form-control serializable" name="formation_sanitaire" tabindex="7" data-parsley-errors-container="#invalid-feedback15">
@@ -385,7 +396,11 @@
                                                 <input id="father_info-dob" placeholder="Select date" type="date" name="dob_of_father" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
                                                 <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
                                             </div>
+<<<<<<< HEAD
                                             
+=======
+
+>>>>>>> 6619dddefb98ef4174e24b972f342ab01d4eb9b6
                                             <div class="row mb-4">
                                                 <label for="father_info-occupation">Profession du Père du Défunt / de la Défunte</label>
                                                 <input id="father_info-occupation" type="text" class="form-control serializable" name="occupation_of_the_father_of_deceased" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
@@ -397,8 +412,13 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
+<<<<<<< HEAD
                                                 <label for="father_info-address">Addresse de la Père du Défunt / de la Défunte</label>
                                                 <input id="father_info-address" type="text" class="form-control serializable" name="address_of_the_father_of_deceased" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+=======
+                                                <label for="address_of_the_father_of_deceased">Addresse de la Père du Défunt / de la Défunte</label>
+                                                <input id="address_of_the_father_of_deceased" type="text" class="form-control serializable" name="address_of_the_father_of_deceased" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+>>>>>>> 6619dddefb98ef4174e24b972f342ab01d4eb9b6
                                                 <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -444,7 +464,11 @@
                                                 <input id="mother_info-dob" placeholder="Select date" type="date" name="dob_of_mother" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
                                                 <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
                                             </div>
+<<<<<<< HEAD
                                             
+=======
+
+>>>>>>> 6619dddefb98ef4174e24b972f342ab01d4eb9b6
                                             <div class="row mb-4">
                                                 <label for="mother_info-occupation">Profession de la Mère du Défunt / de la Défunte</label>
                                                 <input id="mother_info-occupation" type="text" class="form-control serializable" name="occupation_of_the_mother_of_deceased" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
@@ -456,11 +480,29 @@
                                                 @endif
                                             </div>
 
+<<<<<<< HEAD
                                         
 
                                             <div class="row mb-4">
                                                 <label for="mother_info-address">Addresse de la Mère du Défunt / de la Défunte</label>
                                                 <input id="mother_info-address" type="text" class="form-control serializable" name="address_of_the_mother_of_deceased" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+=======
+
+
+                                            <div class="row mb-4">
+                                                <label for="address_of_the_mother_of_deceased">Addresse de la Mère du Défunt / de la Défunte</label>
+                                                <select data-live-search="true" data-name="address_of_the_mother_of_deceased"
+                                                        data-for="address_of_the_father_of_deceased" class="selectpicker w-100
+                                                serializable modifiable address-special-select" tabindex="2" required >
+                                                    <option value="" selected>--</option>
+                                                    <option value="father_address">Meme que le Pere</option>
+                                                    <option value="differente">Differente</option>
+
+                                                </select>
+
+
+                                                <input id="address_of_the_mother_of_deceased" type="text" class="form-control serializable" name="address_of_the_mother_of_deceased" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
+>>>>>>> 6619dddefb98ef4174e24b972f342ab01d4eb9b6
                                                 <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">

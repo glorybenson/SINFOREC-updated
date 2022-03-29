@@ -243,6 +243,10 @@
                                                         <td>Profession du Père de l'Epoux</td>
                                                         <td>{{ $values->{'groom_father-profession'} }}</td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Addresse du Père de l'Epoux</td>
+                                                        <td>{{ $values->{'groom_father-address'} }}</td>
+                                                    </tr>
                                                 </table>
                                             </div>
                                         </div>

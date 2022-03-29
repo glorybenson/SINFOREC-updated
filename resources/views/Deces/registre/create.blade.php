@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-tool="{{ $old ?? '{}' }}" data-conn="{{ $link }}">
             <div class="col-md-4">
                 <div class="card p-3 wizard-form">
                     <ul>
@@ -24,65 +24,18 @@
                                     <i id="open-menu" class="fa fa-chevron-right"></i>
                                 </a>
                             </div>
-                            @if(isset($is_edit))
-                                <ul style="display: block;" id="wizard-ul">
+                            <ul style="display: block;" id="wizard-ul">
+                                @foreach($fields as $field)
                                     <li>
-                                        <p><a class="flow-control{{$filledFields[0] ? ' wizard-filled' : ''}}"
-                                              id="wizard-navs-0" href="#">1
-                                                Zone
-                                                Gérographique</a></p>
+                                        <p>
+                                            <a class="{{$field['is_filled'] ? ' wizard-filled' : ''}}"
+                                               id="wizard-navs-{{$loop->index }}" href="#">
+                                                {{ $loop->iteration }} {{ $field['title'] }}
+                                            </a>
+                                        </p>
                                     </li>
-                                    <li>
-                                        <p><a id="wizard-navs-1" class="{{$filledFields[1] ? ' wizard-filled' : ''}}"
-                                              href="#">2
-                                              Acte de Décès</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-2" class="{{$filledFields[2] ? ' wizard-filled' : ''}}"
-                                              href="#">3 Renseignement sur le Défunt / la Défunte</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-3" class="{{$filledFields[3] ? ' wizard-filled' : ''}}"
-                                              href="#">4 Renseignement sur le Père du Défunt / de la Défunte</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-4" class="{{$filledFields[4] ? ' wizard-filled' : ''}}"
-                                              href="#">5 Renseignement sur la Mère du Défunt / de la Défunte</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-5" class="{{$filledFields[5] ? ' wizard-filled' : ''}}"
-                                              href="#">6 Renseignement sur le Déclarant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-6" class="{{$filledFields[6] ? ' wizard-filled' : ''}}"
-                                              href="#">7 Jugement</a></p>
-                                    </li>
-                                </ul>
-                            @else
-                                <ul style="display: block;" id="wizard-ul">
-                                    <li>
-                                        <p><a class="flow-control" id="wizard-navs-0" href="#">1 Zone Gérographique</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-1" href="#">2 Acte de Décès</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-2" href="#">3 Renseignement sur le Défunt / la Défunte</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-3" href="#">4 Renseignement sur le Père du Défunt / de la Défunte</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-4" href="#">5 Renseignement sur la Mère du Défunt / de la Défunte</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-5" href="#">6 Renseignement sur le Déclarant</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a id="wizard-navs-6" href="#">7 Jugement</a></p>
-                                    </li>
-                                </ul>
-                            @endif
+                                @endforeach
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -246,7 +199,7 @@
                                                 <input id="date_de_déclaration" placeholder="Select date" type="date" name="date_de_déclaration" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
                                                 <span class="feedback-new" id="invalid-feedback7" role="alert"></span>
                                             </div>
-                                                                                   
+
                                             <div class="mb-4">
                                                 <label for="">Heure du Décès</label>
                                                 <input id="heure_du_décès" placeholder="Select date" type="time" name="heure_du_décès" class="form-control serializable" tabindex="5" data-parsley-errors-container="#invalid-feedback12" required >
@@ -262,7 +215,7 @@
                                             </span>
                                                 @endif
                                             </div>
-            
+
                                             <div class="mb-4">
                                                 <label for="">Formation sanitaire</label>
                                                 <input id="" type="text" class="form-control serializable" name="formation_sanitaire" tabindex="7" data-parsley-errors-container="#invalid-feedback15">
@@ -389,7 +342,7 @@
                                                 <input id="father_info-dob" placeholder="Select date" type="date" name="dob_of_father" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
                                                 <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
                                             </div>
-                                            
+
                                             <div class="row mb-4">
                                                 <label for="father_info-occupation">Profession du Père du Défunt / de la Défunte</label>
                                                 <input id="father_info-occupation" type="text" class="form-control serializable" name="occupation_of_the_father_of_deceased" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
@@ -448,7 +401,7 @@
                                                 <input id="mother_info-dob" placeholder="Select date" type="date" name="dob_of_mother" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback24" required >
                                                 <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
                                             </div>
-                                            
+
                                             <div class="row mb-4">
                                                 <label for="mother_info-occupation">Profession de la Mère du Défunt / de la Défunte</label>
                                                 <input id="mother_info-occupation" type="text" class="form-control serializable" name="occupation_of_the_mother_of_deceased" tabindex="5" data-parsley-errors-container="#invalid-feedback26" required >
@@ -460,7 +413,7 @@
                                                 @endif
                                             </div>
 
-                                        
+
 
                                             <div class="row mb-4">
                                                 <label for="mother_info-address">Addresse de la Mère du Défunt / de la Défunte</label>

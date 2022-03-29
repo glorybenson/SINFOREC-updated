@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Deces;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Models\Util;
 use Illuminate\Http\Request;
 use App\Models\Pay;
 use App\Models\Region;
@@ -28,13 +30,26 @@ class DecesController extends Controller
         $arrondissements = Arrondissement::all();
         $communes = Communes::all();
         $centre = Centre::all();
-        return view('Deces.registre.create', compact('pays', 'regions', 'departments', 'arrondissements', 'communes', 'centre'));
+        $post_url = route( 'deces.store');
+        $page_url = route( 'deces.registre');
+
+        $fields = [
+            ['title' => 'Zone Gérographique', 'is_filled' => false],
+            ['title' => "Acte de Décès", 'is_filled' => false],
+            ['title' => "Renseignement sur le Défunt / la Défunte", 'is_filled' => false],
+            ['title' => "Renseignement sur le Père du Défunt / de la Défunte", 'is_filled' => false],
+            ['title' => "Renseignement sur la Mère du Défunt / de la Défunte", 'is_filled' => false],
+            ['title' => "Renseignement sur le Déclarant ", 'is_filled' => false],
+            ['title' => "Jugement", 'is_filled' => false],
+        ];
+        return view('Deces.registre.create', compact('pays', 'regions', 'departments', 'arrondissements', 'communes',
+            'centre', 'post_url', 'page_url', 'fields'));
     }
 
     public function storeDeces(Request $request){
         $winner = $request->all();
         dd($winner);
-       
+
        $deces = new Deces;
 
        $deces->pays = $request->geographical_zone_pays;
@@ -83,7 +98,7 @@ class DecesController extends Controller
          return redirect()->back()->with('error', 'Failed');
        }
 
-     
+
     }
 
 

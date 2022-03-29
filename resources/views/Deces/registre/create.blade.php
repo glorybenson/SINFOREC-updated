@@ -421,6 +421,16 @@
 
                                             <div class="row mb-4">
                                                 <label for="mother_info-address">Addresse de la Mère du Défunt / de la Défunte</label>
+                                                <select data-live-search="true" data-name="mother_info_address"
+                                                        data-for="father_info-address" class="selectpicker w-100
+                                                serializable modifiable address-special-select" tabindex="2" required >
+                                                    <option value="" selected>--</option>
+                                                    <option value="father_address">Meme que le Pere</option>
+                                                    <option value="differente">Differente</option>
+
+                                                </select>
+
+
                                                 <input id="mother_info-address" type="text" class="form-control serializable" name="address_of_the_mother_of_deceased" tabindex="6" data-parsley-errors-container="#invalid-feedback27" required >
                                                 <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
                                                 @if ($errors->has('description'))

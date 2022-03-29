@@ -422,7 +422,7 @@
                                             <div class="form-field row mb-4">
                                                 <label for="mother_info-address">Addresse de la Mère du Défunt / de la Défunte </label>
                                                 <select data-live-search="true" data-name="address_of_the_mother_of_deceased"
-                                                        data-for="father_info-address" class="selectpicker w-100
+                                                        data-for="address_of_the_father_of_deceased" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
 
                                                     <option value="" selected>--</option>

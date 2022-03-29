@@ -14,15 +14,13 @@
                 </div>
             </div>
         </div>
-        <div class="row"
-             data-tool="{{ isset( $old) ? $old : '{}' }}"
-             >
-        <!--<div class="row" data-tool="{{ $old ?? '{}' }}" data-conn='{"pays":[{"id":0,"description":"N/A",
+       
+        <div class="row" data-tool="{{ $old ?? '{}' }}" data-conn='{"pays":[{"id":0,"description":"N/A",
         "created_by":"0"},{"id":21,"description":"Senegal","created_by":"1"},{"id":22,"description":"Canada",
         "created_by":"1"},{"id":23,"description":"Mali","created_by":"1"},{"id":24,"description":"France",
         "created_by":"1"},{"id":25,"description":"Ghana","created_by":"1"},{"id":26,"description":"cote d&apos;ivoire",
         "created_by":"1"}],"regions":[{"id":0,"description":"N/A","pay_id":"0"},{"id":23,"description":"Mbour","pay_id":"21"},{"id":26,"description":"Ottawa","pay_id":"22"},{"id":27,"description":"Paris","pay_id":"24"}],"departments":[{"id":0,"region_id":"0","description":"N/A"},{"id":17,"region_id":"23","description":"Health Department"},{"id":18,"region_id":"26","description":"Immigration"},{"id":19,"region_id":"27","description":"Entertainment"}],"arrondissements":[{"id":0,"description":"N/A","department_id":"0"},{"id":20,"description":"matter","department_id":"17"},{"id":21,"description":"passports and travel","department_id":"18"},{"id":22,"description":"Music","department_id":"19"}],"communes":[{"id":0,"description":"N/A","arrondissement_id":"0"},{"id":17,"description":"send","arrondissement_id":"20"},{"id":18,"description":"application","arrondissement_id":"21"},{"id":19,"description":"R n B","arrondissement_id":"22"}],"centre":[{"id":"36","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"send","departments":"Health Department","commune_id":"0"},{"id":"37","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"nat","departments":"Health Department","commune_id":"0"},{"id":"38","arrondissements":"matter","communes":"send","regions":"Mbour","description":"land","departments":"Health Department","commune_id":"17"},{"id":"39","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"New","departments":"Health Department","commune_id":"0"},{"id":"40","arrondissements":"N/A","communes":"N/A","regions":"Mbour","description":"Lisa","departments":"Health Department","commune_id":"0"},{"id":"41","arrondissements":"Music","communes":"R n B","regions":"Paris","description":"Music Centre","departments":"Entertainment","commune_id":"19"}]}'>
-        -->
+        
         <div class="col-md-4">
                 <div class="card p-3 wizard-form">
                     <ul>
@@ -426,7 +424,7 @@
                                             <div class="form-field row mb-4">
                                                 <label for="mother_info-address">Addresse de la Mère du Défunt / de la Défunte </label>
                                                 <select data-live-search="true" data-name="address_of_the_mother_of_deceased"
-                                                        data-for="address_of_the_father_of_deceased" class="selectpicker w-100
+                                                        data-for="father_info-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
 
                                                     <option value="" selected>--</option>

@@ -53,6 +53,7 @@ class Deces extends Model
         'Parente',
         'created_by',
         'created_at',
+        'docId',
     ];
 }
 

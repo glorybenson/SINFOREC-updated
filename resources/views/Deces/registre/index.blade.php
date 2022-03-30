@@ -60,10 +60,10 @@
                                         <td>
                                             {{ $item->values->{'deceased-birth_place'} }}</td>
                                         <td>
-                                            {{ $item->values->{'date_of_death'} }}
+                                            {{ $item->values->{'date_du_deces'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'declarant_info-cin'} }}
+                                            {{ $item->values->{'declaration_number'} }}
                                         </td>
                                         <td>
                                             {{ $item->values->{'date_of_death'} }}

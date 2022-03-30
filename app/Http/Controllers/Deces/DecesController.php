@@ -97,8 +97,8 @@ final class DecesController extends Controller
             $add->done = isset( $ajax_call) ? 'no' : 'yes';
             $add->save();
             $inputs[ 'id'] = $add->id;
-            $add->values = json_encode( $inputs);
-            $add->update();
+            //$add->values = json_encode( $inputs);
+            //$add->update();
         }
 
         if ( isset( $ajax_call) && empty($inputs['saveAndExit']))

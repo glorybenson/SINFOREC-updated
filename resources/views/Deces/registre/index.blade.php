@@ -56,7 +56,7 @@
                                         </td>
                                         <td>
                                             {{ $item->values->{'deceased-dob'} }}</td>
-                                        <td>
+                                        </td>
                                             {{ $item->values->{'deceased-birth_place'} }}</td>
                                         <td>
                                             {{ $item->values->{'date_of_death'} }}

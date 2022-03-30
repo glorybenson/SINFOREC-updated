@@ -229,7 +229,7 @@ final class DecesController extends Controller
             unset( $inputs[ 'src']);
             $ajax_call = true;
         }
-        $add = Marriage::find( $id);
+        $add = Deces::find( $id);
         $add->values = json_encode( $inputs);
         $add->update();
 

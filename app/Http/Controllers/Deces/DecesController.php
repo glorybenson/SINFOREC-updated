@@ -76,7 +76,7 @@ final class DecesController extends Controller
         if( array_key_exists( 'src', $inputs))
         {
             unset( $inputs[ 'src']);
-            $ajax_call = true;
+            //$ajax_call = true;
         }
 
         if( array_key_exists( 'id', $inputs)) {
@@ -94,7 +94,7 @@ final class DecesController extends Controller
             $add = new Deces();
             $add->values = json_encode( $inputs);
             $add->created_by = Auth::user()[ 'id'];
-            $add->done = isset( $ajax_call) ? 'no' : 'yes';
+            //$add->done = isset( $ajax_call) ? 'no' : 'yes';
             $add->save();
             $inputs[ 'id'] = $add->id;
             $add->values = json_encode( $inputs);

@@ -42,7 +42,7 @@
                                 <th>Action</th>
                                 </thead>
                                 <tbody>
-                               @if(isset($add))
+                               
                                @foreach ($add as $item)
                                     @php
                                         if(isset($item))
@@ -86,7 +86,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                                @endif
+                                
                                 </tbody>
                             </table>
                         </div>

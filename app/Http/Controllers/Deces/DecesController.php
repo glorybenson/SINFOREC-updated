@@ -80,12 +80,12 @@ final class DecesController extends Controller
         }
 
         if( array_key_exists( 'id', $inputs)) {
-            $add = Marriage::find( $inputs[ 'id']);
+            $add = Deces::find( $inputs[ 'id']);
             $add->values = json_encode( $inputs);
             $add->update();
             return $add;
         } else if (array_key_exists('docId', $inputs)) {
-            $add = Marriage::find( $inputs[ 'docId']);
+            $add = Deces::find( $inputs[ 'docId']);
             $add->values = json_encode( $inputs);
             $add->update();
         } else

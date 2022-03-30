@@ -72,15 +72,42 @@ final class DecesController extends Controller
     public function store(Request $request)
     {
         $inputs = $request->all();
+        unset($inputs['_token']);
+        if( array_key_exists( 'src', $inputs))
+        {
+            unset( $inputs[ 'src']);
+            $ajax_call = true;
+        }
+
+        if( array_key_exists( 'id', $inputs)) {
+            $add = Marriage::find( $inputs[ 'id']);
+            $add->values = json_encode( $inputs);
+            $add->update();
+            return $add;
+        } else if (array_key_exists('docId', $inputs)) {
+            $add = Marriage::find( $inputs[ 'docId']);
+            $add->values = json_encode( $inputs);
+            $add->update();
+        } else
+        {
         
             $add = new Deces();
             $add->values = json_encode( $inputs);
             $add->created_by = Auth::user()[ 'id'];
+            $add->done = isset( $ajax_call) ? 'no' : 'yes';
             $add->save();
             $inputs[ 'id'] = $add->id;
             $add->values = json_encode( $inputs);
             $add->update();
-       
+        }
+
+        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
+        {
+            $id = $add->id;
+            return response("{ \"message\": \"Ajout créée avec succès\", \"id\": $id}", 200)
+                ->header('Content-Type', 'application/json')
+                ->header( 'charset', 'utf-8');
+        }
 
 
         return Redirect::route('deces.index')->with('success', 'Ajout créée avec succès');

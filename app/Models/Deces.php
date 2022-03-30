@@ -50,10 +50,9 @@ class Deces extends Model
         'judgement_number',
         'judgement_region',
         'mention_marginales',
-        'saveAndExit'
-        //'Parente',
-        //'created_by',
-        //'created_at',
+        'Parente',
+        'created_by',
+        'created_at',
     ];
 }
 

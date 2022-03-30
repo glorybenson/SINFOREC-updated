@@ -32,7 +32,7 @@ final class DecesController extends Controller
             ->select('deces.*')
             ->get();
 
-        return view('deces.registre.index', [
+        return view('Deces.registre.index', [
             'add' => $add
         ]);
     }
@@ -60,7 +60,7 @@ final class DecesController extends Controller
             ['title' => "Jugement", 'is_filled' => false],
         ];
 
-        return view('deces.registre.create', $binding);
+        return view('Deces.registre.create', $binding);
     }
 
     /**

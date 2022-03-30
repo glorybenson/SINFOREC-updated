@@ -229,26 +229,9 @@ final class DecesController extends Controller
             unset( $inputs[ 'src']);
             $ajax_call = true;
         }
-        if( array_key_exists( 'id', $inputs)) {
-        $add = Deces::find( $inputs[ 'id']);
+        $add = Deces::find( $id);
         $add->values = json_encode( $inputs);
         $add->update();
-        return $add;
-        } else if (array_key_exists('docId', $inputs)) {
-            $add = Deces::find( $inputs[ 'docId']);
-            $add->values = json_encode( $inputs);
-            $add->update();
-        } else
-        {
-            $add = new Deces();
-            $add->values = json_encode( $inputs);
-            $add->created_by = Auth::user()[ 'id'];
-            $add->done = isset( $ajax_call) ? 'no' : 'yes';
-            $add->save();
-            $inputs[ 'id'] = $add->id;
-            $add->values = json_encode( $inputs);
-            $add->update();
-        }
 
         if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
         {
@@ -258,7 +241,7 @@ final class DecesController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('deces.registre')->with('success', 'Add créée avec succès');
+        return Redirect::route('marriage.registre')->with('success', 'Add créée avec succès');
     }
 
     /**

@@ -235,7 +235,8 @@ final class DecesController extends Controller
 
         if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
         {
-            return response("{ \"message\": \"Add créée avec succès\"}", 200)
+            $id = $add->id;
+            return response("{  \"message\": \"Ajout créée avec succès\", \"id\": $id}", 200)
                 ->header('Content-Type', 'application/json')
                 ->header( 'charset', 'utf-8');
         }

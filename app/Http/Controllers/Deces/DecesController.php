@@ -76,29 +76,29 @@ final class DecesController extends Controller
         if( array_key_exists( 'src', $inputs))
         {
             unset( $inputs[ 'src']);
-            //$ajax_call = true;
+            $ajax_call = true;
         }
 
         if( array_key_exists( 'id', $inputs)) {
             $add = Deces::find( $inputs[ 'id']);
-            $add->values = json_encode( $inputs);
-            $add->update();
+            //$add->values = json_encode( $inputs);
+            //$add->update();
             return $add;
         } else if (array_key_exists('docId', $inputs)) {
             $add = Deces::find( $inputs[ 'docId']);
             //$add->values = json_encode( $inputs);
-            $add->update();
+            //$add->update();
         } else
         {
         
             $add = new Deces();
             $add->values = json_encode( $inputs);
             $add->created_by = Auth::user()[ 'id'];
-            //$add->done = isset( $ajax_call) ? 'no' : 'yes';
+            $add->done = isset( $ajax_call) ? 'no' : 'yes';
             $add->save();
             $inputs[ 'id'] = $add->id;
-            $add->values = json_encode( $inputs);
-            $add->update();
+            //$add->values = json_encode( $inputs);
+            //$add->update();
         }
 
         if ( isset( $ajax_call) && empty($inputs['saveAndExit']))

@@ -184,13 +184,13 @@
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="mb-4">
-                                                <label for="certificate-date_of_marriage">Date du Deces</label>
-                                                <input id="certificate-date_of_marriage" placeholder="Select date" type="date" name="date_du_deces" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
+                                                <label for="date_du_deces">Date du Deces</label>
+                                                <input id="date_du_deces" placeholder="Select date" type="date" name="date_du_deces" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
                                                 <span class="feedback-new" id="invalid-feedback7" role="alert"></span>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="certificate-decl_number">Numéro de déclaration</label>
-                                                <input id="certificate-decl_number" type="text" class="form-control serializable" name="certificate-decl_number" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >
+                                                <label for="declaration_number">Numéro de déclaration</label>
+                                                <input id="declaration_number" type="text" class="form-control serializable" name="declaration_number" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >
                                                 <span class="feedback-new" id="invalid-feedback8" role="alert"></span>
                                                 @if ($errors->has('description'))
                                                     <span class="invalid-feedback" role="alert">
@@ -199,13 +199,13 @@
                                                 @endif
                                             </div>
                                             <div class="mb-4">
-                                                <label for="certificate-date_of_decl">Date de déclaration</label>
-                                                <input id="certificate-date_of_decl" placeholder="Select date" type="date" name="date_of_death" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
+                                                <label for="date_of_death">Date de déclaration</label>
+                                                <input id="date_of_death" placeholder="Select date" type="date" name="date_of_death" class="form-control serializable" data-parsley-errors-container="#invalid-feedback7" required >
                                                 <span class="feedback-new" id="invalid-feedback9" role="alert"></span>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="certificate-wedding_time">Heure du Deces</label>
-                                                <input id="certificate-wedding_time" placeholder="Select date"
+                                                <label for="death_time">Heure du Deces</label>
+                                                <input id="death_time" placeholder="Select date"
                                                        type="time" name="death_time" class="form-control serializable" tabindex="5" data-parsley-errors-container="#invalid-feedback10" required >
                                                 <span class="feedback-new" id="invalid-feedback10" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -215,14 +215,14 @@
                                                 @endif
                                             </div>
                                             <div class="mb-4">
-                                                <label for="certificate-wedding_venue">Lieu du Deces</label>
-                                                <input id="certificate-wedding_venue" type="text" class="form-control
+                                                <label for="place_of_death">Lieu du Deces</label>
+                                                <input id="place_of_death" type="text" class="form-control
                                                 serializable" name="place_of_death" tabindex="2" data-parsley-errors-container="#invalid-feedback11" required >
                                                 <span class="feedback-new" id="invalid-feedback11" role="alert"></span>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="certificate-wedding_venue">Formation Sanitaire</label>
-                                                <input id="certificate-wedding_venue" type="text" class="form-control
+                                                <label for="formation_sanitaire">Formation Sanitaire</label>
+                                                <input id="formation_sanitaire" type="text" class="form-control
                                                 serializable" name="formation_sanitaire" tabindex="2" data-parsley-errors-container="#invalid-feedback11" required >
                                                 <span class="feedback-new" id="invalid-feedback11" role="alert"></span>
                                             </div>
@@ -240,8 +240,8 @@
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-4">
-                                                <label for="groom-first_name">Prénom de la personne Décèdée</label>
-                                                <input id="groom-first_name" type="text" class="form-control
+                                                <label for="deceased-first_name">Prénom de la personne Décèdée</label>
+                                                <input id="deceased-first_name" type="text" class="form-control
                                                 serializable" name="deceased-first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
                                                 <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -251,8 +251,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom-family_name">Nom de famille de la personne Décèdée</label>
-                                                <input id="groom-family_name" type="text" class="form-control
+                                                <label for="deceased-family_name">Nom de famille de la personne Décèdée</label>
+                                                <input id="deceased-family_name" type="text" class="form-control
                                                 serializable" name="deceased-family_name" tabindex="2" data-parsley-errors-container="#invalid-feedback14" required >
                                                 <span class="feedback-new" id="invalid-feedback14" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -262,15 +262,15 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom-dob">
+                                                <label for="deceased-dob">
                                                 Date de Naissance de la personne Décèdée</label>
-                                                <input id="groom-dob" placeholder="Select date" type="date"
+                                                <input id="deceased-dob" placeholder="Select date" type="date"
                                                        name="deceased-dob" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback15" required >
                                                 <span class="feedback-new" id="invalid-feedback15" role="alert"></span>
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom-birth_place">Lieu de Naissance de la personne Décèdée</label>
-                                                <input id="groom-birth_place" type="text" class="form-control
+                                                <label for="deceased-birth_place">Lieu de Naissance de la personne Décèdée</label>
+                                                <input id="deceased-birth_place" type="text" class="form-control
                                                 serializable" name="deceased-birth_place" tabindex="4" data-parsley-errors-container="#invalid-feedback16" required >
                                                 <span class="feedback-new" id="invalid-feedback16" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -280,9 +280,9 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom-profession">Profession de la personne Décèdée</label>
+                                                <label for="deceased-profession">Profession de la personne Décèdée</label>
                                                 <input id="deceased-profession" type="text" class="form-control
-                                                serializable" name="groom-profession" tabindex="5"
+                                                serializable" name="deceased-profession" tabindex="5"
                                                        data-parsley-errors-container="#invalid-feedback17" required >
                                                 <span class="feedback-new" id="invalid-feedback17" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -292,8 +292,8 @@
                                                 @endif
                                             </div>
                                             <div class="mb-4">
-                                                <label for="child_info-gender">Sexe de la personne Décèdée</label>
-                                                <select id="child_info-gender" data-live-search="true" name="deceased_sex_info" class="selectpicker w-100 serializable" tabindex="6" data-parsley-errors-container="#invalid-feedback13" required >
+                                                <label for="deceased_sex_info">Sexe de la personne Décèdée</label>
+                                                <select id="deceased_sex_info" data-live-search="true" name="deceased_sex_info" class="selectpicker w-100 serializable" tabindex="6" data-parsley-errors-container="#invalid-feedback13" required >
                                                     <option value>--</option>
                                                     <option value="Masculin">Masculin</option>
                                                     <option value="Féminin">Féminin</option>
@@ -301,8 +301,8 @@
                                                 <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom-address">Addresse de la personne Décèdée</label>
-                                                <input id="groom-address" type="text" class="form-control
+                                                <label for="deceased-address">Addresse de la personne Décèdée</label>
+                                                <input id="deceased-address" type="text" class="form-control
                                                 serializable" name="deceased-address" tabindex="6"
                                                        data-parsley-errors-container="#invalid-feedback18" required >
                                                 <span class="feedback-new" id="invalid-feedback18" role="alert"></span>
@@ -326,8 +326,8 @@
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-4">
-                                                <label for="groom_father-first_name">Prénom du Père du Défunt / de la Défunte</label>
-                                                <input id="groom_father-first_name" type="text" class="form-control
+                                                <label for="deceased_father-first_name">Prénom du Père du Défunt / de la Défunte</label>
+                                                <input id="deceased_father-first_name" type="text" class="form-control
                                                 serializable" name="deceased_father-first_name" tabindex="1"
                                                        data-parsley-errors-container="#invalid-feedback19" required >
                                                 <span class="feedback-new" id="invalid-feedback19" role="alert"></span>
@@ -338,8 +338,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom_father-family_name">Nom de famille du Défunt / de la Défunte</label>
-                                                <input id="groom_father-family_name" type="text" class="form-control
+                                                <label for="deceased_father-family_name">Nom de famille du Défunt / de la Défunte</label>
+                                                <input id="deceased_father-family_name" type="text" class="form-control
                                                 serializable" name="deceased_father-family_name" tabindex="2" data-parsley-errors-container="#invalid-feedback20" required >
                                                 <span class="feedback-new" id="invalid-feedback20" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -349,15 +349,15 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom_father-dob">Date de Naissance du Défunt / de la Défunte</label>
-                                                <input id="groom_father-dob" placeholder="Select date" type="date"
+                                                <label for="deceased_father-dob">Date de Naissance du Défunt / de la Défunte</label>
+                                                <input id="deceased_father-dob" placeholder="Select date" type="date"
                                                        name="deceased_father-dob" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback21" required >
                                                 <span class="feedback-new" id="invalid-feedback21" role="alert"></span>
                                             </div>
                                            
                                             <div class="row mb-4">
-                                                <label for="groom_father-profession">Profession du Père du Défunt / de la Défunte</label>
-                                                <input id="groom_father-profession" type="text" class="form-control
+                                                <label for="deceased_father-profession">Profession du Père du Défunt / de la Défunte</label>
+                                                <input id="deceased_father-profession" type="text" class="form-control
                                                 serializable" name="deceased_father-profession" tabindex="5" data-parsley-errors-container="#invalid-feedback23" required >
                                                 <span class="feedback-new" id="invalid-feedback23" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -367,8 +367,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="groom_father-address">Addresse du Père du Défunt / de la Défunte</label>
-                                                <input id="groom_father-address" type="text" class="form-control
+                                                <label for="deceased_father-address ">Addresse du Père du Défunt / de la Défunte</label>
+                                                <input id="deceased_father-address" type="text" class="form-control
                                                 serializable" name="deceased_father-address" tabindex="6" data-parsley-errors-container="#invalid-feedback24" required >
                                                 <span class="feedback-new" id="invalid-feedback24" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -391,8 +391,8 @@
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-3">
-                                                <label for="groom_mother-first_name">Prénom de la Mère du Défunt / de la Défunte</label>
-                                                <input id="groom_mother-first_name" type="text" class="form-control
+                                                <label for="deceased_mother-first_name">Prénom de la Mère du Défunt / de la Défunte</label>
+                                                <input id="deceased_mother-first_name" type="text" class="form-control
                                                 serializable" name="deceased_mother-first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback25" required >
                                                 <span class="feedback-new" id="invalid-feedback25" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -402,8 +402,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-3">
-                                                <label for="groom_mother-family_name">Nom de famille du Défunt / de la Défunte</label>
-                                                <input id="groom_mother-family_name" type="text" class="form-control
+                                                <label for="deceased_mother-family_name">Nom de famille du Défunt / de la Défunte</label>
+                                                <input id="deceased_mother-family_name" type="text" class="form-control
                                                 serializable" name="deceased_mother-family_name" tabindex="2"
                                                        data-parsley-errors-container="#invalid-feedback26" required >
                                                 <span class="feedback-new" id="invalid-feedback26" role="alert"></span>
@@ -414,15 +414,15 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-3">
-                                                <label for="groom_mother-dob">Date de Naissance du Défunt / de la Défunte</label>
-                                                <input id="groom_mother-dob" placeholder="Select date" type="date"
+                                                <label for="deceased_mother-dob">Date de Naissance du Défunt / de la Défunte</label>
+                                                <input id="deceased_mother-dob" placeholder="Select date" type="date"
                                                        name="deceased_mother-dob" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback27" required >
                                                 <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
                                             </div>
                                             
 
                                             <div class="row mb-3">
-                                                <label for="groom_mother-profession" class="required">Profession de la Mère du Défunt / de la Défunte </label>
+                                                <label for="deceased_mother-profession" class="required">Profession de la Mère du Défunt / de la Défunte </label>
                                                 <input id="deceased_mother-profession" type="text" class="form-control
                                                 serializable" name="deceased_mother-profession" tabindex="5"
                                                        data-parsley-errors-container="#invalid-feedback29" required >
@@ -435,7 +435,7 @@
                                             </div>
 
                                             <div class="form-field row mb-3">
-                                                <label for="groom_mother-address">Addresse de la Mère du Défunt / de la Défunte</label>
+                                                <label for="deceased_mother_address">Addresse de la Mère du Défunt / de la Défunte</label>
                                                 <select data-live-search="true" data-name="deceased_mother_address"
                                                         data-for="deceased_father-address" class="selectpicker w-100
                                                 serializable modifiable address-special-select" tabindex="2" required >
@@ -444,7 +444,7 @@
                                                     <option value="father_address">Meme que le Pere</option>
                                                     <option value="differente">Differente</option>
                                                 </select>
-                                                <input id="groom_mother-address" type="text" class="form-control
+                                                <input id="deceased_mother_address" type="text" class="form-control
                                                 serializable" name="deceased_mother-address" tabindex="3" data-parsley-errors-container="#invalid-feedback30" required >
                                                 <span class="feedback-new" id="invalid-feedback30" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -468,8 +468,8 @@
                                     <div class="row">
                                         <div class="col-sm">
                                             <div class="row mb-4">
-                                                <label for="bride-first_name">Prénom du déclarant</label>
-                                                <input id="bride-first_name" type="text" class="form-control
+                                                <label for="declarant-first_name">Prénom du déclarant</label>
+                                                <input id="declarant-first_name" type="text" class="form-control
                                                 serializable" name="declarant-first_name" tabindex="1"
                                                        data-parsley-errors-container="#invalid-feedback31" required >
                                                 <span class="feedback-new" id="invalid-feedback31" role="alert"></span>
@@ -480,8 +480,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="bride-family_name">Nom du déclarant</label>
-                                                <input id="bride-family_name" type="text" class="form-control
+                                                <label for="declarant_name ">Nom du déclarant</label>
+                                                <input id="declarant_name" type="text" class="form-control
                                                 serializable" name="declarant_name" tabindex="2"
                                                        data-parsley-errors-container="#invalid-feedback32" required >
                                                 <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
@@ -493,8 +493,8 @@
                                             </div>
                                             
                                             <div class="row mb-4">
-                                                <label for="bride-birth_place">Adresse du déclarant</label>
-                                                <input id="bride-birth_place" type="text" class="form-control
+                                                <label for="declarant_address">Adresse du déclarant</label>
+                                                <input id="declarant_address" type="text" class="form-control
                                                 serializable" name="declarant_address" tabindex="4"
                                                        data-parsley-errors-container="#invalid-feedback34" required >
                                                 <span class="feedback-new" id="invalid-feedback34" role="alert"></span>
@@ -505,8 +505,8 @@
                                                 @endif
                                             </div>
                                             <div class="row mb-4">
-                                                <label for="bride-profession">Profession du déclarant</label>
-                                                <input id="bride-profession" type="text" class="form-control
+                                                <label for="declarant-profession">Profession du déclarant</label>
+                                                <input id="declarant-profession" type="text" class="form-control
                                                 serializable" name="declarant-profession" tabindex="5"
                                                        data-parsley-errors-container="#invalid-feedback35" required >
                                                 <span class="feedback-new" id="invalid-feedback35" role="alert"></span>
@@ -528,8 +528,8 @@
                                             </div>
 
                                              <div class="row mb-4">
-                                                <label for="bride-profession">Parente</label>
-                                                <input id="bride-profession" type="text" class="form-control
+                                                <label for="parente">Parente</label>
+                                                <input id="parente" type="text" class="form-control
                                                 serializable" name="parente" tabindex="5"
                                                        data-parsley-errors-container="#invalid-feedback35" required >
                                                 <span class="feedback-new" id="invalid-feedback35" role="alert"></span>

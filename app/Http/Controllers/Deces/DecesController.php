@@ -2,110 +2,263 @@
 
 namespace App\Http\Controllers\Deces;
 
-use Illuminate\Support\Facades\Auth;
-use Carbon\Carbon;
 use App\Http\Controllers\Controller;
+use App\Models\Arrondissement;
+use App\Models\Centre;
+use App\Models\Communes;
+use App\Models\Deces;
+use App\Models\Department;
+use App\Models\Marriage;
+use App\Models\Pay;
+use App\Models\Region;
 use App\Models\User;
 use App\Models\Util;
 use Illuminate\Http\Request;
-use App\Models\Pay;
-use App\Models\Region;
-use App\Models\Centre;
-use App\Models\Deces;
-use App\Models\Communes;
-use App\Models\Department;
-use App\Models\Arrondissement;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
-
-class DecesController extends Controller
+final class DecesController extends Controller
 {
-    //Index method here
-    public function index(){
-        $add = Deces::all();
-        return view('Deces.registre.index', compact('add'));
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $add = DB::table('deces')
+            ->join('users', 'deces.created_by', '=', 'users.id')
+            ->select('deces.*')
+            ->get();
+
+        return view('deces.registre.index', [
+            'add' => $add
+        ]);
     }
 
-    public function createView(){
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $shell = new \stdClass();
+        $binding = Util::load( $shell);
+        $binding[ 'post_url'] = route( 'deces.registre.create.post');
+        $binding[ 'page_url'] = route( 'deces.registre.create');
+        $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
 
-        $pays = Pay::all();
-        $regions = Region::all();
-        $departments = Department::all();
-        $arrondissements = Arrondissement::all();
-        $communes = Communes::all();
-        $centre = Centre::all();
-        $post_url = route( 'deces.store');
-        $page_url = route( 'deces.registre');
-
-        $fields = [
+        $binding['fields'] = [
             ['title' => 'Zone Gérographique', 'is_filled' => false],
-            ['title' => "Acte de Décès", 'is_filled' => false],
+            ['title' => 'Acte de Décès', 'is_filled' => false],
             ['title' => "Renseignement sur le Défunt / la Défunte", 'is_filled' => false],
             ['title' => "Renseignement sur le Père du Défunt / de la Défunte", 'is_filled' => false],
             ['title' => "Renseignement sur la Mère du Défunt / de la Défunte", 'is_filled' => false],
-            ['title' => "Renseignement sur le Déclarant ", 'is_filled' => false],
+            ['title' => "Renseignement sur le Déclarant", 'is_filled' => false],
             ['title' => "Jugement", 'is_filled' => false],
         ];
-        return view('Deces.registre.create', compact('pays', 'regions', 'departments', 'arrondissements', 'communes',
-            'centre', 'post_url', 'page_url', 'fields'));
+
+        return view('deces.registre.create', $binding);
     }
 
-    public function storeDeces(Request $request){
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\RedirectResponse|Response
+     */
+    public function store(Request $request)
+    {
+        $inputs = $request->all();
+        
+            $add = new Deces();
+            $add->values = json_encode( $inputs);
+            $add->created_by = Auth::user()[ 'id'];
+            $add->save();
+            $inputs[ 'id'] = $add->id;
+            $add->values = json_encode( $inputs);
+            $add->update();
+       
 
-       $currentTime = Carbon::now();
-       $times = $currentTime->toDateTimeString();
-       $deces = new Deces;
+        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
+        {
+            $id = $add->id;
+            return response("{ \"message\": \"Ajout créée avec succès\", \"id\": $id}", 200)
+                ->header('Content-Type', 'application/json')
+                ->header( 'charset', 'utf-8');
+        }
 
-       $deces->pays = $request->geographical_zone_pays;
-       $deces->Regions = $request->geographical_zone_regions;
-       $deces->Departments = $request->geographical_zone_departments;
-       $deces->Arrondissments = $request->geographical_zone_arrondissements;
-       $deces->Comunes = $request->geographical_zone_communes;
-       $deces->Centres = $request->geographical_zone_centre;
-       $deces->Date_du_Décès = $request->date_de_deces;
-       $deces->Numéro_de_déclaration = $request->Numéro_de_déclaration;
-       $deces->Date_de_déclaration = $request->date_de_déclaration;
-       $deces->time_of_death = $request->heure_du_décès;
-       $deces->place_o_death = $request->lieu_du_décès;
-       $deces->health_training = $request->formation_sanitaire;
-       $deces->firstname_of_the_deceased = $request->prénom_de_la_personne_Décèdée;
-       $deces->lasttname_of_the_deceased = $request->nom_de_famille_de_la_personne_Décèdée;
-       $deces->dob_of_deceased = $request->date_de_Naissance_de_la_personne_Décèdée;
-       $deces->birthplace_of_deceased = $request->Lieu_de_Naissance_de_la_personne_Décèdée;
-       $deces->occupation_of_the_deceased = $request->Profession_de_la_personne_Décèdée;
-       $deces->sex_of_deceased = $request->Sexe_de_la_personne_Décèdée;
-       $deces->address_of_deceased = $request->Addresse_de_la_personne_Décèdée;
-       $deces->firstname_of_the_father_of_deceased = $request->firstname_of_the_father_of_deceased;
-       $deces->father_family_name = $request->father_family_name;
-       $deces->dob_of_father = $request->dob_of_father;
-       $deces->occupation_of_the_father_of_deceased = $request->occupation_of_the_father_of_deceased;
-       $deces->address_of_the_father_of_deceased = $request->address_of_the_father_of_deceased;
-       $deces->firstname_of_the_mother_of_deceased = $request->firstname_of_the_mother_of_deceased;
-       $deces->mother_family_name = $request->mother_family_name;
-       $deces->dob_of_mother = $request->dob_of_mother;
-       $deces->occupation_of_the_mother_of_deceased = $request->occupation_of_the_mother_of_deceased;
-       $deces->address_of_the_mother_of_deceased = $request->address_of_the_mother_of_deceased;
-       $deces->declarant_firstname = $request->declarant_firstname;
-       $deces->declarant_lasttname = $request->declarant_lasttname;
-       $deces->declarant_address = $request->declarant_address;
-       $deces->declarant_profession = $request->declarant_profession;
-       $deces->declarant_cin = $request->declarant_cin;
-       $deces->Parente = $request->parente;
-       $deces->judgement_judgement = $request->judgement_judgement;
-       $deces->judgement_date = $request->judgement_date;
-       $deces->judgement_number = $request->judgement_number;
-       $deces->judgement_region = $request->judgment_region;
-       $deces->mention_marginales = $request->mention_marginales;
-       $deces->created_by = Auth::user()->first_name;
-       $deces->created_at = $times;
-
-       if($deces->save()){
-        return redirect()->route('deces.index')->with('success', 'Deces Created Successfully');
-       }else{
-         return redirect()->back()->with('error', 'Failed');
-       }
-
-
+        return Redirect::route('deces.index')->with('success', 'Ajout créée avec succès');
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $add = DB::table('marriage')
+            ->join('users', 'marriage.created_by', '=', 'users.id')
+            ->select('marriage.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
+            ->where('marriage.id', '=', $id)
+            ->get()->first();
+        $values = json_decode($add->values);
 
+        $binding = [
+            'registre' => collect($add),
+            'values' => $values,
+        ];
+
+        $valuesArr = json_decode($add->values, true);
+
+        $binding['models'] = [
+            'judgement-region' => empty($valuesArr['judgement-region']) ? '--' :
+                Region::find($values->{'judgement-region'})->description,
+            'geographical_zone-pays' => empty($valuesArr['geographical_zone-pays']) ? '--' :
+                Pay::find($values->{'geographical_zone-pays'})->description,
+            'geographical_zone-centre' => empty($valuesArr['geographical_zone-centre']) ? '--' :
+                Centre::find($values->{'geographical_zone-centre'})->description,
+            'geographical_zone-communes' => empty($valuesArr['geographical_zone-communes']) ? '--' :
+                Communes::find($values->{'geographical_zone-communes'})->description,
+            'geographical_zone-departments' => empty($valuesArr['geographical_zone-departments']) ? '--' :
+                Department::find($values->{'geographical_zone-departments'})->description,
+            'geographical_zone-regions' => empty($valuesArr['geographical_zone-regions']) ? '--' :
+                Region::find($values->{'geographical_zone-regions'})->description,
+            'geographical_zone-arrondissements' => empty($valuesArr['geographical_zone-arrondissements']) ? '--' :
+                Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
+        ];
+
+        if (isset($valuesArr['certificate-civil_servant'])) {
+            $civilServant = User::find($valuesArr['certificate-civil_servant']);
+        }
+        $binding['civilServantName'] = isset($civilServant)
+            ? $civilServant->first_name . ' ' . $civilServant->last_name
+            : '--';
+
+        return view('marriage.registre.show', $binding);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     */
+    public function edit( $id)
+    {
+        $old = Marriage::find( $id);
+        $shell = new \stdClass();
+        $binding = Util::load( $shell);
+        $binding[ 'old'] = $old->values;
+        $binding[ 'post_url'] = route( 'marriage.registre.edit.post', [ 'id' => $id]);
+        $binding[ 'page_url'] = route( 'marriage.registre.edit', [ 'id' => $id]);
+        $formFields = [
+            ['geographical_zone-pays', 'geographical_zone-arrondissements', 'geographical_zone-departments',
+                'geographical_zone-communes', 'geographical_zone-regions', 'geographical_zone-centre'],
+            ['certificate-date_of_marriage', 'certificate-decl_number', 'certificate-date_of_decl',
+                'certificate-wedding_time', 'certificate-wedding_venue', 'certificate-civil_servant'],
+            ['groom-first_name', 'groom-family_name', 'groom-dob', 'groom-birth_place',
+                'groom-profession', 'groom-address'],
+            ['groom_father-first_name', 'groom_father-family_name', 'groom_father-dob', 'groom_father-birth_place',
+                'groom_father-profession', 'groom_father-address'],
+            ['groom_mother-first_name', 'groom_mother-family_name', 'groom_mother-dob', 'groom_mother-birth_place',
+                'groom_mother-profession', 'groom_mother-address'],
+            ['bride-first_name', 'bride-family_name', 'bride-dob', 'bride-birth_place',
+                'bride-profession', 'bride-address'],
+            ['bride_father-first_name', 'bride_father-family_name', 'bride_father-dob', 'bride_father-birth_place',
+                'bride_father-profession', 'bride_father-address'],
+            ['bride_mother-first_name', 'bride_mother-family_name', 'bride_mother-dob', 'bride_mother-birth_place',
+                'bride_mother-profession', 'bride_mother-address'],
+            ['additional-regime', 'additional-type', 'additional-feats'],
+            ['judgement-judgement'],
+            ['groom_witness_one-first_name','groom_witness_one-name','groom_witness_one-profession',
+                'groom_witness_one-cin','groom_witness_one-address'],
+            ['groom_witness_two-first_name','groom_witness_two-name','groom_witness_two-profession',
+                'groom_witness_two-cin','groom_witness_two-address'],
+            ['bride_witness_one-first_name','bride_witness_one-name','bride_witness_one-profession',
+                'bride_witness_one-cin','bride_witness_one-address'],
+            ['bride_witness_two-first_name','bride_witness_two-name','bride_witness_two-profession',
+                'bride_witness_two-cin','bride_witness_two-address'],
+        ];
+        $formNamesFilled = array_map(function ($fields) use ($old) {
+            $values = json_decode($old->values, true);
+            foreach ($values as $key => $value) {
+                if (in_array($key, $fields) && empty($value)) {
+                    return false;
+                } elseif ($fields[0] === 'judgement-judgement' && $values['judgement-judgement'] !== 'Non'
+                    && empty($value)) {
+                    return false;
+                }
+            }
+
+            return true;
+        }, $formFields);
+
+        $binding['fields'] = [
+            ['title' => 'Zone Gérographique', 'is_filled' => $formNamesFilled[0]],
+            ['title' => 'Acte de Mariage', 'is_filled' => $formNamesFilled[1]],
+            ['title' => "Renseignement sur l'Epoux", 'is_filled' => $formNamesFilled[2]],
+            ['title' => "Renseignement sur le Père de l'Epoux", 'is_filled' => $formNamesFilled[3]],
+            ['title' => "Renseignement sur la Mère de l'Epoux", 'is_filled' => $formNamesFilled[4]],
+            ['title' => "Renseignement sur l'Epouse", 'is_filled' => $formNamesFilled[5]],
+            ['title' => "Renseignement sur le Père de l'Epouse", 'is_filled' => $formNamesFilled[6]],
+            ['title' => "Renseignement sur la Mère de l'Epouse", 'is_filled' => $formNamesFilled[7]],
+            ['title' => "Renseignements additionnels ", 'is_filled' => $formNamesFilled[8]],
+            ['title' => "Jugement", 'is_filled' => $formNamesFilled[9]],
+            ['title' => "Premier témoin de l'Epoux", 'is_filled' => $formNamesFilled[10]],
+            ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => $formNamesFilled[11]],
+            ['title' => "Premier témoin de l'Epouse", 'is_filled' => $formNamesFilled[12]],
+            ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => $formNamesFilled[13]],
+        ];
+        $binding[ 'is_edit'] = true;
+        $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
+
+        return view('marriage.registre.create', $binding);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\RedirectResponse|Response
+     */
+    public function update( Request $request, $id)
+    {
+        $inputs = $request->all();
+        unset($inputs['_token']);
+        if( array_key_exists( 'src', $inputs))
+        {
+            unset( $inputs[ 'src']);
+            $ajax_call = true;
+        }
+        $add = Marriage::find( $id);
+        $add->values = json_encode( $inputs);
+        $add->update();
+
+        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
+        {
+            return response("{ \"message\": \"Add créée avec succès\"}", 200)
+                ->header('Content-Type', 'application/json')
+                ->header( 'charset', 'utf-8');
+        }
+
+        return Redirect::route('marriage.registre')->with('success', 'Add créée avec succès');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy($id)
+    {
+        Marriage::destroy($id);
+        return redirect()->route('marriage.registre')->with('success', 'Supprimée avec succès');
+    }
 }

@@ -139,7 +139,7 @@ Route::middleware( 'auth')->group( function () {
     Route::get('/regions/{id}/delete', [App\Http\Controllers\Regions\RegionsController::class, 'destroy'])->name('region.delete');
 
     //Deces Routes Here
-    Route::get('deces/registre/create', [App\Http\Controllers\Deces\DecesController::class, 'createView'])->name('deces.registre');
+    Route::get('deces/registre/create', [App\Http\Controllers\Deces\DecesController::class, 'create'])->name('deces.registre.create');
     Route::get('deces/registre', [App\Http\Controllers\Deces\DecesController::class, 'index'])->name('deces.index');
-    Route::post('deces/registre/create', [App\Http\Controllers\Deces\DecesController::class, 'storeDeces'])->name('deces.store');
+    Route::post('deces/registre/create', [App\Http\Controllers\Deces\DecesController::class, 'store'])->name('deces.registre.create.post');
 });

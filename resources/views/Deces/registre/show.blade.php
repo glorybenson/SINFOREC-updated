@@ -310,7 +310,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu d'emission</td>
-                                                        <td>{{ $values->{'judgment-region'} }}</td>
+                                                        <td>{{ $models['judgement-region'] }}</td>
                                                     </tr>
                                                 </table>
                                             </div>

@@ -82,6 +82,13 @@ final class DecesController extends Controller
             $add->update();
        
 
+        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
+        {
+            $id = $add->id;
+            return response("{ \"message\": \"Ajout créée avec succès\", \"id\": $id}", 200)
+                ->header('Content-Type', 'application/json')
+                ->header( 'charset', 'utf-8');
+        }
 
         return Redirect::route('deces.index')->with('success', 'Ajout créée avec succès');
     }

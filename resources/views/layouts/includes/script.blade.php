@@ -30,14 +30,10 @@
 
         if(location.pathname.indexOf( '/centre/create') !== -1
 
-                || location.pathname.indexOf( 'deces/registre/create') !== -1
-                || /deces\/registre\/[0-9]+\/edit/.test( window.location.pathname))
+                || location.pathname.indexOf( '/registre/create') !== -1
+                || /\/registre\/[0-9]+\/edit/.test( window.location.pathname))
 
 
-                || location.pathname.indexOf( 'naissance/registre/create') !== -1
-                || /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname)
-                || location.pathname.indexOf( 'marriage/registre/create') !== -1
-                || /marriage\/registre\/[0-9]+\/edit/.test( window.location.pathname))
             filterHierarchy( createDropdown);
 
         // if( location.pathname.indexOf( 'create-user') !== -1 || location.pathname.indexOf( 'edit-user') !== -1)

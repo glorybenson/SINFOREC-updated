@@ -264,7 +264,7 @@ final class DecesController extends Controller
     public function destroy($id)
     {
         Deces::destroy($id);
-        return back()->with('success', 'Arrondissement supprimé avec succès.');
+        return back()->with('success', 'supprimé avec succès.');
     }
 
 }

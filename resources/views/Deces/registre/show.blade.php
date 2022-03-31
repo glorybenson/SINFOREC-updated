@@ -63,27 +63,27 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Pays</td>
-                                                        <td>#</td>
+                                                        <td>{{ $models['geographical_zone-pays'] }}</td>
                                                     </tr>                                                   
                                                     <tr>
                                                         <td>Région</td>
-                                                        <td>#</td>
+                                                        <td>{{ $models['geographical_zone-regions'] }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Département</td>
-                                                        <td>#</td>
+                                                        <td>{{ $models['geographical_zone-departments'] }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Arrondissement</td>
-                                                        <td>#</td>
+                                                        <td>{{ $models['geographical_zone-arrondissements'] }}</td>
                                                     </tr>                                                    
                                                     <tr>
                                                         <td>Commune</td>
-                                                        <td># </td>
+                                                        <td>{{ $models['geographical_zone-communes'] }}  </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Centre</td>
-                                                        <td>#</td>
+                                                        <td>{{ $models['geographical_zone-centre'] }}</td>
                                                     </tr>
                                                 </table>
                                             </div>

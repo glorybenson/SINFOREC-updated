@@ -252,7 +252,7 @@ final class DecesController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return back()->with('success', 'Add créée avec succès');
+        return Redirect::route('deces.index')->with('success', 'Add créée avec succès');
     }
 
     /**

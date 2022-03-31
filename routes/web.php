@@ -142,9 +142,9 @@ Route::middleware( 'auth')->group( function () {
     Route::get('deces/registre/create', [App\Http\Controllers\Deces\DecesController::class, 'create'])->name('deces.registre.create');
     Route::get('deces/registre', [App\Http\Controllers\Deces\DecesController::class, 'index'])->name('deces.index');
     Route::post('deces/registre/create', [App\Http\Controllers\Deces\DecesController::class, 'store'])->name('deces.registre.create.post');
-    Route::get('/deces/registre/{id}/edit', [App\Http\Controllers\Marriage\DecesController::class, 'edit'])->name('deces.registre.edit');
-    Route::post('/deces/registre/{id}/edit', [App\Http\Controllers\Marriage\DecesController::class, 'update'])->name('deces.registre.edit.post');
-    Route::get('/deces/registre/{id}/detail', [App\Http\Controllers\Marriage\DecesController::class, 'show'])->name('deces.registre.show');
-    Route::get('/deces/registre/{id}/delete', [App\Http\Controllers\Marriage\DecesController::class, 'destroy'])->name('deces.registre.delete');
+    Route::get('/deces/registre/{id}/edit', [App\Http\Controllers\Deces\DecesController::class, 'edit'])->name('deces.registre.edit');
+    Route::post('/deces/registre/{id}/edit', [App\Http\Controllers\Deces\DecesController::class, 'update'])->name('deces.registre.edit.post');
+    Route::get('/deces/registre/{id}/detail', [App\Http\Controllers\Deces\DecesController::class, 'show'])->name('deces.registre.show');
+    Route::get('/deces/registre/{id}/delete', [App\Http\Controllers\Deces\DecesController::class, 'destroy'])->name('deces.registre.delete');
     
 });

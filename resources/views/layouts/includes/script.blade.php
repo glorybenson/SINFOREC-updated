@@ -29,8 +29,15 @@
         addressSelect();
 
         if(location.pathname.indexOf( '/centre/create') !== -1
+<<<<<<< HEAD
                 || location.pathname.indexOf( '/registre/create') !== -1
                 || /\/registre\/[0-9]+\/edit/.test( window.location.pathname))
+=======
+                || location.pathname.indexOf( 'naissance/registre/create') !== -1
+                || /naissance\/registre\/[0-9]+\/edit/.test( window.location.pathname)
+                || location.pathname.indexOf( 'marriage/registre/create') !== -1
+                || /marriage\/registre\/[0-9]+\/edit/.test( window.location.pathname))
+>>>>>>> parent of ba32c5c (For checkout purpose)
             filterHierarchy( createDropdown);
 
         // if( location.pathname.indexOf( 'create-user') !== -1 || location.pathname.indexOf( 'edit-user') !== -1)

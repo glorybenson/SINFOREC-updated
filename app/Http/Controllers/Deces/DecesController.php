@@ -101,6 +101,7 @@ final class DecesController extends Controller
             ->get()->first();
         $values = json_decode($add->values);
 
+<<<<<<< HEAD
         $binding = [
             'registre' => collect($add),
             'values' => $values,
@@ -254,4 +255,6 @@ final class DecesController extends Controller
         Marriage::destroy($id);
         return redirect()->route('marriage.registre')->with('success', 'Supprimée avec succès');
     }
+=======
+>>>>>>> parent of ba32c5c (For checkout purpose)
 }

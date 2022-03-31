@@ -121,6 +121,7 @@
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         }
                     });
+                    console.log(present)
 
                     $.ajax( {
                         url: $('#form').get( 0).action,

@@ -90,7 +90,13 @@ final class DecesController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('deces.index')->with('success', 'Ajout créée avec succès');
+        if($add->save()){
+            return redirect()->route('deces.index')->with('success', 'Deces Created Successfully');
+           }else{
+             return redirect()->back()->with('error', 'Failed');
+           }
+
+      //  return Redirect::route('deces.index')->with('success', 'Ajout créée avec succès');
     }
 
     /**

@@ -237,7 +237,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de la Mère du Défunt / de la Défunte</td>
-                                                        <td>{{ $values->{'deceased_mother-address'} }}</td>
+                                                        <td>#</td>
                                                     </tr>                                                   
                                                 </table>
                                             </div>
@@ -310,7 +310,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu d'emission</td>
-                                                        <td>{{ $models['judgment-region'] }}</td>
+                                                        <td>{{ $values->{'judgment-region'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>

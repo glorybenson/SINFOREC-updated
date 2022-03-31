@@ -162,7 +162,7 @@ final class DecesController extends Controller
             //? $civilServant->first_name . ' ' . $civilServant->last_name
             //: '--';
 
-        return view('deces.registre.show', $binding);
+        return view('Deces.registre.show', $binding);
     }
 
     /**
@@ -222,7 +222,7 @@ final class DecesController extends Controller
         $binding[ 'is_edit'] = true;
         $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
 
-        return view('deces.registre.create', $binding);
+        return view('Deces.registre.create', $binding);
     }
 
     /**

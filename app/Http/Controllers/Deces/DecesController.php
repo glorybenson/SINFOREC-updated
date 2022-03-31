@@ -140,7 +140,7 @@ final class DecesController extends Controller
 
         $binding['models'] = [
             'judgement-region' => empty($valuesArr['judgement-region']) ? '--' :
-                Region::find($values->{'geographical_zone-regions'})->description,
+                Region::find($values->{'judgement-region'})->description,
             'geographical_zone-pays' => empty($valuesArr['geographical_zone-pays']) ? '--' :
                 Pay::find($values->{'geographical_zone-pays'})->description,
             'geographical_zone-centre' => empty($valuesArr['geographical_zone-centre']) ? '--' :
@@ -252,7 +252,7 @@ final class DecesController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('Deces.registre.edit.post')->with('success', 'Add créée avec succès');
+        return back()->with('success', 'Add créée avec succès');
     }
 
     /**

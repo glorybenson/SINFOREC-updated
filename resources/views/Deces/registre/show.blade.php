@@ -237,7 +237,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de la Mère du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_mother-address'} }}</td>
                                                     </tr>                                                   
                                                 </table>
                                             </div>

@@ -139,7 +139,7 @@ final class DecesController extends Controller
         $valuesArr = json_decode($add->values, true);
 
         $binding['models'] = [
-            'judgement-region' => empty($valuesArr['judgement-region']) ? '--' :
+            'judgement-region' => empty($valuesArr['judgement-region']) ? :
                 Region::find($values->{'judgement-region'})->description,
             'geographical_zone-pays' => empty($valuesArr['geographical_zone-pays']) ? '--' :
                 Pay::find($values->{'geographical_zone-pays'})->description,

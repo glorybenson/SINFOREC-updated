@@ -291,7 +291,7 @@
                                             </span>
                                                 @endif
                                             </div>
-                                            <div class="mb-4">
+                                            <div class="row mb-4">
                                                 <label for="deceased_sex_info">Sexe de la personne Décèdée</label>
                                                 <select id="deceased_sex_info" data-live-search="true" name="deceased_sex_info" class="selectpicker w-100 serializable" tabindex="6" data-parsley-errors-container="#invalid-feedback13" required >
                                                     <option value>--</option>

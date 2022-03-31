@@ -264,7 +264,7 @@ final class DecesController extends Controller
     public function destroy($id)
     {
         Deces::destroy($id);
-        return redirect()->route('deces.registre.delete')->with('success', 'Supprimée avec succès');
+        return back()->with('success', 'Arrondissement supprimé avec succès.');
     }
 
 }

@@ -252,7 +252,7 @@ final class DecesController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('marriage.registre')->with('success', 'Add créée avec succès');
+        return Redirect::route('Deces.registre.edit.post')->with('success', 'Add créée avec succès');
     }
 
     /**
@@ -264,7 +264,7 @@ final class DecesController extends Controller
     public function destroy($id)
     {
         Marriage::destroy($id);
-        return redirect()->route('marriage.registre')->with('success', 'Supprimée avec succès');
+        return redirect()->route('Deces.registre.delete')->with('success', 'Supprimée avec succès');
     }
 
 }

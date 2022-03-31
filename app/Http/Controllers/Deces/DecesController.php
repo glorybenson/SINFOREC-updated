@@ -72,6 +72,7 @@ final class DecesController extends Controller
     public function store(Request $request)
     {
         $inputs = $request->all();
+        dd($request->all());
         unset($inputs['_token']);
         if( array_key_exists( 'src', $inputs))
         {

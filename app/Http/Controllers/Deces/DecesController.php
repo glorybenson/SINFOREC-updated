@@ -140,7 +140,7 @@ final class DecesController extends Controller
 
         $binding['models'] = [
             'judgement-region' => empty($valuesArr['judgement-region']) ? '--' :
-                Region::find($values->{'judgement-region'})->description,
+                Region::find($values->{'geographical_zone-regions'})->description,
             'geographical_zone-pays' => empty($valuesArr['geographical_zone-pays']) ? '--' :
                 Pay::find($values->{'geographical_zone-pays'})->description,
             'geographical_zone-centre' => empty($valuesArr['geographical_zone-centre']) ? '--' :

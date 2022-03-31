@@ -86,9 +86,9 @@ final class DecesController extends Controller
             $add->update();
             return $add;
         } else if (array_key_exists('docId', $inputs)) {
-            //$add = Deces::find( $inputs[ 'docId']);
-            //$add->values = json_encode( $inputs);
-           $add->update();
+            $add = Deces::find( $inputs[ 'docId']);
+            $add->values = json_encode( $inputs);
+            $add->update();
         } else
         {
             $add = new Deces();

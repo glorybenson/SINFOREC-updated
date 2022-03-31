@@ -75,13 +75,13 @@
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="{{ route('marriage.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
+                                            <a class="text-dark" href="{{ route('deces.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
                                                 <i class="feather-eye"></i></a>
-                                            <a href="{{ route('marriage.registre.edit', ['id' => $item->id]) }}"
+                                            <a href="{{ route('deces.registre.edit', ['id' => $item->id]) }}"
                                                class="mx-2 text-dark"><i class="feather-edit"></i></a>
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href="{{ route('marriage.registre.delete', ['id' => $item->id]) }}"><i
+                                               href="{{ route('deces.registre.delete', ['id' => $item->id]) }}"><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

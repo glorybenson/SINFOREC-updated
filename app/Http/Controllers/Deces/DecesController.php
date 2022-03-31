@@ -241,7 +241,7 @@ final class DecesController extends Controller
             unset( $inputs[ 'src']);
             $ajax_call = true;
         }
-        $add = Marriage::find( $id);
+        $add = Deces::find( $id);
         $add->values = json_encode( $inputs);
         $add->update();
 
@@ -263,7 +263,7 @@ final class DecesController extends Controller
      */
     public function destroy($id)
     {
-        Marriage::destroy($id);
+        Deces::destroy($id);
         return redirect()->route('Deces.registre.delete')->with('success', 'Supprimée avec succès');
     }
 

@@ -102,27 +102,27 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Date du Décès</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'date_du_deces'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Numéro de déclaration</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'declaration_number'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de déclaration</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'date_of_death'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Heure du Décès</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'death_time'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu du Décès</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'place_of_death'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Formation Sanitaire</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'formation_sanitaire'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -141,31 +141,31 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom de la personne Décèdée</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille de la personne Décèdée</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance de la personne Décèdée</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu de Naissance de la personne Décèdée</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased-birth_place'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession de la personne Décèdée</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Sexe de la personne Décèdée</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_sex_info'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de la personne Décèdée</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -185,23 +185,23 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom du Père du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_father-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_father-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_father-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession du Père du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_father-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse du Père du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_father-address'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -221,23 +221,23 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom de la Mère du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_mother-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom de famille du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_mother-family_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date de Naissance du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_mother-dob'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession de la Mère du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_mother-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Addresse de la Mère du Défunt / de la Défunte</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'deceased_mother-address'} }}</td>
                                                     </tr>                                                   
                                                 </table>
                                             </div>
@@ -257,27 +257,27 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Prénom du déclarant</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'declarant-first_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nom du déclarant</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'declarant_name'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Adresse du déclarant</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'declarant_address'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Profession du déclarant</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'declarant-profession'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>C.I.N</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'declarant_info-cin'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Parente</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'parente'} }}</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -298,19 +298,19 @@
                                                 <table class="table table-bordered table-striped">
                                                     <tr>
                                                         <td>Jugement</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'judgement-judgement'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Date du jugement</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'judgement-date'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Numéro du jugement</td>
-                                                        <td>#</td>
+                                                        <td>{{ $values->{'judgement-number'} }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lieu d'emission</td>
-                                                        <td>#</td>
+                                                        <td>{{ $models['judgment-region'] }}</td>
                                                     </tr>
                                                 </table>
                                             </div>

@@ -31,6 +31,8 @@
                                 <thead class="thead-light">
                                 <th>Prénom du Père de l'Epoux</th>
                                 <th>Nom de famille du Père de l'Epoux</th>
+                                <th>Prénom de l'Epoux</th>
+                                <th>Nom de famille  de l'Epoux</th>
                                 <th>Prénom de l'Epouse</th>
                                 <th>Nom de famille  de l'Epouse</th>
                                 <th>Date du Mariage</th>
@@ -53,6 +55,10 @@
                                         <td>
                                             {{ $item->values->{'groom_father-family_name'} }}
                                         </td>
+                                        <td>
+                                            {{ $item->values->{'groom-first_name'} }}</td>
+                                        <td>
+                                            {{ $item->values->{'groom-family_name'} }}</td>
                                         <td>
                                             {{ $item->values->{'bride-first_name'} }}</td>
                                         <td>

@@ -88,7 +88,7 @@
                             <span>Certificat De</span> <span class="menu-arrow"></span></a>
                         <ul style="display: none;">
                             <li><a href="{{ route('celibat.index') }}">Célibat</a></li>
-                            <li><a href="">Vie Collectif</a></li>
+                            <li><a href="{{ route('collectif.index') }}">Vie Collectif</a></li>
                             <li><a href="">Vie Individuel</a></li>
                             <li><a href="">Individualité</a></li>
                             <li><a href="">Résidence </a></li>

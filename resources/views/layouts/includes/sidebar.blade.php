@@ -90,7 +90,7 @@
                             <li><a href="{{ route('celibat.index') }}">Célibat</a></li>
                             <li><a href="{{ route('collectif.index') }}">Vie Collectif</a></li>
                             <li><a href="{{ route('individuel.index') }}">Vie Individuel</a></li>
-                            <li><a href="">Individualité</a></li>
+                            <li><a href="{{ route('individualite.index') }}">Individualité</a></li>
                             <li><a href="">Résidence </a></li>
                             <li><a href="">Non Divorce et de Non Séparation de Corps</a></li>
                             <li><a href="">Non Mariage ou de Non Remariage</a></li>

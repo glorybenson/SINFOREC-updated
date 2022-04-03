@@ -155,6 +155,11 @@ Route::middleware( 'auth')->group( function () {
     //Route::get('certificat/celibat/create', [App\Http\Controllers\Certificat\CelibatController::class, 'create'])->name('certificat.celibat.create');
     //Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');
     Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');
+
+    //Vie Individuel
+    //Route::get('certificat/celibat/create', [App\Http\Controllers\Certificat\CelibatController::class, 'create'])->name('certificat.celibat.create');
+    //Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');
+    Route::get('/individuel', [App\Http\Controllers\Individuel\IndividuelController::class, 'index'])->name('individuel.index');
    
     
 });

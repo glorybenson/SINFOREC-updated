@@ -148,8 +148,8 @@ Route::middleware( 'auth')->group( function () {
     Route::get('/deces/registre/{id}/delete', [App\Http\Controllers\Deces\DecesController::class, 'destroy'])->name('deces.registre.delete');
 
     //Certificat De Célibat
-    Route::get('/certificat/celibat', function(){
-        return view('certificat.celibat.index');
-    });
+    //Route::get('certificat/celibat/create', [App\Http\Controllers\Certificat\CelibatController::class, 'create'])->name('certificat.celibat.create');
+    Route::get('/celibat', [App\Http\Controllers\Celibat\CelibatController::class, 'index'])->name('celibat.index');
+    }); 
     
 });

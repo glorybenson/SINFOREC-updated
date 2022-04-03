@@ -69,7 +69,8 @@ final class CelibatController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\RedirectResponse|Response
      */
     public function store(Request $request)
-    /*{
+    {
+        /*
         $inputs = $request->all();
         unset($inputs['_token']);
         if( array_key_exists( 'src', $inputs))

@@ -68,13 +68,13 @@
                                             
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="{{ route('naissance.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
+                                            <a class="text-dark" href="">
                                                 <i class="feather-eye"></i></a>
-                                            <a href="{{ route('naissance.registre.edit', ['id' => $item->id]) }}"
+                                            <a href=""
                                                class="mx-2 text-dark"><i class="feather-edit"></i></a>   
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href="{{ route('naissance.registre.delete', ['id' => $item->id]) }}"><i
+                                               href=""><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

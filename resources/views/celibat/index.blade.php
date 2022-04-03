@@ -47,26 +47,26 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            {{ $item->values->{'child_info-first_name'} }}
+                                            
                                         </td>
                                         <td>
-                                            {{ $item->values->{'child_info-last_name'} }}
+                                            
                                         </td>
                                         <td>
-                                            {{ $item->values->{'child_info-dob'} }}
+                                            
                                         </td>
                                         <td>
-                                            {{ $item->values->{'father_info-country'} }}</td>
-                                        <td>
-                                            {{ $item->values->{'mother_info-first_name'} }}</td>
-                                        <td>
-                                            {{ $item->values->{'mother_info-family_name'} }}
                                         </td>
                                         <td>
-                                            {{ \App\Models\User::find($item->created_by)->first_name }}
                                         </td>
                                         <td>
-                                            {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
+                                            
+                                        </td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                            
                                         </td>
                                         <td>
                                             <a class="text-dark" href="{{ route('naissance.registre.show', ['id' => $item->id, 'rt' => time()]) }}">

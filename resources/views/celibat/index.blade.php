@@ -20,9 +20,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                        Deces data table</h4>
+                        Celibat</h4>
                         <div class="text-right">
-                            <a href="{{ route('deces.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
+                            <a href="" class="btn btn-dark px-3">Ajout</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -75,13 +75,12 @@
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="{{ route('deces.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
+                                            <a class="text-dark" href="">
                                                 <i class="feather-eye"></i></a>
-                                            <a href="{{ route('deces.registre.edit', ['id' => $item->id]) }}"
-                                               class="mx-2 text-dark"><i class="feather-edit"></i></a>
+                                            <a href=""><i class="feather-edit"></i></a>
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href="{{ route('deces.registre.delete', ['id' => $item->id]) }}"><i
+                                               href=""><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

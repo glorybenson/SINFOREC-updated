@@ -7,7 +7,7 @@
                     <div class="d-flex align-items-center">
                         <h5 class="page-title">Dashboard</h5>
                         <ul class="breadcrumb ml-2">
-                        <li class="breadcrumb-item"><a href="">Des détails</a>
+                        <li class="breadcrumb-item"><a href="{{ route('naissance.registre') }}">Des détails</a>
 
                             <li class="breadcrumb-item active">Registre</li>
                         </ul>
@@ -20,53 +20,47 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                        Celibat</h4>
+                            Celibate</h4>
                         <div class="text-right">
-                            <a href="" class="btn btn-dark px-3">Ajout</a>
+                            <a href="{{ route('naissance.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table mb-0 table-striped border-0 data-table" id="datatable">
                                 <thead class="thead-light">
-                                <th>Prénom de la personne Décèdée</th>
-                                <th>Nom de famille de la personne Décèdée</th>
-                                <th>Date de Naissance de la personne Décèdée</th>
-                                <th>Lieu de Naissance de la personne Décèdée</th>
-                                <th>Date du Décès</th>
-                                <th>Numéro de déclaration</th>
-                                <th>Date de déclaration</th>
-                                <th>Créé par</th>
-                                <th>Créé le</th>
-
+                                <th>Prénom</th>
+                                <th>Nom de Famille</th>
+                                <th>Date de Naissance</th>
+                                <th>Prénom du Père</th>
+                                <th>Prénom de la mère</th>
+                                <th>Nom de Famille de la Mère</th>
+                                <th>Creer par</th>
+                                <th>Cree le</th>
                                 <th>Action</th>
                                 </thead>
                                 <tbody>
-                               @if(isset($add))
-                               @foreach ($add as $item)
+                                @foreach ($add as $item)
                                     @php
                                         if(isset($item))
                                             $item->values = json_decode( $item->values);
                                     @endphp
                                     <tr>
                                         <td>
-                                            {{ $item->values->{'deceased-first_name'} }}
+                                            {{ $item->values->{'child_info-first_name'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'deceased-family_name'} }}
+                                            {{ $item->values->{'child_info-last_name'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'deceased-dob'} }}</td>
-                                        <td>
-                                            {{ $item->values->{'deceased-birth_place'} }}</td>
-                                        <td>
-                                            {{ $item->values->{'date_du_deces'} }}
+                                            {{ $item->values->{'child_info-dob'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'declaration_number'} }}
-                                        </td>
+                                            {{ $item->values->{'father_info-country'} }}</td>
                                         <td>
-                                            {{ $item->values->{'date_of_death'} }}
+                                            {{ $item->values->{'mother_info-first_name'} }}</td>
+                                        <td>
+                                            {{ $item->values->{'mother_info-family_name'} }}
                                         </td>
                                         <td>
                                             {{ \App\Models\User::find($item->created_by)->first_name }}
@@ -75,17 +69,17 @@
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="">
+                                            <a class="text-dark" href="{{ route('naissance.registre.show', ['id' => $item->id, 'rt' => time()]) }}">
                                                 <i class="feather-eye"></i></a>
-                                            <a href=""><i class="feather-edit"></i></a>
+                                            <a href="{{ route('naissance.registre.edit', ['id' => $item->id]) }}"
+                                               class="mx-2 text-dark"><i class="feather-edit"></i></a>   
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href=""><i
+                                               href="{{ route('naissance.registre.delete', ['id' => $item->id]) }}"><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
-                                @endif
                                 </tbody>
                             </table>
                         </div>

@@ -7,7 +7,7 @@
                     <div class="d-flex align-items-center">
                         <h5 class="page-title">Dashboard</h5>
                         <ul class="breadcrumb ml-2">
-                        <li class="breadcrumb-item"><a href="{{ route('naissance.registre') }}">Des détails</a>
+                        <li class="breadcrumb-item"><a href="">Des détails</a>
 
                             <li class="breadcrumb-item active">Registre</li>
                         </ul>
@@ -22,7 +22,7 @@
                         <h4 class="card-title float-left">
                             Certificat De Célibat</h4>
                         <div class="text-right">
-                            <a href="{{ route('naissance.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
+                            <a href="" class="btn btn-dark px-3">Ajout</a>
                         </div>
                     </div>
                     <div class="card-body">

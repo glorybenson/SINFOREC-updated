@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title float-left">
-                            Celibate</h4>
+                            Certificat De Célibat</h4>
                         <div class="text-right">
                             <a href="{{ route('naissance.registre.create') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>

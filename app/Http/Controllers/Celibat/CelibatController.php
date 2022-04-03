@@ -26,7 +26,7 @@ final class CelibatController extends Controller
      */
     public function index()
     {
-        return view('Celibat.index');
+        return view('celibat.index');
     }
 
     /**

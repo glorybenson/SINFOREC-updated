@@ -29,12 +29,12 @@
                         <div class="table-responsive">
                             <table class="table mb-0 table-striped border-0 data-table" id="datatable">
                                 <thead class="thead-light">
+                                <th>Date de la demande</th>
+                                <th>Numéro de déclaration</th>
                                 <th>Prénom</th>
-                                <th>Nom de Famille</th>
+                                <th>Nom de famille </th>
                                 <th>Date de Naissance</th>
-                                <th>Prénom du Père</th>
-                                <th>Prénom de la mère</th>
-                                <th>Nom de Famille de la Mère</th>
+                                
                                 <th>Creer par</th>
                                 <th>Cree le</th>
                                 <th>Action</th>
@@ -55,8 +55,7 @@
                                         <td>
                                             
                                         </td>
-                                        <td>
-                                        </td>
+                                        
                                         <td>
                                         </td>
                                         <td>

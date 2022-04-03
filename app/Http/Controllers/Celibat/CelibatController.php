@@ -26,7 +26,13 @@ final class CelibatController extends Controller
      */
     public function index()
     {
-        return view('celibat.index');
+        $add = DB::table('deces')
+            ->join('users', 'deces.created_by', '=', 'users.id')
+            ->select('deces.*')
+            ->get();
+        return view('celibat.index', [
+            'add' => $add
+        ]);
     }
 
     /**

@@ -91,8 +91,8 @@
                                         padding: 3px;
                                     }
                                     .down {  
-                                        transform: rotate(90deg); 
-                                        -webkit-transform: rotate(90deg);
+                                        transform: rotate(45deg); 
+                                        -webkit-transform: rotate(45deg);
                                     }
                                     </style>
 

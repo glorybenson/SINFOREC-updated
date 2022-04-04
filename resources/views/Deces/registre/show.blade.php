@@ -27,7 +27,7 @@
                                 <div class="card-header">
                                     <div class="text-left">
                                         <div class="position-relative position-relative-example">
-                                            <h4 class="position-absolute top-50" class="color: green">
+                                            <h4 class="position-absolute top-50" class="text-green">
                                     {{ $values->{'deceased-first_name'} }}
                                      {{ $values->{'deceased-family_name'} }} </h4>
                                     </div>

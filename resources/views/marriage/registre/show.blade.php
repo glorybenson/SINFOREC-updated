@@ -84,11 +84,11 @@
 
                             <div>-->
                                 <style>
-                                    .arrow-down{
+                                    .fa-angle-down{
                                         transform: rotate(0deg);
                                         transition: transform 1s linear;
                                     }
-                                    .arrow-down.open{
+                                    .fa-angle-down.open{
                                         transform: rotate(180deg);
                                         transition: transform 1s linear;
                                     }
@@ -101,7 +101,7 @@
                                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne"
                                                 aria-expanded="false" aria-controls="collapseOne">
                                                 1. Zone Gérographique &nbsp;
-                                                <span><i id="icon" class="arrow-down"></i></span>
+                                                <span><i id="icon" class="fa fa-angle-down"></i></span>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"

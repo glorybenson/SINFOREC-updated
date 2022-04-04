@@ -34,11 +34,11 @@
                                         </ul>
                                     </div>
                                     <div class="text-left">
-                                        <!--<div class="position-relative position-relative-example">
-                                            <h4 class="position-absolute top-0 start-0">-->
-                                    <h4>{{ $values->{'deceased-first_name'} }}
+                                        <div class="position-relative position-relative-example">
+                                            <h4 class="position-absolute start-0">
+                                    {{ $values->{'deceased-first_name'} }}
                                      {{ $values->{'deceased-family_name'} }} </h4>
-                                    
+                                    </div>
                                 </div>                                    
                                 </div>
 

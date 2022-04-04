@@ -27,8 +27,8 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div>
-                                        <ul class="text-right">
+                                    <div class="text-right">
+                                        <ul>
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Certificat de
                                                 Mariage
                                             </li>

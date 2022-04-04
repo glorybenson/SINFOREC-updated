@@ -27,6 +27,10 @@
                                 <div class="card-header">
                                     <div class="text-right">
                                         <ul>
+                                            <li><span>{{ $values->{'deceased-first_name'} }}</span>
+                                                <span>{{ $values->{'deceased-family_name'} }}</span>
+
+                                            </li>
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Bulletin de Décès
                                             </li>
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Acte de Décès

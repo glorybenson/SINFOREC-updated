@@ -337,6 +337,14 @@
             el.change();
         }
 
+        $(document).ready(function() {
+            $('#example').DataTable({    
+                "language": {
+                    "info": "Vue de _START_ a _END_ sur _TOTAL_ entrées",
+                }
+            })
+        });
+
         function addressSelect() {
             $('.address-special-select').each(function () {
                 const name = $(this).data('name');

@@ -42,9 +42,9 @@
 
             div.addEventListener('click', function(){
                 if(open){
-                    icon.className = 'fa fa-arrow-down';  
+                    icon.className = 'arrow-down';  
                 } else{
-                    icon.className = 'fa fa-arrow-down open';
+                    icon.className = 'arrow-down open';
                 }
                 open = !open;
             });

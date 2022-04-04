@@ -91,8 +91,8 @@
                                         padding: 3px;
                                     }
                                     .down {  
-                                        transform: rotate(45deg); 
-                                        -webkit-transform: rotate(45deg);
+                                        transform: rotate(90deg); 
+                                        -webkit-transform: rotate(90deg);
                                     }
                                     </style>
 
@@ -102,7 +102,7 @@
                                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne"
                                                 aria-expanded="false" aria-controls="collapseOne">
                                                 1. Zone Gérographique &nbsp;
-                                                <span><i class="menu-arrow"></i></span>
+                                                <span><i class="arrow down"></i></span>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"

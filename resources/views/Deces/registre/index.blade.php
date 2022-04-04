@@ -31,8 +31,8 @@
                     <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <!--<table class="table mb-0 table-striped border-0 data-table" id="datatable">-->
-                                <table id="example" class="display" cellspacing="0" width="100%">
+                            <table class="table mb-0 table-striped border-0 data-table" id="datatable">
+                                <!--<table id="example" class="display" cellspacing="0" width="100%">-->
                                 <thead class="thead-light">
                                 <th>Prénom de la personne Décèdée</th>
                                 <th>Nom de famille de la personne Décèdée</th>

@@ -28,6 +28,14 @@
                 }
             })
         });
+        $('#datatable').dataTable( {
+            "language": {
+                "paginate": {
+                    "previous": "Précédente"
+                }
+            }
+        } );
+    
 
     $(document).ready(function() {
         $('select').selectpicker();

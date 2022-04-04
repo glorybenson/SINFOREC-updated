@@ -27,6 +27,12 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
+                                    <div class="text-left">
+                                        <div class="d-inline-flex p-2">{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</div>
+                                        <div class="d-inline-flex p-2">{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</div>
+                                    </div>
+
+
                                     <div class="text-right">
                                         <ul>
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Certificat de

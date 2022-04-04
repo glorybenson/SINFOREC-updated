@@ -26,9 +26,9 @@
                         </div>
                     </div>
 
-                    <link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet"/>
+                    <!--<link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet"/>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                    <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+                    <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>-->
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table mb-0 table-striped border-0 data-table" id="datatable">

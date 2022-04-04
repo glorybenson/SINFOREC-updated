@@ -41,6 +41,7 @@
                                             <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-left">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</h5> 
                                         </div>
                                     </div>
+                                </div>
 
                                <!-- <div class="card-body">
                                     <div>

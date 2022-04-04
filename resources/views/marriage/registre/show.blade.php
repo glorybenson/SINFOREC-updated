@@ -102,7 +102,7 @@
                                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne"
                                                 aria-expanded="false" aria-controls="collapseOne">
                                                 1. Zone Gérographique &nbsp;
-                                                <span><i class="arrow down"></i></span>
+                                                <span><i class="menu-arrow"></i></span>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"

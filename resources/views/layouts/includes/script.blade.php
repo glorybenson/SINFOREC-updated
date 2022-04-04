@@ -25,11 +25,11 @@
             $('#datatable').DataTable({    
                 "language": {
                     "info": "Vue de _START_ a _END_ sur _TOTAL_ entrées",
+                    "search": "chercher:",
+                    "lengthMenu": "Vue _MENU_ entrées",
                     "paginate": {
                     "previous": "Précédente",
                     "next": "Suivante",
-                    "search": "nreew:",
-                    "lengthMenu": "V _MENU_ entrées",
                 }
                 }
             })

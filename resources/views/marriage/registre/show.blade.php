@@ -34,11 +34,12 @@
                                             </h5>
                                             <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Acte de Mariage
                                             </h5>
-                                        </div>
+                                        
                                         <div class="text-left">
                                             <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-left">{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</h5>
                                             <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-left">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</h5> 
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
 

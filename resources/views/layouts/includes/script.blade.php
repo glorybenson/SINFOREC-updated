@@ -28,8 +28,8 @@
                     "search": "chercher:",
                     "lengthMenu": "Vue _MENU_ entrées",
                     "paginate": {
-                    //"previous": "Précédente",
-                    //"next": "Suivante",
+                    "previous": "Précédente",
+                    "next": "Suivante",
                 }
                 }
             })

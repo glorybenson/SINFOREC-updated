@@ -84,16 +84,15 @@
 
                             <div>-->
                                 <style>
-                                    .arrow {
-                                        border: solid black;
-                                        border-width: 0 3px 3px 0;  
-                                        display: inline-block; 
-                                        padding: 3px;
+                                    .fa-arrow-down{
+                                        transform: rotate(0deg);
+                                        transition: transform 1s linear;
                                     }
-                                    .down {  
-                                        transform: rotate(45deg); 
-                                        -webkit-transform: rotate(45deg);
+                                    .fa-arrow-down.open{
+                                        transform: rotate(180deg);
+                                        transition: transform 1s linear;
                                     }
+                                    
                                     </style>
 
                                 <div class="accordion" id="accordionExample">
@@ -102,7 +101,7 @@
                                             <h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne"
                                                 aria-expanded="false" aria-controls="collapseOne">
                                                 1. Zone Gérographique &nbsp;
-                                                <span><i class="arrow down"></i></span>
+                                                <span><i id="icon" class="fa fa-arrow-down"></i></span>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"

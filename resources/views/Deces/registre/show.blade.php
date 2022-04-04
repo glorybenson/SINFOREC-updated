@@ -27,7 +27,7 @@
                                 <div class="card-header">
                                     <div class="text-right">
                                         <ul>
-                                            <li><h4 class="position-absolute top-0 start-50 translate-middle">{{ $values->{'deceased-first_name'} }}
+                                            <li><h4 class="position-absolute bottom-0 end-0">{{ $values->{'deceased-first_name'} }}
                                               {{ $values->{'deceased-family_name'} }}</h4>
 
                                             </li>

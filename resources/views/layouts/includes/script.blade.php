@@ -25,16 +25,13 @@
             $('#datatable').DataTable({    
                 "language": {
                     "info": "Vue de _START_ a _END_ sur _TOTAL_ entrées",
+                    "paginate": {
+                    "previous": "Précédente",
+                }
                 }
             })
         });
-        $('#datatable').dataTable( {
-            "language": {
-                "paginate": {
-                    "previous": "Précédente"
-                }
-            }
-        } );
+        
     
 
     $(document).ready(function() {

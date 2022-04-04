@@ -28,11 +28,10 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="text-left">
-                                        <div class="d-flex flex-wrap" style="display">
                                         <div>{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</div>
                                         <div>{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</div>
                                     </div>
-                                </div>
+                                
 
                                     <div class="text-right">
                                         <ul>

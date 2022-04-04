@@ -37,8 +37,8 @@
                                         </div>
                                         
                                         <div class="text-left">
-                                            <h5 class="btn btn-dark px-3">{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</h5>
-                                            <h5 class="btn btn-dark px-3">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</h5> 
+                                            <h5 class="btn btn-grey px-3">{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</h5>
+                                            <h5 class="btn btn-grey px-3">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</h5> 
                                         </div>
                                     </div>
                                 </div>

@@ -27,7 +27,7 @@
                                 <div class="card-header">
                                     <div class="text-left">
                                         <div class="position-absolute top-50">
-                                            <h4 class="text-primary ml-1 p-2 pr-3 pl-3">
+                                            <h4 class="text-primary ml-0 p-0 pr-3 pl-3">
                                     {{ $values->{'deceased-first_name'} }}
                                      {{ $values->{'deceased-family_name'} }} </h4>
                                     </div>

@@ -28,9 +28,6 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div>
-                                        <h5 class="text-left">{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</h5>
-                                            <h5 class="text-left">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</h5>
-
                                         <ul class="text-right">
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Certificat de
                                                 Mariage
@@ -38,6 +35,8 @@
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Acte de Mariage
                                             </li>
                                         </ul>
+                                        <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-left">{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</h5>
+                                        <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-left">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</h5> 
                                     </div>
                                 </div>
                             </div>

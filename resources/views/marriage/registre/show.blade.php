@@ -27,7 +27,6 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div>
                                         <div class="text-right">
                                             <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Certificat de
                                                 Mariage
@@ -41,7 +40,7 @@
                                             <h5 class="btn btn-outline-dark">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</h5> 
                                         </div>
                                     </div>
-                                </div>
+                                
 
                                <!-- <div class="card-body">
                                     <div>

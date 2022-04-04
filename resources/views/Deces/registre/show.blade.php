@@ -27,12 +27,10 @@
                                 <div class="card-header">
                                     <div class="text-right">
                                         <ul>
-                                            <div class="position-relative position-relative">
                                             <li><h4 class="position-absolute top-0 start-0">
                                             {{ $values->{'deceased-first_name'} }}
                                              {{ $values->{'deceased-family_name'} }} </h4>
                                            </li>
-                                           </div>
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Bulletin de Décès
                                             </li>
                                             <li class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Acte de Décès

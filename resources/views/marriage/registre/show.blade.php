@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="text-left" style="display: block;">
+                                    <div class="text-left" style="display">
                                         <div class="d-inline-flex p-2">{{ $values->{'groom-first_name'} }} {{ $values->{'groom-family_name'} }}</div>
                                         <div class="d-inline-flex p-2">{{ $values->{'bride-first_name'} }} {{ $values->{'bride-family_name'} }}</div>
                                     </div>

@@ -28,6 +28,8 @@
                     "paginate": {
                     "previous": "Précédente",
                     "next": "Suivante",
+                    "search": "chercher:",
+                    "lengthMenu": "Vue _MENU_ entrées",
                 }
                 }
             })

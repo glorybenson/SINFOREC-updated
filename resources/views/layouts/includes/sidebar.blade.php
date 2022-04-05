@@ -74,7 +74,7 @@
                             <span class="shape1"></span><span class="shape2"></span>
                             <span>Décès</span> <span class="menu-arrow"></span></a>
                         <ul style="display: none;">
-                            <li><a href="{{ route('deces.index') }}">Régistre de Décès</a></li>
+                            <li><a href="{{ route('deces.registre') }}">Régistre de Décès</a></li>
                             <li><a href="">Bulletin de Décès</a></li>
                             <li><a href="">Acte de Décès</a></li>
                         </ul>

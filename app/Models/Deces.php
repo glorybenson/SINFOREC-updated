@@ -9,4 +9,5 @@ class Deces extends Model
 {
     use HasFactory;
     protected $table = 'deces';
+    protected $fillable = [ 'id', 'values'];
 }

@@ -34,21 +34,6 @@
                 }
             })
         });
-        
-       (function(document){
-            var div = document.getElementById('headingOne');
-            var icon = document.getElementById('icon');
-            var open = false;
-
-            div.addEventListener('click', function(){
-                if(open){
-                    icon.className = 'fa fa-angle-down';  
-                } else{
-                    icon.className = 'fa fa-angle-down open';
-                }
-                open = !open;
-            });
-        });
     
 
     $(document).ready(function() {
@@ -392,4 +377,19 @@
             });
         }
     });
+
+    (function(document){
+            var div = document.getElementById('headingOne');
+            var icon = document.getElementById('icon');
+            var open = false;
+
+            div.addEventListener('click', function(){
+                if(open){
+                    icon.className = 'fa fa-angle-down';  
+                } else{
+                    icon.className = 'fa fa-angle-down open';
+                }
+                open = !open;
+            });
+        })(document);
 </script>

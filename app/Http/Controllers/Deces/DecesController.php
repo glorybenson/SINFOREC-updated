@@ -111,7 +111,7 @@ final class DecesController extends Controller
         }
 
 
-        return Redirect::route('deces.index')->with('success', 'Ajout créée avec succès');
+        return Redirect::route('deces.registre')->with('success', 'Ajout créée avec succès');
     }
 
     /**

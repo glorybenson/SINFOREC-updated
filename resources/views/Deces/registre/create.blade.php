@@ -7,7 +7,7 @@
                     <div class="d-flex align-items-center">
                         <h5 class="page-title">Dashboard</h5>
                         <ul class="breadcrumb ml-2">
-                            <li class="breadcrumb-item active"><a href="{{ route('deces.registre.create') }}"
+                            <li class="breadcrumb-item active"><a href="{{ route('deces.registre') }}"
                                                                   class="text-primary">Régistre de Décès</a></li>
                         </ul>
                     </div>

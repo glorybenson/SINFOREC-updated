@@ -65,7 +65,7 @@ final class CelibatController extends Controller
             ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => false],
         ];*/
 
-        return view('celibat.create', $binding);
+        return view('celibat.create', );
     }
 
     /**

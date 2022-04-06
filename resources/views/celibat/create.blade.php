@@ -31,8 +31,8 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm">
-                                <!--<form method="POST" action="{{ route('create.user.post') }}">
-                                    @csrf -->
+                                        <form method="POST" action="{{ route('create.user.post') }}">
+                                            @csrf
 
                                         <div class="row mb-3">
                                             <label for="first_name">Prénom</label>
@@ -115,7 +115,7 @@
                                             Créer un compte pour Célibat
                                         </button>
                                     </div>
-                                <!--</form>-->
+                                </form>
                             </div>
                         </div>
                     </div>

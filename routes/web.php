@@ -148,19 +148,17 @@ Route::middleware( 'auth')->group( function () {
     Route::get('/deces/registre/{id}/delete', [App\Http\Controllers\Deces\DecesController::class, 'destroy'])->name('deces.registre.delete');
 
     //Certificat De Célibat
-    //Route::get('certificat/celibat/create', [App\Http\Controllers\Certificat\CelibatController::class, 'create'])->name('certificat.celibat.create');
     Route::get('/celibat', [App\Http\Controllers\Celibat\CelibatController::class, 'index'])->name('celibat.index');
     Route::get('/celibat/create', [App\Http\Controllers\Celibat\CelibatController::class, 'create'])->name('celibat.create');
 
     //Vie Collectif
-    //Route::get('certificat/celibat/create', [App\Http\Controllers\Certificat\CelibatController::class, 'create'])->name('certificat.celibat.create');
-    //Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');
     Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');
 
     //Vie Individuel
-    //Route::get('certificat/celibat/create', [App\Http\Controllers\Certificat\CelibatController::class, 'create'])->name('certificat.celibat.create');
-    //Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');
     Route::get('/individuel', [App\Http\Controllers\Individuel\IndividuelController::class, 'index'])->name('individuel.index');
-   
-    
+
+    //Residence
+    Route::get('/residence', [App\Http\Controllers\Residence\ResidenceController::class, 'index'])->name('residence.index');
+    Route::get('/residence/create', [App\Http\Controllers\Residence\ResidenceController::class, 'create'])->name('residence.create');
+
 });

@@ -33,7 +33,7 @@
                                             @csrf
 
                                         <div class="row mb-3">
-                                            <label for="first_name">Prénom</label>
+                                            <label for="first_name" class="col-md-2 col-form-label text-md-end">Prénom</label>
 
                                             <div class="col-md-10">
                                             <input id="first_name" type="text" class="form-control
@@ -48,7 +48,7 @@
                                     </div>
 
                                         <div class="row mb-3">
-                                            <label for="last_name">Nom de famillee</label>
+                                            <label for="last_name" class="col-md-2 col-form-label text-md-end">Nom de famillee</label>
                                             <div class="col-md-10">
                                             <input id="last_name" type="text" class="form-control
                                             serializable" name="last_name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
@@ -64,7 +64,7 @@
 
                                     
                                     <div class="row mb-3">
-                                        <label for="dob">
+                                        <label for="dob" class="col-md-2 col-form-label text-md-end">
                                             Date de Naissance</label>
                                             <div class="col-md-10">
                                         <input id="dob" placeholder="Select date" type="date"
@@ -73,7 +73,7 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3">
+                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
                                         <label for="address">Addresse</label>
                                         <div class="col-md-10">
                                         <input id="address" type="text" class="form-control
@@ -87,7 +87,7 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3">
+                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
                                         <label for="cin" class="required">C.I.N</label>
                                         <div class="col-md-10">
                                         <input id="cin" type="number" class="form-control serializable" name="cin" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
@@ -100,7 +100,7 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3">
+                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
                                         <label for="demande">
                                             Date de la demande</label>
                                             <div class="col-md-10">
@@ -110,7 +110,7 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3">
+                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
                                         <label for="declaration_number">Numéro de déclaration</label>
                                         <div class="col-md-10">
                                         <input id="declaration_number" type="text" class="form-control serializable" name="declaration_number" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >

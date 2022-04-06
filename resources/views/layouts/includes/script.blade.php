@@ -367,6 +367,7 @@
                         //input.hide();
                     } else if ($(this).val() === '' && input.val() === fatherInput.val()) {
                         $(this).val('father_address');
+                        console.log('same');
                         //input.hide();
                     } else if ($(this).val() === '' && input.val().length) {
                         $(this).val('differente');

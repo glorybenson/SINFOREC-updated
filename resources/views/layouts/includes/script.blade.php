@@ -357,17 +357,19 @@
                 const name = $(this).data('name');
                 const $this = $(`[data-name="${name}"]`);
 
-                const input = $this.closest('.form-field').find('input[type="text"]');
-                const dataFor = $this.data('for');
-                const fatherInput = $(`[name="${dataFor}"]`);
-                if (input.val() === fatherInput.val()) {
-                    $this.val('father_address');
-                }
-
                 const changeFn = () => {
                     const input = $(this).closest('.form-field').find('input[type="text"]');
                     const dataFor = $(this).data('for');
                     const fatherInput = $(`[name="${dataFor}"]`);
+
+                    if (input.val() === fatherInput.val()) {
+                        $(this).val('father_address');
+                        console.log('same');
+                    } else if (input.val().length) {
+                        $(this).val('different');
+                        console.log('different');
+                    }
+
                     if ($(this).val() === 'father_address') {
                         input.val(fatherInput.val());
                         input.hide();

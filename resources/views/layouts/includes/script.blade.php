@@ -375,7 +375,7 @@
                         input.val('');
                     }
 
-                    if ($(this).val() === 'differente' || input.val() === '') {
+                    if ($(this).val() === 'father_address' || $(this).val() === '') {
                         input.hide();
                     }
                 }

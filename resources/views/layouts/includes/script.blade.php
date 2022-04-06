@@ -361,23 +361,22 @@
                     const input = $(this).closest('.form-field').find('input[type="text"]');
                     const dataFor = $(this).data('for');
                     const fatherInput = $(`[name="${dataFor}"]`);
+                    input.show();
 
                     if ($(this).val() === 'father_address') {
                         input.val(fatherInput.val());
-                        //input.hide();
                     } else if ($(this).val() === '' && input.val() === fatherInput.val()) {
                         $(this).val('father_address');
-                        console.log('same');
-                        //input.hide();
                     } else if ($(this).val() === '' && input.val().length) {
                         $(this).val('differente');
-                        input.show();
                     } else if($(this).val() === '') {
                         input.val('');
-                        //input.hide();
                     } else {
                         input.val('');
-                        input.show();
+                    }
+
+                    if ($(this).val() === 'father_address' || $(this).val() === '') {
+                        input.hide();
                     }
                 }
                 $this.change(changeFn);

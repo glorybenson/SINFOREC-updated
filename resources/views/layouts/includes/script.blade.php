@@ -366,16 +366,16 @@
                         $(this).val('father_address');
                         console.log('same');
                     } else if (input.val().length) {
-                        $(this).val('different');
+                        $(this).val('differente');
                         console.log('different');
                     }
 
                     if ($(this).val() === 'father_address') {
                         input.val(fatherInput.val());
-                        input.hide();
+                        //input.hide();
                     } else if($(this).val() === '') {
                         input.val('');
-                        input.hide();
+                        //input.hide();
                     } else {
                         input.val('');
                         input.show();

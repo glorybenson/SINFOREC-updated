@@ -362,17 +362,15 @@
                     const dataFor = $(this).data('for');
                     const fatherInput = $(`[name="${dataFor}"]`);
 
-                    if (input.val() === fatherInput.val()) {
-                        $(this).val('father_address');
-                        console.log('same');
-                    } else if (input.val().length) {
-                        $(this).val('differente');
-                        console.log('different');
-                    }
-
                     if ($(this).val() === 'father_address') {
                         input.val(fatherInput.val());
                         //input.hide();
+                    } else if ($(this).val() === '' && input.val() === fatherInput.val()) {
+                        $(this).val('father_address');
+                        //input.hide();
+                    } else if ($(this).val() === '' && input.val().length) {
+                        $(this).val('differente');
+                        input.show();
                     } else if($(this).val() === '') {
                         input.val('');
                         //input.hide();

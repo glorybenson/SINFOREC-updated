@@ -32,8 +32,8 @@
                                 <div class="row">
                                     <div class="col-sm">
                                 <!--<form method="POST" action="{{ route('create.user.post') }}">
-                                    @csrf-->
-                                    <div class="row mb-3">
+                                    @csrf -->
+
                                         <div class="row mb-3">
                                             <label for="first_name">Prénom</label>
                                             <input id="first_name" type="text" class="form-control

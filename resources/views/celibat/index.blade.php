@@ -22,7 +22,7 @@
                         <h4 class="card-title float-left">
                             Certificat De Célibat</h4>
                         <div class="text-right">
-                            <a href="" class="btn btn-dark px-3">Ajout</a>
+                            <a href="{{ route('celibat.create') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
                     </div>
                     <div class="card-body">

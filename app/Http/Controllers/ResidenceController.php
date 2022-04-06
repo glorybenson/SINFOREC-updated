@@ -9,12 +9,12 @@ class ResidenceController extends Controller
     //
     public function index()
     {
-        $add = DB::table('residence')
+        /*$add = DB::table('residence')
             ->join('users', 'residence.created_by', '=', 'users.id')
             ->select('residence.*')
-            ->get();
+            ->get();*/
         return view('residence.index', [
-            'add' => $add
+            //'add' => $add
         ]);
     }
     public function create()

@@ -32,36 +32,37 @@
                                 <form method="POST" action="{{ route('create.user.post') }}">
                                     @csrf
                                     <div class="row mb-3">
-                                        <label for="first_name" class="col-md-2 col-form-label text-md-end">Prénom</label>
-
-                                        <div class="col-md-10">
-                                            <input value="{{ old('first_name') }}" id="first_name" type="text" class="form-control " name="first_name" autocomplete="name" required>
-                                            @if ($errors->has('first_name'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('first_name') }}</strong>
-                                            </span>
+                                        <div class="row mb-3">
+                                            <label for="first_name">Prénom</label>
+                                            <input id="first_name" type="text" class="form-control
+                                            serializable" name="first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
+                                            <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
+                                            @if ($errors->has('description'))
+                                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('description') }}</strong>
+                                        </span>
                                             @endif
                                         </div>
-                                    </div>
 
-                                    <div class="row mb-3">
-                                        <label for="last_name" class="col-md-2 col-form-label text-md-end">
-                                            Nom de famille</label>
-                                        <div class="col-md-10">
-                                            <input id="last_name" type="text" class="form-control " name="last_name" value="{{ old('last_name') }}" autocomplete="name" autofocus required>
-                                            @if ($errors->has('last_name'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('last_name') }}</strong>
-                                            </span>
+                                        <div class="row mb-3">
+                                            <label for="last_name">Nom de famillee</label>
+                                            <input id="last_name" type="text" class="form-control
+                                            serializable" name="last_name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
+                                            <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
+                                            @if ($errors->has('description'))
+                                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('description') }}</strong>
+                                        </span>
                                             @endif
                                         </div>
-                                    </div>
 
+
+                                    
                                     <div class="row mb-3">
                                         <label for="dob">
                                             Date de Naissance</label>
-                                        <input id="" placeholder="Select date" type="date"
-                                               name="" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback15" required >
+                                        <input id="dob" placeholder="Select date" type="date"
+                                               name="dob" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback15" required >
                                         <span class="feedback-new" id="invalid-feedback15" role="alert"></span>
                                     </div>
 
@@ -91,8 +92,8 @@
                                     <div class="row mb-3">
                                         <label for="demande">
                                             Date de la demande</label>
-                                        <input id="" placeholder="Select date" type="date"
-                                               name="" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback15" required >
+                                        <input id="demande" placeholder="Select date" type="date"
+                                               name="demande" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback15" required >
                                         <span class="feedback-new" id="invalid-feedback15" role="alert"></span>
                                     </div>
 
@@ -122,5 +123,4 @@
     </div>
 </div>
 </div>
-@include('layouts.includes.filterJs')
 @endsection

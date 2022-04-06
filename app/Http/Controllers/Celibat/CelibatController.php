@@ -63,9 +63,9 @@ final class CelibatController extends Controller
             ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => false],
             ['title' => "Premier témoin de l'Epouse", 'is_filled' => false],
             ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => false],
-        ];
+        ];*/
 
-        return view('marriage.registre.create', $binding);*/
+        return view('celibat.create', $binding);
     }
 
     /**

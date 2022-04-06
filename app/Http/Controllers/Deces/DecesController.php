@@ -100,7 +100,7 @@ final class DecesController extends Controller
             //$add->values = json_encode( $inputs);
             //$add->update();
         }
-       
+
 
         if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
         {
@@ -192,8 +192,8 @@ final class DecesController extends Controller
                 'deceased_mother-address'],
             ['declarant-first_name', 'declarant_name', 'declarant_address', 'declarant-profession',
                 'declarant_info-cin', 'parente'],
-            ['judgement-judgement', 'judgement-date', 'judgement-number', 'judgment-region'],
-            
+            ['judgement-judgement'],
+
         ];
         $formNamesFilled = array_map(function ($fields) use ($old) {
             $values = json_decode($old->values, true);
@@ -217,7 +217,7 @@ final class DecesController extends Controller
             ['title' => "Renseignement sur la Mère du Défunt / de la Défunte", 'is_filled' => $formNamesFilled[4]],
             ['title' => "Renseignement sur le Déclarant", 'is_filled' => $formNamesFilled[5]],
             ['title' => "Jugement", 'is_filled' => $formNamesFilled[6]],
-            
+
         ];
         $binding[ 'is_edit'] = true;
         $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();

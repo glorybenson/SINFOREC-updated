@@ -29,8 +29,6 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm">
                                         <form method="POST" action="{{ route('create.user.post') }}">
                                             @csrf
 

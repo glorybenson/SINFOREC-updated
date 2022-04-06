@@ -87,7 +87,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="profession">Profession</label>
+                                <label for="profession" class="col-md-2 col-form-label text-md-end">Profession</label>
                                 <div class="col-md-10">
                                 <input id="profession" type="text"
                                        class="form-control serializable"
@@ -102,7 +102,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="sex_info">Sexe</label>
+                                <label for="sex_info" class="col-md-2 col-form-label text-md-end">Sexe</label>
                                 <div class="col-md-10">
                                 <select id="sex_info" data-live-search="true" name="sex_info" class="selectpicker w-100 serializable" tabindex="6" data-parsley-errors-container="#invalid-feedback13" required >
                                     <option value>--</option>

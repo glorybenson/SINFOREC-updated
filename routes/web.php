@@ -158,7 +158,7 @@ Route::middleware( 'auth')->group( function () {
     Route::get('/individuel', [App\Http\Controllers\Individuel\IndividuelController::class, 'index'])->name('individuel.index');
 
     //Residence
-    Route::get('/residence', [App\Http\Controllers\Residence\ResidenceController::class, 'index'])->name('residence.index');
-    Route::get('/residence/create', [App\Http\Controllers\Residence\ResidenceController::class, 'create'])->name('residence.create');
+    Route::get('/residence', [App\Http\Controllers\ResidenceController::class, 'index'])->name('residence.index');
+    Route::get('/residence/create', [App\Http\Controllers\ResidenceController::class, 'create'])->name('residence.create');
 
 });

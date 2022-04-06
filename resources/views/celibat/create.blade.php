@@ -73,8 +73,8 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
-                                        <label for="address">Addresse</label>
+                                    <div class="row mb-3">
+                                        <label for="address" class="col-md-2 col-form-label text-md-end">Addresse</label>
                                         <div class="col-md-10">
                                         <input id="address" type="text" class="form-control
                                         serializable" name="address" tabindex="6" data-parsley-errors-container="#invalid-feedback24" required >
@@ -87,8 +87,8 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
-                                        <label for="cin" class="required">C.I.N</label>
+                                    <div class="row mb-3">
+                                        <label for="cin" class="col-md-2 col-form-label text-md-end" class="required">C.I.N</label>
                                         <div class="col-md-10">
                                         <input id="cin" type="number" class="form-control serializable" name="cin" tabindex="5" data-parsley-errors-container="#invalid-feedback32" required >
                                         <span class="feedback-new" id="invalid-feedback32" role="alert"></span>
@@ -100,8 +100,8 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
-                                        <label for="demande">
+                                    <div class="row mb-3">
+                                        <label for="demande" class="col-md-2 col-form-label text-md-end">
                                             Date de la demande</label>
                                             <div class="col-md-10">
                                         <input id="demande" placeholder="Select date" type="date"
@@ -110,8 +110,8 @@
                                     </div>
                                 </div>
 
-                                    <div class="row mb-3" class="col-md-2 col-form-label text-md-end">
-                                        <label for="declaration_number">Numéro de déclaration</label>
+                                    <div class="row mb-3">
+                                        <label for="declaration_number" class="col-md-2 col-form-label text-md-end">Numéro de déclaration</label>
                                         <div class="col-md-10">
                                         <input id="declaration_number" type="text" class="form-control serializable" name="declaration_number" tabindex="1" data-parsley-errors-container="#invalid-feedback8" required >
                                         <span class="feedback-new" id="invalid-feedback8" role="alert"></span>

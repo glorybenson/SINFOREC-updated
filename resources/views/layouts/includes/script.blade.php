@@ -22,7 +22,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $(document).ready(function() {
-            $('#datatable').DataTable({    
+            $('#datatable').DataTable({
                 "language": {
                     "info": "Vue de _START_ a _END_ sur _TOTAL_ entrées",
                     "search": "chercher:",
@@ -34,7 +34,7 @@
                 }
             })
         });
-    
+
 
     $(document).ready(function() {
         $('select').selectpicker();
@@ -361,12 +361,19 @@
                     const input = $(this).closest('.form-field').find('input[type="text"]');
                     const dataFor = $(this).data('for');
                     const fatherInput = $(`[name="${dataFor}"]`);
+
                     if ($(this).val() === 'father_address') {
                         input.val(fatherInput.val());
-                        input.hide();
+                        //input.hide();
+                    } else if ($(this).val() === '' && input.val() === fatherInput.val()) {
+                        $(this).val('father_address');
+                        //input.hide();
+                    } else if ($(this).val() === '' && input.val().length) {
+                        $(this).val('differente');
+                        input.show();
                     } else if($(this).val() === '') {
                         input.val('');
-                        input.hide();
+                        //input.hide();
                     } else {
                         input.val('');
                         input.show();
@@ -385,7 +392,7 @@
 
             div.addEventListener('click', function(){
                 if(open){
-                    icon.className = 'fa fa-angle-down';  
+                    icon.className = 'fa fa-angle-down';
                 } else{
                     icon.className = 'fa fa-angle-down open';
                 }

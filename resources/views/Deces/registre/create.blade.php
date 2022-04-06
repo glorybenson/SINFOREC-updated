@@ -354,7 +354,7 @@
                                                        name="deceased_father-dob" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback21" required >
                                                 <span class="feedback-new" id="invalid-feedback21" role="alert"></span>
                                             </div>
-                                           
+
                                             <div class="row mb-4">
                                                 <label for="deceased_father-profession">Profession du Père du Défunt / de la Défunte</label>
                                                 <input id="deceased_father-profession" type="text" class="form-control
@@ -419,7 +419,7 @@
                                                        name="deceased_mother-dob" class="form-control serializable" tabindex="3" data-parsley-errors-container="#invalid-feedback27" required >
                                                 <span class="feedback-new" id="invalid-feedback27" role="alert"></span>
                                             </div>
-                                            
+
 
                                             <div class="row mb-3">
                                                 <label for="deceased_mother-profession" class="required">Profession de la Mère du Défunt / de la Défunte </label>
@@ -438,13 +438,13 @@
                                                 <label for="deceased_mother_address">Addresse de la Mère du Défunt / de la Défunte</label>
                                                 <select data-live-search="true" data-name="deceased_mother_address"
                                                         data-for="deceased_father-address" class="selectpicker w-100
-                                                serializable modifiable address-special-select" tabindex="2" required >
+                                                serializable modifiable address-special-select" tabindex="2">
 
                                                     <option value="" selected>--</option>
                                                     <option value="father_address">Meme que le Pere</option>
                                                     <option value="differente">Differente</option>
                                                 </select>
-                                                <input id="deceased_mother_address" type="text" class="form-control
+                                                <input id="deceased_mother-address" type="text" class="form-control
                                                 serializable" name="deceased_mother-address" tabindex="3" data-parsley-errors-container="#invalid-feedback30" required >
                                                 <span class="feedback-new" id="invalid-feedback30" role="alert"></span>
                                                 @if ($errors->has('description'))
@@ -491,7 +491,7 @@
                                             </span>
                                                 @endif
                                             </div>
-                                            
+
                                             <div class="row mb-4">
                                                 <label for="declarant_address">Adresse du déclarant</label>
                                                 <input id="declarant_address" type="text" class="form-control
@@ -546,7 +546,7 @@
                             </div>
                         </div>
 
-                      
+
 
                         <div class="form-section current">
                             <div class="card">

@@ -26,9 +26,9 @@ final class CelibatController extends Controller
      */
     public function index()
     {
-        $add = DB::table('deces')
-            ->join('users', 'deces.created_by', '=', 'users.id')
-            ->select('deces.*')
+        $add = DB::table('celibat')
+            ->join('users', 'celibat.created_by', '=', 'users.id')
+            ->select('celibat.*')
             ->get();
         return view('celibat.index', [
             'add' => $add
@@ -42,28 +42,11 @@ final class CelibatController extends Controller
      */
     public function create()
     {
-       /* $shell = new \stdClass();
+       $shell = new \stdClass();
         $binding = Util::load( $shell);
-        $binding[ 'post_url'] = route( 'marriage.registre.create.post');
-        $binding[ 'page_url'] = route( 'marriage.registre.create');
-        $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
-
-        $binding['fields'] = [
-            ['title' => 'Zone Gérographique', 'is_filled' => false],
-            ['title' => 'Acte de Mariage', 'is_filled' => false],
-            ['title' => "Renseignement sur l'Epoux", 'is_filled' => false],
-            ['title' => "Renseignement sur le Père de l'Epoux", 'is_filled' => false],
-            ['title' => "Renseignement sur la Mère de l'Epoux", 'is_filled' => false],
-            ['title' => "Renseignement sur l'Epouse", 'is_filled' => false],
-            ['title' => "Renseignement sur le Père de l'Epouse", 'is_filled' => false],
-            ['title' => "Renseignement sur la Mère de l'Epouse", 'is_filled' => false],
-            ['title' => "Renseignements additionnels ", 'is_filled' => false],
-            ['title' => "Jugement", 'is_filled' => false],
-            ['title' => "Premier témoin de l'Epoux", 'is_filled' => false],
-            ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => false],
-            ['title' => "Premier témoin de l'Epouse", 'is_filled' => false],
-            ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => false],
-        ];*/
+        $binding[ 'post_url'] = route( 'celibat.create.post');
+        $binding[ 'page_url'] = route( 'celibat.create');
+        
 
         return view('celibat.create', );
     }
@@ -76,46 +59,7 @@ final class CelibatController extends Controller
      */
     public function store(Request $request)
     {
-        /*
-        $inputs = $request->all();
-        unset($inputs['_token']);
-        if( array_key_exists( 'src', $inputs))
-        {
-            unset( $inputs[ 'src']);
-            $ajax_call = true;
-        }
-
-        if( array_key_exists( 'id', $inputs)) {
-            $add = Marriage::find( $inputs[ 'id']);
-            $add->values = json_encode( $inputs);
-            $add->update();
-            return $add;
-        } else if (array_key_exists('docId', $inputs)) {
-            $add = Marriage::find( $inputs[ 'docId']);
-            $add->values = json_encode( $inputs);
-            $add->update();
-        } else
-        {
-            $add = new Marriage();
-            $add->values = json_encode( $inputs);
-            $add->created_by = Auth::user()[ 'id'];
-            $add->done = isset( $ajax_call) ? 'no' : 'yes';
-            $add->save();
-            $inputs[ 'id'] = $add->id;
-            $add->values = json_encode( $inputs);
-            $add->update();
-        }
-
-        if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
-        {
-            $id = $add->id;
-            return response("{ \"message\": \"Ajout créée avec succès\", \"id\": $id}", 200)
-                ->header('Content-Type', 'application/json')
-                ->header( 'charset', 'utf-8');
-        }
-
-        return Redirect::route('marriage.registre')->with('success', 'Ajout créée avec succès');
-    */
+        
     }
 
     /**

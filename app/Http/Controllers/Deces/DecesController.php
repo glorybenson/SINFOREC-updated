@@ -193,7 +193,6 @@ final class DecesController extends Controller
             ['declarant-first_name', 'declarant_name', 'declarant_address', 'declarant-profession',
                 'declarant_info-cin', 'parente'],
             ['judgement-judgement'],
-
         ];
         $formNamesFilled = array_map(function ($fields) use ($old) {
             $values = json_decode($old->values, true);

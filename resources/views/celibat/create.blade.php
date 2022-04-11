@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                        <form method="POST" action="{{ route('create.user.post') }}">
+                                        <form method="POST" action="{{ $post_url }}">
                                             @csrf
 
                                         <div class="row mb-3">
@@ -62,7 +62,7 @@
                                         </div>
 
 
-                                    
+
                                     <div class="row mb-3">
                                         <label for="dob" class="col-md-2 col-form-label text-md-end">
                                             Date de Naissance</label>

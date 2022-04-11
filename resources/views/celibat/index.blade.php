@@ -34,7 +34,7 @@
                                 <th>Prénom</th>
                                 <th>Nom de famille </th>
                                 <th>Date de Naissance</th>
-                                
+
                                 <th>Creer par</th>
                                 <th>Cree le</th>
                                 <th>Action</th>
@@ -45,33 +45,35 @@
                                         if(isset($item))
                                             $item->values = json_decode( $item->values);
                                     @endphp
+
                                     <tr>
                                         <td>
-                                            
+                                            {{ $item->values->{'demande'} }}
                                         </td>
                                         <td>
-                                            
+                                            {{ $item->values->{'declaration_number'} }}
                                         </td>
                                         <td>
-                                            
+                                            {{ $item->values->{'first_name'} }}
                                         </td>
-                                        
+
                                         <td>
-                                        </td>
-                                        <td>
-                                            
+                                            {{ $item->values->{'last_name'} }}
                                         </td>
                                         <td>
-                                            
+                                            {{ $item->values->{'dob'} }}
                                         </td>
                                         <td>
-                                            
+                                            {{ \App\Models\User::find($item->created_by)->first_name }}
+                                        </td>
+                                        <td>
+                                            {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
                                             <a class="text-dark" href="">
                                                 <i class="feather-eye"></i></a>
                                             <a href=""
-                                               class="mx-2 text-dark"><i class="feather-edit"></i></a>   
+                                               class="mx-2 text-dark"><i class="feather-edit"></i></a>
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
                                                href=""><i

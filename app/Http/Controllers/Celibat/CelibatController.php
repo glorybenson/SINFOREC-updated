@@ -119,7 +119,7 @@ final class CelibatController extends Controller
             'values' => $values,
         ];
 
-        return view('Deces.registre.show', $binding);
+        return view('celibat.show', $binding);
     }
 
     /**

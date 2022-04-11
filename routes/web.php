@@ -151,6 +151,10 @@ Route::middleware( 'auth')->group( function () {
     Route::get('/celibat', [App\Http\Controllers\Celibat\CelibatController::class, 'index'])->name('celibat.index');
     Route::get('/celibat/create', [App\Http\Controllers\Celibat\CelibatController::class, 'create'])->name('celibat.create');
     Route::post('/celibat/create', [App\Http\Controllers\Celibat\CelibatController::class, 'store'])->name('celibat.create.post');
+    Route::get('/celibat/{id}/edit', [App\Http\Controllers\Deces\DecesController::class, 'edit'])->name('celibat.edit');
+    Route::post('/celibat/{id}/edit', [App\Http\Controllers\Deces\DecesController::class, 'update'])->name('celibat.edit.post');
+    Route::get('/celibat/{id}/detail', [App\Http\Controllers\Deces\DecesController::class, 'show'])->name('celibat.show');
+    Route::get('/celibat/{id}/delete', [App\Http\Controllers\Deces\DecesController::class, 'destroy'])->name('celibat.delete');
 
     //Vie Collectif
     Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');

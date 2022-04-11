@@ -130,7 +130,17 @@ final class CelibatController extends Controller
      */
     public function edit( $id)
     {
+        $old = Celibat::find( $id);
+        $shell = new \stdClass();
+        $binding = Util::load( $shell);
+        $binding[ 'old'] = $old->values;
+        $binding[ 'post_url'] = route( 'celibat.edit.post', [ 'id' => $id]);
+        $binding[ 'page_url'] = route( 'celibat.edit', [ 'id' => $id]);
 
+        $binding[ 'is_edit'] = true;
+        $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
+
+        return view('celibat.create', $binding);
     }
 
     /**
@@ -142,14 +152,14 @@ final class CelibatController extends Controller
      */
     public function update( Request $request, $id)
     {
-        /*$inputs = $request->all();
+        $inputs = $request->all();
         unset($inputs['_token']);
         if( array_key_exists( 'src', $inputs))
         {
             unset( $inputs[ 'src']);
             $ajax_call = true;
         }
-        $add = Marriage::find( $id);
+        $add = Celibat::find( $id);
         $add->values = json_encode( $inputs);
         $add->update();
 
@@ -160,8 +170,7 @@ final class CelibatController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('marriage.registre')->with('success', 'Add créée avec succès');
-    */
+        return Redirect::route('celibat.index')->with('success', 'Add créée avec succès');
     }
 
     /**
@@ -172,7 +181,7 @@ final class CelibatController extends Controller
      */
     public function destroy($id)
     {
-       // Marriage::destroy($id);
-        //return redirect()->route('marriage.registre')->with('success', 'Supprimée avec succès');
+        Celibat::destroy($id);
+        return redirect()->route('celibat.index')->with('success', 'Supprimée avec succès');
     }
 }

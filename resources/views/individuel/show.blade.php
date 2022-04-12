@@ -13,7 +13,7 @@
                                 <div class="d-flex align-items-center">
                                     <h5 class="page-title">Dashboard</h5>
                                     <ul class="breadcrumb ml-2">
-                                        <li class="breadcrumb-item"><a href="{{ route('celibat.index') }}">Celibat</a>
+                                        <li class="breadcrumb-item"><a href="{{ route('individuel.index') }}">Celibat</a>
                                         </li>
                                         <li class="breadcrumb-item active">View</li>
                                     </ul>
@@ -25,19 +25,17 @@
                         <div class="col-md-12">
                             <div class="card">
 
+                            <div class="card-header">
+
+                                    <div class="text-right" class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Generer le Certificat de Vie Individuel
+                                    </div>
+                                </div>
+
                                 <div class="card-body">
                                     <div>
-                                        <h4 class="card-title float-left">Certificat De Célibat</h4>
+                                        <h4 class="card-title float-left">Vie Individuel</h4>
                                     </div>
                                     <table class="table table-bordered table-striped">
-                                        <tr>
-                                            <td>Date de la demande</td>
-                                            <td>{{ $values->{'demande'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Numéro de déclaration</td>
-                                            <td>{{ $values->{'declaration_number'} }}</td>
-                                        </tr>
                                         <tr>
                                             <td>Prénom</td>
                                             <td>{{ $values->{'first_name'} }}</td>
@@ -47,17 +45,18 @@
                                             <td>{{ $values->{'last_name'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Date de Naissance</td>
-                                            <td>{{ $values->{'dob'} }}</td>
+                                            <td>Date de la demande</td>
+                                            <td>{{ $values->{'demande'} }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Addresse</td>
-                                            <td>{{ $values->{'address'} }}</td>
+                                            <td>Officier d'ETAT CIVIL</td>
+                                            <td>{{ $civilServantName }}</td>
                                         </tr>
                                         <tr>
-                                            <td>C.I.N</td>
-                                            <td>{{ $values->{'cin'} }}</td>
+                                            <td>Numéro de déclaration</td>
+                                            <td>{{ $values->{'declaration_number'} }}</td>
                                         </tr>
+                                        
                                     </table>
                                     <div class="mb-5">
                                     </div>

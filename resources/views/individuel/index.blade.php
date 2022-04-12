@@ -62,7 +62,7 @@
                                             {{ $item->values->{'last_name'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'{{ \App\Models\User::find($item->created_by)->first_name }}'} }}
+                                            {{ \App\Models\User::find($item->created_by)->first_name }}
                                         </td>
                                         <td>
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}

@@ -26,10 +26,25 @@ final class IndividuelController extends Controller
      */
     public function index()
     {
-        $add = DB::table('deces')
-            ->join('users', 'deces.created_by', '=', 'users.id')
-            ->select('deces.*')
+        $add = DB::table('individuel')
+            ->join('users', 'individuel.created_by', '=', 'users.id')
+            ->select('individuel.*')
             ->get();
+
+            $add_new = [];
+
+        foreach ($add as $item) {
+            $values = json_decode($item->values, true);
+            if (isset($values['certificate-civil_servant'])) {
+                $civilServant = User::find($values['certificate-civil_servant']);
+            }
+            $item->civilServantName = isset($civilServant)
+                ? $civilServant->first_name . ' ' . $civilServant->last_name
+                : '--';
+            $add_new[] = $item;
+        }
+
+
         return view('individuel.index', [
             'add' => $add
         ]);
@@ -40,32 +55,16 @@ final class IndividuelController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
+
     public function create()
     {
-       /* $shell = new \stdClass();
+        $shell = new \stdClass();
         $binding = Util::load( $shell);
-        $binding[ 'post_url'] = route( 'marriage.registre.create.post');
-        $binding[ 'page_url'] = route( 'marriage.registre.create');
+        $binding[ 'post_url'] = route( 'individuel.create.post');
+        $binding[ 'page_url'] = route( 'individuel.create');
         $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
 
-        $binding['fields'] = [
-            ['title' => 'Zone Gérographique', 'is_filled' => false],
-            ['title' => 'Acte de Mariage', 'is_filled' => false],
-            ['title' => "Renseignement sur l'Epoux", 'is_filled' => false],
-            ['title' => "Renseignement sur le Père de l'Epoux", 'is_filled' => false],
-            ['title' => "Renseignement sur la Mère de l'Epoux", 'is_filled' => false],
-            ['title' => "Renseignement sur l'Epouse", 'is_filled' => false],
-            ['title' => "Renseignement sur le Père de l'Epouse", 'is_filled' => false],
-            ['title' => "Renseignement sur la Mère de l'Epouse", 'is_filled' => false],
-            ['title' => "Renseignements additionnels ", 'is_filled' => false],
-            ['title' => "Jugement", 'is_filled' => false],
-            ['title' => "Premier témoin de l'Epoux", 'is_filled' => false],
-            ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => false],
-            ['title' => "Premier témoin de l'Epouse", 'is_filled' => false],
-            ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => false],
-        ];
-
-        return view('marriage.registre.create', $binding);*/
+        return view('individuel.create', $binding);
     }
 
     /**
@@ -76,9 +75,9 @@ final class IndividuelController extends Controller
      */
     public function store(Request $request)
     {
-        /*
         $inputs = $request->all();
         unset($inputs['_token']);
+
         if( array_key_exists( 'src', $inputs))
         {
             unset( $inputs[ 'src']);
@@ -86,25 +85,22 @@ final class IndividuelController extends Controller
         }
 
         if( array_key_exists( 'id', $inputs)) {
-            $add = Marriage::find( $inputs[ 'id']);
+            $add = Individuel::find( $inputs[ 'id']);
             $add->values = json_encode( $inputs);
             $add->update();
             return $add;
         } else if (array_key_exists('docId', $inputs)) {
-            $add = Marriage::find( $inputs[ 'docId']);
+            $add = Individuel::find( $inputs[ 'docId']);
             $add->values = json_encode( $inputs);
             $add->update();
         } else
         {
-            $add = new Marriage();
+            $add = new Individuel();
             $add->values = json_encode( $inputs);
             $add->created_by = Auth::user()[ 'id'];
-            $add->done = isset( $ajax_call) ? 'no' : 'yes';
             $add->save();
-            $inputs[ 'id'] = $add->id;
-            $add->values = json_encode( $inputs);
-            $add->update();
         }
+
 
         if ( isset( $ajax_call) && empty($inputs['saveAndExit']))
         {
@@ -114,8 +110,8 @@ final class IndividuelController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('marriage.registre')->with('success', 'Ajout créée avec succès');
-    */
+
+        return Redirect::route('individuel.index')->with('success', 'Ajout créée avec succès');
     }
 
     /**
@@ -126,10 +122,10 @@ final class IndividuelController extends Controller
      */
     public function show($id)
     {
-       /* $add = DB::table('marriage')
-            ->join('users', 'marriage.created_by', '=', 'users.id')
-            ->select('marriage.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
-            ->where('marriage.id', '=', $id)
+        $add = DB::table('individuel')
+            ->join('users', 'individuel.created_by', '=', 'users.id')
+            ->select('individuel.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
+            ->where('individuel.id', '=', $id)
             ->get()->first();
         $values = json_decode($add->values);
 
@@ -138,34 +134,7 @@ final class IndividuelController extends Controller
             'values' => $values,
         ];
 
-        $valuesArr = json_decode($add->values, true);
-
-        $binding['models'] = [
-            'judgment-region' => empty($valuesArr['judgment-region']) ? '--' :
-                Region::find($values->{'judgment-region'})->description,
-            'geographical_zone-pays' => empty($valuesArr['geographical_zone-pays']) ? '--' :
-                Pay::find($values->{'geographical_zone-pays'})->description,
-            'geographical_zone-centre' => empty($valuesArr['geographical_zone-centre']) ? '--' :
-                Centre::find($values->{'geographical_zone-centre'})->description,
-            'geographical_zone-communes' => empty($valuesArr['geographical_zone-communes']) ? '--' :
-                Communes::find($values->{'geographical_zone-communes'})->description,
-            'geographical_zone-departments' => empty($valuesArr['geographical_zone-departments']) ? '--' :
-                Department::find($values->{'geographical_zone-departments'})->description,
-            'geographical_zone-regions' => empty($valuesArr['geographical_zone-regions']) ? '--' :
-                Region::find($values->{'geographical_zone-regions'})->description,
-            'geographical_zone-arrondissements' => empty($valuesArr['geographical_zone-arrondissements']) ? '--' :
-                Arrondissement::find($values->{'geographical_zone-arrondissements'})->description,
-        ];
-
-        if (isset($valuesArr['certificate-civil_servant'])) {
-            $civilServant = User::find($valuesArr['certificate-civil_servant']);
-        }
-        $binding['civilServantName'] = isset($civilServant)
-            ? $civilServant->first_name . ' ' . $civilServant->last_name
-            : '--';
-
-        return view('marriage.registre.show', $binding);
-    */
+        return view('individuel.show', $binding);
     }
 
     /**
@@ -176,75 +145,17 @@ final class IndividuelController extends Controller
      */
     public function edit( $id)
     {
-       /*
-        $old = Marriage::find( $id);
+        $old = Individuel::find( $id);
         $shell = new \stdClass();
         $binding = Util::load( $shell);
         $binding[ 'old'] = $old->values;
-        $binding[ 'post_url'] = route( 'marriage.registre.edit.post', [ 'id' => $id]);
-        $binding[ 'page_url'] = route( 'marriage.registre.edit', [ 'id' => $id]);
-        $formFields = [
-            ['geographical_zone-pays', 'geographical_zone-arrondissements', 'geographical_zone-departments',
-                'geographical_zone-communes', 'geographical_zone-regions', 'geographical_zone-centre'],
-            ['certificate-date_of_marriage', 'certificate-decl_number', 'certificate-date_of_decl',
-                'certificate-wedding_time', 'certificate-wedding_venue', 'certificate-civil_servant'],
-            ['groom-first_name', 'groom-family_name', 'groom-dob', 'groom-birth_place',
-                'groom-profession', 'groom-address'],
-            ['groom_father-first_name', 'groom_father-family_name', 'groom_father-dob', 'groom_father-birth_place',
-                'groom_father-profession', 'groom_father-address'],
-            ['groom_mother-first_name', 'groom_mother-family_name', 'groom_mother-dob', 'groom_mother-birth_place',
-                'groom_mother-profession', 'groom_mother-address'],
-            ['bride-first_name', 'bride-family_name', 'bride-dob', 'bride-birth_place',
-                'bride-profession', 'bride-address'],
-            ['bride_father-first_name', 'bride_father-family_name', 'bride_father-dob', 'bride_father-birth_place',
-                'bride_father-profession', 'bride_father-address'],
-            ['bride_mother-first_name', 'bride_mother-family_name', 'bride_mother-dob', 'bride_mother-birth_place',
-                'bride_mother-profession', 'bride_mother-address'],
-            ['additional-regime', 'additional-type', 'additional-feats'],
-            ['judgement-judgement'],
-            ['groom_witness_one-first_name','groom_witness_one-name','groom_witness_one-profession',
-                'groom_witness_one-cin','groom_witness_one-address'],
-            ['groom_witness_two-first_name','groom_witness_two-name','groom_witness_two-profession',
-                'groom_witness_two-cin','groom_witness_two-address'],
-            ['bride_witness_one-first_name','bride_witness_one-name','bride_witness_one-profession',
-                'bride_witness_one-cin','bride_witness_one-address'],
-            ['bride_witness_two-first_name','bride_witness_two-name','bride_witness_two-profession',
-                'bride_witness_two-cin','bride_witness_two-address'],
-        ];
-        $formNamesFilled = array_map(function ($fields) use ($old) {
-            $values = json_decode($old->values, true);
-            foreach ($values as $key => $value) {
-                if (in_array($key, $fields) && empty($value)) {
-                    return false;
-                } elseif ($fields[0] === 'judgement-judgement' && $values['judgement-judgement'] !== 'Non'
-                    && empty($value)) {
-                    return false;
-                }
-            }
+        $binding[ 'post_url'] = route( 'individuel.edit.post', [ 'id' => $id]);
+        $binding[ 'page_url'] = route( 'individuel.edit', [ 'id' => $id]);
 
-            return true;
-        }, $formFields);
-
-        $binding['fields'] = [
-            ['title' => 'Zone Gérographique', 'is_filled' => $formNamesFilled[0]],
-            ['title' => 'Acte de Mariage', 'is_filled' => $formNamesFilled[1]],
-            ['title' => "Renseignement sur l'Epoux", 'is_filled' => $formNamesFilled[2]],
-            ['title' => "Renseignement sur le Père de l'Epoux", 'is_filled' => $formNamesFilled[3]],
-            ['title' => "Renseignement sur la Mère de l'Epoux", 'is_filled' => $formNamesFilled[4]],
-            ['title' => "Renseignement sur l'Epouse", 'is_filled' => $formNamesFilled[5]],
-            ['title' => "Renseignement sur le Père de l'Epouse", 'is_filled' => $formNamesFilled[6]],
-            ['title' => "Renseignement sur la Mère de l'Epouse", 'is_filled' => $formNamesFilled[7]],
-            ['title' => "Renseignements additionnels ", 'is_filled' => $formNamesFilled[8]],
-            ['title' => "Jugement", 'is_filled' => $formNamesFilled[9]],
-            ['title' => "Premier témoin de l'Epoux", 'is_filled' => $formNamesFilled[10]],
-            ['title' => "Deuxieme témoin de l'Epoux", 'is_filled' => $formNamesFilled[11]],
-            ['title' => "Premier témoin de l'Epouse", 'is_filled' => $formNamesFilled[12]],
-            ['title' => "Deuxieme témoin de l'Epouse", 'is_filled' => $formNamesFilled[13]],
-        ];
         $binding[ 'is_edit'] = true;
         $binding['users'] = User::with('created_user:id,first_name,last_name')->orderBy('id', 'desc')->get();
 
-        return view('marriage.registre.create', $binding); */
+        return view('individuel.create', $binding);
     }
 
     /**
@@ -256,14 +167,14 @@ final class IndividuelController extends Controller
      */
     public function update( Request $request, $id)
     {
-        /*$inputs = $request->all();
+        $inputs = $request->all();
         unset($inputs['_token']);
         if( array_key_exists( 'src', $inputs))
         {
             unset( $inputs[ 'src']);
             $ajax_call = true;
         }
-        $add = Marriage::find( $id);
+        $add = Individuel::find( $id);
         $add->values = json_encode( $inputs);
         $add->update();
 
@@ -274,8 +185,7 @@ final class IndividuelController extends Controller
                 ->header( 'charset', 'utf-8');
         }
 
-        return Redirect::route('marriage.registre')->with('success', 'Add créée avec succès');
-    */
+        return Redirect::route('individuel.index')->with('success', 'Add créée avec succès');
     }
 
     /**
@@ -286,7 +196,9 @@ final class IndividuelController extends Controller
      */
     public function destroy($id)
     {
-       // Marriage::destroy($id);
-        //return redirect()->route('marriage.registre')->with('success', 'Supprimée avec succès');
+        Individuel::destroy($id);
+        return redirect()->route('individuel.index')->with('success', 'Supprimée avec succès');
     }
 }
+
+

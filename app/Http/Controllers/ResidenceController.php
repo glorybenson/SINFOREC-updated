@@ -3,6 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Arrondissement;
+use App\Models\Centre;
+use App\Models\Communes;
+use App\Models\Deces;
+use App\Models\Department;
+use App\Models\Residence;
+use App\Models\Pay;
+use App\Models\Region;
+use App\Models\User;
+use App\Models\Util;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class ResidenceController extends Controller
 {

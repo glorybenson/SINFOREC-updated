@@ -22,7 +22,7 @@
                         <h4 class="card-title float-left">
                             Vie Individuel</h4>
                         <div class="text-right">
-                            <a href="" class="btn btn-dark px-3">Ajout</a>
+                            <a href="{{ route('individuel.create') }}" class="btn btn-dark px-3">Ajout</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -68,13 +68,13 @@
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="">
+                                            <a class="text-dark" href="{{ route('individuel.show', ['id' => $item->id, 'rt' => time()]) }}">
                                                 <i class="feather-eye"></i></a>
-                                            <a href=""
-                                               class="mx-2 text-dark"><i class="feather-edit"></i></a>   
+                                            <a href="{{ route('individuel.edit', ['id' => $item->id]) }}"
+                                               class="mx-2 text-dark"><i class="feather-edit"></i></a>
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href=""><i
+                                               href="{{ route('individuel.delete', ['id' => $item->id]) }}"><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

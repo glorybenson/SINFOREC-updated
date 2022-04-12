@@ -12,7 +12,7 @@
                             <div class="d-flex align-items-center">
                                 <h5 class="page-title">Dashboard</h5>
                                 <ul class="breadcrumb ml-2">
-                                    <li class="breadcrumb-item"><a href="{{ route('celibat.index') }}">Vie Individuel</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('individuel.index') }}">Vie Individuel</a>
                                     </li>
                                     <li class="breadcrumb-item active">Vie Individuel</li>
                                 </ul>
@@ -26,7 +26,7 @@
                             <div class="card-header">
                                 <h4 class="card-title float-left">Vie Individuel</h4>
                                 <div class="text-right">
-                                    <a href="{{ route('celibat.index') }}" class="btn btn-dark px-3">
+                                    <a href="{{ route('individuel.index') }}" class="btn btn-dark px-3">
                                         Retour aux Célibat</a>
                                 </div>
                             </div>

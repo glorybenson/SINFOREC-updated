@@ -32,6 +32,7 @@
                                 <th>Date de la demande</th>
                                 <th>Officier d'Etat Civil</th>
                                 <th>Numéro de déclaration</th>
+                                <th>Prénom </th>
                                 <th>Nom de famille </th>                              
                                 <th>Creer par</th>
                                 <th>Cree le</th>
@@ -45,23 +46,26 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            
+                                            {{ $item->values->{'demande'} }} 
                                         </td>
                                 
                                         <td>
-                                            
+                                            {{ $item->civilServantName }}
                                         </td>
                                         
-                                        <td>
+                                        <td> {{ $item->values->{'declaration_number'} }}
                                         </td>
                                         <td>
-                                            
+                                            {{ $item->values->{'first_name'} }}
                                         </td>
                                         <td>
-                                            
+                                            {{ $item->values->{'last_name'} }}
                                         </td>
                                         <td>
-                                            
+                                            {{ $item->values->{'{{ \App\Models\User::find($item->created_by)->first_name }}'} }}
+                                        </td>
+                                        <td>
+                                            {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
                                             <a class="text-dark" href="">

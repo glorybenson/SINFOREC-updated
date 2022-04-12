@@ -173,5 +173,11 @@ Route::middleware( 'auth')->group( function () {
     //Residence
     Route::get('/residence', [App\Http\Controllers\ResidenceController::class, 'index'])->name('residence.index');
     Route::get('/residence/create', [App\Http\Controllers\ResidenceController::class, 'create'])->name('residence.create');
+    Route::post('/residence/create', [App\Http\Controllers\ResidenceController::class, 'store'])->name('residence.create.post');
+    Route::get('/residence/registre/{id}/edit', [App\Http\Controllers\ResidenceController::class, 'edit'])->name('residence.edit');
+    Route::post('/residence/registre/{id}/edit', [App\Http\Controllers\ResidenceController::class, 'update'])
+        ->name('residence.edit.post');
+    Route::get('/residence/{id}/detail', [App\Http\Controllers\ResidenceController::class, 'show'])->name('residence.show');
+    Route::get('/residence/{id}/delete', [App\Http\Controllers\ResidenceController::class, 'destroy'])->name('residence.delete');
 
 });

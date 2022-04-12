@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="row">
+    data-tool="{{ isset( $old) ? $old : '{}' }}"
+     data-conn="{{ $link }}">
     <div class="col-md-10 mx-auto">
         <div class="mt-3">
             <div class="content container-fluid">

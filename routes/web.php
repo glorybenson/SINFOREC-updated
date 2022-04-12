@@ -162,6 +162,13 @@ Route::middleware( 'auth')->group( function () {
 
     //Vie Individuel
     Route::get('/individuel', [App\Http\Controllers\Individuel\IndividuelController::class, 'index'])->name('individuel.index');
+    Route::get('/individuel/create', [App\Http\Controllers\Individuel\IndividuelController::class, 'create'])->name('individuel.create');
+    Route::post('/individuel/create', [App\Http\Controllers\Individuel\IndividuelController::class, 'store'])->name('individuel.create.post');
+    Route::get('/individuel/registre/{id}/edit', [App\Http\Controllers\Individuel\IndividuelController::class, 'edit'])->name('individuel.edit');
+    Route::post('/individuel/registre/{id}/edit', [App\Http\Controllers\Individuel\IndividuelController::class, 'update'])
+        ->name('individuel.edit.post');
+    Route::get('/individuel/{id}/detail', [App\Http\Controllers\Individuel\IndividuelController::class, 'show'])->name('individuel.show');
+    Route::get('/individuel/{id}/delete', [App\Http\Controllers\Individuel\IndividuelController::class, 'destroy'])->name('individuel.delete');
 
     //Residence
     Route::get('/residence', [App\Http\Controllers\ResidenceController::class, 'index'])->name('residence.index');

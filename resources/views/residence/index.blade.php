@@ -26,13 +26,10 @@
                         </div>
                     </div>
 
-                    <!--<link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet"/>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                    <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>-->
+                    
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table mb-0 table-striped border-0 data-table" id="datatable">
-                                <!--<table id="example" class="display" cellspacing="0" width="100%">-->
                                 <thead class="thead-light">
                                 <th>Prénom</th>
                                 <th>Nom de famille</th>
@@ -56,26 +53,26 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            {{ $item->values->{'deceased-first_name'} }}
+                                            {{ $item->values->{'first_name'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'deceased-family_name'} }}
+                                            {{ $item->values->{'last_name'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'deceased-dob'} }}</td>
+                                            {{ $item->values->{'dob'} }}</td>
                                         <td>
-                                            {{ $item->values->{'deceased-birth_place'} }}</td>
+                                            {{ $item->values->{'place_of_birth'} }}</td>
                                         <td>
-                                            {{ $item->values->{'date_du_deces'} }}
+                                            {{ $item->values->{'profession'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'declaration_number'} }}
+                                            {{ $item->values->{'sex_info'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'date_of_death'} }}
+                                            {{ $item->values->{'address'} }}
                                         </td>
                                         <td>
-                                            {{ $item->values->{'date_of_death'} }}
+                                            {{ $item->values->{'demande'} }}
                                         </td>
                                         <td>
                                             {{ \App\Models\User::find($item->created_by)->first_name }}
@@ -84,13 +81,13 @@
                                             {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="">
+                                            <a class="text-dark" href="{{ route('residence.show', ['id' => $item->id, 'rt' => time()]) }}">
                                                 <i class="feather-eye"></i></a>
-                                            <a href=""
+                                            <a href="{{ route('residence.edit', ['id' => $item->id]) }}"
                                                class="mx-2 text-dark"><i class="feather-edit"></i></a>
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href=""><i
+                                               href="{{ route('residence.delete', ['id' => $item->id]) }}"><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

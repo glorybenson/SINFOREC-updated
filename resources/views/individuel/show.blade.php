@@ -13,7 +13,7 @@
                                 <div class="d-flex align-items-center">
                                     <h5 class="page-title">Dashboard</h5>
                                     <ul class="breadcrumb ml-2">
-                                        <li class="breadcrumb-item"><a href="{{ route('individuel.index') }}">Celibat</a>
+                                        <li class="breadcrumb-item"><a href="{{ route('individuel.index') }}">Vie Individuel</a>
                                         </li>
                                         <li class="breadcrumb-item active">View</li>
                                     </ul>

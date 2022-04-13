@@ -47,6 +47,8 @@
                                         </span>
                                             @endif
                                         </div>
+
+                                        <div style="float:left;"> </div>
                                     
 
                                     

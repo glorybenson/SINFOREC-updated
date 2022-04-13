@@ -30,7 +30,7 @@
                                 <div class="text-right">
                                     <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Generer le Certificat de Vie Individuel
                                     </h5>
-                                    <h5 class="card-title pull-left">Vie Individuel
+                                    <h5 class="card-title float-left">Vie Individuel
                                     </h5>
                                 </div>
                             </div>

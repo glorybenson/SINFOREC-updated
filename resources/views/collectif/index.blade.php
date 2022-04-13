@@ -45,32 +45,34 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            
+                                            {{ $item->values->{'pere_first-name'} }}
                                         </td>
                                 
                                         <td>
-                                            
+                                            {{ $item->values->{'pere_last-name'} }} 
                                         </td>
                                         
                                         <td>
+                                            {{ $item->values->{'mere_first-name'} }}
                                         </td>
                                         <td>
+                                            {{ $item->values->{'mere_last-name'} }}
                                             
                                         </td>
                                         <td>
-                                            
+                                            {{ \App\Models\User::find($item->created_by)->first_name }}
                                         </td>
                                         <td>
-                                            
+                                            {{ Carbon\Carbon::parse($item->created_at)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="">
+                                            <a class="text-dark" href="{{ route('collectif.show', ['id' => $item->id, 'rt' => time()]) }}">
                                                 <i class="feather-eye"></i></a>
-                                            <a href=""
+                                            <a href="{{ route('collectif.edit', ['id' => $item->id]) }}"
                                                class="mx-2 text-dark"><i class="feather-edit"></i></a>   
                                             <a class="text-dark"
                                                onclick="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');"
-                                               href=""><i
+                                               href="{{ route('collectif.delete', ['id' => $item->id]) }}"><i
                                                     class="feather-trash"></i></a>
                                         </td>
                                     </tr>

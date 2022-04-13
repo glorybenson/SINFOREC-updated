@@ -26,7 +26,7 @@
                             <div class="card-header">
                                 <h4 class="card-title float-left">Certificat de Vie Collectif</h4>
                                 <div class="text-right">
-                                    <a href="{{ route('celibat.index') }}" class="btn btn-dark px-3">
+                                    <a href="{{ route('collectif.index') }}" class="btn btn-dark px-3">
                                         Retour aux Collectif</a>
                                 </div>
                             </div>

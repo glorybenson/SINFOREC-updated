@@ -49,6 +49,8 @@
                                         </div>
                                     </div>
 
+                                    <div style="clear:both;">&nbsp;
+
                                         <div style="float:left;" class="row mb-3">
                                             <label for="last_name" class="col-md-2 col-form-label text-md-end">Nom de famille du demandeur</label>
                                             <div class="col-md-10">
@@ -120,6 +122,7 @@
                                             @endif
                                         </div>
                                         </div>
+                                    </div>
 
 
 

@@ -24,10 +24,17 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
+                                <div class="card-header">
+
+                                    <div>
+                                        <h4 class="card-title ml-0 p-2 pr-3 pl-0 float-left">Certificat De Célibat
+                                        </h4>
+                                    </div>
+                                </div>
 
                                 <div class="card-body">
                                     <div>
-                                        <h4 class="card-title float-left">Certificat De Célibat</h4>
+                                        <h4 class="card-title float-left"></h4>
                                     </div>
                                     <table class="table table-bordered table-striped">
                                         <tr>

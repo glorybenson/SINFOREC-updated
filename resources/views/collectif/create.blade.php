@@ -34,7 +34,7 @@
                                         <form method="POST" action="{{ $post_url }}">
                                             @csrf
 
-                                        <div style="float:left;" class="row mb-3">
+                                        <div style="float:left;" class="form-field row mb-3">
                                             <label for="first_name">Prénom du demandeur</label>
 
                                             
@@ -48,7 +48,7 @@
                                             @endif
                                         </div>
 
-                                        <div style="float:centre;" class="row mb-3">
+                                        <div style="float:left;" class="form-field row mb-3">
                                             <label for="last_name">Nom de famille du demandeur</label>
                                             
                                             <input id="last_name" type="text" class="form-control

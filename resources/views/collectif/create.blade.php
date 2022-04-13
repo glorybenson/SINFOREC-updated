@@ -48,7 +48,7 @@
                                             @endif
                                         </div>
 
-                                        <div style="float:right;" class="row mb-3">
+                                        <div style="float:centre;" class="row mb-3">
                                             <label for="last_name">Nom de famille du demandeur</label>
                                             
                                             <input id="last_name" type="text" class="form-control

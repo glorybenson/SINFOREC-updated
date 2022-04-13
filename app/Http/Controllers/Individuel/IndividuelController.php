@@ -134,6 +134,8 @@ final class IndividuelController extends Controller
             'values' => $values,
         ];
 
+        $valuesArr = json_decode($add->values, true);
+
         if (isset($valuesArr['certificate-civil_servant'])) {
             $civilServant = User::find($valuesArr['certificate-civil_servant']);
         }

@@ -27,9 +27,9 @@
 
                             <div class="card-header">
 
-                                <div class="text-left">
-                                    <h5>Vie Individuel</h5>
-                                </div>
+                                <h3 class="text-left">
+                                    Vie Individuel
+                                </h3>
 
                                 <div class="text-right">
                                     <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Generer le Certificat de Vie Individuel

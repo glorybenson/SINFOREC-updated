@@ -34,7 +34,7 @@
                                         <form method="POST" action="{{ $post_url }}">
                                             @csrf
 
-                                        <div style="float:left; width:24%; margin-right:1%;" class="row mb-3">
+                                        <div style="float:left;" class="row mb-3">
                                             <label for="first_name">Prénom du demandeur</label>
 
                                             
@@ -51,7 +51,7 @@
 
                                     
 
-                                        <div style="float:left; width:24%; margin-right:1%;" class="row mb-3">
+                                        <div style="float:left;" class="row mb-3">
                                             <label for="last_name">Nom de famille du demandeur</label>
                                             
                                             <input id="last_name" type="text" class="form-control
@@ -65,7 +65,7 @@
                                         </div>
                                         
 
-                                        <div style="clear:both;">&nbsp;
+                                        <div style="clear:both;">&nbsp; </div> 
 
                                         <div class="row mb-3">
                                             <label for="pere_first-name" class="col-md-2 col-form-label text-md-end">Prénom du Père</label>
@@ -124,7 +124,7 @@
                                             @endif
                                         </div>
                                         </div>
-                                        </div>
+                                       
 
 
 

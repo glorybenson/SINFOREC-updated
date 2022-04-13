@@ -134,6 +134,13 @@ final class IndividuelController extends Controller
             'values' => $values,
         ];
 
+        if (isset($valuesArr['certificate-civil_servant'])) {
+            $civilServant = User::find($valuesArr['certificate-civil_servant']);
+        }
+        $binding['civilServantName'] = isset($civilServant)
+            ? $civilServant->first_name . ' ' . $civilServant->last_name
+            : '--';
+
         return view('individuel.show', $binding);
     }
 

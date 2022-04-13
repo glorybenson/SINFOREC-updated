@@ -28,7 +28,7 @@
                             <div class="card-header">
 
                                 <div class="text-left">
-                                    <h4 class="card-title float-left">Vie Individuel</h4>
+                                    <h5>Vie Individuel</h5>
                                 </div>
 
                                 <div class="text-right">

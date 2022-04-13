@@ -39,7 +39,7 @@
 
                                             
                                             <input id="first_name" type="text" class="form-control
-                                            serializable" name="first_name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
+                                            serializable" name="first_name" tabindex="1" style="width: 25%" data-parsley-errors-container="#invalid-feedback13" required >
                                             <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
                                             @if ($errors->has('description'))
                                                 <span class="invalid-feedback" role="alert">
@@ -48,16 +48,11 @@
                                             @endif
                                         </div>
 
-                                        <div style="float:left;"> </div>
-                                    
-
-                                    
-
                                         <div style="float:left;" class="row mb-3">
                                             <label for="last_name">Nom de famille du demandeur</label>
                                             
                                             <input id="last_name" type="text" class="form-control
-                                            serializable" name="last_name" tabindex="2" data-parsley-errors-container="#invalid-feedback13" required >
+                                            serializable" name="last_name" tabindex="2" style="width: 25%" data-parsley-errors-container="#invalid-feedback13" required >
                                             <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
                                             @if ($errors->has('description'))
                                                 <span class="invalid-feedback" role="alert">

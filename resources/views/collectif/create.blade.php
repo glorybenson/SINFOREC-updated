@@ -35,7 +35,7 @@
                                             @csrf
 
                                         <div style="float:left;" class="row mb-3">
-                                            <label for="first_name" class="col-md-2 col-form-label text-md-end">Prénom du demandeur</label>
+                                            <label for="first_name">Prénom du demandeur</label>
 
                                             
                                             <input id="first_name" type="text" class="form-control
@@ -52,7 +52,7 @@
                                     
 
                                         <div style="float:left;" class="row mb-3">
-                                            <label for="last_name" class="col-md-2 col-form-label text-md-end">Nom de famille du demandeur</label>
+                                            <label for="last_name">Nom de famille du demandeur</label>
                                             
                                             <input id="last_name" type="text" class="form-control
                                             serializable" name="last_name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >

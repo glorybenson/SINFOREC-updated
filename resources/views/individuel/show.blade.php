@@ -27,17 +27,16 @@
 
                             <div class="card-header">
 
-                                <div class="text-left">
-                                    Vie Individuel
+                                    <div class="text-right" class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Generer le Certificat de Vie Individuel
+                                    </div>
                                 </div>
 
-                                <div class="text-right">
-                                    <h5 class="btn btn-primary ml-2 p-2 pr-3 pl-3 pull-right">Generer le Certificat de Vie Individuel
-                                    </h5>
-                                </div>
+                                
 
                                 <div class="card-body">
-                                
+                                    <div>
+                                        <h4 class="card-title float-left">Vie Individuel</h4>
+                                    </div>
                                     <table class="table table-bordered table-striped">
                                         <tr>
                                             <td>Prénom</td>

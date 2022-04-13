@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Collectif extends Model
 {
-    
+    use HasFactory;
+    protected $table = 'collectif';
 }

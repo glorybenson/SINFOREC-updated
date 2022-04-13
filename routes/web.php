@@ -159,6 +159,13 @@ Route::middleware( 'auth')->group( function () {
 
     //Vie Collectif
     Route::get('/collectif', [App\Http\Controllers\Collectif\CollectifController::class, 'index'])->name('collectif.index');
+    Route::get('/collectif/create', [App\Http\Controllers\Collectif\CollectifController::class, 'create'])->name('collectif.create');
+    Route::post('/collectif/create', [App\Http\Controllers\Collectif\CollectifController::class, 'store'])->name('collectif.create.post');
+    Route::get('/collectif/registre/{id}/edit', [App\Http\Controllers\Collectif\CollectifController::class, 'edit'])->name('collectif.edit');
+    Route::post('/collectif/registre/{id}/edit', [App\Http\Controllers\Collectif\CollectifController::class, 'update'])
+        ->name('collectif.edit.post');
+    Route::get('/collectif/{id}/detail', [App\Http\Controllers\Collectif\CollectifController::class, 'show'])->name('collectif.show');
+    Route::get('/collectif/{id}/delete', [App\Http\Controllers\Collectif\CollectifController::class, 'destroy'])->name('collectif.delete');
 
     //Vie Individuel
     Route::get('/individuel', [App\Http\Controllers\Individuel\IndividuelController::class, 'index'])->name('individuel.index');

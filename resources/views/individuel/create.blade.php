@@ -27,7 +27,7 @@
                                 <h4 class="card-title float-left">Vie Individuel</h4>
                                 <div class="text-right">
                                     <a href="{{ route('individuel.index') }}" class="btn btn-dark px-3">
-                                        Retour aux Célibat</a>
+                                        Retour</a>
                                 </div>
                             </div>
                             <div class="card-body">

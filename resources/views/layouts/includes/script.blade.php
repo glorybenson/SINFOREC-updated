@@ -385,6 +385,15 @@
         }
     });
 
+    var num = 1;
+document.getElementById('btn').addEventListener("click",addInput);
+
+function addInput(){
+var demo = document.getElementById('demo');
+demo.insertAdjacentHTML('beforeend','<div class="form-holder" style="width: 30%;"><a class="form-label">Prénom</a> <br><input name="ttype'+num+'" type="text" placeholder="Prénom" style="width: 100%;" /></div><div class="form-holder" style="width: 31%; margin-left: 0.6%;"><a class="form-label">Nom de famille</a> <br><input name="tname'+num+'" type="text" placeholder="Nom de famille" style="width: 100%;" /></div> <br>');
+ num++;
+}
+
     (function(document){
             var div = document.getElementById('headingOne');
             var icon = document.getElementById('icon');

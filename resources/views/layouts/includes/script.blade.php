@@ -390,7 +390,9 @@ document.getElementById('btn').addEventListener("click",addInput);
 
 function addInput(){
 var demo = document.getElementById('demo');
-demo.insertAdjacentHTML('beforeend','<div class="form-holder" style="width: 30%;"><a class="form-label">Prénom</a> <br><input name="ttype'+num+'" type="text" placeholder="Prénom" style="width: 100%;" /></div><div class="form-holder" style="width: 31%; margin-left: 0.6%;"><a class="form-label">Nom de famille</a> <br><input name="tname'+num+'" type="text" placeholder="Nom de famille" style="width: 100%;" /></div> <br>');
+demo.insertAdjacentHTML('beforeend','<div class="row mb-3" ><a class="col-md-2 col-form-label text-md-end">Prénom</a> <br><div class="col-md-10"><input name="ttype'+num+'" type="text" class="form-control serializable" placeholder="Prénom" "/></div></div><div class="row mb-3"><a class="col-md-2 col-form-label text-md-end">Nom de famille</a> <br><div class="col-md-10"><input name="tname'+num+'" type="text" placeholder="Nom de famille" " /></div></div> <br>');
+ num++;
+}
  num++;
 }
 

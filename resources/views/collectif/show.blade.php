@@ -67,6 +67,11 @@
                                 
                             </table>
                                     
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                       Other family Members</h5>
+                                </div>
                                     <div> Glory Benson
                                     </div>
                                     <input type="hidden" id="btn" value=""/>

@@ -120,8 +120,8 @@ final class CollectifController extends Controller
         ];
 
         $old = Collectif::find( $id);
-        $shell = new \stdClass();
-        $binding = Util::load( $shell);
+        //$shell = new \stdClass();
+        //$binding = Util::load( $shell);
         $binding[ 'old'] = $old->values;
         $binding[ 'page_url'] = route( 'collectif.show', [ 'id' => $id]);
 

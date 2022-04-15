@@ -35,7 +35,7 @@
                                             @csrf
 
                                             <div class="cellContainer">
-                                            <div style="float:left; margin: 5px;" class="form-field row mb-3">
+                                            <div style="float:left; margin: 5px; width: 40%;" class="form-field row mb-3">
                                             <label for="first_name">Prénom du demandeur</label>
 
                                             
@@ -51,7 +51,7 @@
                                             </div>
 
                                             <div class="cellContainer">
-                                            <div style="float:left; margin: 5px;" class="form-field row mb-3">
+                                            <div style="float:left; margin: 5px; width: 40%;" class="form-field row mb-3">
                                             <label for="last_name">Nom de famille du demandeur</label>
                                             
                                             <input id="last_name" type="text" class="form-control

@@ -24,7 +24,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title float-left">i</h4>
+                                <h4 class="card-title float-left">Vie Collectif</h4>
                                 <div class="text-right">
                                     <a href="{{ route('collectif.index') }}" class="btn btn-dark px-3">
                                         Retour aux Collectif</a>

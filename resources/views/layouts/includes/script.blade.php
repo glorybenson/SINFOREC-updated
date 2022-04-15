@@ -385,12 +385,27 @@
         }
     });
 
-    const data = JSON.parse($('[data-tool]').attr('data-tool'));
+    (function(document){
+            var div = document.getElementById('headingOne');
+            var icon = document.getElementById('icon');
+            var open = false;
 
-function appendFields(data) {
-    var i,
+            div.addEventListener('click', function(){
+                if(open){
+                    icon.className = 'fa fa-angle-down';
+                } else{
+                    icon.className = 'fa fa-angle-down open';
+                }
+                open = !open;
+            });
+        })(document);
+        
+        
+        const data = JSON.parse($('[data-tool]').attr('data-tool'));
+        function appendFields(data) {
+            var i,
         keys = Object.keys(data);
-    for (i = 0; i < 6; i++) {
+        for (i = 0; i < 6; i++) {
         delete data[keys[i]];
     }
     for (const key in data) {
@@ -408,23 +423,8 @@ function appendFields(data) {
                 break;
             default:
                 break;
+            }
         }
     }
-}
-appendFields(data);
-
-    (function(document){
-            var div = document.getElementById('headingOne');
-            var icon = document.getElementById('icon');
-            var open = false;
-
-            div.addEventListener('click', function(){
-                if(open){
-                    icon.className = 'fa fa-angle-down';
-                } else{
-                    icon.className = 'fa fa-angle-down open';
-                }
-                open = !open;
-            });
-        })(document);
+    appendFields(data);
 </script>

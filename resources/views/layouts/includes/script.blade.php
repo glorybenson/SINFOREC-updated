@@ -385,14 +385,33 @@
         }
     });
 
-    var num = 1;
-document.getElementById('btn').addEventListener("click",addInput);
+const data = JSON.parse($('[data-tool]').attr('data-tool'));
 
-function addInput(){
-var demo = document.getElementById('demo');
-demo.insertAdjacentHTML('beforeend','<div class="form-holder"><a class="form-label">Prénom</a> <br><input name="ttype'+num+'" type="text" class="form-control serializable" placeholder="Prénom" style="width: 50%;" /></div><div class="form-holder" ><a class="form-label">Nom de famille</a> <br><input name="tname'+num+'" type="text" class="form-control serializable" placeholder="Nom de famille" style="width: 50%; position: relative; padding-right: 15px; padding-left: 15px; box-sizing: border-box;" /></div> <br>');
- num++;
-}
+    function appendFields(data) {
+        var i,
+            keys = Object.keys(data);
+        for (i = 0; i < 6; i++) {
+            delete data[keys[i]];
+        }
+        for (const key in data) {
+            console.log(key, data[key])
+            switch (name) {
+                case "ttype":
+                    var parent = document.getElementById('demo');
+                    var newChildFirstName = '<div class="form-holder"><a class="form-label">Prénom</a> <br><input name="' + key + '" type="text" value="' + data[key] + '" class="form-control serializable" placeholder="Prénom" style="width: 50%;"></div><br>';
+                    parent.insertAdjacentHTML('beforeend', newChildFirstName);
+                    break;
+                case "tname":
+                    var parent = document.getElementById('demo');
+                    var newChildLastName = '<div class="form-holder"><a class="form-label">Nom de famille</a> <br><input name="' + key + '" type="text" value="' + data[key] + '" class="form-control serializable" placeholder="Nom de famille" style="width: 50%; position: relative; padding-right: 15px; padding-left: 15px; box-sizing: border-box;"></div><br>';
+                    parent.insertAdjacentHTML('beforeend', newChildLastName);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    window.addEventListener('load', appendFields(data))
 
     (function(document){
             var div = document.getElementById('headingOne');

@@ -69,7 +69,7 @@
                                         <div style="clear:both;">&nbsp; </div> 
 
                                         <div class="cellContainer">
-                                            <div style="float:left; margin: 5px; width: 50%;" class="form-field row mb-3">
+                                            <div style="float:left; margin: 5px; width: 40%;" class="form-field row mb-3">
                                             <label for="pere_first-name">Prénom du Père</label>
 
                                             
@@ -85,7 +85,7 @@
                                             </div>
 
                                             <div class="cellContainer">
-                                            <div style="float:left; margin: 5px; width: 50%;" class="form-field row mb-3">
+                                            <div style="float:left; margin: 5px; width: 40%;" class="form-field row mb-3">
                                             <label for="pere_last-name">Nom de famille du Père</label>
                                             
                                             <input id="pere_last-name" type="text" class="form-control
@@ -102,7 +102,7 @@
 
                 
                                         <div class="cellContainer">
-                                            <div style="float:left; margin: 5px; width: 50%;" class="form-field row mb-3">
+                                            <div style="float:left; margin: 5px; width: 40%;" class="form-field row mb-3">
                                             <label for="mere_first-name">Prénom de la Mère</label>
 
                                             
@@ -118,7 +118,7 @@
                                             </div>
 
                                             <div class="cellContainer">
-                                            <div style="float:left; margin: 5px; width: 50%;" class="form-field row mb-3">
+                                            <div style="float:left; margin: 5px; width: 40%;" class="form-field row mb-3">
                                             <label for="mere_last-name">Nom de famille de la Mère</label>
                                             
                                             <input id="mere_last-name" type="text" class="form-control

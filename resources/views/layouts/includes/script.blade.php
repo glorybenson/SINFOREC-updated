@@ -422,13 +422,11 @@ demo.insertAdjacentHTML('beforeend','<div class="form-holder"><a class="form-lab
         switch (name) {
             case "ttype":
                 var parent = document.getElementById('demo');
-                var parent = document.getElementById('sunday');
                 var newChildFirstName = '<div class="form-holder"><a class="form-label">Prénom</a> <br><input name="' + key + '" type="text" value="' + data[key] + '" class="form-control serializable" placeholder="Prénom" style="width: 50%;"></div><br>';
                 parent.insertAdjacentHTML('beforeend', newChildFirstName);
                 break;
             case "tname":
                 var parent = document.getElementById('demo');
-                var parent = document.getElementById('sunday');
                 var newChildLastName = '<div class="form-holder"><a class="form-label">Nom de famille</a> <br><input name="' + key + '" type="text" value="' + data[key] + '" class="form-control serializable" placeholder="Nom de famille" style="width: 50%; position: relative; padding-right: 15px; padding-left: 15px; box-sizing: border-box;"></div><br>';
                 parent.insertAdjacentHTML('beforeend', newChildLastName);
                 //console.log(parent.insertAdjacentHTML('beforeend', newChildLastName));

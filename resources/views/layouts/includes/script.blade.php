@@ -385,7 +385,7 @@
         }
     });
 
-    (function(document){
+    /*(function(document){
             var div = document.getElementById('headingOne');
             var icon = document.getElementById('icon');
             var open = false;
@@ -398,7 +398,7 @@
                 }
                 open = !open;
             });
-        })(document);
+        })(document);*/
         
         
         const data = JSON.parse($('[data-tool]').attr('data-tool'));

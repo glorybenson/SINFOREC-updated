@@ -39,7 +39,7 @@
                                     <div>
                                         <h4 class="card-title float-left"></h4>
                                     </div>
-                                    <table class="table table-bordered table-striped">
+                                    <!--<table class="table table-bordered table-striped">
                                         <tr>
                                             <td>Prénom du demandeur</td>
                                             <td>{{ $values->{'first_name'} }}</td>
@@ -65,7 +65,7 @@
                                             <td>{{ $values->{'mere_last-name'} }}</td>
                                         </tr>
                                         
-                                    </table>
+                                    </table>-->
                                     <div id="demo">
                                     </div>
 

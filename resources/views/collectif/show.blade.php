@@ -42,7 +42,6 @@
                                     
                                     <div id="demo">
                                     </div>
-                                    <input type="button" id="btn" value="Ajouter un nouveau membre"/>
 
                                     <div class="mb-5">
                                     </div>

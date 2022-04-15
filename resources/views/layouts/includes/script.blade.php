@@ -401,6 +401,7 @@
         })(document);*/
         
         
+        
         const data = JSON.parse($('[data-tool]').attr('data-tool'));
         function appendFields(data) {
             var i,
@@ -420,6 +421,7 @@
                 var parent = document.getElementById('demo');
                 var newChildLastName = '<div class="form-holder"><a class="form-label">Nom de famille</a> <br><input name="' + key + '" type="text" value="' + data[key] + '" class="form-control serializable" placeholder="Nom de famille" style="width: 50%; position: relative; padding-right: 15px; padding-left: 15px; box-sizing: border-box;"></div><br>';
                 parent.insertAdjacentHTML('beforeend', newChildLastName);
+                console.log(parent.insertAdjacentHTML('beforeend', newChildLastName));
                 break;
             default:
                 break;
@@ -427,5 +429,5 @@
         }
     }
     appendFields(data);
-    console.log(parent.insertAdjacentHTML('beforeend', newChildLastName));
+    
 </script>

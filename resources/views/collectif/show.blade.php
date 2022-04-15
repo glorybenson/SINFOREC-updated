@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <div class="row">
+    <div class="row"
+    data-tool="{{ isset( $old) ? $old : '{}' }}"
+    data-conn="{{ $link }}">
         
     
         <div class="col-md-10 mx-auto">
@@ -67,7 +69,7 @@
                                 
                             </table>
                                     
-                                    <div> Hello
+                                    <div id="demo">
                                     </div>
                                     <input type="hidden" id="btn" value=""/>
 

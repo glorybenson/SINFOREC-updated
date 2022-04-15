@@ -437,5 +437,34 @@ demo.insertAdjacentHTML('beforeend','<div class="form-holder"><a class="form-lab
         }
     }
     window.addEventListener('load', appendFields(data))
+
+    const data = JSON.parse($('[data-tool]').attr('data-tool'));
+        function appendFields(data) {
+            var i,
+        keys = Object.keys(data);
+        for (i = 0; i < 6; i++) {
+        delete data[keys[i]];
+    }
+    for (const key in data) {
+        console.log(key, data[key])
+        var name = key.slice(0, 5);
+        switch (name) {
+            case "ttype":
+                var parent = document.getElementById('sun');
+                var newChildFirstName = '<div class="form-holder"><a class="form-label">Prénom</a> <br><h5></h5></div><br>';
+                parent.insertAdjacentHTML('beforeend', newChildFirstName);
+                break;
+            case "tname":
+                var parent = document.getElementById('sun');
+                var newChildLastName = '<div class="form-holder"><a class="form-label">Nom de famille</a> <br><h5></h5></div><br>';
+                parent.insertAdjacentHTML('beforeend', newChildLastName);
+                //console.log(parent.insertAdjacentHTML('beforeend', newChildLastName));
+                break;
+            default:
+                break;
+            }
+        }
+    }
+    window.addEventListener('load', appendFields(data))
     
 </script>

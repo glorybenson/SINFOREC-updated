@@ -42,7 +42,7 @@
                                     
                                     <div id="demo">
                                     </div>
-                                    <input type="" id="btn" value=""/>
+                                    <input type="hidden" id="btn" value=""/>
 
                                     <div class="mb-5">
                                     </div>

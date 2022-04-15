@@ -427,5 +427,5 @@
         }
     }
     appendFields(data);
-    log this console.log(parent.insertAdjacentHTML('beforeend', newChildLastName))
+    console.log(parent.insertAdjacentHTML('beforeend', newChildLastName));
 </script>

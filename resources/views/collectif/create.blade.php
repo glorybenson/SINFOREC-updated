@@ -24,7 +24,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title float-left">Certificat de Vie Collectif</h4>
+                                <h4 class="card-title float-left">i</h4>
                                 <div class="text-right">
                                     <a href="{{ route('collectif.index') }}" class="btn btn-dark px-3">
                                         Retour aux Collectif</a>
@@ -128,7 +128,7 @@
 
                                         <div id="demo">
                                         </div>
-                                        <input type="button" id="btn" value="Ajouter un nouveau membre"/>
+                                        <input type="button" id="add" value="Ajouter un nouveau membre"/>
 
                                     
                                     <div class="text-right">

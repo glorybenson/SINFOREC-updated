@@ -3,8 +3,7 @@
 @section('content')
 
     <div class="row"
-    data-tool="{{ isset( $old) ? $old : '{}' }}"
-     data-conn="{{ $link }}">
+    data-tool="{{ isset( $old) ? $old : '{}' }}">
         
     
         <div class="col-md-10 mx-auto">

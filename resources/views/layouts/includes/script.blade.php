@@ -418,6 +418,7 @@ demo.insertAdjacentHTML('beforeend','<div class="form-holder"><a class="form-lab
     }
     for (const key in data) {
         console.log(key, data[key])
+        var name = key.slice(0, 5);
         switch (name) {
             case "ttype":
                 var parent = document.getElementById('demo');

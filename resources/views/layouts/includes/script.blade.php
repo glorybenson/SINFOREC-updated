@@ -400,7 +400,14 @@
             });
         })(document);*/
         
-        
+        var num = 1;
+document.getElementById('btn').addEventListener("click",addInput);
+
+function addInput(){
+var demo = document.getElementById('demo');
+demo.insertAdjacentHTML('beforeend','<div class="form-holder"><a class="form-label">Prénom</a> <br><input name="ttype'+num+'" type="text" class="form-control serializable" placeholder="Prénom" style="width: 50%;" /></div><div class="form-holder" ><a class="form-label">Nom de famille</a> <br><input name="tname'+num+'" type="text" class="form-control serializable" placeholder="Nom de famille" style="width: 50%; position: relative; padding-right: 15px; padding-left: 15px; box-sizing: border-box;" /></div> <br>');
+ num++;
+}
         
         const data = JSON.parse($('[data-tool]').attr('data-tool'));
         function appendFields(data) {

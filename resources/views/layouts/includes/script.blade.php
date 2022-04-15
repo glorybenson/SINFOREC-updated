@@ -411,7 +411,7 @@ const data = JSON.parse($('[data-tool]').attr('data-tool'));
             }
         }
     }
-    appendFields(data);
+    appendFields(data)
 
     (function(document){
             var div = document.getElementById('headingOne');

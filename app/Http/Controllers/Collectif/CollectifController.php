@@ -112,11 +112,17 @@ final class CollectifController extends Controller
             ->where('collectif.id', '=', $id)
             ->get()->first();
         $values = json_decode($add->values);
+        
 
         $binding = [
             'registre' => collect($add),
             'values' => $values,
         ];
+
+        $old = Collectif::find( $id);
+        $shell = new \stdClass();
+        $binding = Util::load( $shell);
+        $binding[ 'old'] = $old->values;
 
         return view('collectif.show', $binding);
     }

@@ -63,6 +63,11 @@
                                         </tr>
                                         
                                     </table>
+
+                                    <p>{{ $values->{'ttype1'} }} {{ $values->{'tname1'} }}</p>
+                                    <p>{{ $values->{'ttype2'} }} {{ $values->{'tname2'} }}</p>
+                                    <p>{{ $values->{'ttype3'} }} {{ $values->{'tname3'} }}</p>
+                                    <p>{{ $values->{'ttype4'} }} {{ $values->{'tname4'} }}</p>
                                     <div class="mb-5">
                                     </div>
                                 </div>

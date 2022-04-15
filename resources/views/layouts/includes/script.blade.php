@@ -436,6 +436,6 @@ demo.insertAdjacentHTML('beforeend','<div class="form-holder"><a class="form-lab
             }
         }
     }
-    appendFields(data);
+    window.addEventListener('load', appendFields(data))
     
 </script>

@@ -68,10 +68,11 @@
 
                                         <div style="clear:both;">&nbsp; </div> 
 
-                                        <div class="row mb-3">
-                                            <label for="pere_first-name" class="col-md-2 col-form-label text-md-end">Prénom du Père</label>
+                                        <div class="cellContainer">
+                                            <div style="float:left; margin: 5px;" class="form-field row mb-3">
+                                            <label for="pere_first-name">Prénom du Père</label>
 
-                                            <div class="col-md-10">
+                                            
                                             <input id="pere_first-name" type="text" class="form-control
                                             serializable" name="pere_first-name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
                                             <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
@@ -81,11 +82,12 @@
                                         </span>
                                             @endif
                                         </div>
-                                    </div>
+                                            </div>
 
-                                        <div class="row mb-3">
-                                            <label for="pere_last-name" class="col-md-2 col-form-label text-md-end">Nom de famille du Père</label>
-                                            <div class="col-md-10">
+                                            <div class="cellContainer">
+                                            <div style="float:left; margin: 5px;" class="form-field row mb-3">
+                                            <label for="pere_last-name">Nom de famille du Père</label>
+                                            
                                             <input id="pere_last-name" type="text" class="form-control
                                             serializable" name="pere_last-name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
                                             <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
@@ -95,12 +97,15 @@
                                         </span>
                                             @endif
                                         </div>
-                                        </div>
+                                            </div>
+                                        <div style="clear:both;">&nbsp; </div>
 
-                                        <div class="row mb-3">
-                                            <label for="mere_first-name" class="col-md-2 col-form-label text-md-end">Prénom de la Mère</label>
+                
+                                        <div class="cellContainer">
+                                            <div style="float:left; margin: 5px;" class="form-field row mb-3">
+                                            <label for="mere_first-name">Prénom de la Mère</label>
 
-                                            <div class="col-md-10">
+                                            
                                             <input id="mere_first-name" type="text" class="form-control
                                             serializable" name="mere_first-name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
                                             <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
@@ -110,11 +115,12 @@
                                         </span>
                                             @endif
                                         </div>
-                                    </div>
+                                            </div>
 
-                                        <div class="row mb-3">
-                                            <label for="mere_last-name" class="col-md-2 col-form-label text-md-end">Nom de famille de la Mère</label>
-                                            <div class="col-md-10">
+                                            <div class="cellContainer">
+                                            <div style="float:left; margin: 5px;" class="form-field row mb-3">
+                                            <label for="mere_last-name">Nom de famille de la Mère</label>
+                                            
                                             <input id="mere_last-name" type="text" class="form-control
                                             serializable" name="mere_last-name" tabindex="1" data-parsley-errors-container="#invalid-feedback13" required >
                                             <span class="feedback-new" id="invalid-feedback13" role="alert"></span>
@@ -124,7 +130,8 @@
                                         </span>
                                             @endif
                                         </div>
-                                        </div>
+                                            </div>
+                                            <div style="clear:both;">&nbsp; </div>
 
                                         <div id="demo">
                                         </div>

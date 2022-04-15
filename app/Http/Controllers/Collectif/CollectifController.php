@@ -123,6 +123,10 @@ final class CollectifController extends Controller
         $shell = new \stdClass();
         $binding = Util::load( $shell);
         $binding[ 'old'] = $old->values;
+        $binding[ 'post_url'] = route( 'collectif.show.post', [ 'id' => $id]);
+        $binding[ 'page_url'] = route( 'collectif.show', [ 'id' => $id]);
+
+        $binding[ 'is_show'] = true;
 
         return view('collectif.show', $binding);
     }

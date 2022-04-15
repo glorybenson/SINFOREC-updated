@@ -39,33 +39,7 @@
                                     <div>
                                         <h4 class="card-title float-left"></h4>
                                     </div>
-                                    <!--<table class="table table-bordered table-striped">
-                                        <tr>
-                                            <td>Prénom du demandeur</td>
-                                            <td>{{ $values->{'first_name'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Numéro de déclaration</td>
-                                            <td>{{ $values->{'last_name'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Prénom du Père</td>
-                                            <td>{{ $values->{'pere_first-name'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nom de famille du Père</td>
-                                            <td>{{ $values->{'pere_last-name'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Prénom de la Mère</td>
-                                            <td>{{ $values->{'mere_first-name'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nom de famille de la Mère</td>
-                                            <td>{{ $values->{'mere_last-name'} }}</td>
-                                        </tr>
-                                        
-                                    </table>-->
+                                    
                                     <div id="demo">
                                     </div>
 

@@ -6,7 +6,7 @@
     data-tool="{{ isset( $old) ? $old : '{}' }}"
      data-conn="{{ $link }}">
         
-    <!--<p class="hidden">@json ($registre) </p>-->
+    
         <div class="col-md-10 mx-auto">
             <div class= "mt-3">
                 <div class="content container-fluid">

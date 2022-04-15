@@ -2,7 +2,10 @@
 
 @section('content')
 
-    <div class="row">
+    <div class="row"
+    data-tool="{{ isset( $old) ? $old : '{}' }}"
+     data-conn="{{ $link }}">
+        
     <!--<p class="hidden">@json ($registre) </p>-->
         <div class="col-md-10 mx-auto">
             <div class= "mt-3">
@@ -64,11 +67,6 @@
                                         
                                     </table>
 
-                                 
-
-                                    <h5 data-tool="{{ isset( $old) ? $old : '{}' }}"
-                                    data-conn="{{ $link }}">
-                                    </h5>
                                     <div class="mb-5">
                                     </div>
                                 </div>

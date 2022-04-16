@@ -66,23 +66,7 @@
                                 
                             </table>
                                     
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="mb-0">
-                                       Other family Members</h5>
-
-                                       <table class="table table-bordered table-striped">
-                                        <th>First name</th>
-                                        <th>Last name</th>
-                                        <tr>
-                                            
-                                            <td>Glory</td>
-                                            <td>
-                                                Benson
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
+                            <div class="card" id="otherFamilyMembers"></div>
                                     <input type="hidden" id="btn" value=""/>
 
                                     <h4 class="mb-5">

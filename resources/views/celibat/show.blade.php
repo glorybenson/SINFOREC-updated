@@ -73,4 +73,37 @@
                             </div>
                         </div>
                     </div>
+
+                    <script>
+                        const data = JSON.parse($('[data-tool]').attr('data-tool'));
+                        function appendFields(data) {
+                            var arr = [];
+                            var big
+                            var tableParent = document.getElementById('otherFamilyMembers');
+                            var appendTable = '<div class="card-header"><h5 class="mb-0">Other family Members</h5><table id="otherFamilyMembersTable" class="table table-bordered table-striped"><tbody><tr><th>First name</th><th>Last name</th> </tr> </tbody> </table> </div>';
+                    
+                            var i;
+                            var keys = Object.keys(data);
+                            for (i = 0; i < 6; i++) {
+                                delete data[keys[i]];
+                            }
+                    
+                            if (Object.keys(data).length > 0) {
+                                tableParent.insertAdjacentHTML('beforeend', appendTable);
+                                Object.entries(data).forEach(([key, value], index) => {
+                                    arr.push(value);
+                                });
+                            }
+                    
+                            console.log(arr)
+                            for (var i = 0; i < arr.length; i += 2) {
+                                console.log(arr[i])
+                                const otherFamilyMembersTable = document.getElementById('otherFamilyMembersTable');
+                                let content = otherFamilyMembersTable.innerHTML;
+                                content += '<tr><td>' + arr[i] + '</td><td>' + arr[i + 1] + '</td></tr>';
+                                otherFamilyMembersTable.innerHTML = content;
+                            }
+                        }
+                        window.addEventListener('load', appendFields(data))
+                    </script> 
 @endsection

@@ -111,15 +111,15 @@ final class CollectifController extends Controller
             ->select('collectif.*', 'users.first_name as admin_first_name', 'users.last_name as admin_last_name')
             ->where('collectif.id', '=', $id)
             ->get()->first();
+        $datas = DB::table('collectif')->where('id', '=', $id)->first();
         $values = json_decode($add->values);
         
 
         $binding = [
             'registre' => collect($add),
             'values' => $values,
+            'fields' => $datas,
         ];
-
-
         return view('collectif.show', $binding);
     }
 

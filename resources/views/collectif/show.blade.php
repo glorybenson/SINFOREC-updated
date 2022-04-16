@@ -65,9 +65,7 @@
                                 </tr>
                                 
                             </table>
-                                    
-                            <div class="card" id="otherFamilyMembers"></div>
-                                    <input type="hidden" id="btn" value=""/>
+
 
                                     <h4 class="mb-5">
                                     </h4>
@@ -76,6 +74,8 @@
                         </div>
                     </div>
 
+                    <div class="card" id="otherFamilyMembers"></div>
+                                    <input type="hidden" id="btn" value=""/>
                     <script>
                         const data = JSON.parse($('[data-tool]').attr('data-tool'));
                         function appendFields(data) {

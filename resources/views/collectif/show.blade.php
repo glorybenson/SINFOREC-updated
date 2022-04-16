@@ -65,7 +65,8 @@
                                 </tr>
                                 
                             </table>
-                                    
+                                    <div></div>
+                                    <div></div>
                             <div class="card" id="otherFamilyMembers"></div>
                                     <input type="hidden" id="btn" value=""/>
 
@@ -82,7 +83,7 @@
                             var arr = [];
                             var big
                             var tableParent = document.getElementById('otherFamilyMembers');
-                            var appendTable = '<div><h5 class="mb-0">Other family Members</h5><table id="otherFamilyMembersTable" class="table table-bordered table-striped"><tbody><tr><th>First name</th><th>Last name</th> </tr> </tbody> </table> </div>';
+                            var appendTable = '<div class="card-header"><h5 class="mb-0">Other family Members</h5><table id="otherFamilyMembersTable" class="table table-bordered table-striped"><tbody><tr><th>First name</th><th>Last name</th> </tr> </tbody> </table> </div>';
                     
                             var i;
                             var keys = Object.keys(data);

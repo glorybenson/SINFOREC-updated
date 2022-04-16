@@ -29,6 +29,8 @@
                         <div class="table-responsive">
                             <table class="table mb-0 table-striped border-0 data-table" id="datatable">
                                 <thead class="thead-light">
+                                <th>Prénom du demandeur</th>
+                                <th>Nom de famille du demandeur</th>
                                 <th>Prénom du Père</th>
                                 <th>Nom de famille du Père</th>
                                 <th>Prénom de la Mère</th>
@@ -44,6 +46,13 @@
                                             $item->values = json_decode( $item->values);
                                     @endphp
                                     <tr>
+                                        <td>
+                                            {{ $item->values->{'first_name'} }}
+                                        </td>
+                                
+                                        <td>
+                                            {{ $item->values->{'last_name'} }} 
+                                        </td>
                                         <td>
                                             {{ $item->values->{'pere_first-name'} }}
                                         </td>

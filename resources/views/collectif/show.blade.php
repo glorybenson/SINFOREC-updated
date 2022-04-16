@@ -2,7 +2,8 @@
 
 @section('content')
 
-    <div class="row">
+    <div class="row"
+    data-tool='{{ $fields->values}}'>
         <div class="col-md-10 mx-auto">
             <div class= "mt-3">
                 <div class="content container-fluid">

@@ -83,7 +83,7 @@
                             var arr = [];
                             var big
                             var tableParent = document.getElementById('otherFamilyMembers');
-                            var appendTable = '<div class="card-header"><div><h5 class="mb-0">Other family Members</h5><table id="otherFamilyMembersTable" class="table table-bordered table-striped"><tbody><tr><th>First name</th><th>Last name</th> </tr> </tbody> </table> </div></div>';
+                            var appendTable = '<div class="card-header"><div><h5 class="mb-0">D\'autres membres de la famille</h5><table id="otherFamilyMembersTable" class="table table-bordered table-striped"><tbody><tr><th>First name</th><th>Last name</th> </tr> </tbody> </table> </div></div>';
                     
                             var i;
                             var keys = Object.keys(data);

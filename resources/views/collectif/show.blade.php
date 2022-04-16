@@ -66,7 +66,7 @@
                                 
                             </table>
                                     
-                            <div class="card-body" id="otherFamilyMembers"></div>
+                            <div class="card" id="otherFamilyMembers"></div>
                                     <input type="hidden" id="btn" value=""/>
 
                                     <h4 class="mb-5">

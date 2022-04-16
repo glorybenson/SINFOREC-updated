@@ -34,7 +34,7 @@
                                     <div>
                                         <h4 class="card-title float-left"></h4>
                                     </div>
-                                    {{ var_dump($fields) }}
+                                    {{ $fields->values }}
 
                                     <table class="table table-bordered table-striped">
                                         <tr>

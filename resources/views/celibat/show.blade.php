@@ -37,14 +37,7 @@
                                         <h4 class="card-title float-left"></h4>
                                     </div>
                                     <table class="table table-bordered table-striped">
-                                        <tr>
-                                            <td>Date de la demande</td>
-                                            <td>{{ $values->{'demande'} }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Numéro de déclaration</td>
-                                            <td>{{ $values->{'declaration_number'} }}</td>
-                                        </tr>
+                                       
                                         <tr>
                                             <td>Prénom</td>
                                             <td>{{ $values->{'first_name'} }}</td>
@@ -64,6 +57,14 @@
                                         <tr>
                                             <td>C.I.N</td>
                                             <td>{{ $values->{'cin'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date de la demande</td>
+                                            <td>{{ $values->{'demande'} }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Numéro de déclaration</td>
+                                            <td>{{ $values->{'declaration_number'} }}</td>
                                         </tr>
                                     </table>
                                     <div class="mb-5">

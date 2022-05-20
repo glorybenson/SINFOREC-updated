@@ -3,6 +3,7 @@
 use App\Http\Controllers\Naissance\FormController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\App;
 
 /*
 |----------------------------------------\\\\\\\\\\\----------------------------------
@@ -187,4 +188,14 @@ Route::middleware( 'auth')->group( function () {
     Route::get('/residence/{id}/detail', [App\Http\Controllers\ResidenceController::class, 'show'])->name('residence.show');
     Route::get('/residence/{id}/delete', [App\Http\Controllers\ResidenceController::class, 'destroy'])->name('residence.delete');
 
+    Route::get('/greeting/{locale}', function ($locale) {
+        if (! in_array($locale, ['en', 'es', 'fr'])) {
+            abort(400);
+        }
+     
+        App::setLocale($locale);
+     
+        //
+    });
 });
+

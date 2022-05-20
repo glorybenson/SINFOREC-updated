@@ -21,7 +21,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    /*$(document).ready(function() {
+    $(document).ready(function() {
             $('#datatable').DataTable({
                 "language": {
                     "info": "Vue de _START_ a _END_ sur _TOTAL_ entrées",
@@ -33,7 +33,7 @@
                 }
                 }
             })
-        });*/
+        });
 
 
     $(document).ready(function() {
